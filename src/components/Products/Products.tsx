@@ -1,5 +1,4 @@
-import { ChevronDown, MoveUpRight } from "lucide-react";
-import Image from "next/image";
+import { MoveUpRight } from "lucide-react";
 
 export default function Products() {
   return (
