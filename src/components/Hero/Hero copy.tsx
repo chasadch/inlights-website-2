@@ -34,7 +34,7 @@ export default function Hero() {
         <button className="group relative mb-24">
           <div className="absolute -inset-[3px] rounded-lg bg-bg opacity-75 blur-md transition-opacity group-hover:opacity-100"></div>
           <div className="relative flex items-center rounded-lg bg-gradient-to-r from-gradientDark to-gradientLight px-6 py-3 text-white shadow-custom">
-            Let's Talk
+            Let&apos;s Talk
             <ArrowRight className="ml-2 h-4 w-4" />
           </div>
         </button>
