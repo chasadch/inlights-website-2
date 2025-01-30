@@ -30,12 +30,12 @@ export default function SuccessStories() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-[24px]">
+        <div className="flex items-center gap-[24px] self-stretch">
           {/* Card 1 */}
           <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
-              className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
+              className="relative flex h-[174px] w-[421px] flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
               style={{
                 background:
                   "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_1.png')",
@@ -50,7 +50,7 @@ export default function SuccessStories() {
             </div>
             {/* Text content */}
             <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="text-size-3 font-bold">
+              <h1 className="self-stretch text-size-3 font-bold">
                 AI-Powered Physical Exercise Coach
               </h1>
               <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
@@ -73,7 +73,7 @@ export default function SuccessStories() {
           <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
-              className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
+              className="relative flex h-[174px] w-[421px] flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
               style={{
                 background:
                   "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_2.png')",
@@ -107,7 +107,7 @@ export default function SuccessStories() {
           <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
-              className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
+              className="relative flex h-[174px] w-[421px] flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
               style={{
                 background:
                   "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_3.png')",

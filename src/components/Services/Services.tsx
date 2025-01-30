@@ -110,7 +110,7 @@ export default function Services() {
       </div>
 
       {/* Talent */}
-      <div className="flex items-center justify-center py-[100px]">
+      <div className="flex items-center justify-center pt-[240px]">
         <div
           className="relative h-[255px] w-[1301px] overflow-hidden rounded-[32px]"
           style={{
