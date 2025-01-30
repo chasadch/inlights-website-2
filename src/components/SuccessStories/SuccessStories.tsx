@@ -1,139 +1,100 @@
-import { MoveUpRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 export default function SuccessStories() {
   return (
-    <div className="bg-black px-[70px] py-[140px]">
-      <div className="flex flex-col items-start gap-[64px] self-stretch">
-        <div className="flex items-center justify-between gap-[48px] self-stretch">
-          <div className="flex flex-col items-start gap-[8px]">
-            <h1 className="text-size-2 font-normal">Our Success Stories</h1>
-          </div>
-          <div className="flex-grow-1 flex items-end justify-end gap-[10px]">
-            <button className="flex h-[40px] w-[40px] items-center justify-center rounded-[900px] border-[1px] border-[#B4BBC6] p-[12px]">
-              <Image
-                src={"/successStories/left.png"}
-                alt="Arrow"
-                width={24}
-                height={24}
-              />
+    <div className="min-h-screen w-full bg-black px-4 py-20 text-white">
+      <div className="container mx-auto">
+        <div className="mb-12 flex items-center justify-between">
+          <h2 className="text-5xl font-light">Our Success Stories</h2>
+          <div className="flex gap-4">
+            <button className="rounded-full border border-white/20 p-4 hover:bg-white/10">
+              <ChevronLeft className="h-6 w-6" />
             </button>
-            <button className="flex h-[40px] w-[40px] items-center justify-center rounded-[900px] border-[1px] border-[#B4BBC6] p-[12px]">
-              <Image
-                src={"/successStories/right.png"}
-                alt="Arrow"
-                width={24}
-                height={24}
-              />
+            <button className="rounded-full border border-white/20 p-4 hover:bg-white/10">
+              <ChevronRight className="h-6 w-6" />
             </button>
           </div>
         </div>
-
-        <div className="grid grid-cols-3 gap-[24px]">
-          {/* Card 1 */}
-          <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-[#050919] shadow-[0_0_30px_0_#5144DCF7]">
-            {/* Image with overlay */}
-            <div
-              className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
-              style={{
-                background:
-                  "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_1.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <span className="absolute top-1/2 text-size-4 font-normal">
-                GeoHealth
-              </span>
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f1729] shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+            <div className="relative h-48">
+              <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#0f1729]" />
+              <Image
+                src="https://images.unsplash.com/photo-1576678927484-cc907957088c"
+                alt="GeoHealth"
+                width={400}
+                height={300}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute left-4 top-4 z-20">
+                <span className="text-sm">GeoHealth</span>
+              </div>
             </div>
-            {/* Text content */}
-            <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="text-size-3 font-bold">
+            <div className="p-6">
+              <h3 className="mb-4 text-xl font-semibold">
                 AI-Powered Physical Exercise Coach
-              </h1>
-              <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
+              </h3>
+              <p className="mb-4 text-sm text-gray-400">
                 AI-powered exercise monitoring system for real-time pose
                 detection, angle measurements, and form correction feedback for
                 various exercises.
               </p>
-              <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                <span className="text-size-7 font-normal">
-                  Discover InLights
-                </span>
-                <div className="flex h-[15px] w-[15px] items-center justify-center">
-                  <MoveUpRight width={15} height={15} />
-                </div>
-              </div>
+              <button className="flex items-center text-sm text-blue-400 hover:text-blue-300">
+                Discover Insights <ArrowRight className="ml-2 h-4 w-4" />
+              </button>
             </div>
           </div>
-
-          {/* Card 2 */}
-          <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-[#050919] shadow-[0_0_30px_0_#5144DCF7]">
-            {/* Image with overlay */}
-            <div
-              className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
-              style={{
-                background:
-                  "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_2.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <span className="absolute top-1/2 text-size-4 font-normal">
-                Manufacturing
-              </span>
+          <div className="overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f1729] shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+            <div className="relative h-48">
+              <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#0f1729]" />
+              <Image
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                alt="Manufacturing"
+                width={400}
+                height={300}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute left-4 top-4 z-20">
+                <span className="text-sm">Manufacturing</span>
+              </div>
             </div>
-            {/* Text content */}
-            <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="text-size-3 font-bold">Project 2</h1>
-              <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
+            <div className="p-6">
+              <h3 className="mb-4 text-xl font-semibold">Project 2</h3>
+              <p className="mb-4 text-sm text-gray-400">
                 Manufacturers are achieving remarkable gains in productivity and
-                efficiency with Emerald’s innovative solutions. Our preventive
-                maintenance system has...
+                efficiency with Emerald&apos;s innovative solutions. Our
+                preventive maintenance system has notably...
               </p>
-              <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                <span className="text-size-7 font-normal">Read More</span>
-                <div className="flex h-[15px] w-[15px] items-center justify-center">
-                  <MoveUpRight width={15} height={15} />
-                </div>
-              </div>
+              <button className="flex items-center text-sm text-blue-400 hover:text-blue-300">
+                Read More <ArrowRight className="ml-2 h-4 w-4" />
+              </button>
             </div>
           </div>
-
-          {/* Card 3 */}
-          <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-[#050919] shadow-[0_0_30px_0_#5144DCF7]">
-            {/* Image with overlay */}
-            <div
-              className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
-              style={{
-                background:
-                  "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_3.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <span className="absolute top-1/2 text-size-4 font-normal">
-                Health Care
-              </span>
-            </div>
-            {/* Text content */}
-            <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="text-size-3 font-bold">Project 3</h1>
-              <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
-                Healthcare providers are witnessing notable enhancements in
-                service quality and operational efficiency with Emerald’s
-                cutting-edge platform. Our asse...
-              </p>
-              <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                <span className="text-size-7 font-normal">Read More</span>
-                <div className="flex h-[15px] w-[15px] items-center justify-center">
-                  <MoveUpRight width={15} height={15} />
-                </div>
+          <div className="overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f1729] shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+            <div className="relative h-48">
+              <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#0f1729]" />
+              <Image
+                src="https://images.unsplash.com/photo-1538108149393-fbbd81895907"
+                alt="Health Care"
+                width={400}
+                height={300}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute left-4 top-4 z-20">
+                <span className="text-sm">Health Care</span>
               </div>
+            </div>
+            <div className="p-6">
+              <h3 className="mb-4 text-xl font-semibold">Project 3</h3>
+              <p className="mb-4 text-sm text-gray-400">
+                Healthcare providers are witnessing notable enhancements in
+                service quality and operational efficiency with Emerald&apos;s
+                cutting-edge platform. Our ass...
+              </p>
+              <button className="flex items-center text-sm text-blue-400 hover:text-blue-300">
+                Read More <ArrowRight className="ml-2 h-4 w-4" />
+              </button>
             </div>
           </div>
         </div>
