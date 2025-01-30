@@ -1,5 +1,6 @@
 import React from "react";
-import { Code, Palette, Eye, Scissors } from "lucide-react";
+import { Code, Palette, Eye, Scissors, ArrowRight } from "lucide-react";
+import Image from "next/image";
 export default function Services() {
   const services = [
     {
@@ -29,7 +30,7 @@ export default function Services() {
   ];
   return (
     <main className="min-h-screen w-full bg-black p-8 text-white">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto mb-20 max-w-7xl">
         <h1 className="mb-16 text-center text-5xl font-medium">Our Services</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
@@ -64,6 +65,32 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="relative h-[255px] overflow-hidden rounded-lg">
+        {" "}
+        {/* Fixed height and rounded corners */}
+        {/* Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1576678927484-cc907957088c"
+          alt="Background"
+          fill // Fill the container
+          className="object-cover" // Cover the container without repeating
+        />
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          {" "}
+          {/* Center content */}
+          <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
+            <h1 className="max-w-3xl text-4xl font-medium text-white md:text-6xl">
+              We Are Looking for Exceptional Talent
+            </h1>
+            <button className="hidden items-center rounded-full bg-gradient-to-r from-[#4154F6] to-[#8B9AFF] px-6 py-3 text-white transition-opacity hover:opacity-90 md:flex">
+              Join Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </button>
+          </div>
         </div>
       </div>
     </main>
