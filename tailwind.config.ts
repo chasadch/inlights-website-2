@@ -6,12 +6,13 @@ module.exports = {
     extend: {
       colors: {
         // Brand Gradient
-        gradientDark: "#6C63FF",
-        gradientLight: "#AAB4FF",
+        gradientDark: "#552DDA",
+        gradientLight: "#1D3E80",
         // Black Colors
-        bg: "#03030E",
+        bg: "#050919",
         cards: "#050919",
         footer: "#0D0D1D",
+        borderCustom: "rgba(45, 160, 184, 0.15)",
       },
       fontSize: {
         // Typography sizes from the design
@@ -36,8 +37,7 @@ module.exports = {
         "4xl": "40px",
       },
       boxShadow: {
-        // Shadow rules from the design
-        custom: "0px 0px 30px rgba(26, 54, 163, 0.3)", // X, Y, Blur, Color
+        custom: "0px 0px 30px rgba(26, 54, 163, 0.8)",
       },
       maxWidth: {
         container: "1440px",

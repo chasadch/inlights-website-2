@@ -1,5 +1,4 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 export default function Products() {
   return (
@@ -10,8 +9,8 @@ export default function Products() {
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="flex flex-col rounded-3xl border border-blue-500/20 bg-[#0f1729] p-8 shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-            <div className="inline-block">
-              <span className="rounded-full bg-white/10 px-4 py-1 text-sm">
+            <div className="inline">
+              <span className="rounded-full bg-white px-4 py-1 text-sm text-[#414C5C]">
                 Traffic Management
               </span>
             </div>
@@ -23,22 +22,22 @@ export default function Products() {
               tools. Anticipate needs, schedule proactively, and optimize
               resources to keep operations running smoothly.
             </p>
-            <button className="mb-8 flex w-fit items-center gap-2 text-blue-400 transition-colors hover:text-blue-300">
-              Discover Insights <ArrowRight className="h-4 w-4" />
+            <button className="flex w-fit items-center gap-2 transition-colors hover:text-blue-300">
+              Discover Insights <ArrowUpRight className="h-4 w-4" />
             </button>
             <div className="mt-auto overflow-hidden rounded-xl border border-white/10">
               <Image
                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072"
                 alt="Traffic Management Dashboard"
-                width={400}
-                height={400}
-                className="h-auto w-full"
+                width={460}
+                height={307}
+                className="h-[307px] w-full"
               />
             </div>
           </div>
           <div className="flex flex-col rounded-3xl border border-blue-500/20 bg-[#0f1729] p-8 shadow-[0_0_30px_rgba(59,130,246,0.1)]">
             <div className="inline-block">
-              <span className="rounded-full bg-white/10 px-4 py-1 text-sm">
+              <span className="rounded-full bg-white px-4 py-1 text-sm text-[#414C5C]">
                 Premise Security
               </span>
             </div>
@@ -51,16 +50,16 @@ export default function Products() {
               real-time tracking for unmatched access control and theft
               prevention.
             </p>
-            <button className="mb-8 flex w-fit items-center gap-2 text-blue-400 transition-colors hover:text-blue-300">
-              Discover Insights <ArrowRight className="h-4 w-4" />
+            <button className="mb-8 flex w-fit items-center gap-2 transition-colors hover:text-blue-300">
+              Discover Insights <ArrowUpRight className="h-4 w-4" />
             </button>
             <div className="mt-auto overflow-hidden rounded-xl border border-white/10">
               <Image
                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072"
                 alt="Premise Security Dashboard"
-                width={400}
-                height={400}
-                className="h-auto w-full"
+                width={460}
+                height={307}
+                className="h-[307px] w-full"
               />
             </div>
           </div>

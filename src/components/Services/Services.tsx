@@ -4,25 +4,25 @@ import Image from "next/image";
 export default function Services() {
   const services = [
     {
-      icon: <Code className="h-8 w-8 text-[#8B9AFF]" />,
+      icon: <Code className="h-10 w-10 text-[#8B9AFF]" />,
       title: "Web Development",
       description:
         "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate yo",
     },
     {
-      icon: <Palette className="h-8 w-8 text-[#8B9AFF]" />,
+      icon: <Palette className="h-10 w-10 text-[#8B9AFF]" />,
       title: "Product Design",
       description:
         "Transforming raw ideas into innovative, user-focused products with seamless design and unmatched functionality.",
     },
     {
-      icon: <Eye className="h-8 w-8 text-[#8B9AFF]" />,
+      icon: <Eye className="h-10 w-10 text-[#8B9AFF]" />,
       title: "Computer Vision",
       description:
         "Empowering businesses with advanced computer vision solutions that unlock insights and automate processes with",
     },
     {
-      icon: <Scissors className="h-8 w-8 text-[#8B9AFF]" />,
+      icon: <Scissors className="h-10 w-10 text-[#8B9AFF]" />,
       title: "AI Automation",
       description:
         "Revolutionizing workflows with AI-driven automation, delivering efficiency, accuracy, and smarter decision-making.",
@@ -30,22 +30,22 @@ export default function Services() {
   ];
   return (
     <main className="min-h-screen w-full bg-black p-8 text-white">
-      <div className="container mx-auto mb-20 max-w-7xl">
+      <div className="container mx-auto mb-20">
         <h1 className="mb-16 text-center text-5xl font-medium">Our Services</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative cursor-pointer rounded-lg bg-[#0A0B14] p-6 transition-all duration-300 hover:scale-[1.02]"
+              className="border-borderCustom group relative cursor-pointer rounded-lg border bg-bg p-1 shadow-custom transition-all duration-300 hover:scale-[1.02]"
             >
-              <div className="absolute -inset-[1px] rounded-lg bg-[#4154F6] opacity-50 blur-sm transition-opacity group-hover:opacity-70" />
-              <div className="relative rounded-lg bg-[#0A0B14] p-6">
+              <div className="bg- absolute -inset-[1px] rounded-lg opacity-50 blur-sm transition-opacity group-hover:opacity-70" />
+              <div className="relative rounded-lg p-6">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="mb-3 text-xl font-medium">{service.title}</h3>
-                <p className="mb-4 text-sm text-gray-400">
+                <p className="mb-4 w-[257px] text-sm text-gray-400">
                   {service.description}
                 </p>
-                <div className="flex items-center text-sm text-[#8B9AFF]">
+                <div className="flex items-center text-sm">
                   Discover Insights
                   <svg
                     className="ml-2 h-4 w-4"
@@ -68,25 +68,25 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="relative h-[255px] overflow-hidden rounded-lg">
+      <div className="relative mx-8 h-[255px] overflow-hidden rounded-[32px]">
         {" "}
         {/* Fixed height and rounded corners */}
         {/* Image */}
         <Image
-          src="https://images.unsplash.com/photo-1576678927484-cc907957088c"
+          src={"/services/this_is_engineering.png"}
           alt="Background"
-          fill // Fill the container
-          className="object-cover" // Cover the container without repeating
+          fill
+          className="object-cover"
         />
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center">
           {" "}
           {/* Center content */}
           <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
-            <h1 className="max-w-3xl text-4xl font-medium text-white md:text-6xl">
+            <h1 className="max-w-6xl text-4xl font-medium text-white md:text-6xl">
               We Are Looking for Exceptional Talent
             </h1>
-            <button className="hidden items-center rounded-full bg-gradient-to-r from-[#4154F6] to-[#8B9AFF] px-6 py-3 text-white transition-opacity hover:opacity-90 md:flex">
+            <button className="hidden items-center rounded-full bg-gradient-to-r from-gradientDark to-gradientLight px-6 py-3 text-white transition-opacity hover:opacity-90 md:flex">
               Join Us
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>

@@ -17,7 +17,7 @@ export default function SuccessStories() {
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          <div className="overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f1729] shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+          <div className="border-borderCustom overflow-hidden rounded-3xl border bg-bg shadow-custom">
             <div className="relative h-48">
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#0f1729]" />
               <Image
@@ -40,12 +40,12 @@ export default function SuccessStories() {
                 detection, angle measurements, and form correction feedback for
                 various exercises.
               </p>
-              <button className="flex items-center text-sm text-blue-400 hover:text-blue-300">
+              <button className="flex items-center text-sm hover:text-blue-300">
                 Discover Insights <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
           </div>
-          <div className="overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f1729] shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+          <div className="border-borderCustom overflow-hidden rounded-3xl border bg-bg shadow-custom">
             <div className="relative h-48">
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#0f1729]" />
               <Image
@@ -66,12 +66,12 @@ export default function SuccessStories() {
                 efficiency with Emerald&apos;s innovative solutions. Our
                 preventive maintenance system has notably...
               </p>
-              <button className="flex items-center text-sm text-blue-400 hover:text-blue-300">
+              <button className="flex items-center text-sm hover:text-blue-300">
                 Read More <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
           </div>
-          <div className="overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f1729] shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+          <div className="border-borderCustom overflow-hidden rounded-3xl border bg-bg shadow-custom">
             <div className="relative h-48">
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#0f1729]" />
               <Image
@@ -92,7 +92,7 @@ export default function SuccessStories() {
                 service quality and operational efficiency with Emerald&apos;s
                 cutting-edge platform. Our ass...
               </p>
-              <button className="flex items-center text-sm text-blue-400 hover:text-blue-300">
+              <button className="flex items-center text-sm hover:text-blue-300">
                 Read More <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
