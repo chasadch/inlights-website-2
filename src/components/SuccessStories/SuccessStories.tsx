@@ -32,7 +32,7 @@ export default function SuccessStories() {
 
         <div className="grid grid-cols-3 gap-[24px]">
           {/* Card 1 */}
-          <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-[#050919] shadow-[0_0_30px_0_#5144DCF7]">
+          <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
               className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
@@ -70,7 +70,7 @@ export default function SuccessStories() {
           </div>
 
           {/* Card 2 */}
-          <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-[#050919] shadow-[0_0_30px_0_#5144DCF7]">
+          <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
               className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
@@ -104,7 +104,7 @@ export default function SuccessStories() {
           </div>
 
           {/* Card 3 */}
-          <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-[#050919] shadow-[0_0_30px_0_#5144DCF7]">
+          <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
               className="relative flex h-[200px] w-full items-center justify-center overflow-hidden rounded-[20px]"
