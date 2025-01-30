@@ -1,106 +1,42 @@
-"use client";
-
-import { ChevronDown, Menu, X } from "lucide-react"; // Import ChevronLeft icon
+import { ChevronDown, MoveUpRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu open/close
-
-  // Toggle mobile menu
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-transparent">
-      <div className="container mx-auto flex items-center justify-between px-[120px] py-4">
-        {/* Logo */}
-        <Image
-          src={"/header/logo.png"}
-          width={155}
-          height={18}
-          alt="InLights logo"
-        />
+    <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[120px] py-[16px] text-white">
+      {/* Logo */}
+      <Image
+        src={"/header/logo.png"}
+        alt="Logo"
+        width={156}
+        height={18}
+        className="flex-shrink-0"
+      />
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:items-center md:gap-8">
-          <a href="#" className="text-white hover:text-[#6C63FF]">
-            Home
-          </a>
-          <a
-            href="#"
-            className="flex items-center gap-1 text-white hover:text-[#6C63FF]"
-          >
-            Services
-            <ChevronDown size={18} />
-          </a>
-          <a
-            href="#"
-            className="flex items-center gap-1 text-white hover:text-[#6C63FF]"
-          >
-            Our Products
-            <ChevronDown size={18} />
-          </a>
-          <a
-            href="#"
-            className="flex items-center gap-1 text-white hover:text-[#6C63FF]"
-          >
-            Company
-            <ChevronDown size={18} />
-          </a>
-        </nav>
-
-        <a
-          href="#"
-          className="border-borderCustom rounded-full bg-gradient-to-r from-gradientDark to-gradientLight px-6 py-2 text-white shadow-custom transition-opacity hover:opacity-90"
-        >
-          Join Us
-        </a>
-
-        {/* Mobile Menu Button */}
-        <button className="text-white md:hidden" onClick={toggleMenu}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+      {/* Navigation */}
+      <div className="flex items-center justify-center gap-[9px]">
+        <div className="flex items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+          <div className="text-size-4 font-semibold">Home</div>
+        </div>
+        <div className="flex items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+          <div className="text-size-4 font-semibold">Services</div>
+          <ChevronDown width={16} height={16} />
+        </div>
+        <div className="flex items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+          <div className="text-size-4 font-semibold">Our Products</div>
+          <ChevronDown width={16} height={16} />
+        </div>
+        <div className="flex items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+          <div className="text-size-4 font-semibold">Company</div>
+          <ChevronDown width={16} height={16} />
+        </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="absolute left-0 right-0 top-full bg-[#0A0B14] bg-opacity-90 backdrop-blur-md md:hidden">
-          <nav className="flex flex-col items-center gap-4 py-4">
-            <a href="#" className="text-white hover:text-[#6C63FF]">
-              Home
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-1 text-white hover:text-[#6C63FF]"
-            >
-              Services
-              <ChevronDown size={18} />
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-1 text-white hover:text-[#6C63FF]"
-            >
-              Our Products
-              <ChevronDown size={18} />
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-1 text-white hover:text-[#6C63FF]"
-            >
-              Company
-              <ChevronDown size={18} />
-            </a>
-            <a
-              href="#"
-              className="rounded-full bg-gradient-to-r from-gradientDark to-gradientLight px-6 py-2 text-white transition-opacity hover:opacity-90"
-            >
-              Join Us
-            </a>
-          </nav>
-        </div>
-      )}
+      {/* Join Us Button */}
+      <div className="shadow-[0_0_35.7px_0_rgba(81, 68, 220, 0.97)] flex items-center justify-center gap-[12px] rounded-[10px] border-[3px] border-[#552DDA] px-[20px] py-[14px]">
+        <span className="text-size-6 font-medium">Join Us</span>
+        <MoveUpRight width={17} height={17} />
+      </div>
     </header>
   );
 }
