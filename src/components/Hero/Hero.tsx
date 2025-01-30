@@ -31,7 +31,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 inline-flex flex-col items-center gap-[50px]">
         {/* Main Heading */}
-        <div className="flex flex-col items-center gap-[18px]">
+        <div className="flex flex-col items-center">
           {/* First heading */}
           <h1 className="w-[1199px] text-center text-size-1 font-medium">
             Redefining Smart Cities using
