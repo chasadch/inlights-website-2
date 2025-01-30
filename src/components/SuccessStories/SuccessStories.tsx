@@ -35,7 +35,7 @@ export default function SuccessStories() {
           <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
-              className="relative flex h-[174px] w-[421px] flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
+              className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
               style={{
                 background:
                   "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_1.png')",
@@ -73,7 +73,7 @@ export default function SuccessStories() {
           <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
-              className="relative flex h-[174px] w-[421px] flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
+              className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
               style={{
                 background:
                   "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_2.png')",
@@ -107,7 +107,7 @@ export default function SuccessStories() {
           <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
             {/* Image with overlay */}
             <div
-              className="relative flex h-[174px] w-[421px] flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
+              className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
               style={{
                 background:
                   "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_3.png')",
