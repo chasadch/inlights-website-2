@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-[#0D0D1D] py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-          {/* Left Section */}
           <div className="space-y-6 md:col-span-6">
             <div className="space-y-4">
               <Image
@@ -55,66 +54,57 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Quick Links and Solutions */}
-          <div className="md:col-span-6 md:flex md:justify-end md:gap-[60px]">
-            {/* Quick Links */}
-            <div className="md:w-auto">
-              <h3 className="mb-6 text-size-5 font-medium">Quick Links</h3>
-              <ul className="space-y-4 text-gray-400">
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    About us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    Inlights Security
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    Inlights Traffic
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    Careers
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Solutions */}
-            <div className="md:w-auto">
-              <h3 className="mb-6 text-size-5 font-medium">Solutions</h3>
-              <ul className="space-y-4 text-gray-400">
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    Web Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    Product Design
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    AI Automation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#B5B5B5] hover:text-white">
-                    Computer Vision
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="md:col-span-3">
+            <h3 className="mb-6 text-size-5 font-medium">Quick Links</h3>
+            <ul className="space-y-4 text-gray-400">
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  Inlights Security
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  Inlights Traffic
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  Careers
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="md:col-span-3">
+            <h3 className="mb-6 text-size-5 font-medium">Solutions</h3>
+            <ul className="space-y-4 text-gray-400">
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  Product Design
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  AI Automation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-[#B5B5B5] hover:text-white">
+                  Computer Vision
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-
-        {/* Footer Bottom */}
         <div className="mt-16 flex flex-col items-center justify-between border-t border-gray-800 pt-8 text-size-6 font-normal text-white md:flex-row">
           <a href="mailto:admin@inlights.com.pk">admin@inlights.com.pk</a>
           <p>© 2025 Inlights. All rights reserved</p>

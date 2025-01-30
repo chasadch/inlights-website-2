@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`w-full text-white antialiased ${manrope.className}`}>
-        <Header />
+        {/* <Header /> */}
         <main className="min-w-container">{children}</main>
         <Footer />
       </body>

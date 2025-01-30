@@ -9,8 +9,8 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 export default function HomePage() {
   return (
     <div>
-      <Hero />
-      <Statistics />
+      {/* <Hero /> */}
+      {/* <Statistics /> */}
       <Products />
       <Services />
       <SuccessStories />
