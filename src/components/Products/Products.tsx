@@ -1,85 +1,71 @@
-import { MoveUpRight } from "lucide-react";
-
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 export default function Products() {
   return (
-    <section className="flex flex-col items-start gap-[10px] self-stretch bg-black px-[70px] py-[130px]">
-      <div className="flex flex-col items-center gap-[64px] self-stretch">
-        <div className="flex flex-col items-start gap-[8px]">
-          <h1 className="text-center text-size-2 font-medium">Our Products</h1>
-        </div>
-
-        <div className="flex w-[1299px] items-center gap-[24px]">
-          <div className="flex-grow-1 relative flex h-[591px] flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)]">
-            <div className="flex flex-col items-start justify-center gap-[24px] self-stretch">
-              <div className="flex flex-col items-start gap-[34px] self-stretch">
-                <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
-                  <h1 className="text-size-7 font-normal text-[#414C5C]">
-                    Traffic Management
-                  </h1>
-                </div>
-                {/* Subheading */}
-                <p className="w-[467px] text-[34px] font-medium">
-                  Manage City Traffic with AI
-                </p>
-                <p className="self-stretch text-size-5 font-normal opacity-70">
-                  InLights revolutionizes your planning with advanced
-                  forecasting tools. Anticipate needs, schedule proactively, and
-                  optimize resources to keep operations running smoothly.
-                </p>
-                <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                  <span className="text-size-7 font-normal">
-                    Discover InLights
-                  </span>
-                  <div className="flex h-[15px] w-[15px] items-center justify-center">
-                    <MoveUpRight width={15} height={15} />
-                  </div>
-                </div>
-              </div>
+    <div className="min-h-screen w-full bg-black px-4 py-20 text-white">
+      <div className="container mx-auto max-w-7xl">
+        <h2 className="mb-12 text-center text-4xl font-light md:text-5xl">
+          Our Products
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="flex flex-col rounded-3xl border border-blue-500/20 bg-[#0f1729] p-8 shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+            <div className="inline-block">
+              <span className="rounded-full bg-white/10 px-4 py-1 text-sm">
+                Traffic Management
+              </span>
             </div>
-
-            <div className="absolute -bottom-[107px] left-[16px] h-[307px] w-[567px]">
-              <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px] border-[6px] border-white bg-white">
-                1
-              </div>
+            <h3 className="mb-4 mt-6 text-2xl font-light md:text-3xl">
+              Manage City Traffic with AI
+            </h3>
+            <p className="mb-6 text-gray-400">
+              InLights revolutionizes your planning with advanced forecasting
+              tools. Anticipate needs, schedule proactively, and optimize
+              resources to keep operations running smoothly.
+            </p>
+            <button className="mb-8 flex w-fit items-center gap-2 text-blue-400 transition-colors hover:text-blue-300">
+              Discover Insights <ArrowRight className="h-4 w-4" />
+            </button>
+            <div className="mt-auto overflow-hidden rounded-xl border border-white/10">
+              <Image
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072"
+                alt="Traffic Management Dashboard"
+                width={400}
+                height={400}
+                className="h-auto w-full"
+              />
             </div>
           </div>
-
-          <div className="flex-grow-1 relative flex h-[591px] flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)]">
-            <div className="flex flex-col items-start justify-center gap-[24px] self-stretch">
-              <div className="flex flex-col items-start gap-[34px] self-stretch">
-                <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
-                  <h1 className="text-size-7 font-normal text-[#414C5C]">
-                    Traffic Management
-                  </h1>
-                </div>
-                {/* Subheading */}
-                <p className="w-[467px] text-[34px] font-medium">
-                  Manage City Traffic with AI
-                </p>
-                <p className="self-stretch text-size-5 font-normal opacity-70">
-                  InLights revolutionizes your planning with advanced
-                  forecasting tools. Anticipate needs, schedule proactively, and
-                  optimize resources to keep operations running smoothly.
-                </p>
-                <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                  <span className="text-size-7 font-normal">
-                    Discover InLights
-                  </span>
-                  <div className="flex h-[15px] w-[15px] items-center justify-center">
-                    <MoveUpRight width={15} height={15} />
-                  </div>
-                </div>
-              </div>
+          <div className="flex flex-col rounded-3xl border border-blue-500/20 bg-[#0f1729] p-8 shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+            <div className="inline-block">
+              <span className="rounded-full bg-white/10 px-4 py-1 text-sm">
+                Premise Security
+              </span>
             </div>
-
-            <div className="absolute -bottom-[107px] left-[16px] h-[307px] w-[567px]">
-              <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px] border-[6px] border-white bg-white">
-                1
-              </div>
+            <h3 className="mb-4 mt-6 text-2xl font-light md:text-3xl">
+              Manage who Enters your Premises
+            </h3>
+            <p className="mb-6 text-gray-400">
+              InLights revolutionizes gate security with a cutting-edge solution
+              that fuses AI-driven vehicle identification, CNIC scanning, and
+              real-time tracking for unmatched access control and theft
+              prevention.
+            </p>
+            <button className="mb-8 flex w-fit items-center gap-2 text-blue-400 transition-colors hover:text-blue-300">
+              Discover Insights <ArrowRight className="h-4 w-4" />
+            </button>
+            <div className="mt-auto overflow-hidden rounded-xl border border-white/10">
+              <Image
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072"
+                alt="Premise Security Dashboard"
+                width={400}
+                height={400}
+                className="h-auto w-full"
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
