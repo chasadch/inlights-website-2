@@ -153,7 +153,7 @@ export default function Contact() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="flex w-[150px] items-center justify-center gap-[11px] rounded-[10px] bg-[#5144DC] px-[20px] py-[14px] shadow-custom transition-opacity hover:opacity-90"
+            className="shadow-custom flex w-[150px] items-center justify-center gap-[11px] rounded-[10px] bg-[#5144DC] px-[20px] py-[14px] transition-opacity hover:opacity-90"
           >
             <span className="text-size-5 font-medium">Let&apos;s Talk</span>
             <MoveUpRight width={17} height={17} />

@@ -48,13 +48,7 @@ export default function Hero() {
           </h1>
         </div>
         {/* Let's talk button */}
-        <Button
-          background="bg-gradientDark"
-          borderColor="border-gradientDark"
-          hover="hover:bg-transparent hover:border-none hover:ring-0"
-        >
-          Let&apos; talk
-        </Button>
+        <Button variant="gradient">Let&apos;s Talk</Button>
       </div>
 
       {/* Bottom */}

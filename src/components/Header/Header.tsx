@@ -33,14 +33,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Join Us Button */}
-      <Button
-        background="bg-transparent"
-        borderColor="border-gradientDark"
-        hover="hover:bg-gradient-to-r hover:from-gradientLight hover:to-gradientDark hover:border-none hover:ring-0"
-      >
-        Join Us
-      </Button>
+      <Button>Join Us</Button>
     </header>
   );
 }

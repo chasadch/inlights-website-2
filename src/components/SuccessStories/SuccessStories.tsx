@@ -1,28 +1,92 @@
-import { MoveUpRight } from "lucide-react";
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import { useState } from "react";
+import StoriesCard from "../ui/StoriesCard";
 
 export default function SuccessStories() {
+  const stories = [
+    {
+      image: "/successStories/coverPhoto_1.png",
+      category: "GeoHealth",
+      title: "AI-Powered Physical Exercise Coach",
+      description:
+        "AI-powered exercise monitoring system for real-time pose detection, angle measurements, and form correction feedback.",
+    },
+    {
+      image: "/successStories/coverPhoto_2.png",
+      category: "Manufacturing",
+      title: "Project 2",
+      description:
+        "Manufacturers are achieving remarkable gains in productivity with our preventive maintenance system.",
+    },
+    {
+      image: "/successStories/coverPhoto_3.png",
+      category: "Health Care",
+      title: "Project 3",
+      description:
+        "Healthcare providers are witnessing notable enhancements in service quality with our platform.",
+    },
+    {
+      image: "/successStories/coverPhoto_2.png",
+      category: "Manufacturing",
+      title: "Project 2",
+      description:
+        "Manufacturers are achieving remarkable gains in productivity with our preventive maintenance system.",
+    },
+    {
+      image: "/successStories/coverPhoto_1.png",
+      category: "GeoHealth",
+      title: "AI-Powered Physical Exercise Coach",
+      description:
+        "AI-powered exercise monitoring system for real-time pose detection, angle measurements, and form correction feedback.",
+    },
+  ];
+
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 3;
+
+  const handleScrollLeft = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (startIndex + itemsPerPage < stories.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
   return (
-    <div className="bg-black px-[70px] py-[140px]">
+    <div className="bg-black px-[70px] py-[140px] text-white">
       <div className="flex flex-col items-start gap-[64px] self-stretch">
+        {/* Header Section */}
         <div className="flex items-center justify-between gap-[48px] self-stretch">
-          <div className="flex flex-col items-start gap-[8px]">
-            <h1 className="text-size-2 font-normal">Our Success Stories</h1>
-          </div>
-          <div className="flex-grow-1 flex items-end justify-end gap-[10px]">
-            <button className="flex h-[40px] w-[40px] items-center justify-center rounded-[900px] border-[1px] border-[#B4BBC6] p-[12px]">
+          <h1 className="text-size-2 font-normal">Our Success Stories</h1>
+
+          {/* Navigation Buttons */}
+          <div className="flex gap-[10px]">
+            <button
+              onClick={handleScrollLeft}
+              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-[#B4BBC6] transition-all hover:scale-110 hover:bg-[#B4BBC6] hover:bg-opacity-20 disabled:opacity-50"
+              disabled={startIndex === 0}
+            >
               <Image
-                src={"/successStories/left.png"}
-                alt="Arrow"
+                src="/successStories/left.png"
+                alt="Arrow Left"
                 width={24}
                 height={24}
               />
             </button>
-            <button className="flex h-[40px] w-[40px] items-center justify-center rounded-[900px] border-[1px] border-[#B4BBC6] p-[12px]">
+            <button
+              onClick={handleScrollRight}
+              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-[#B4BBC6] transition-all hover:scale-110 hover:bg-[#B4BBC6] hover:bg-opacity-20 disabled:opacity-50"
+              disabled={startIndex + itemsPerPage >= stories.length}
+            >
               <Image
-                src={"/successStories/right.png"}
-                alt="Arrow"
+                src="/successStories/right.png"
+                alt="Arrow Right"
                 width={24}
                 height={24}
               />
@@ -30,112 +94,19 @@ export default function SuccessStories() {
           </div>
         </div>
 
-        <div className="flex items-center gap-[24px] self-stretch">
-          {/* Card 1 */}
-          <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
-            {/* Image with overlay */}
-            <div
-              className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
-              style={{
-                background:
-                  "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_1.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <span className="absolute top-1/2 text-size-4 font-normal">
-                GeoHealth
-              </span>
-            </div>
-            {/* Text content */}
-            <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="self-stretch text-size-3 font-bold">
-                AI-Powered Physical Exercise Coach
-              </h1>
-              <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
-                AI-powered exercise monitoring system for real-time pose
-                detection, angle measurements, and form correction feedback for
-                various exercises.
-              </p>
-              <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                <span className="text-size-7 font-normal">
-                  Discover InLights
-                </span>
-                <div className="flex h-[15px] w-[15px] items-center justify-center">
-                  <MoveUpRight width={15} height={15} />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
-            {/* Image with overlay */}
-            <div
-              className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
-              style={{
-                background:
-                  "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_2.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <span className="absolute top-1/2 text-size-4 font-normal">
-                Manufacturing
-              </span>
-            </div>
-            {/* Text content */}
-            <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="text-size-3 font-bold">Project 2</h1>
-              <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
-                Manufacturers are achieving remarkable gains in productivity and
-                efficiency with Emerald’s innovative solutions. Our preventive
-                maintenance system has...
-              </p>
-              <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                <span className="text-size-7 font-normal">Read More</span>
-                <div className="flex h-[15px] w-[15px] items-center justify-center">
-                  <MoveUpRight width={15} height={15} />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="border-borderCustom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] bg-bg shadow-custom">
-            {/* Image with overlay */}
-            <div
-              className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px]"
-              style={{
-                background:
-                  "linear-gradient(0deg, rgba(15, 25, 82, 0.11) 0%, rgba(15, 25, 82, 0.11) 100%), url('/successStories/coverPhoto_3.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <span className="absolute top-1/2 text-size-4 font-normal">
-                Health Care
-              </span>
-            </div>
-            {/* Text content */}
-            <div className="flex flex-col items-start gap-[14px] self-stretch px-[24px] pb-[24px]">
-              <h1 className="text-size-3 font-bold">Project 3</h1>
-              <p className="h-[65px] overflow-hidden text-size-6 font-normal text-white opacity-70">
-                Healthcare providers are witnessing notable enhancements in
-                service quality and operational efficiency with Emerald’s
-                cutting-edge platform. Our asse...
-              </p>
-              <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-                <span className="text-size-7 font-normal">Read More</span>
-                <div className="flex h-[15px] w-[15px] items-center justify-center">
-                  <MoveUpRight width={15} height={15} />
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Success Stories Grid Section */}
+        <div className="grid w-full grid-cols-1 gap-[24px] md:grid-cols-2 lg:grid-cols-3">
+          {stories
+            .slice(startIndex, startIndex + itemsPerPage)
+            .map((story, index) => (
+              <StoriesCard
+                key={index}
+                image={story.image}
+                category={story.category}
+                title={story.title}
+                description={story.description}
+              />
+            ))}
         </div>
       </div>
     </div>
