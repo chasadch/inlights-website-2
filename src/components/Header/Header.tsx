@@ -1,5 +1,6 @@
-import { ChevronDown, MoveUpRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Button from "../ui/Button";
 
 export default function Header() {
   return (
@@ -33,10 +34,13 @@ export default function Header() {
       </div>
 
       {/* Join Us Button */}
-      <div className="shadow-[0_0_35.7px_0_rgba(81, 68, 220, 0.97)] flex items-center justify-center gap-[12px] rounded-[10px] border-[3px] border-[#552DDA] px-[20px] py-[14px]">
-        <span className="text-size-6 font-medium">Join Us</span>
-        <MoveUpRight width={17} height={17} />
-      </div>
+      <Button
+        background="bg-transparent"
+        borderColor="border-gradientDark"
+        hover="hover:bg-gradient-to-r hover:from-gradientLight hover:to-gradientDark hover:border-none hover:ring-0"
+      >
+        Join Us
+      </Button>
     </header>
   );
 }

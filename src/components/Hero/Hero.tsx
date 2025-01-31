@@ -1,5 +1,5 @@
-import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import Button from "../ui/Button";
 
 export default function Hero() {
   return (
@@ -48,10 +48,13 @@ export default function Hero() {
           </h1>
         </div>
         {/* Let's talk button */}
-        <button className="flex items-center justify-center gap-[11px] rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] px-[20px] py-[14px] text-center shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)]">
-          <button className="text-size-5 font-normal">Let&apos;s talk</button>
-          <MoveUpRight width={16.576} height={16.576} />
-        </button>
+        <Button
+          background="bg-gradientDark"
+          borderColor="border-gradientDark"
+          hover="hover:bg-transparent hover:border-none hover:ring-0"
+        >
+          Let&apos; talk
+        </Button>
       </div>
 
       {/* Bottom */}

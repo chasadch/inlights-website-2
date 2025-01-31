@@ -1,5 +1,6 @@
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import Button from "../ui/Button";
 
 export default function Services() {
   return (
@@ -11,7 +12,7 @@ export default function Services() {
         </div>
 
         <div className="flex h-[298px] items-center gap-[24px] self-stretch">
-          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] border-borderCustom flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] bg-bg p-[24px] shadow-custom">
+          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[24px] shadow-custom">
             <Image
               src={"/services/ph_code-bold.png"}
               alt="Service 1"
@@ -35,7 +36,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] border-borderCustom flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] bg-bg p-[24px] shadow-custom">
+          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[24px] shadow-custom">
             <Image
               src={"/services/product_design.png"}
               alt="Service 1"
@@ -59,7 +60,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] border-borderCustom flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] bg-bg p-[24px] shadow-custom">
+          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[24px] shadow-custom">
             <Image
               src={"/services/computer_vision.png"}
               alt="Service 1"
@@ -83,7 +84,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] border-borderCustom flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] bg-bg p-[24px] shadow-custom">
+          <div className="flex-grow-1 border-[rgba(45, 160, 184, 0.15)] flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[24px] shadow-custom">
             <Image
               src={"/services/ai_automation.png"}
               alt="Service 1"
@@ -126,16 +127,13 @@ export default function Services() {
               We Are Looking for Exceptional Talent
             </p>
             {/* Button */}
-            <div
-              className="flex cursor-pointer items-center justify-center gap-[11px] rounded-[9px] px-[21px] py-[15px] shadow-[0_0_36px_0_#5144DCF7]"
-              style={{
-                background:
-                  "var(--Gradient, linear-gradient(180deg, #552DDA 0%, #1D3E80 100%))",
-              }}
+            <Button
+              background="bg-gradientDark"
+              borderColor="border-gradientDark"
+              hover="hover:bg-transparent hover:border-none hover:ring-0"
             >
-              <p className="text-size-5 font-bold text-white">Join Us</p>
-              <MoveUpRight width={17} height={17} />
-            </div>
+              Join Us
+            </Button>
           </div>
         </div>
       </div>

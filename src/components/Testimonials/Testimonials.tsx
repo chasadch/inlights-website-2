@@ -63,7 +63,7 @@ export default function Testimonials() {
           </h1>
 
           {/* Testimonial Card */}
-          <div className="border-borderCustom flex w-[1300px] flex-col items-center justify-center gap-[40px] rounded-[32px] border bg-bg p-[48px] shadow-custom">
+          <div className="flex w-[1300px] flex-col items-center justify-center gap-[40px] rounded-[32px] border border-borderCustom bg-bg p-[48px] shadow-custom">
             <div className="flex items-center gap-[128px]">
               {/* Left Arrow (Disabled for one-way movement) */}
               <button
