@@ -2,7 +2,7 @@
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 export default function Testimonials() {
   const testimonials = [
@@ -31,24 +31,26 @@ export default function Testimonials() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // Effect to handle seamless looping
-  useEffect(() => {
-    if (currentIndex === testimonials.length) {
-      setTimeout(() => {
-        setCurrentIndex(0);
-        if (sliderRef.current) {
-          sliderRef.current.style.transition = "none"; // Instantly reset
-          sliderRef.current.style.transform = `translateX(0%)`;
-        }
-      }, 500); // Match animation duration
+  // Handler to reset the slider when the transition ends on the cloned slide.
+  const handleTransitionEnd = () => {
+    if (currentIndex === testimonials.length && sliderRef.current) {
+      // Remove transition so the reset happens instantly
+      sliderRef.current.style.transition = "none";
+      setCurrentIndex(0);
+      sliderRef.current.style.transform = `translateX(0%)`;
+
+      // Force reflow to apply the no-transition reset immediately
+      void sliderRef.current.offsetWidth;
+
+      // Re-enable the transition for future animations
+      sliderRef.current.style.transition = "transform 0.5s ease-in-out";
     }
-  }, [currentIndex]);
+  };
 
   const nextTestimonial = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) => prevIndex + 1);
-
     setTimeout(() => {
       setIsTransitioning(false);
     }, 500);
@@ -73,17 +75,14 @@ export default function Testimonials() {
                 <ArrowLeft width={24} height={24} stroke="currentColor" />
               </button>
 
-              {/* Testimonial Wrapper */}
+              {/* Testimonial Slider */}
               <div className="relative w-[800px] overflow-hidden">
                 <div
                   ref={sliderRef}
+                  onTransitionEnd={handleTransitionEnd}
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{
                     transform: `translateX(-${currentIndex * 100}%)`,
-                    transition:
-                      currentIndex === testimonials.length
-                        ? "none"
-                        : "transform 0.5s ease-in-out",
                   }}
                 >
                   {testimonials.map((testimonial, index) => (
@@ -149,7 +148,7 @@ export default function Testimonials() {
               </button>
             </div>
 
-            {/* Pagination Dots (Fixed) */}
+            {/* Pagination Dots */}
             <div className="flex -rotate-[90deg] flex-col items-start gap-[6px]">
               {testimonials.map((_, i) => (
                 <div

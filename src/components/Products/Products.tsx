@@ -1,5 +1,3 @@
-import { MoveUpRight } from "lucide-react";
-import Image from "next/image";
 import ProductCard from "../ui/ProductCard";
 
 export default function Products() {

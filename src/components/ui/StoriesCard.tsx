@@ -15,13 +15,15 @@ export default function StoriesCard({
   image,
 }: StoriesCardProps) {
   return (
-    <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] border-borderCustom bg-bg shadow-shadowCustom">
+    <div className="relative flex w-full flex-col items-start gap-[34px] rounded-[32px] border-[1px] border-borderCustom bg-bg shadow-shadowCustom">
       {/* Image with overlay */}
       <div
         className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px] bg-cover bg-center"
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className="absolute inset-0 bg-[rgba(15,25,82,0.11)]"></div>
+        {/* 🔥 Fixed overlay: Now it covers the entire image */}
+        <div className="absolute inset-0 bg-[rgba(18,19,22,0.46)] backdrop-blur-[1px]"></div>
+
         <span className="relative z-10 text-size-4 font-normal">
           {category}
         </span>
