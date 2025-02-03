@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, MoveUpRight } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Button from "../ui/Button";
 
@@ -146,7 +146,7 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
+              className="resize-none border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               rows={3}
             />
           </div>
