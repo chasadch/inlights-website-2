@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import Button from "../ui/Button";
 
 export default function Contact() {
   return (
@@ -84,56 +85,56 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex h-[522px] w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
+      <div className="flex w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
         <form className="flex w-full flex-col gap-[52px]">
-          <div className="flex gap-[20px]">
-            {/* Email Input */}
-            <div className="flex w-1/2 flex-col">
-              <label htmlFor="email" className="text-size-6 font-normal">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                className="border-b border-[#DFDFDF] bg-transparent p-2 text-white outline-none"
-              />
-            </div>
-
-            {/* Phone Input */}
-            <div className="flex w-1/2 flex-col">
-              <label htmlFor="phone" className="text-size-6 font-normal">
-                Phone
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                className="border-b border-[#DFDFDF] bg-transparent p-2 text-white outline-none"
-              />
-            </div>
-          </div>
-
-          <div className="flex gap-[20px]">
+          <div className="flex gap-[63px]">
             {/* First Name Input */}
-            <div className="flex w-1/2 flex-col">
+            <div className="flex w-1/2 flex-col gap-[50px]">
               <label htmlFor="first-name" className="text-size-6 font-normal">
                 First Name
               </label>
               <input
                 id="first-name"
                 type="text"
-                className="border-b border-[#DFDFDF] bg-transparent p-2 text-white outline-none"
+                className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               />
             </div>
 
             {/* Last Name Input */}
-            <div className="flex w-1/2 flex-col">
+            <div className="flex w-1/2 flex-col gap-[50px]">
               <label htmlFor="last-name" className="text-size-6 font-normal">
                 Last Name
               </label>
               <input
                 id="last-name"
                 type="text"
-                className="border-b border-[#DFDFDF] bg-transparent p-2 text-white outline-none"
+                className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
+              />
+            </div>
+          </div>
+
+          <div className="flex gap-[63px]">
+            {/* Email Input */}
+            <div className="flex w-1/2 flex-col gap-[50px]">
+              <label htmlFor="email" className="text-size-6 font-normal">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
+              />
+            </div>
+
+            {/* Phone Input */}
+            <div className="flex w-1/2 flex-col gap-[50px]">
+              <label htmlFor="phone" className="text-size-6 font-normal">
+                Phone
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               />
             </div>
           </div>
@@ -145,19 +146,15 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              className="border-b border-[#DFDFDF] bg-transparent p-2 text-white outline-none"
+              className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               rows={3}
             />
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="shadow-custom flex w-[150px] items-center justify-center gap-[11px] rounded-[10px] bg-[#5144DC] px-[20px] py-[14px] transition-opacity hover:opacity-90"
-          >
-            <span className="text-size-5 font-medium">Let&apos;s Talk</span>
-            <MoveUpRight width={17} height={17} />
-          </button>
+          <div>
+            <Button variant="gradient">Let&apos;s Talk</Button>
+          </div>
         </form>
       </div>
     </section>
