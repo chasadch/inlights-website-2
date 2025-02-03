@@ -147,7 +147,7 @@ export default function Header() {
         </li>
       </ul>
 
-      <Button>Join Us</Button>
+      <Button variant="outline">Join Us</Button>
     </header>
   );
 }
