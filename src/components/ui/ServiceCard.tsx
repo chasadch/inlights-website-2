@@ -16,7 +16,7 @@ export default function ServiceCard({
   linkText = "Discover InLights",
 }: ServiceCardProps) {
   return (
-    <div className="border-[rgba(45, 160, 184, 0.15)] shadow-custom flex flex-grow flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px]">
+    <div className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px] shadow-shadowCustom">
       {/* Service Icon */}
       <Image src={image} alt={title} width={72} height={72} />
 

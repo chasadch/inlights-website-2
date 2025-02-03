@@ -84,7 +84,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex h-[522px] w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] border border-[#5144DCF7] bg-[#050919] p-[36px] shadow-[0_0_30px_0_#5144DCF7]">
+      <div className="flex h-[522px] w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
         <form className="flex w-full flex-col gap-[52px]">
           <div className="flex gap-[20px]">
             {/* Email Input */}

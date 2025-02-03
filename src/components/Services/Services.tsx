@@ -1,4 +1,4 @@
-import Button from "../ui/button"; // Ensure correct import
+import Button from "../ui/Button";
 import ServiceCard from "../ui/ServiceCard";
 
 export default function Services() {

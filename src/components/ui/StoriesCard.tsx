@@ -15,7 +15,7 @@ export default function StoriesCard({
   image,
 }: StoriesCardProps) {
   return (
-    <div className="shadow-custom relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] border-borderCustom bg-bg">
+    <div className="relative flex flex-col items-start gap-[34px] rounded-[32px] border-[1px] border-borderCustom bg-bg shadow-shadowCustom">
       {/* Image with overlay */}
       <div
         className="relative flex h-[174px] w-full flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[20px] bg-cover bg-center"
