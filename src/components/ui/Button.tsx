@@ -16,8 +16,8 @@ export default function Button({ variant, children }: ButtonProps) {
     <button
       className={`${baseClasses} ${
         isGradient
-          ? "border-transparent bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)] hover:border-[3px] hover:border-[#552DDA] hover:bg-none"
-          : "border-[3px] border-[#552DDA] bg-transparent text-white shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)] hover:border-transparent hover:bg-gradient-to-b hover:from-[#552DDA] hover:to-[#1D3E80]"
+          ? "border-transparent bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-shadowCustom hover:bg-transparent"
+          : "border-[3px] border-[#552DDA] bg-transparent text-white shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)] hover:bg-[#5144DCF7]"
       }`}
     >
       <span>{children}</span>
