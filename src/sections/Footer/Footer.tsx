@@ -1,4 +1,4 @@
-import { Linkedin, MoveUpRight, Youtube } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
