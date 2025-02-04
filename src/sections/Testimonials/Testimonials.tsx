@@ -24,6 +24,18 @@ export default function Testimonials() {
       role: "Founder",
       image: "/testimonials/ellipse.png",
     },
+    {
+      text: "Our productivity increased significantly after implementing InLights Solutions. The automation features are a game-changer for our workflow efficiency.",
+      name: "Leslie Alexander",
+      role: "CTO",
+      image: "/testimonials/ellipse.png",
+    },
+    {
+      text: "The best investment we made this year! InLights Solutions optimized our operations beyond expectations. Highly recommended!",
+      name: "Michael Johnson",
+      role: "Founder",
+      image: "/testimonials/ellipse.png",
+    },
   ];
 
   // State for animation control
@@ -57,7 +69,7 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="bg-black px-[70px] py-[160px]">
+    <section className="bg-black px-[70px] py-[160px]">
       <div className="flex flex-col items-center gap-[64px]">
         <div className="flex flex-col items-center gap-[8px]">
           <h1 className="mb-[64px] w-[864px] text-center text-size-2 font-normal">
@@ -150,20 +162,23 @@ export default function Testimonials() {
 
             {/* Pagination Dots */}
             <div className="flex -rotate-[90deg] flex-col items-start gap-[6px]">
-              {testimonials.map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-[6px] w-[6px] rounded-[97px] transition-all duration-300 ${
-                    i === currentIndex % testimonials.length
-                      ? "h-[18px] bg-white"
-                      : "bg-[#929CAB]"
-                  }`}
-                ></div>
-              ))}
+              {/* Extra wrapper to re-rotate and lay out horizontally */}
+              <div className="flex rotate-[90deg] flex-row items-center gap-[6px]">
+                {testimonials.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-[6px] rounded-[97px] transition-all duration-300 ${
+                      i === currentIndex % testimonials.length
+                        ? "w-[18px] bg-white"
+                        : "w-[6px] bg-[#929CAB]"
+                    }`}
+                  ></div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -28,11 +28,25 @@ export default function SuccessStories() {
         "Healthcare providers are witnessing notable enhancements in service quality with our platform.",
     },
     {
+      image: "/successStories/coverPhoto_1.png",
+      category: "GeoHealth",
+      title: "AI-Powered Physical Exercise Coach",
+      description:
+        "AI-powered exercise monitoring system for real-time pose detection, angle measurements, and form correction feedback.",
+    },
+    {
       image: "/successStories/coverPhoto_2.png",
       category: "Manufacturing",
       title: "Project 2",
       description:
         "Manufacturers are achieving remarkable gains in productivity with our preventive maintenance system.",
+    },
+    {
+      image: "/successStories/coverPhoto_3.png",
+      category: "Health Care",
+      title: "Project 3",
+      description:
+        "Healthcare providers are witnessing notable enhancements in service quality with our platform.",
     },
     {
       image: "/successStories/coverPhoto_1.png",
@@ -41,20 +55,31 @@ export default function SuccessStories() {
       description:
         "AI-powered exercise monitoring system for real-time pose detection, angle measurements, and form correction feedback.",
     },
+    {
+      image: "/successStories/coverPhoto_2.png",
+      category: "Manufacturing",
+      title: "Project 2",
+      description:
+        "Manufacturers are achieving remarkable gains in productivity with our preventive maintenance system.",
+    },
+    {
+      image: "/successStories/coverPhoto_3.png",
+      category: "Health Care",
+      title: "Project 3",
+      description:
+        "Healthcare providers are witnessing notable enhancements in service quality with our platform.",
+    },
   ];
 
-  // Ref for the horizontal scroll container.
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsPerPage = 3; // Number of items visible (and scrolled per click)
 
-  // Track current scroll position and maximum scroll.
   const [scrollPos, setScrollPos] = useState(0);
   const [maxScroll, setMaxScroll] = useState(0);
 
   useEffect(() => {
     const container = containerRef.current;
     if (container) {
-      // Set maximum scrollable distance.
       setMaxScroll(container.scrollWidth - container.clientWidth);
       const handleScrollEvent = () => {
         setScrollPos(container.scrollLeft);
@@ -64,13 +89,12 @@ export default function SuccessStories() {
     }
   }, []);
 
-  // Compute and perform smooth scrolling by the width of three card wrappers.
   const handleScroll = (direction: "left" | "right") => {
     if (containerRef.current) {
       const cardWrapper = containerRef.current.firstElementChild as HTMLElement;
       if (cardWrapper) {
         const cardWidth = cardWrapper.offsetWidth;
-        const gap = 24; // gap-[24px] in pixels
+        const gap = 24; // gap-[24px]
         const scrollDistancePerCard = cardWidth + gap;
         const scrollDistance = scrollDistancePerCard * itemsPerPage;
         containerRef.current.scrollBy({
@@ -120,11 +144,10 @@ export default function SuccessStories() {
         {/* Success Stories Grid Section */}
         <div
           ref={containerRef}
-          className="flex gap-[24px] overflow-x-auto scroll-smooth"
-          style={{ scrollbarWidth: "none" }} // for Firefox
+          className="flex h-auto items-center gap-[24px] self-stretch overflow-x-auto overflow-y-visible scroll-smooth"
+          style={{ scrollbarWidth: "none" }} // For Firefox
         >
           {stories.map((story, index) => (
-            // Wrap each card to force it to take up one-third of the available width.
             <div
               key={index}
               className="flex-shrink-0"

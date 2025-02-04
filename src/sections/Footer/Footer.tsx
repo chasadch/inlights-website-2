@@ -52,20 +52,22 @@ export default function Footer() {
           <div className="flex items-start gap-[12px]">
             <div className="relative flex w-[35px] items-start justify-between">
               <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25"></div>
-              <Youtube
+              <Image
+                src={"/footer/youtube.png"}
+                alt="Logo"
                 width={16}
                 height={16}
-                color="#fff"
                 className="absolute bottom-[9px] right-[9px]"
               />
             </div>
 
             <div className="relative flex w-[35px] items-start justify-between">
               <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25"></div>
-              <Linkedin
+              <Image
+                src={"/footer/linkedin.png"}
+                alt="Logo"
                 width={16}
                 height={16}
-                color="#fff"
                 className="absolute bottom-[9px] right-[9px]"
               />
             </div>
@@ -91,8 +93,8 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-[24px]">
-            <h1 className="text-size-5 font-medium">Quick Links</h1>
+          <div className="flex flex-col items-start gap-[20px]">
+            <h1 className="text-size-5 font-medium">Solutions</h1>
             <div className="flex flex-col items-start gap-[16px]">
               <span className="text-size-6 font-normal text-[#B5B5B5]">
                 Web Development

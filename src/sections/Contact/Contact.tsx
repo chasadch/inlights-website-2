@@ -28,7 +28,7 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-size-3 font-bold">Our Email</h1>
+              <h1 className="text-size-3 font-bold">Our email</h1>
               <p className="text-size-5 font-normal opacity-70">
                 admin@inlights.com.pk
               </p>
@@ -78,15 +78,30 @@ export default function Contact() {
 
         {/* Social Icons */}
         <div className="flex items-start gap-[40px] opacity-70">
-          <Facebook size={20} />
-          <Instagram size={20} />
-          <Linkedin size={20} />
+          <Image
+            src="/contact/facebook.png"
+            alt="Facebook"
+            width={12}
+            height={22}
+          />
+          <Image
+            src="/contact/instagram.png"
+            alt="Facebook"
+            width={23}
+            height={23}
+          />
+          <Image
+            src="/contact/linkedin.png"
+            alt="Facebook"
+            width={23}
+            height={23}
+          />
         </div>
       </div>
 
       {/* Contact Form */}
       <div className="flex w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
-        <form className="flex w-full flex-col gap-[52px]">
+        <form className="flex w-full flex-col gap-[50px]">
           <div className="flex gap-[63px]">
             {/* First Name Input */}
             <div className="flex w-1/2 flex-col gap-[50px]">
