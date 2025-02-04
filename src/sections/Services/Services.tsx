@@ -1,7 +1,12 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
 import ServiceCard from "./ServiceCard";
 
 export default function Services() {
+  const router = useRouter();
+
   const services = [
     {
       image: "/services/ph_code-bold.png",
@@ -29,6 +34,11 @@ export default function Services() {
     },
   ];
 
+  const handleServiceClick = (title: string) => {
+    if (title === "Web Development") router.push("/services/web-development");
+    if (title === "Product Design") router.push("/services/uiux-design");
+  };
+
   return (
     <section className="bg-black px-[70px] py-[140px] text-white">
       {/* Services Header */}
@@ -43,6 +53,7 @@ export default function Services() {
               image={service.image}
               title={service.title}
               description={service.description}
+              onClick={() => handleServiceClick(service.title)}
             />
           ))}
         </div>

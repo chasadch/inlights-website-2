@@ -1,10 +1,12 @@
+import Button from "@/components/Button";
 import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="relative h-[685px] self-stretch bg-black">
-      {/* <div
-        className="h-[685px]"
+    <div className="relative self-stretch bg-black">
+      {/* Hero Section */}
+      <div
+        className="relative flex h-[685px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
@@ -26,14 +28,25 @@ export default function About() {
             competitive market.
           </p>
         </div>
-      </div> */}
+      </div>
 
+      {/* Brief History Section */}
       <div className="flex flex-col items-start gap-[10px] self-stretch py-[70px]">
-        <div className="h-[541px] w-full">
-          <div></div>
+        <div className="relative h-[541px] w-full">
+          {/* Background container placed absolutely behind the content */}
+          <div className="absolute left-0 top-0 z-0 h-[541px] w-full">
+            <div
+              className="h-full"
+              style={{
+                background:
+                  "url(/about/about_2.png) lightgray 50%  / cover no-repeat",
+              }}
+            ></div>
+          </div>
 
-          <div className="flex flex-col items-center gap-[48px]">
-            <h1 className="text-center text-[40px] font-medium">
+          {/* Content container above the background */}
+          <div className="relative z-10 flex h-full flex-col items-center gap-[48px]">
+            <h1 className="mt-[24px] text-center text-[40px] font-medium">
               A Brief History
             </h1>
 
@@ -44,7 +57,7 @@ export default function About() {
               </div>
 
               <div className="z-10 flex w-full flex-row items-center justify-between">
-                {/* 2019 */}
+                {/* -- 2019 -- */}
                 <div className="relative flex w-[151px] flex-col items-center justify-center gap-[40px]">
                   <h1 className="mt-24 self-stretch text-center text-size-3 font-bold">
                     2019
@@ -70,7 +83,7 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* 2020 */}
+                {/* -- 2020 -- */}
                 <div className="relative flex w-[151px] flex-col items-center justify-center gap-[40px]">
                   <div className="flex flex-col items-center gap-[12px] self-stretch">
                     <span className="flex h-[48px] flex-col justify-end self-stretch text-center text-size-6 font-normal opacity-70">
@@ -96,7 +109,7 @@ export default function About() {
                   />
                 </div>
 
-                {/* 2021 */}
+                {/* -- 2021 -- */}
                 <div className="relative flex w-[151px] flex-col items-center justify-center gap-[40px]">
                   <h1 className="mt-24 self-stretch text-center text-size-3 font-bold">
                     2021
@@ -122,7 +135,7 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* 2022 */}
+                {/* -- 2022 -- */}
                 <div className="relative flex w-[151px] flex-col items-center justify-center gap-[40px]">
                   <div className="flex flex-col items-center gap-[12px] self-stretch">
                     <span className="flex h-[48px] flex-col justify-end self-stretch text-center text-size-6 font-normal opacity-70">
@@ -148,7 +161,7 @@ export default function About() {
                   />
                 </div>
 
-                {/* 2023 */}
+                {/* -- 2023 -- */}
                 <div className="relative flex w-[151px] flex-col items-center justify-center gap-[40px]">
                   <h1 className="mt-24 self-stretch text-center text-size-3 font-bold">
                     2023
@@ -175,6 +188,29 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Talent Section */}
+      <div className="flex items-center justify-center py-[160px]">
+        <div
+          className="relative h-[209px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
+          }}
+        >
+          {/* Overlay Content */}
+          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[24px] text-center">
+            {/* Text */}
+            <p
+              className="text-[45px] font-bold text-[#FBFBFB]"
+              style={{ fontFamily: "Roboto Serif" }}
+            >
+              Enough talk, let&apos;s get to work
+            </p>
+            {/* Button */}
+            <Button variant="gradient">Let&apos;s Get In Touch</Button>
           </div>
         </div>
       </div>

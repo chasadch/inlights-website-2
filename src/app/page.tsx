@@ -14,14 +14,14 @@ export default function HomePage() {
     <div>
       {/* <Portfolio /> */}
       {/* <Team /> */}
-      <About />
-      {/* <Hero />
+      {/* <About /> */}
+      <Hero />
       <Statistics />
       <Products />
       <Services />
       <SuccessStories />
       <Testimonials />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }

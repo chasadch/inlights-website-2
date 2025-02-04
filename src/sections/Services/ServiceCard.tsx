@@ -7,6 +7,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   linkText?: string;
+  onClick: () => void;
 }
 
 export default function ServiceCard({
@@ -14,9 +15,13 @@ export default function ServiceCard({
   title,
   description,
   linkText = "Discover InLights",
+  onClick,
 }: ServiceCardProps) {
   return (
-    <div className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px] shadow-shadowCustom">
+    <div
+      onClick={onClick}
+      className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px] shadow-shadowCustom"
+    >
       {/* Service Icon */}
       <Image src={image} alt={title} width={72} height={72} />
 
