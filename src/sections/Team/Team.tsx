@@ -1,6 +1,6 @@
 import React from "react";
 import TeamCard from "./TeamCard";
-import Button from "../ui/Button";
+import Button from "../../components/Button";
 
 export default function Team() {
   const teamMembers = [

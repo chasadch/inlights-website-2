@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import StoriesCard from "../ui/StoriesCard";
+import StoriesCard from "./StoriesCard";
 
 export default function SuccessStories() {
   const stories = [

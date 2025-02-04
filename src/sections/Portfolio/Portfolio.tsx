@@ -1,6 +1,6 @@
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
-import Button from "../ui/Button";
+import Button from "../../components/Button";
 
 export default function Portfolio() {
   const projects = [

@@ -1,4 +1,4 @@
-import ProductCard from "../ui/ProductCard";
+import ProductCard from "./ProductCard";
 
 export default function Products() {
   return (

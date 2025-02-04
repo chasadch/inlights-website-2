@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import Button from "../ui/Button";
-import DropDownCard from "../ui/DropDownCard";
+import Button from "../../components/Button";
+import DropDownCard from "./DropDownCard";
 
 export default function Header() {
   return (

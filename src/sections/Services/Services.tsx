@@ -1,5 +1,5 @@
-import Button from "../ui/Button";
-import ServiceCard from "../ui/ServiceCard";
+import Button from "../../components/Button";
+import ServiceCard from "./ServiceCard";
 
 export default function Services() {
   const services = [
