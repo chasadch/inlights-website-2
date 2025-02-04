@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="relative self-stretch bg-black">
+    <section className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
         className="relative flex h-[685px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center"
@@ -214,6 +214,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
