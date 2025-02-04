@@ -40,9 +40,9 @@ export default function Services() {
   };
 
   return (
-    <section className="bg-black px-[70px] py-[140px] text-white">
+    <section className="bg-black text-white">
       {/* Services Header */}
-      <div className="flex flex-col items-center gap-[64px]">
+      <div className="flex flex-col items-center gap-[64px] px-[70px] py-[140px]">
         <h1 className="text-center text-size-2 font-normal">Our Services</h1>
 
         {/* Service Cards - Responsive Grid */}
@@ -60,15 +60,15 @@ export default function Services() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center pt-[240px]">
+      <div className="flex items-center justify-center py-[100px]">
         <div
-          className="relative h-[255px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative h-[255px] w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('/services/this_is_engineering.png')",
           }}
         >
           {/* Overlay Content */}
-          <div className="absolute inset-0 flex items-center justify-between px-[130px]">
+          <div className="absolute inset-0 flex items-center justify-between px-[60px]">
             {/* Text */}
             <p className="text-size-2 font-normal text-white">
               We Are Looking for Exceptional Talent
