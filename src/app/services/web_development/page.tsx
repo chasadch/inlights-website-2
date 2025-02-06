@@ -37,7 +37,7 @@ export default function WebDevelopmentPage() {
             alt=""
             width={323}
             height={323}
-            className="absolute left-3 top-5 z-50 flex-shrink-0"
+            className="absolute left-3 top-5 z-10 flex-shrink-0"
           />
           <Image
             src={"/services/tablet.png"}

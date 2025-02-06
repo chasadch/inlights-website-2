@@ -3,12 +3,23 @@
 import Image from "next/image";
 import Button from "../../components/Button";
 import { useRouter } from "next/navigation";
+import { useLoading } from "@/LoadingContext";
 
 export default function Hero() {
   const router = useRouter();
+  const { setLoading } = useLoading();
+
+  const handleLetsTalkClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push("/contact");
+    }, 1500);
+  };
+
   return (
     <section
-      className="relative h-[810px] self-stretch overflow-hidden pb-[336px] pl-[120px] pr-[121px] pt-[161px] text-center text-white"
+      className="relative h-[810px] self-stretch overflow-hidden px-[120px] pb-[336px] pt-[161px] text-center text-white"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -52,7 +63,7 @@ export default function Hero() {
           </h1>
         </div>
         {/* Let's talk button */}
-        <Button onClick={() => router.push("/contact")} variant="gradient">
+        <Button onClick={handleLetsTalkClick} variant="gradient">
           Let&apos;s Talk
         </Button>
       </div>

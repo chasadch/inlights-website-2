@@ -3,6 +3,7 @@ import Header from "@/sections/Header/Header";
 import { Manrope } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
+import { LoadingProvider } from "@/LoadingContext";
 
 export const metadata = {
   title: "Smart Cities AI",
@@ -18,9 +19,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`w-full text-white antialiased ${manrope.className}`}>
-        <Header />
-        <main className="min-w-container">{children}</main>
-        <Footer />
+        <LoadingProvider>
+          <Header />
+          <main className="min-w-container">{children}</main>
+          <Footer />
+        </LoadingProvider>
       </body>
     </html>
   );
