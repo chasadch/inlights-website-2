@@ -2,7 +2,9 @@
 // import Contact from "@/sections/Contact/Contact";
 // import Hero from "@/sections/Hero/Hero";
 
-import GeoHealth from "@/sections/GeoHealth/GeoHealth";
+import Info from "@/sections/Info/Info";
+
+// import GeoHealth from "@/sections/GeoHealth/GeoHealth";
 
 // import Portfolio from "@/components/Portfolio/Portfolio";
 // import Products from "@/sections/Products/Products";
@@ -15,7 +17,8 @@ import GeoHealth from "@/sections/GeoHealth/GeoHealth";
 export default function HomePage() {
   return (
     <div>
-      <GeoHealth />
+      <Info />
+      {/* <GeoHealth /> */}
       {/* <Portfolio /> */}
       {/* <Team /> */}
       {/* <About /> */}
