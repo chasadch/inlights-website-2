@@ -6,13 +6,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "gradient" | "outline";
   children: React.ReactNode;
   icon?: boolean;
+  onClick?: () => void;
 }
 
 export default function Button({
   variant,
   children,
   icon = true,
-  ...props
+  onClick,
 }: ButtonProps) {
   const baseClasses =
     "flex items-center justify-center gap-[12px] rounded-[10px] px-[20px] py-[14px] text-size-6 font-medium transition-all duration-300";
@@ -21,7 +22,7 @@ export default function Button({
 
   return (
     <button
-      {...props} // Spread additional props like onClick.
+      onClick={onClick}
       className={`${baseClasses} group relative ${
         isGradient
           ? "border-[3px] border-[#552DDA] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-shadowCustom hover:border-opacity-100 hover:bg-none"

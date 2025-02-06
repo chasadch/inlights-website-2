@@ -1,9 +1,14 @@
+"use client";
+
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Button from "../../components/Button";
 import DropDownCard from "./DropDownCard";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[120px] py-[16px] text-white">
       {/* Logo */}
@@ -153,7 +158,9 @@ export default function Header() {
         </li>
       </ul>
 
-      <Button variant="outline">Join Us</Button>
+      <Button onClick={() => router.push("/jobs")} variant="outline">
+        Join Us
+      </Button>
     </header>
   );
 }

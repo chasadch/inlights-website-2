@@ -74,7 +74,9 @@ export default function Services() {
               We Are Looking for Exceptional Talent
             </p>
             {/* Button */}
-            <Button variant="gradient">Join Us</Button>
+            <Button onClick={() => router.push("/jobs")} variant="gradient">
+              Join Us
+            </Button>
           </div>
         </div>
       </div>

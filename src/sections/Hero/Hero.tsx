@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Button from "../../components/Button";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
   return (
     <section
       className="relative h-[810px] self-stretch overflow-hidden pb-[336px] pl-[120px] pr-[121px] pt-[161px] text-center text-white"
@@ -48,7 +52,9 @@ export default function Hero() {
           </h1>
         </div>
         {/* Let's talk button */}
-        <Button variant="gradient">Let&apos;s Talk</Button>
+        <Button onClick={() => router.push("/contact")} variant="gradient">
+          Let&apos;s Talk
+        </Button>
       </div>
 
       {/* Bottom */}
