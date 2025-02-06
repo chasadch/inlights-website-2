@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import React from "react";
 
-export default function Info2() {
+export default function PremisesSecurity() {
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}

@@ -28,7 +28,6 @@ export default function Header() {
         width={156}
         height={18}
         className="flex-shrink-0 cursor-pointer"
-        onClick={() => router.push("/")}
       />
 
       {/* Navigation */}
@@ -180,7 +179,7 @@ export default function Header() {
                 <DropDownCard
                   imageSrc="/header/computer_vision.png"
                   title="Computer Vision"
-                  onClick={() => router.push("/company/computer_vision")}
+                  onClick={() => router.push("/team")}
                 />
                 <DropDownCard
                   imageSrc="/header/ai_automation.png"

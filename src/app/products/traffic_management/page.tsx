@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import React from "react";
 
-export default function Info() {
+export default function TrafficManagement() {
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
