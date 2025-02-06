@@ -1,12 +1,19 @@
 import { MoveUpRight } from "lucide-react";
 import React from "react";
 
-interface ButtonProps {
+// Extend React's button attributes.
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "gradient" | "outline";
   children: React.ReactNode;
+  icon?: boolean;
 }
 
-export default function Button({ variant, children }: ButtonProps) {
+export default function Button({
+  variant,
+  children,
+  icon = true,
+  ...props
+}: ButtonProps) {
   const baseClasses =
     "flex items-center justify-center gap-[12px] rounded-[10px] px-[20px] py-[14px] text-size-6 font-medium transition-all duration-300";
 
@@ -14,6 +21,7 @@ export default function Button({ variant, children }: ButtonProps) {
 
   return (
     <button
+      {...props} // Spread additional props like onClick.
       className={`${baseClasses} group relative ${
         isGradient
           ? "border-[3px] border-[#552DDA] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-shadowCustom hover:border-opacity-100 hover:bg-none"
@@ -21,7 +29,7 @@ export default function Button({ variant, children }: ButtonProps) {
       }`}
     >
       <span>{children}</span>
-      <MoveUpRight width={17} height={17} />
+      {icon && <MoveUpRight width={17} height={17} />}
     </button>
   );
 }
