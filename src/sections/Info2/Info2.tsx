@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import React from "react";
 
-export default function Info() {
+export default function Info2() {
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
@@ -15,7 +15,7 @@ export default function Info() {
       >
         {/* Content container with higher z-index */}
         <div className="z-10 inline-flex flex-col items-center gap-[50px]">
-          <div className="flex w-[949px] flex-col items-center gap-[18px]">
+          <div className="flex flex-col items-center gap-[18px]">
             <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
               <button
                 className="text-size-6 font-normal text-[#414C5C]"
@@ -25,7 +25,7 @@ export default function Info() {
               </button>
             </div>
             <h1 className="text-size-1 font-medium">
-              Manage City Traffic with
+              Manage Premise Seciruty with
             </h1>
             <h1
               className="bg-clip-text text-size-1 font-medium text-transparent"

@@ -2,7 +2,8 @@
 // import Contact from "@/sections/Contact/Contact";
 // import Hero from "@/sections/Hero/Hero";
 
-import Info from "@/sections/Info/Info";
+// import Info from "@/sections/Info/Info";
+import Info2 from "@/sections/Info2/Info2";
 
 // import GeoHealth from "@/sections/GeoHealth/GeoHealth";
 
@@ -17,7 +18,8 @@ import Info from "@/sections/Info/Info";
 export default function HomePage() {
   return (
     <div>
-      <Info />
+      {/* <Info /> */}
+      <Info2 />
       {/* <GeoHealth /> */}
       {/* <Portfolio /> */}
       {/* <Team /> */}
