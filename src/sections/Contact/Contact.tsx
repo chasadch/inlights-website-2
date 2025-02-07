@@ -103,7 +103,7 @@ export default function Contact() {
         <form className="flex w-full flex-col gap-[50px]">
           <div className="flex gap-[63px]">
             {/* First Name Input */}
-            <div className="flex w-1/2 flex-col gap-[50px]">
+            <div className="flex w-1/2 flex-col gap-[40px]">
               <label htmlFor="first-name" className="text-size-6 font-normal">
                 First Name
               </label>
@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
 
             {/* Last Name Input */}
-            <div className="flex w-1/2 flex-col gap-[50px]">
+            <div className="flex w-1/2 flex-col gap-[40px]">
               <label htmlFor="last-name" className="text-size-6 font-normal">
                 Last Name
               </label>
@@ -129,7 +129,7 @@ export default function Contact() {
 
           <div className="flex gap-[63px]">
             {/* Email Input */}
-            <div className="flex w-1/2 flex-col gap-[50px]">
+            <div className="flex w-1/2 flex-col gap-[40px]">
               <label htmlFor="email" className="text-size-6 font-normal">
                 Email
               </label>
@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
 
             {/* Phone Input */}
-            <div className="flex w-1/2 flex-col gap-[50px]">
+            <div className="flex w-1/2 flex-col gap-[40px]">
               <label htmlFor="phone" className="text-size-6 font-normal">
                 Phone
               </label>

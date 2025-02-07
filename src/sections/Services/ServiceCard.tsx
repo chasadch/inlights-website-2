@@ -20,7 +20,7 @@ export default function ServiceCard({
   return (
     <div
       onClick={onClick}
-      className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px] shadow-shadowCustom"
+      className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px] shadow-shadowCustom transition-transform duration-300 hover:scale-105"
     >
       {/* Service Icon */}
       <Image src={image} alt={title} width={72} height={72} />

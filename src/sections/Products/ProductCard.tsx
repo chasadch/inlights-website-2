@@ -20,7 +20,7 @@ export default function ProductCard({
   return (
     <div
       onClick={() => onClick(title)}
-      className="relative flex h-[591px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)] md:w-1/2"
+      className="relative flex h-[591px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)] transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_40px_0_rgba(26,54,163,1)] md:w-1/2"
     >
       <div className="flex cursor-pointer flex-col items-start justify-center gap-[24px] self-stretch">
         <div className="flex flex-col items-start gap-[34px] self-stretch">
