@@ -46,7 +46,7 @@ export default function Services() {
         <h1 className="text-center text-size-2 font-normal">Our Services</h1>
 
         {/* Service Cards - Responsive Grid */}
-        <div className="grid w-full grid-cols-1 gap-[24px] md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex items-center gap-[24px] self-stretch">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

@@ -20,7 +20,7 @@ export default function ProductCard({
   return (
     <div
       onClick={() => onClick(title)}
-      className="relative flex h-[591px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)] transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_40px_0_rgba(26,54,163,1)] md:w-1/2"
+      className="relative flex h-auto w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)] transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_40px_0_rgba(26,54,163,1)] md:h-[591px] md:w-1/2"
     >
       <div className="flex cursor-pointer flex-col items-start justify-center gap-[24px] self-stretch">
         <div className="flex flex-col items-start gap-[34px] self-stretch">
@@ -43,8 +43,9 @@ export default function ProductCard({
         </div>
       </div>
 
-      <div className="absolute -bottom-[107px] left-[16px] h-[307px] w-[567px]">
-        <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px]">
+      {/* Absolutely positioned image container */}
+      <div className="absolute -bottom-[50px] left-[8px] h-[150px] w-[90%] md:-bottom-[107px] md:left-[16px] md:h-[307px] md:w-[567px]">
+        <div className="border-opacity-44 h-full w-full flex-shrink-0 rounded-[12px]">
           <Image
             src={imageSrc}
             alt={title}

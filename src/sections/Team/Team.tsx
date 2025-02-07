@@ -59,7 +59,7 @@ export default function Team() {
       </div>
 
       {/* Team Cards */}
-      <div className="flex flex-wrap gap-[74px]">
+      <div className="flex items-start gap-[74px]">
         {teamMembers.map((member, index) => (
           <TeamCard
             key={index}

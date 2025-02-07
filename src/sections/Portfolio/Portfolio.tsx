@@ -70,7 +70,7 @@ export default function Portfolio() {
       </div>
 
       {/* Projects Grid Container: 2 cards per row */}
-      <div className="grid grid-cols-2 gap-[32px] self-stretch">
+      <div className="flex items-center gap-[32px] self-stretch">
         {projects.map((project, index) => (
           <div
             key={index}
