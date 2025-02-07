@@ -47,7 +47,7 @@ export default function Header() {
                 <DropDownCard
                   imageSrc="/header/product_design.png"
                   title="UI/UX Design"
-                  onClick={() => router.push("/services/uiux-design")}
+                  onClick={() => router.push("/services/uiux_design")}
                 />
               </div>
             </div>

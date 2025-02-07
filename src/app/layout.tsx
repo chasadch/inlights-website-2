@@ -20,7 +20,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`w-full text-white antialiased ${manrope.className}`}>
-        <Toaster />
+        <Toaster
+          toastOptions={{
+            duration: 5000,
+          }}
+        />
         <LoadingProvider>
           <Header />
           <main className="min-w-container">{children}</main>
