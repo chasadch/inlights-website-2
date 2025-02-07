@@ -4,6 +4,7 @@ import { Manrope } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 import { LoadingProvider } from "@/LoadingContext";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Smart Cities AI",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`w-full text-white antialiased ${manrope.className}`}>
+        <Toaster />
         <LoadingProvider>
           <Header />
           <main className="min-w-container">{children}</main>

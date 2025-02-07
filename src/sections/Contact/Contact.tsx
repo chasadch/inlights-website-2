@@ -1,7 +1,37 @@
 import Image from "next/image";
 import Button from "../../components/Button";
+import supabase from "@/lib/supabase";
+import toast from "react-hot-toast";
+// import { useRef } from "react";
 
 export default function Contact() {
+  // const formRef = useRef<HTMLFormElement>(null);
+
+  const handleLetsTalkClick = async (
+    e: React.MouseEvent<HTMLButtonElement>,
+  ) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    const firstName = formData.get("fitstName") as string;
+    const lastName = formData.get("lastName") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const message = formData.get("message") as string;
+
+    // try {
+    //   const { data, error } = await supabase
+    //     .from("contact")
+    //     .insert([{ firstName, lastName, email, phone, message }]);
+
+    //   if (error) {
+    //     throw new Error("Error inserting contact: " + error.message);
+    //   }
+
+    //   toast.success("Message sent successfully!");
+    // } catch (error) {}
+  };
+
   return (
     <section className="flex items-center justify-between bg-black px-[70px] py-[140px]">
       <div className="flex w-[401px] flex-col items-start gap-[32px]">
@@ -225,7 +255,9 @@ export default function Contact() {
 
           {/* Submit Button */}
           <div>
-            <Button variant="gradient">Let&apos;s Talk</Button>
+            <Button onClick={handleLetsTalkClick} variant="gradient">
+              Let&apos;s Talk
+            </Button>
           </div>
         </form>
       </div>
