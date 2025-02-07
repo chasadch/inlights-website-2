@@ -2,22 +2,12 @@
 
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
 import DropDownCard from "./DropDownCard";
-import { useRouter } from "next/navigation";
-import { useLoading } from "@/LoadingContext";
 
 export default function Header() {
   const router = useRouter();
-  const { setLoading } = useLoading();
-
-  const handleJoinUsClick = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      router.push("/jobs");
-    }, 1500);
-  };
 
   return (
     <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[120px] py-[16px] text-white">
@@ -192,7 +182,7 @@ export default function Header() {
         </li>
       </ul>
 
-      <Button onClick={handleJoinUsClick} variant="outline">
+      <Button onClick={() => router.push("/jobs")} variant="outline">
         Join Us
       </Button>
     </header>

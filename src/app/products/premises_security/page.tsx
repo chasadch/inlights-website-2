@@ -1,8 +1,13 @@
+"use client";
+
 import Button from "@/components/Button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function PremisesSecurity() {
+  const router = useRouter();
+
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
@@ -37,7 +42,9 @@ export default function PremisesSecurity() {
               Artificial Intelligence
             </h1>
           </div>
-          <Button variant="gradient">Let&apos; Talk</Button>
+          <Button onClick={() => router.push("/contact")} variant="gradient">
+            Let&apos;s Talk
+          </Button>
         </div>
 
         {/* Image */}

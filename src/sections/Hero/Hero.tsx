@@ -1,21 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../../components/Button";
 import { useRouter } from "next/navigation";
-import { useLoading } from "@/LoadingContext";
+import Button from "../../components/Button";
 
 export default function Hero() {
   const router = useRouter();
-  const { setLoading } = useLoading();
-
-  const handleLetsTalkClick = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      router.push("/contact");
-    }, 1500);
-  };
 
   return (
     <section
@@ -63,7 +53,7 @@ export default function Hero() {
           </h1>
         </div>
         {/* Let's talk button */}
-        <Button onClick={handleLetsTalkClick} variant="gradient">
+        <Button onClick={() => router.push("/contact")} variant="gradient">
           Let&apos;s Talk
         </Button>
       </div>
