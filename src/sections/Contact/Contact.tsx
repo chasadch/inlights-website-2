@@ -28,9 +28,12 @@ export default function Contact() {
             </div>
             <div className="flex flex-col">
               <h1 className="text-size-3 font-bold">Our email</h1>
-              <p className="text-size-5 font-normal opacity-70">
+              <a
+                href="mailto:admin@inlights.com.pk"
+                className="text-size-5 font-normal opacity-70"
+              >
                 admin@inlights.com.pk
-              </p>
+              </a>
             </div>
           </div>
 
@@ -47,9 +50,12 @@ export default function Contact() {
             </div>
             <div className="flex flex-col">
               <h1 className="text-size-3 font-bold">Call us</h1>
-              <p className="text-size-5 font-normal opacity-70">
+              <a
+                href="tel:+923235353143"
+                className="text-size-5 font-normal opacity-70"
+              >
                 +92 3235353143
-              </p>
+              </a>
             </div>
           </div>
 
@@ -66,9 +72,14 @@ export default function Contact() {
             </div>
             <div className="flex flex-col">
               <h1 className="text-size-3 font-bold">Find us</h1>
-              <p className="text-size-5 font-normal opacity-70">
+              <a
+                href="https://maps.app.goo.gl/Kvzisj4UWjLZyRFC8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-size-5 font-normal opacity-70"
+              >
                 Open Google Maps
-              </p>
+              </a>
             </div>
           </div>
         </div>
