@@ -43,7 +43,7 @@ export default function Testimonials() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // Handler to reset the slider when the transition ends on the cloned slide.
+  // When reaching the cloned slide, reset the slider to the real first slide.
   const handleTransitionEnd = () => {
     if (currentIndex === testimonials.length && sliderRef.current) {
       // Remove transition so the reset happens instantly
@@ -51,18 +51,29 @@ export default function Testimonials() {
       setCurrentIndex(0);
       sliderRef.current.style.transform = `translateX(0%)`;
 
-      // Force reflow to apply the no-transition reset immediately
+      // Force reflow so that the no-transition change is applied immediately
       void sliderRef.current.offsetWidth;
 
-      // Re-enable the transition for future animations
+      // Re-enable transition for future animations
       sliderRef.current.style.transition = "transform 0.5s ease-in-out";
     }
   };
 
+  // Move to the next testimonial
   const nextTestimonial = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) => prevIndex + 1);
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500);
+  };
+
+  // Move to the previous testimonial (only if one exists)
+  const previousTestimonial = () => {
+    if (isTransitioning || currentIndex === 0) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => prevIndex - 1);
     setTimeout(() => {
       setIsTransitioning(false);
     }, 500);
@@ -79,10 +90,14 @@ export default function Testimonials() {
           {/* Testimonial Card */}
           <div className="flex w-[1300px] flex-col items-center justify-center gap-[40px] rounded-[32px] border border-borderCustom bg-bg p-[48px] shadow-shadowCustom">
             <div className="flex items-center gap-[128px]">
-              {/* Left Arrow (Disabled for one-way movement) */}
+              {/* Left Arrow */}
               <button
-                className="flex cursor-not-allowed items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] opacity-50 transition-opacity"
-                disabled
+                onClick={previousTestimonial}
+                className={`flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity ${
+                  currentIndex === 0
+                    ? "pointer-events-none cursor-not-allowed opacity-50"
+                    : "hover:opacity-80"
+                }`}
               >
                 <ArrowLeft width={24} height={24} stroke="currentColor" />
               </button>
