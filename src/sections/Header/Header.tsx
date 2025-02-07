@@ -10,7 +10,7 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-4 py-[16px] text-white sm:px-8 lg:px-[120px]">
+    <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[120px] py-[16px] text-white">
       {/* Logo */}
       <Image
         src={"/header/logo.png"}
@@ -21,29 +21,24 @@ export default function Header() {
       />
 
       {/* Navigation */}
-      <ul className="z-50 flex flex-wrap items-center justify-center gap-2 sm:gap-[9px]">
-        <li className="flex cursor-pointer items-center justify-center gap-1 rounded-md p-2">
-          <span
-            className="text-size-4 font-semibold"
-            onClick={() => router.push("/")}
-          >
-            Home
-          </span>
+      <ul className="z-50 flex items-center justify-center gap-[9px]">
+        <li className="flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+          <span className="text-size-4 font-semibold">Home</span>
         </li>
-        <li className="group relative flex cursor-pointer items-center justify-center gap-1 rounded-md p-2">
+        <li className="group relative flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
           <span className="text-size-4 font-semibold">Services</span>
           <ChevronDown width={16} height={16} />
 
           {/* Dropdown */}
-          <div className="border-1 invisible absolute left-0 top-full z-10 flex flex-col items-start gap-8 rounded-2xl border-[rgba(45,160,184,0.15)] bg-bg p-8 opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
-            <div className="flex flex-col items-start gap-4">
+          <div className="border-1 invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
+            <div className="flex flex-col items-start gap-[18px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
                 style={{ fontFamily: "Lato" }}
               >
                 Custom Product Development
               </span>
-              <div className="flex flex-wrap items-start gap-5">
+              <div className="flex items-start gap-[20px] self-stretch">
                 <DropDownCard
                   imageSrc="/header/web_development.png"
                   title="Web Development"
@@ -57,16 +52,16 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="h-px w-full max-w-[386px] bg-[#E5EAEE] opacity-50"></div>
+            <div className="h-[1px] w-[386px] bg-[#E5EAEE] opacity-50"></div>
 
-            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start gap-[15px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
                 style={{ fontFamily: "Lato" }}
               >
                 Artificial Intelligence
               </span>
-              <div className="flex flex-wrap items-start gap-5">
+              <div className="flex items-start gap-[20px] self-stretch">
                 <DropDownCard
                   imageSrc="/header/computer_vision.png"
                   title="Computer Vision"
@@ -82,20 +77,20 @@ export default function Header() {
           </div>
         </li>
 
-        <li className="group relative flex cursor-pointer items-center justify-center gap-1 rounded-md p-2">
+        <li className="group relative flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
           <span className="text-size-4 font-semibold">Products</span>
           <ChevronDown width={16} height={16} />
 
           {/* Dropdown */}
-          <div className="border-1 invisible absolute left-0 top-full z-10 flex flex-col items-start gap-8 rounded-2xl border-[rgba(45,160,184,0.15)] bg-bg p-8 opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
-            <div className="flex flex-col items-start gap-4">
+          <div className="border-1 invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
+            <div className="flex flex-col items-start gap-[18px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
                 style={{ fontFamily: "Lato" }}
               >
                 Custom Product Development
               </span>
-              <div className="flex flex-wrap items-start gap-5">
+              <div className="flex items-start gap-[20px] self-stretch">
                 <DropDownCard
                   imageSrc="/header/web_development.png"
                   title="Web Development"
@@ -109,16 +104,16 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="h-px w-full max-w-[386px] bg-[#E5EAEE] opacity-50"></div>
+            <div className="h-[1px] w-[386px] bg-[#E5EAEE] opacity-50"></div>
 
-            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start gap-[15px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
                 style={{ fontFamily: "Lato" }}
               >
                 Artificial Intelligence
               </span>
-              <div className="flex flex-wrap items-start gap-5">
+              <div className="flex items-start gap-[20px] self-stretch">
                 <DropDownCard
                   imageSrc="/header/computer_vision.png"
                   title="Computer Vision"
@@ -134,20 +129,20 @@ export default function Header() {
           </div>
         </li>
 
-        <li className="group relative flex cursor-pointer items-center justify-center gap-1 rounded-md p-2">
+        <li className="group relative flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
           <span className="text-size-4 font-semibold">Company</span>
           <ChevronDown width={16} height={16} />
 
           {/* Dropdown */}
-          <div className="invisible absolute left-0 top-full z-10 flex flex-col items-start gap-8 rounded-2xl border border-[rgba(45,160,184,0.15)] bg-bg p-8 opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
-            <div className="flex flex-col items-start gap-4">
+          <div className="invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
+            <div className="flex flex-col items-start gap-[18px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
                 style={{ fontFamily: "Lato" }}
               >
                 Our Portfolio
               </span>
-              <div className="flex flex-wrap items-start gap-5">
+              <div className="flex items-start gap-[20px] self-stretch">
                 <DropDownCard
                   imageSrc="/header/web_development.png"
                   title="Web Development"
@@ -161,16 +156,16 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="h-px w-full max-w-[386px] bg-[#E5EAEE] opacity-50"></div>
+            <div className="h-[1px] w-[386px] bg-[#E5EAEE] opacity-50"></div>
 
-            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start gap-[15px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
                 style={{ fontFamily: "Lato" }}
               >
                 Our Team
               </span>
-              <div className="flex flex-wrap items-start gap-5">
+              <div className="flex items-start gap-[20px] self-stretch">
                 <DropDownCard
                   imageSrc="/header/computer_vision.png"
                   title="Computer Vision"

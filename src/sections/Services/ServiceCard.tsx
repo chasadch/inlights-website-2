@@ -28,7 +28,16 @@ export default function ServiceCard({
       {/* Service Info */}
       <div className="flex flex-col items-start gap-[14px] self-stretch">
         <h1 className="text-size-3 font-bold">{title}</h1>
-        <p className="text-size-5 font-normal opacity-70">{description}</p>
+        <p
+          className="w-[257px] overflow-hidden text-size-6 font-normal opacity-70"
+          style={{
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 3,
+          }}
+        >
+          {description}
+        </p>
 
         {/* Link */}
         <div className="flex items-center gap-[9px] self-stretch py-[8px]">

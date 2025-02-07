@@ -195,7 +195,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
+      <div className="flex h-[522px] w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
         <form ref={formRef} className="flex w-full flex-col gap-[50px]">
           <div className="flex gap-[63px]">
             {/* First Name Input */}

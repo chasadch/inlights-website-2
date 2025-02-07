@@ -88,8 +88,8 @@ export default function Testimonials() {
           </h1>
 
           {/* Testimonial Card */}
-          <div className="flex w-[1300px] flex-col items-center justify-center gap-[48px] rounded-[32px] border border-borderCustom bg-bg p-[48px] shadow-shadowCustom">
-            <div className="flex items-center gap-[128px]">
+          <div className="flex flex-col items-center justify-center gap-[40px] rounded-[32px] border border-borderCustom bg-bg p-[48px] shadow-shadowCustom">
+            <div className="flex items-center gap-[128px] self-stretch">
               {/* Left Arrow */}
               <button
                 onClick={previousTestimonial}
@@ -117,7 +117,7 @@ export default function Testimonials() {
                       key={index}
                       className="flex min-w-full flex-col items-center justify-center gap-[32px]"
                     >
-                      <p className="self-stretch text-center text-[24px] font-normal opacity-80">
+                      <p className="self-stretch text-center text-[24px] font-light opacity-80">
                         {testimonial.text}
                       </p>
                       <div className="flex flex-col items-center justify-center gap-[16px]">

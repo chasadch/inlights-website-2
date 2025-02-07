@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-[810px] self-stretch overflow-hidden px-4 pb-[336px] pt-[161px] text-center text-white sm:h-[600px] md:h-[810px] md:px-[70px] lg:px-[120px]"
+      className="relative h-[810px] self-stretch overflow-hidden px-[120px] pb-[336px] pt-[161px] text-center text-white"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -38,10 +38,10 @@ export default function Hero() {
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[18px]">
           {/* First heading */}
-          <h1 className="w-full max-w-[1199px] text-center text-size-1 font-medium">
+          <h1 className="w-[1199px] text-center text-size-1 font-medium">
             Redefining Smart Cities using
           </h1>
-          {/* Second heading (SVG) */}
+          {/* Second heading */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="803"
@@ -473,42 +473,41 @@ export default function Hero() {
             </defs>
           </svg>
         </div>
-        {/* Let's Talk Button */}
+        {/* Let's talk button */}
         <Button onClick={() => router.push("/contact")} variant="gradient">
           Let&apos;s Talk
         </Button>
       </div>
 
       {/* Bottom */}
-      <div className="absolute bottom-[87px] left-1/2 z-20 inline-flex w-full max-w-[523.724px] -translate-x-1/2 flex-col items-center justify-center gap-[64px]">
-        <div className="flex w-full flex-col items-center gap-[16px]">
+      <div className="absolute bottom-[87px] left-1/2 z-20 inline-flex w-[523.724px] -translate-x-1/2 flex-col items-start justify-center gap-[64px]">
+        <div className="flex w-[524px] flex-col items-center gap-[16px]">
           {/* Paragraph */}
           <p className="text-size-5 font-normal opacity-90">
             IN PARTNERSHIP WITH
           </p>
           {/* Image container */}
-          <div className="flex flex-wrap items-center justify-center gap-[32px] sm:gap-[62px]">
+          <div className="flex items-center gap-[62px]">
             {/* Image 1 */}
             <Image
-              src="/hero/ntdp.png"
+              src={"/hero/ntdp.png"}
               alt="Ntdp image"
               width={53}
               height={54}
             />
             {/* Image 2 */}
             <Image
-              src="/hero/sdaia.png"
+              src={"/hero/sdaia.png"}
               alt="Sdaia image"
               width={108}
               height={24}
             />
             {/* Image 3 */}
             <Image
-              src="/hero/nstp_new_2.png"
+              src={"/hero/nstp.png"}
               alt="Nstp image"
               width={54}
               height={54}
-              className="bg-blend-difference"
             />
           </div>
         </div>

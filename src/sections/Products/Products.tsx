@@ -3,24 +3,22 @@ import ProductCard from "./ProductCard";
 
 export default function Products() {
   const router = useRouter();
-
   const handleCardClick = (cardName: string) => {
     if (cardName === "Traffic Management")
       router.push("/products/traffic_management");
+
     if (cardName === "Premises Security")
       router.push("/products/premises_security");
   };
 
   return (
-    <section className="flex w-full flex-col items-center gap-[10px] bg-black px-[70px] py-[130px]">
-      {/* Wrap content in a container that is full-width on smaller screens and fixed on larger ones */}
-      <div className="flex w-full max-w-[1299px] flex-col items-center gap-[64px]">
-        <div className="flex w-full flex-col items-start gap-[8px]">
+    <section className="flex flex-col items-start gap-[10px] self-stretch bg-black px-[70px] py-[130px]">
+      <div className="flex flex-col items-center gap-[64px] self-stretch">
+        <div className="flex flex-col items-start gap-[8px]">
           <h1 className="text-center text-size-2 font-medium">Our Products</h1>
         </div>
 
-        {/* On small screens, stack cards vertically; on large screens, use a row */}
-        <div className="flex w-full flex-col items-center gap-[24px] lg:flex-row">
+        <div className="flex w-[1299px] items-center gap-[24px]">
           <ProductCard
             title="Traffic Management"
             subtitle="Manage City Traffic with AI"

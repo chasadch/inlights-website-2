@@ -144,7 +144,7 @@ export default function SuccessStories() {
         {/* Success Stories Grid Section */}
         <div
           ref={containerRef}
-          className="flex items-center gap-[24px] self-stretch overflow-x-auto overflow-y-visible scroll-smooth"
+          className="flex items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[5px]"
           style={{ scrollbarWidth: "none" }} // For Firefox
         >
           {stories.map((story, index) => (
