@@ -1,7 +1,6 @@
 import React from "react";
 import { MoveUpRight } from "lucide-react";
 
-// No need to override onClick if you extend React.ButtonHTMLAttributes
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "gradient" | "outline";
   children: React.ReactNode;
@@ -16,17 +15,17 @@ export default function Button({
   ...rest
 }: ButtonProps) {
   const baseClasses =
-    "flex items-center justify-center gap-[12px] rounded-[10px] px-[20px] py-[14px] text-size-6 font-medium transition-all duration-300";
+    "flex items-center justify-center gap-[12px] rounded-[10px] px-[20px] py-[14px] text-size-6 font-medium transition duration-300 box-border";
 
   const isGradient = variant === "gradient";
 
   return (
     <button
       onClick={onClick}
-      className={`${baseClasses} group relative ${
+      className={`${baseClasses} group relative h-[52px] ${
         isGradient
-          ? "border-[3px] border-[#552DDA] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-shadowCustom hover:border-opacity-100 hover:bg-none"
-          : "border-[3px] border-[#552DDA] bg-transparent text-white shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)] hover:bg-[#5144DCF7]"
+          ? `bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-shadowCustom before:absolute before:inset-0 before:rounded-[10px] before:border-[3px] before:border-transparent before:transition-all before:duration-300 before:content-[''] hover:bg-none hover:before:border-[#552DDA]`
+          : `border-[3px] border-[#552DDA] bg-transparent text-white shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)] hover:bg-[#5144DCF7]`
       }`}
       {...rest}
     >

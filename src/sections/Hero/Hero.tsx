@@ -29,7 +29,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-10 bg-opacity-80"
         style={{
-          background: "rgba(9, 17, 33, 0.8)", // #091121 with 80% transparency
+          background: "rgba(9, 17, 33, 0.8)",
         }}
       ></div>
 
@@ -504,7 +504,7 @@ export default function Hero() {
             />
             {/* Image 3 */}
             <Image
-              src={"/hero/nstp.png"}
+              src={"/hero/nstp_new_2.png"}
               alt="Nstp image"
               width={54}
               height={54}

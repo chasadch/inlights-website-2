@@ -30,7 +30,7 @@ export default function Header() {
           <ChevronDown width={16} height={16} />
 
           {/* Dropdown */}
-          <div className="border-1 invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
+          <div className="invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
             <div className="flex flex-col items-start gap-[18px]">
               <span
                 className="self-stretch text-size-4 font-semibold"

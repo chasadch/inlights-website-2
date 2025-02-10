@@ -88,12 +88,12 @@ export default function Testimonials() {
           </h1>
 
           {/* Testimonial Card */}
-          <div className="flex flex-col items-center justify-center gap-[40px] rounded-[32px] border border-borderCustom bg-bg p-[48px] shadow-shadowCustom">
+          <div className="flex flex-col items-center justify-center gap-[40px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[48px] shadow-shadowCustom">
             <div className="flex items-center gap-[128px] self-stretch">
               {/* Left Arrow */}
               <button
                 onClick={previousTestimonial}
-                className={`flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity ${
+                className={`mt-8 flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity ${
                   currentIndex === 0
                     ? "pointer-events-none cursor-not-allowed opacity-50"
                     : "hover:opacity-80"
@@ -117,7 +117,7 @@ export default function Testimonials() {
                       key={index}
                       className="flex min-w-full flex-col items-center justify-center gap-[32px]"
                     >
-                      <p className="self-stretch text-center text-[24px] font-light opacity-80">
+                      <p className="self-stretch text-center text-[23.2px] font-light opacity-80">
                         {testimonial.text}
                       </p>
                       <div className="flex flex-col items-center justify-center gap-[16px]">
@@ -169,7 +169,7 @@ export default function Testimonials() {
               {/* Right Arrow */}
               <button
                 onClick={nextTestimonial}
-                className="flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity hover:opacity-80"
+                className="mt-8 flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity hover:opacity-80"
               >
                 <ArrowRight width={24} height={24} stroke="currentColor" />
               </button>
