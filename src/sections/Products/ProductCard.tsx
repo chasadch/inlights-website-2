@@ -20,18 +20,18 @@ export default function ProductCard({
   return (
     <div
       onClick={() => onClick(title)}
-      className="relative flex h-[591px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-[#050919] p-[34px] shadow-[0_0_30px_0_rgba(26,54,163,0.80)] transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_40px_0_rgba(26,54,163,1)] md:w-1/2"
+      className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 xl:h-[591px] xl:p-[34px]"
     >
-      <div className="flex cursor-pointer flex-col items-start justify-center gap-[24px] self-stretch">
+      <div className="flex cursor-pointer flex-col items-start justify-center gap-[20px] self-stretch xl:gap-[24px]">
         <div className="flex flex-col items-start gap-[34px] self-stretch">
           <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
             <h1 className="text-size-7 font-normal text-[#414C5C]">{title}</h1>
           </div>
           {/* Subheading */}
-          <p className="w-full text-[34px] font-medium md:w-[467px]">
+          <p className="w-full text-[20px] font-medium xl:w-[467px] xl:text-[34px]">
             {subtitle}
           </p>
-          <p className="self-stretch text-size-5 font-normal opacity-70">
+          <p className="self-stretch text-size-7 font-normal opacity-70 xl:text-size-5">
             {description}
           </p>
           <div className="flex items-center gap-[9px] self-stretch py-[8px]">
@@ -43,7 +43,7 @@ export default function ProductCard({
         </div>
       </div>
 
-      <div className="absolute -bottom-[107px] left-[16px] h-[307px] w-[567px]">
+      <div className="absolute -bottom-[66px] -left-[16px] h-[172px] w-[297px] xl:-bottom-[107px] xl:left-[16px] xl:h-[307px] xl:w-[567px]">
         <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px]">
           <Image
             src={imageSrc}

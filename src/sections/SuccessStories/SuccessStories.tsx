@@ -106,14 +106,16 @@ export default function SuccessStories() {
   };
 
   return (
-    <div className="bg-black px-[70px] py-[140px] text-white">
-      <div className="flex flex-col items-start gap-[64px] self-stretch">
+    <div className="bg-black px-[16px] py-[140px] text-white lg:px-[70px]">
+      <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[64px]">
         {/* Header Section */}
-        <div className="flex items-center justify-between gap-[48px] self-stretch">
-          <h1 className="text-size-2 font-normal">Our Success Stories</h1>
+        <div className="flex items-center justify-center gap-[48px] self-stretch lg:justify-between">
+          <h1 className="text-size-3 font-normal lg:text-size-2">
+            Our Success Stories
+          </h1>
 
           {/* Navigation Buttons */}
-          <div className="flex gap-[10px]">
+          <div className="hidden gap-[10px] lg:flex">
             <button
               onClick={() => handleScroll("left")}
               disabled={scrollPos <= 0}
@@ -144,14 +146,13 @@ export default function SuccessStories() {
         {/* Success Stories Grid Section */}
         <div
           ref={containerRef}
-          className="flex items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[5px]"
+          className="grid grid-cols-1 gap-[26px] py-[5px] md:grid-cols-2 md:gap-[24px] lg:flex lg:overflow-x-auto lg:scroll-smooth"
           style={{ scrollbarWidth: "none" }} // For Firefox
         >
           {stories.map((story, index) => (
             <div
               key={index}
-              className="flex-shrink-0"
-              style={{ width: "calc((100% - 48px) / 3)" }}
+              className="w-full flex-shrink-0 md:w-[48%] lg:w-[calc((100%-48px)/3)]"
             >
               <StoriesCard
                 image={story.image}
@@ -163,6 +164,7 @@ export default function SuccessStories() {
           ))}
         </div>
       </div>
+
       {/* Hide scrollbar for WebKit browsers */}
       <style jsx>{`
         div::-webkit-scrollbar {

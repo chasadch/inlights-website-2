@@ -10,22 +10,22 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[120px] py-[16px] text-white">
+    <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white md:px-[40px] md:py-[8px] lg:px-[120px] lg:py-[16px]">
       {/* Logo */}
       <Image
         src={"/header/logo.png"}
         alt="Logo"
         width={156}
         height={18}
-        className="flex-shrink-0 cursor-pointer"
+        className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18px] lg:w-[156px]"
       />
 
       {/* Navigation */}
-      <ul className="z-50 flex items-center justify-center gap-[9px]">
-        <li className="flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+      <ul className="z-50 hidden items-center justify-center gap-[9px] md:flex">
+        <li className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px]">
           <span className="text-size-4 font-semibold">Home</span>
         </li>
-        <li className="group relative flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+        <li className="group relative flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] lg:gap-[4px]">
           <span className="text-size-4 font-semibold">Services</span>
           <ChevronDown width={16} height={16} />
 
@@ -77,7 +77,7 @@ export default function Header() {
           </div>
         </li>
 
-        <li className="group relative flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+        <li className="group relative flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] lg:gap-[4px]">
           <span className="text-size-4 font-semibold">Products</span>
           <ChevronDown width={16} height={16} />
 
@@ -129,7 +129,7 @@ export default function Header() {
           </div>
         </li>
 
-        <li className="group relative flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
+        <li className="group relative flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] lg:gap-[4px]">
           <span className="text-size-4 font-semibold">Company</span>
           <ChevronDown width={16} height={16} />
 
@@ -182,7 +182,29 @@ export default function Header() {
         </li>
       </ul>
 
-      <Button onClick={() => router.push("/jobs")} variant="outline">
+      <div className="flex items-start gap-[105px] rounded-[56px] p-[6px] md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <Button
+        onClick={() => router.push("/jobs")}
+        variant="outline"
+        className="hidden md:flex"
+      >
         Join Us
       </Button>
     </header>

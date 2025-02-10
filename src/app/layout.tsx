@@ -3,7 +3,7 @@ import Header from "@/sections/Header/Header";
 import { Manrope } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
-import { LoadingProvider } from "@/LoadingContext";
+
 import { Toaster } from "react-hot-toast";
 
 export const metadata = {
@@ -25,11 +25,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             duration: 5000,
           }}
         />
-        <LoadingProvider>
-          <Header />
-          <main className="min-w-container">{children}</main>
-          <Footer />
-        </LoadingProvider>
+
+        {/* <Header /> */}
+        <main className="min-w-container">{children}</main>
+        {/* <Footer /> */}
       </body>
     </html>
   );

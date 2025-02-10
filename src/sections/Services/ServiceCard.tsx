@@ -20,16 +20,22 @@ export default function ServiceCard({
   return (
     <div
       onClick={onClick}
-      className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg p-[24px] shadow-shadowCustom transition-transform duration-300 hover:scale-105"
+      className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 lg:p-[24px]"
     >
       {/* Service Icon */}
-      <Image src={image} alt={title} width={72} height={72} />
+      <Image
+        src={image}
+        alt={title}
+        width={72}
+        height={72}
+        className="flex-shrink-0"
+      />
 
       {/* Service Info */}
       <div className="flex flex-col items-start gap-[14px] self-stretch">
-        <h1 className="text-size-3 font-bold">{title}</h1>
+        <h1 className="text-size-3 font-semibold">{title}</h1>
         <p
-          className="w-[257px] overflow-hidden text-size-6 font-normal opacity-70"
+          className="self-stretch overflow-hidden text-size-7 font-normal opacity-70 lg:text-size-6"
           style={{
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",

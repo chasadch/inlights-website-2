@@ -12,13 +12,15 @@ export default function Products() {
   };
 
   return (
-    <section className="flex flex-col items-start gap-[10px] self-stretch bg-black px-[70px] py-[130px]">
-      <div className="flex flex-col items-center gap-[64px] self-stretch">
-        <div className="flex flex-col items-start gap-[8px]">
-          <h1 className="text-center text-size-2 font-medium">Our Products</h1>
+    <section className="flex flex-col items-start self-stretch bg-black py-[130px] lg:gap-[10px] lg:px-[70px]">
+      <div className="flex flex-col items-center gap-[20px] self-stretch lg:gap-[64px]">
+        <div className="flex flex-col items-start gap-[4px] lg:gap-[8px]">
+          <h1 className="text-center text-size-3 font-medium lg:text-size-2">
+            Our Products
+          </h1>
         </div>
 
-        <div className="flex w-[1299px] items-center gap-[24px]">
+        <div className="grid grid-cols-1 gap-[34px] md:grid-cols-2 lg:gap-[24px]">
           <ProductCard
             title="Traffic Management"
             subtitle="Manage City Traffic with AI"
