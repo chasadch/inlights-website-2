@@ -1,5 +1,5 @@
-import Footer from "@/sections/Footer/Footer";
-import Header from "@/sections/Header/Header";
+// import Footer from "@/sections/Footer/Footer";
+// import Header from "@/sections/Header/Header";
 import { Manrope } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
