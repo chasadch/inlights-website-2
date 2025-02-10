@@ -15,9 +15,9 @@ export default function HomePage() {
       {/* <Statistics /> */}
       <Products />
       <Services />
-      <SuccessStories />
-      {/* <Testimonials /> */}
-      {/* <Contact /> */}
+      {/* <SuccessStories /> */}
+      <Testimonials />
+      <Contact />
     </div>
   );
 }
