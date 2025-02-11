@@ -27,7 +27,7 @@ export default function Button({
       className={`${baseClasses} ${className} group relative h-[52px] ${
         isGradient
           ? `bg-gradient-to-b from-[#552DDA] to-[#1D3E80] text-white shadow-shadowCustom before:absolute before:inset-0 before:rounded-[10px] before:border-[3px] before:border-transparent before:transition-all before:duration-300 before:content-[''] hover:bg-none hover:before:border-[#552DDA]`
-          : `border-[3px] border-[#552DDA] bg-transparent text-white shadow-[0px_0px_35.7px_rgba(81,68,220,0.97)] hover:bg-[#5144DCF7]`
+          : `border-[3px] border-[#552DDA] bg-transparent text-white hover:bg-[#5144DCF7]`
       }`}
       {...rest}
     >

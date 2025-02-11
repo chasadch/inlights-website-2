@@ -1,4 +1,3 @@
-import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Button from "../../components/Button";
 
@@ -97,11 +96,31 @@ export default function PortfolioPage() {
                   <h1 className="w-[261px] text-size-3 font-semibold">
                     {project.title}
                   </h1>
-                  <MoveUpRight
-                    width={24}
-                    height={24}
-                    className="flex items-center justify-center"
-                  />
+                  <div className="flex h-[24px] w-[24px] items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="h-[24px] w-[24px] flex-shrink-0"
+                    >
+                      <path
+                        d="M17 7L7 17"
+                        stroke="white"
+                        stroke-width="1.125"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8 7H17V16"
+                        stroke="white"
+                        stroke-width="1.125"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <p className="w-[285px] self-stretch text-size-6 font-normal opacity-70">
                   {project.description}

@@ -28,10 +28,14 @@ export default function UIUXDesignPage() {
           </p>
         </div>
 
-        <div className="relative h-[380px] w-[474px] flex-shrink-0">
-          {/* Make the border shape absolutely positioned */}
-          <div className="absolute left-0 top-0 h-[373px] w-[465px] flex-shrink-0 rounded-[71.152px] border-[32.84px] border-gradientDark"></div>
-
+        <div
+          className="relative h-[380px] w-[473.827px] flex-shrink-0"
+          style={{
+            backgroundImage: "url(/services/web_development/rectangle.png)",
+            backgroundSize: "100% 100%",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <Image
             src={"/services/uiux-design/alexix.png"}
             alt=""

@@ -13,7 +13,7 @@ export default function WebDevelopmentPage() {
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="flex w-[652px] flex-col items-start gap-[18px]">
+        <div className="flex w-[652px] flex-col items-start gap-[17.612px]">
           <h1 className="text-size-2 font-medium">Web Development</h1>
           <p className="text-size-4 font-normal opacity-70">
             Attracting and retaining customers in today&apos;s digital age
@@ -30,21 +30,27 @@ export default function WebDevelopmentPage() {
           </p>
         </div>
 
-        <div className="relative h-[380px] w-[474px] flex-shrink-0">
-          <div className="h-[305px] w-[431px] flex-shrink-0 rounded-[71.152px] border-[32.84px] border-gradientDark"></div>
+        <div
+          className="relative h-[380px] w-[473.827px] flex-shrink-0"
+          style={{
+            backgroundImage: "url(/services/web_development/rectangle.png)",
+            backgroundSize: "100% 100%",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <Image
             src={"/services/laptop.png"}
             alt=""
-            width={323}
-            height={323}
-            className="absolute left-3 top-5 z-10 flex-shrink-0"
+            width={323.704}
+            height={323.704}
+            className="absolute left-[20px] top-[35px] z-10 flex-shrink-0"
           />
           <Image
             src={"/services/tablet.png"}
             alt=""
-            width={255}
-            height={255}
-            className="absolute -top-9 right-9 flex-shrink-0"
+            width={256.461}
+            height={256.461}
+            className="absolute -right-[20px] -top-[20px] flex-shrink-0"
           />
         </div>
       </div>

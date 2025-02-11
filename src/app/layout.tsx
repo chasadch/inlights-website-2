@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import "./globals.css";
 
 import { Toaster } from "react-hot-toast";
+import Header from "@/sections/Header/Header";
 
 export const metadata = {
   title: "Smart Cities AI",
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* <Header /> */}
+        <Header />
         <main className="min-w-container">{children}</main>
         {/* <Footer /> */}
       </body>

@@ -40,7 +40,7 @@ export default function JobsPage() {
   };
 
   return (
-    <section className="w-screen bg-[#03030E]">
+    <section className="bg-[#03030E]">
       {/* Hero Section */}
       <div
         className="relative h-[528px] bg-cover bg-center"
@@ -51,7 +51,7 @@ export default function JobsPage() {
       >
         <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[18px]">
           <button className="flex items-center justify-center gap-[0.625rem] rounded-[40px] bg-white px-[12px] py-[2px] text-size-7 font-normal text-[#06121B]">
-            We&apos; are Hiring
+            We are Hiring!
           </button>
           <h1 className="text-size-2 font-medium">Be a part of our Mission</h1>
           <p className="text-size-4 font-normal opacity-70">
