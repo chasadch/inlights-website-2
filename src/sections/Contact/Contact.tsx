@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <section className="flex flex-col items-center justify-between bg-black px-[16px] py-[140px] sm:flex-row sm:items-start lg:px-[70px]">
       {/* Contact Info */}
-      <div className="flex w-full max-w-[401px] flex-col items-start gap-[32px] sm:w-[401px]">
+      <div className="flex w-full flex-col items-start gap-[32px] sm:w-[401px] lg:w-[301px] xl:w-[401px]">
         <div className="flex flex-col items-start gap-[20px] self-stretch">
           <h1 className="text-size-3 font-normal lg:text-size-2">
             Let&apos;s talk
@@ -107,7 +107,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="mt-[40px] flex w-full max-w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom sm:mt-0 lg:p-[36px]">
+      <div className="flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom sm:mt-0 lg:w-[495px] lg:p-[36px] xl:w-[695px]">
         <form ref={formRef} className="flex w-full flex-col gap-[40px]">
           <div className="flex flex-col gap-[40px] sm:flex-row">
             <div className="flex w-full flex-col gap-[24px] sm:w-1/2">

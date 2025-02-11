@@ -15,15 +15,15 @@ export default function SuccessStories() {
     },
     {
       image: "/successStories/coverPhoto_2.png",
-      category: "Manufacturing",
-      title: "Project 2",
+      category: "Retrofarm",
+      title: "Retro & Vinatage E-commerce Store",
       description:
-        "Manufacturers are achieving remarkable gains in productivity with our preventive maintenance system.",
+        "RetroFam offers  a seamless shopping experience with advanced search, customization, and secure payment integration.",
     },
     {
       image: "/successStories/coverPhoto_3.png",
-      category: "Health Care",
-      title: "Project 3",
+      category: "Smart TrafficLights",
+      title: "Smart Traffic Lights System ",
       description:
         "Healthcare providers are witnessing notable enhancements in service quality with our platform.",
     },
@@ -106,16 +106,14 @@ export default function SuccessStories() {
   };
 
   return (
-    <div className="bg-black px-[16px] py-[140px] text-white lg:px-[70px]">
-      <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[64px]">
+    <div className="bg-black px-[70px] py-[140px] text-white">
+      <div className="flex flex-col items-start gap-[64px] self-stretch">
         {/* Header Section */}
-        <div className="flex items-center justify-center gap-[48px] self-stretch lg:justify-between">
-          <h1 className="text-size-3 font-normal lg:text-size-2">
-            Our Success Stories
-          </h1>
+        <div className="flex items-center justify-between gap-[48px] self-stretch">
+          <h1 className="text-size-2 font-normal">Our Success Stories</h1>
 
           {/* Navigation Buttons */}
-          <div className="hidden gap-[10px] lg:flex">
+          <div className="flex gap-[10px]">
             <button
               onClick={() => handleScroll("left")}
               disabled={scrollPos <= 0}
@@ -146,13 +144,14 @@ export default function SuccessStories() {
         {/* Success Stories Grid Section */}
         <div
           ref={containerRef}
-          className="grid grid-cols-1 gap-[26px] py-[5px] md:grid-cols-2 md:gap-[24px] lg:flex lg:overflow-x-auto lg:scroll-smooth"
+          className="flex items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[5px]"
           style={{ scrollbarWidth: "none" }} // For Firefox
         >
           {stories.map((story, index) => (
             <div
               key={index}
-              className="w-full flex-shrink-0 md:w-[48%] lg:w-[calc((100%-48px)/3)]"
+              className="flex-shrink-0"
+              style={{ width: "calc((100% - 48px) / 3)" }}
             >
               <StoriesCard
                 image={story.image}
@@ -164,7 +163,6 @@ export default function SuccessStories() {
           ))}
         </div>
       </div>
-
       {/* Hide scrollbar for WebKit browsers */}
       <style jsx>{`
         div::-webkit-scrollbar {

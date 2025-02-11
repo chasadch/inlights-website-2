@@ -38,7 +38,7 @@ export default function Hero() {
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[16px] self-stretch lg:gap-[18px]">
           {/* First heading */}
-          <h1 className="text-[1.75rem] font-medium leading-tight sm:text-[2.5rem] lg:text-[3rem] xl:text-[4rem]">
+          <h1 className="font-medium lg:text-size-2 xl:text-size-1">
             Redefining Smart Cities using
           </h1>
           {/* Second heading */}

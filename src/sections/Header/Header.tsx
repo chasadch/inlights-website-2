@@ -1,5 +1,4 @@
 "use client";
-
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,27 +7,27 @@ import DropDownCard from "./DropDownCard";
 
 export default function Header() {
   const router = useRouter();
-
   return (
-    <header className="absolute left-0 top-0 z-50 flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white md:px-[40px] md:py-[8px] lg:px-[120px] lg:py-[16px]">
+    <header className="absolute left-0 top-0 z-50 box-border flex h-[84px] w-full flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white lg:px-[120px] lg:py-[16px]">
       {/* Logo */}
       <Image
         src={"/header/logo.png"}
         alt="Logo"
         width={156}
         height={18}
-        className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18px] lg:w-[156px]"
+        className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer xl:h-[18px] xl:w-[156px]"
       />
-
       {/* Navigation */}
-      <ul className="z-50 hidden items-center justify-center gap-[9px] md:flex">
+      <ul
+        className="z-50 hidden flex-wrap items-center gap-[9px] md:flex"
+        style={{ maxWidth: "100%", flexWrap: "wrap" }}
+      >
         <li className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px]">
           <span className="text-size-4 font-semibold">Home</span>
         </li>
-        <li className="group relative flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] lg:gap-[4px]">
+        <li className="flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] xl:gap-[4px]">
           <span className="text-size-4 font-semibold">Services</span>
           <ChevronDown width={16} height={16} />
-
           {/* Dropdown */}
           <div className="invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
             <div className="flex flex-col items-start gap-[18px]">
@@ -51,9 +50,7 @@ export default function Header() {
                 />
               </div>
             </div>
-
             <div className="h-[1px] w-[386px] bg-[#E5EAEE] opacity-50"></div>
-
             <div className="flex flex-col items-start gap-[15px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
@@ -76,11 +73,9 @@ export default function Header() {
             </div>
           </div>
         </li>
-
-        <li className="group relative flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] lg:gap-[4px]">
+        <li className="flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] xl:gap-[4px]">
           <span className="text-size-4 font-semibold">Products</span>
           <ChevronDown width={16} height={16} />
-
           {/* Dropdown */}
           <div className="border-1 invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
             <div className="flex flex-col items-start gap-[18px]">
@@ -103,9 +98,7 @@ export default function Header() {
                 />
               </div>
             </div>
-
             <div className="h-[1px] w-[386px] bg-[#E5EAEE] opacity-50"></div>
-
             <div className="flex flex-col items-start gap-[15px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
@@ -128,11 +121,9 @@ export default function Header() {
             </div>
           </div>
         </li>
-
-        <li className="group relative flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] lg:gap-[4px]">
+        <li className="flex cursor-pointer items-center justify-center gap-[2px] rounded-[8px] p-[12px] xl:gap-[4px]">
           <span className="text-size-4 font-semibold">Company</span>
           <ChevronDown width={16} height={16} />
-
           {/* Dropdown */}
           <div className="invisible absolute left-0 top-full z-10 inline-flex flex-col items-start gap-[32px] rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-bg p-[34px] opacity-0 shadow-shadowCustom transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
             <div className="flex flex-col items-start gap-[18px]">
@@ -155,9 +146,7 @@ export default function Header() {
                 />
               </div>
             </div>
-
             <div className="h-[1px] w-[386px] bg-[#E5EAEE] opacity-50"></div>
-
             <div className="flex flex-col items-start gap-[15px]">
               <span
                 className="self-stretch text-size-4 font-semibold"
@@ -181,7 +170,6 @@ export default function Header() {
           </div>
         </li>
       </ul>
-
       <div className="flex items-start gap-[105px] rounded-[56px] p-[6px] md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -193,13 +181,12 @@ export default function Header() {
           <path
             d="M4 6H20M4 12H20M4 18H20"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
-
       <Button
         onClick={() => router.push("/jobs")}
         variant="outline"

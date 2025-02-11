@@ -70,12 +70,9 @@ export default function Services() {
           }}
         >
           {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] px-[20px] sm:flex-row sm:justify-between sm:px-[40px] md:px-[60px]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] sm:flex-row sm:justify-between lg:px-[60px]">
             {/* Text */}
-            <p
-              className="text-center text-size-6 font-normal text-white lg:text-size-2"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
+            <p className="text-size-7 font-normal text-white lg:text-[36px] xl:text-size-2">
               We Are Looking for Exceptional Talent
             </p>
             {/* Button */}

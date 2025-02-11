@@ -3,27 +3,28 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-[#0D0D1D] px-[70px] pb-[30px] pt-[80px]">
-      <div className="flex items-start gap-[60px] self-stretch">
-        <div className="flex flex-col items-start gap-4">
+    <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-[#0D0D1D] px-[16px] pb-[30px] pt-[80px] lg:px-[70px]">
+      {/* First container */}
+      <div className="+ order-2 flex items-start gap-[60px] self-stretch md:order-1">
+        <div className="flex flex-col items-start gap-[16px] self-stretch">
           <div className="flex flex-col items-start gap-[16px]">
             <Image
               src={"/footer/inlights.png"}
               alt="Logo"
-              width={156}
-              height={18}
+              width={155.885}
+              height={18.197}
             />
-            <div className="flex flex-col items-start gap-[4px]">
-              <div className="text-size-6 font-normal text-[#B5B5B5]">
+            <div className="flex flex-col items-start gap-[8px] lg:gap-[4px]">
+              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
                 INLIGHTS
               </div>
-              <div className="text-size-6 font-normal text-[#B5B5B5]">
+              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
                 HQ - The Garage, KACST, Riyadh, Saudi Arabia
               </div>
-              <div className="text-size-6 font-normal text-[#B5B5B5]">
+              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
                 NSTP, NUST, H-12, Islamabad, Pakistan
               </div>
-              <div className="text-size-6 font-normal text-[#B5B5B5]">
+              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
                 NASTP, Nur Khan Airbase, Rawalpindi, Pakistan
               </div>
             </div>
@@ -134,7 +135,7 @@ export default function Footer() {
       </div>
 
       {/* Second container */}
-      <div className="flex flex-col items-start gap-[23px] self-stretch">
+      <div className="+ order-1 flex flex-col items-start gap-[23px] self-stretch md:order-2">
         <div className="h-[1px] self-stretch bg-[#8C8C8C] opacity-50"></div>
         <div className="flex items-start justify-between self-stretch">
           <span className="text-size-6 font-normal">admin@inlights.com.pk</span>
