@@ -5,14 +5,14 @@ import React from "react";
 export default function ContactPage() {
   return (
     <section className="flex items-center justify-between bg-black px-[70px] py-[140px]">
-      <div className="flex w-[401px] flex-col items-start gap-[32px]">
+      <div className="flex flex-col items-start gap-[32px] lg:w-[301px] xl:w-[351px] 2xl:w-[401px]">
         <div className="flex flex-col items-start gap-[20px]">
           <h1 className="text-size-2 font-normal">Let&apos;s talk</h1>
-          <p className="w-[376px] text-size-5 font-normal opacity-70">
+          <p className="text-size-5 font-normal opacity-70 lg:w-[276px] xl:w-[326px] 2xl:w-[376px]">
             Like our story? Contact now and create greatness together with us.
           </p>
         </div>
-        <div className="h-[1px] w-[401px] bg-white opacity-20"></div>
+        <div className="h-[1px] w-full bg-white opacity-20"></div>
 
         {/* Contact Info */}
         <div className="flex flex-col items-start gap-[20px]">
@@ -74,7 +74,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="h-[1px] w-[401px] bg-white opacity-20"></div>
+        <div className="h-[1px] w-full bg-white opacity-20"></div>
 
         {/* Social Icons */}
         <div className="flex items-start gap-[40px] opacity-70">
@@ -100,7 +100,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex w-[695px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom">
+      <div className="flex flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] p-[36px] shadow-shadowCustom lg:w-[495px] xl:w-[595px] 2xl:w-[695px]">
         <form className="flex w-full flex-col gap-[50px]">
           <div className="flex gap-[63px]">
             {/* First Name Input */}

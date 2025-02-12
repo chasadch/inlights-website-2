@@ -10,13 +10,22 @@ interface TeamCardProps {
 export default function TeamCard({ image, name, role }: TeamCardProps) {
   return (
     <div className="relative flex flex-col items-start gap-[16px]">
-      <div className="relative h-[417px] w-[350px] overflow-hidden rounded-[16px]">
+      {/* Image */}
+      <div className="relative h-[300px] w-full overflow-hidden rounded-[16px] sm:h-[350px] md:h-[417px]">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
+
+      {/* Name and Role */}
       <div className="flex flex-col items-start gap-[10px]">
-        <h1 className="text-center text-size-3 font-semibold">{name}</h1>
-        <p className="text-center text-size-5 font-normal opacity-80">{role}</p>
+        <h1 className="text-center text-xl font-semibold sm:text-size-3">
+          {name}
+        </h1>
+        <p className="text-center text-base font-normal opacity-80 sm:text-size-5">
+          {role}
+        </p>
       </div>
+
+      {/* Social Icons */}
       <div className="absolute right-[13px] top-[15px] flex items-start gap-[8px]">
         <div className="flex cursor-pointer items-start gap-[7px]">
           <div className="relative h-[35px] w-[35px] rounded-full bg-[#FBFBFB]">

@@ -11,7 +11,7 @@ export default function PortfolioPage() {
       type: "AI",
     },
     {
-      title: "Smart Gate Security System",
+      title: "Smart Gate Security System at NUST Gate 2",
       description:
         "Advanced security system that integrates vehicle identification, personnel verification, and time tracking to create a comprehensive gate security solution.",
       image: "/portfolio/smart_gate_security_system.png",
@@ -62,22 +62,22 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <section className="flex flex-col gap-[44px] bg-black px-[70px] py-[140px] text-white">
+    <section className="flex flex-col gap-[44px] bg-black px-[16px] py-[80px] text-white sm:px-[40px] lg:px-[70px] lg:py-[140px]">
       {/* Services Header */}
       <div className="flex flex-col items-start gap-[64px]">
-        <h1 className="text-size-2 font-normal">Our Portfolio</h1>
+        <h1 className="text-3xl font-normal lg:text-size-2">Our Portfolio</h1>
       </div>
 
       {/* Projects Grid Container: 2 cards per row */}
-      <div className="grid grid-cols-2 gap-[32px] self-stretch">
+      <div className="grid grid-cols-1 gap-[32px] self-stretch xl:grid-cols-2">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-grow items-start gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[20px] shadow-shadowCustom"
+            className="grid grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[20px] shadow-shadowCustom sm:grid-cols-2 xl:h-[239px] 2xl:h-[229px]"
           >
             {/* Image Container */}
             <div
-              className="flex w-[285px] flex-grow flex-col items-start gap-[10px] rounded-[18px]"
+              className="flex h-[200px] flex-col items-start gap-[10px] rounded-[18px]"
               style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
             >
               <Image
@@ -85,15 +85,15 @@ export default function PortfolioPage() {
                 alt={project.title}
                 width={285}
                 height={200}
-                className="rounded-[20px]"
+                className="h-full w-full rounded-[20px] object-cover"
               />
             </div>
 
             {/* Content Container */}
-            <div className="flex h-[189px] min-w-0 flex-grow flex-col items-start justify-between">
+            <div className="flex flex-col items-start justify-between">
               <div className="flex flex-col items-start gap-[14px] self-stretch">
-                <div className="flex items-center justify-between gap-[10px] self-stretch">
-                  <h1 className="w-[261px] text-size-3 font-semibold">
+                <div className="flex items-center gap-[6px] self-stretch">
+                  <h1 className="text-xl font-semibold sm:text-size-3">
                     {project.title}
                   </h1>
                   <div className="flex h-[24px] w-[24px] items-center justify-center">
@@ -108,21 +108,21 @@ export default function PortfolioPage() {
                       <path
                         d="M17 7L7 17"
                         stroke="white"
-                        stroke-width="1.125"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="1.125"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                       <path
                         d="M8 7H17V16"
                         stroke="white"
-                        stroke-width="1.125"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="1.125"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
                 </div>
-                <p className="w-[285px] self-stretch text-size-6 font-normal opacity-70">
+                <p className="self-stretch font-normal opacity-70 xl:text-[12px] 2xl:text-size-6">
                   {project.description}
                 </p>
               </div>
@@ -133,21 +133,24 @@ export default function PortfolioPage() {
                     alt="Nodejs"
                     width={32}
                     height={32}
+                    className="xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]"
                   />
                   <Image
                     src="/portfolio/mongodb.png"
-                    alt="Nodejs"
+                    alt="MongoDB"
                     width={32}
                     height={32}
+                    className="xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]"
                   />
                   <Image
                     src="/portfolio/react.png"
-                    alt="Nodejs"
+                    alt="React"
                     width={32}
                     height={32}
+                    className="xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]"
                   />
                 </div>
-                <span className="w-[29px] text-size-6 font-normal opacity-90">
+                <span className="w-[29px] text-base font-normal opacity-90 sm:text-size-6">
                   {project.type}
                 </span>
               </div>
@@ -157,18 +160,18 @@ export default function PortfolioPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center pt-[240px]">
+      <div className="flex items-center justify-center px-[16px] py-[80px] sm:px-[40px] lg:px-[70px] lg:py-[160px]">
         <div
-          className="relative h-[209px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat sm:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}
         >
           {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[24px] text-center">
+          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center sm:gap-[24px]">
             {/* Text */}
             <p
-              className="text-[45px] font-bold text-[#FBFBFB]"
+              className="text-2xl font-bold text-[#FBFBFB] sm:text-[45px]"
               style={{ fontFamily: "Roboto Serif" }}
             >
               Enough talk, let&apos;s get to work

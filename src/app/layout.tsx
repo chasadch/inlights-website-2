@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`overflow-x-hidden text-white antialiased ${manrope.className}`}
+        className={`overflow-x-hidden bg-black text-white antialiased ${manrope.className}`}
       >
         <Toaster
           toastOptions={{

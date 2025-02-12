@@ -13,7 +13,7 @@ export default function WebDevelopmentPage() {
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="flex w-[652px] flex-col items-start gap-[17.612px]">
+        <div className="flex flex-col items-start gap-[17.612px] lg:w-[452px] xl:w-[552px] 2xl:w-[652px]">
           <h1 className="text-size-2 font-medium">Web Development</h1>
           <p className="text-size-4 font-normal opacity-70">
             Attracting and retaining customers in today&apos;s digital age
@@ -31,7 +31,7 @@ export default function WebDevelopmentPage() {
         </div>
 
         <div
-          className="relative h-[380px] w-[473.827px] flex-shrink-0"
+          className="relative flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
           style={{
             backgroundImage: "url(/services/web_development/rectangle.png)",
             backgroundSize: "100% 100%",
@@ -43,14 +43,14 @@ export default function WebDevelopmentPage() {
             alt=""
             width={323.704}
             height={323.704}
-            className="absolute left-[20px] top-[35px] z-10 flex-shrink-0"
+            className="absolute left-[15px] top-[30px] z-10 h-[273.704px] w-[263.704px] flex-shrink-0 xl:h-[323.704px] xl:w-[293.704px] 2xl:left-[20px] 2xl:top-[35px] 2xl:w-[323.704px]"
           />
           <Image
             src={"/services/tablet.png"}
             alt=""
             width={256.461}
             height={256.461}
-            className="absolute -right-[20px] -top-[20px] flex-shrink-0"
+            className="absolute -right-[15px] -top-[15px] h-[206.461px] w-[196.461px] flex-shrink-0 xl:w-[226.461px] 2xl:-right-[20px] 2xl:-top-[20px] 2xl:h-[256.461px] 2xl:w-[256.461px]"
           />
         </div>
       </div>
@@ -59,8 +59,8 @@ export default function WebDevelopmentPage() {
       <div className="flex w-full flex-col items-start gap-[10px] self-stretch py-[70px]">
         <div className="mx-auto inline-flex flex-col items-center gap-[40px]">
           <h1 className="text-[44px] font-normal">Our Tech Stack</h1>
-          <div className="flex items-start gap-[64px]">
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+          <div className="flex items-start gap-[44px] 2xl:gap-[64px]">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/nodejs.png"
                 alt=""
@@ -71,7 +71,7 @@ export default function WebDevelopmentPage() {
               <span className="text-size-3 font-normal text-black">NodeJS</span>
             </div>
 
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/express.png"
                 alt=""
@@ -84,7 +84,7 @@ export default function WebDevelopmentPage() {
               </span>
             </div>
 
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/react.png"
                 alt=""
@@ -95,7 +95,7 @@ export default function WebDevelopmentPage() {
               <span className="text-size-3 font-normal text-black">React</span>
             </div>
 
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/mongodb.png"
                 alt=""
@@ -109,8 +109,8 @@ export default function WebDevelopmentPage() {
             </div>
           </div>
 
-          <div className="flex items-start gap-[64px]">
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+          <div className="flex items-start gap-[44px] 2xl:gap-[64px]">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/nodejs.png"
                 alt=""
@@ -121,7 +121,7 @@ export default function WebDevelopmentPage() {
               <span className="text-size-3 font-normal text-black">NodeJS</span>
             </div>
 
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/express.png"
                 alt=""
@@ -134,7 +134,7 @@ export default function WebDevelopmentPage() {
               </span>
             </div>
 
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/react.png"
                 alt=""
@@ -145,7 +145,7 @@ export default function WebDevelopmentPage() {
               <span className="text-size-3 font-normal text-black">React</span>
             </div>
 
-            <div className="flex h-[156px] w-[225px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white">
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/mongodb.png"
                 alt=""
@@ -162,9 +162,9 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center py-[160px]">
+      <div className="flex items-center justify-center px-[70px] py-[160px]">
         <div
-          className="relative h-[209px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

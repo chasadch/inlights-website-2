@@ -37,10 +37,10 @@ export default function About() {
           <div className="absolute left-0 top-0 z-0 h-[541px] w-full">
             <div
               className="h-full"
-              style={{
-                background:
-                  "url(/about/about_2.png) lightgray 50%  / cover no-repeat",
-              }}
+              // style={{
+              //   background:
+              //     "url(/about/about_2.png) lightgray 50%  / cover no-repeat",
+              // }}
             ></div>
           </div>
 
@@ -51,7 +51,7 @@ export default function About() {
             </h1>
 
             {/* Timeline container, centered horizontally */}
-            <div className="relative mx-auto flex h-[270px] w-[1143px] items-center">
+            <div className="relative mx-auto flex h-[270px] items-center lg:w-[943px] xl:w-[1043px] 2xl:w-[1143px]">
               <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 justify-center">
                 <div className="h-[1px] w-[1060px] bg-gradient-to-b from-gradientDark to-gradientLight"></div>
               </div>
@@ -193,9 +193,9 @@ export default function About() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center py-[160px]">
+      <div className="flex items-center justify-center px-[70px] py-[160px]">
         <div
-          className="relative h-[209px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

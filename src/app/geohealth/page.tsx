@@ -14,7 +14,7 @@ export default function GeoHealth() {
         }}
       >
         <div className="inline-flex flex-col items-start gap-[50px]">
-          <div className="flex w-[746px] flex-col items-start gap-[18px]">
+          <div className="flex flex-col items-start gap-[17.612px] xl:w-[746px]">
             <div className="flex items-center justify-center gap-[10px] rounded-[40px] bg-white px-[12px] py-[2px]">
               <button
                 className="text-size-6 font-normal text-[#414C5C]"
@@ -23,20 +23,21 @@ export default function GeoHealth() {
                 GeoHealth
               </button>
             </div>
-            <h1 className="w-[746px] text-[65.58px] font-bold leading-[94px]">
-              Lorem Ipsum Nate decgade ibum
+            <h1 className="font-bold leading-[94px] lg:w-[373px] lg:text-size-2 xl:w-[746px] xl:text-[65.58px]">
+              GeoHealth
             </h1>
-            <p className="w-[638px] text-size-4 font-normal opacity-70">
-              A sophisticated automated content generation platform that
-              revolutionizes how businesses create and manage their content.
+            <p className="text-size-4 font-normal opacity-70 lg:w-[438px] xl:w-[638px]">
+              An AI-powered advanced exercise monitoring system that helps users
+              maintain proper form during workouts through advanced computer
+              vision and machine learning techniques.
             </p>
           </div>
-          <Button>Let&apos; Talk</Button>
+          <Button>Let&apos;s Talk</Button>
         </div>
 
         {/* Image */}
-        <div className="h-[349px] w-[511px] flex-shrink-0">
-          <div className="relative h-[349px] w-[511px] flex-shrink-0 rounded-[22px] bg-[#33A0F1]">
+        <div className="flex-shrink-0 lg:h-[249px] lg:w-[411px] 2xl:h-[349px] 2xl:w-[511px]">
+          <div className="relative flex-shrink-0 rounded-[22px] bg-[#33A0F1] lg:h-[249px] lg:w-[411px] 2xl:h-[349px] 2xl:w-[511px]">
             <Image
               src={"/geohealth/geohealth_image1.png"}
               alt="Geohealth"
@@ -75,34 +76,28 @@ export default function GeoHealth() {
       >
         <div className="flex h-[585px] flex-shrink-0 items-center justify-between p-[70px]">
           <div className="flex w-[599px] flex-col items-start gap-[24px]">
-            <div className="flex w-[599px] flex-col items-start gap-[24px]">
-              <div className="flex flex-col items-start gap-[12px] self-stretch">
-                <h1 className="self-stretch text-[52px] font-medium leading-[66px]">
-                  1
-                </h1>
-                <h2 className="self-stretch text-[52px] font-medium leading-[66px]">
-                  Topic Customization Engine
-                </h2>
-              </div>
-              <p className="self-stretch text-size-4 font-medium opacity-80">
-                Developed a robust system allowing users to define and customize
-                their content topics post-registration
-              </p>
+            <div className="flex flex-col items-start gap-[12px] self-stretch">
+              <h1 className="self-stretch text-[52px] font-medium leading-[66px]">
+                Significance
+              </h1>
             </div>
+            <ul className="space-y-3 self-stretch text-size-4 opacity-80">
+              <li>90%+ Accuracy in Pose Detection</li>
+              <li>Exercise Variations Covered 2X Faster</li>
+              <li>Form Correction Compared to Traditional Methods</li>
+              <li>Seamless Integration with Dashboards</li>
+              <li>Real-Time Feedback in Under 1 Second</li>
+            </ul>
           </div>
 
-          <div className="relative h-[489px] w-[655px] flex-shrink-0">
+          <div className="relative flex flex-shrink-0 items-center justify-center lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
             <Image
-              src="/geohealth/topic_customization.png"
+              src="/geohealth/significance.png"
               alt="Geohealth"
               width={655}
               height={489}
               className="flex-shrink-0 rounded-[11.84px] p-[12px]"
             />
-
-            <span className="absolute left-[170px] top-1/2 -translate-y-1/2 text-[28px] font-semibold">
-              Image Placeholder
-            </span>
           </div>
         </div>
       </div>
@@ -112,9 +107,11 @@ export default function GeoHealth() {
         <h1 className="w-full text-center text-size-2 font-normal">
           Stacks Used
         </h1>
-        <div className="flex w-[1300px] items-center justify-between rounded-[28px]">
-          <div className="flex w-[249px] flex-shrink-0 flex-col items-center gap-[32px]">
-            <h1 className="text-size-3 font-semibold">Frontend Architecture</h1>
+        <div className="flex w-full items-center justify-between rounded-[28px]">
+          <div className="flex flex-shrink-0 flex-col items-center gap-[32px] lg:w-[199px] xl:w-[249px]">
+            <h1 className="font-semibold lg:text-size-4 xl:text-size-3">
+              Frontend Architecture
+            </h1>
             <div className="flex flex-col items-start gap-[12px]">
               <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
                 <Image
@@ -144,8 +141,10 @@ export default function GeoHealth() {
           </div>
           <div className="h-[342px] w-[1px] bg-white opacity-50"></div>
 
-          <div className="flex w-[249px] flex-shrink-0 flex-col items-center gap-[32px]">
-            <h1 className="text-size-3 font-semibold">Data Flow</h1>
+          <div className="flex flex-shrink-0 flex-col items-center gap-[32px] lg:w-[199px] xl:w-[249px]">
+            <h1 className="font-semibold lg:text-size-4 xl:text-size-3">
+              Data Flow
+            </h1>
             <div className="flex flex-col items-start gap-[12px]">
               <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
                 <Image
@@ -175,8 +174,10 @@ export default function GeoHealth() {
           </div>
           <div className="h-[342px] w-[1px] bg-white opacity-50"></div>
 
-          <div className="flex w-[249px] flex-shrink-0 flex-col items-center gap-[32px]">
-            <h1 className="text-size-3 font-semibold">UI Components</h1>
+          <div className="flex flex-shrink-0 flex-col items-center gap-[32px] lg:w-[199px] xl:w-[249px]">
+            <h1 className="font-semibold lg:text-size-4 xl:text-size-3">
+              UI Components
+            </h1>
             <div className="flex flex-col items-start gap-[12px]">
               <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
                 <Image
@@ -206,8 +207,10 @@ export default function GeoHealth() {
           </div>
           <div className="h-[342px] w-[1px] bg-white opacity-50"></div>
 
-          <div className="flex w-[249px] flex-shrink-0 flex-col items-center gap-[32px]">
-            <h1 className="text-size-3 font-semibold">Development Workflow</h1>
+          <div className="flex flex-shrink-0 flex-col items-center gap-[32px] lg:w-[199px] xl:w-[249px]">
+            <h1 className="font-semibold lg:text-size-4 xl:text-size-3">
+              Development Workflow
+            </h1>
             <div className="flex flex-col items-start gap-[12px]">
               <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
                 <Image

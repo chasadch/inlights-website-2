@@ -8,13 +8,13 @@ export default function UIUXDesignPage() {
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="flex h-[685px] items-center justify-between gap-[16px] bg-cover bg-center pl-[70px] pr-[140px]"
+        className="flex h-[685px] w-full items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px]"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="flex w-[565px] flex-col items-start gap-[18px]">
+        <div className="flex flex-col items-start gap-[17.612px] lg:w-[402px] xl:w-[552px] 2xl:w-[652px]">
           <h1 className="text-size-2 font-medium">UI/UX Design</h1>
           <p className="text-size-4 font-normal opacity-70">
             Our product design services cover the entire cycle from
@@ -29,7 +29,7 @@ export default function UIUXDesignPage() {
         </div>
 
         <div
-          className="relative h-[380px] w-[473.827px] flex-shrink-0"
+          className="relative flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:h-[380px] xl:w-[423.827px] 2xl:w-[473.827px]"
           style={{
             backgroundImage: "url(/services/web_development/rectangle.png)",
             backgroundSize: "100% 100%",
@@ -41,21 +41,21 @@ export default function UIUXDesignPage() {
             alt=""
             width={380}
             height={449}
-            className="absolute right-[15rem] top-[2.5rem] z-20 flex-shrink-0"
+            className="absolute right-[12rem] top-[2.5rem] z-20 h-[349px] w-[280px] flex-shrink-0 xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[15rem] 2xl:h-[449px] 2xl:w-[380px]"
           />
           <Image
             src={"/services/uiux-design/alexix2.png"}
             alt=""
             width={383}
             height={503}
-            className="absolute right-[3rem] top-0 z-10 flex-shrink-0"
+            className="absolute right-[3rem] top-0 z-10 h-[403px] w-[283px] flex-shrink-0 xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
           />
           <Image
             src={"/services/uiux-design/alexix3.png"}
             alt=""
             width={379}
             height={522}
-            className="absolute -right-[5.5rem] -top-[1rem] flex-shrink-0"
+            className="absolute -right-[5.5rem] -top-[1rem] h-[422px] w-[279px] flex-shrink-0 xl:h-[472px] xl:w-[329px] 2xl:h-[522px] 2xl:w-[379px]"
           />
         </div>
       </div>
@@ -67,8 +67,8 @@ export default function UIUXDesignPage() {
             Process that moves things forward
           </h1>
 
-          <div className="flex h-[202px] items-center gap-6">
-            <div className="h-[202px] w-[272px] flex-shrink-0">
+          <div className="flex items-center gap-6">
+            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
               <div className="relative flex-shrink-0">
                 <Image
                   src={"/services/uiux-design/process_line.png"}
@@ -80,7 +80,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute right-[1.9rem] top-[4.57rem] flex-shrink-0"
+                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -90,7 +90,7 @@ export default function UIUXDesignPage() {
                     height={64}
                     className=""
                   />
-                  <span className="text-center text-[24px] font-medium">
+                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
                     Ideate
                   </span>
                 </div>
@@ -111,7 +111,7 @@ export default function UIUXDesignPage() {
               </div>
             </div>
 
-            <div className="h-[202px] w-[272px] flex-shrink-0">
+            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
               <div className="relative flex-shrink-0">
                 <Image
                   src={"/services/uiux-design/process_line.png"}
@@ -123,7 +123,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute right-[1.9rem] top-[4.57rem] flex-shrink-0"
+                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -133,7 +133,7 @@ export default function UIUXDesignPage() {
                     height={64}
                     className=""
                   />
-                  <span className="text-center text-[24px] font-medium">
+                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
                     Reserach
                   </span>
                 </div>
@@ -154,7 +154,7 @@ export default function UIUXDesignPage() {
               </div>
             </div>
 
-            <div className="h-[202px] w-[272px] flex-shrink-0">
+            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
               <div className="relative flex-shrink-0">
                 <Image
                   src={"/services/uiux-design/process_line.png"}
@@ -166,7 +166,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute right-[1.9rem] top-[4.57rem] flex-shrink-0"
+                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -176,7 +176,7 @@ export default function UIUXDesignPage() {
                     height={64}
                     className=""
                   />
-                  <span className="text-center text-[24px] font-medium">
+                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
                     Create
                   </span>
                 </div>
@@ -197,7 +197,7 @@ export default function UIUXDesignPage() {
               </div>
             </div>
 
-            <div className="h-[201px] w-[271px] flex-shrink-0">
+            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
               <div className="relative flex-shrink-0">
                 <Image
                   src={"/services/uiux-design/process_line.png"}
@@ -209,7 +209,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute right-[1.9rem] top-[4.57rem] flex-shrink-0"
+                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -219,7 +219,7 @@ export default function UIUXDesignPage() {
                     height={64}
                     className=""
                   />
-                  <span className="text-center text-[24px] font-medium">
+                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
                     User Testing
                   </span>
                 </div>
@@ -245,9 +245,9 @@ export default function UIUXDesignPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center py-[160px]">
+      <div className="flex items-center justify-center px-[70px] py-[160px]">
         <div
-          className="relative h-[209px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

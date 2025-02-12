@@ -53,7 +53,7 @@ export default function AiEnginnerPage() {
         </div>
 
         <div className="flex items-start justify-between self-stretch">
-          <div className="flex w-[838px] flex-col items-start gap-[20px]">
+          <div className="flex flex-col items-start gap-[20px] lg:w-[538px] xl:w-[738px] 2xl:w-[838px]">
             <h1 className="self-stretch text-size-3 font-semibold">
               Description
             </h1>
@@ -150,7 +150,7 @@ export default function AiEnginnerPage() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex items-center justify-center gap-[194px] rounded-[20px] bg-bg p-[36px] shadow-shadowCustom">
+      <div className="flex items-center justify-center rounded-[20px] bg-bg p-[36px] shadow-shadowCustom">
         <form ref={formRef} className="flex w-full flex-col gap-[52px]">
           <h1 className="text-[22px] font-medium">
             Enter your details to Apply

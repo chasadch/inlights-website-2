@@ -28,7 +28,7 @@ export default function JobsPage() {
         toast.error(`Error fetching jobs: ${error.message}`);
       } else {
         setJobs(data as Job[]);
-        toast.success("Jobs fetched successfully!");
+        // toast.success("Jobs fetched successfully!");
       }
     };
 
@@ -53,7 +53,9 @@ export default function JobsPage() {
           <button className="flex items-center justify-center gap-[0.625rem] rounded-[40px] bg-white px-[12px] py-[2px] text-size-7 font-normal text-[#06121B]">
             We are Hiring!
           </button>
-          <h1 className="text-size-2 font-medium">Be a part of our Mission</h1>
+          <h1 className="text-[47px] font-medium xl:text-size-2">
+            Be a part of our Mission
+          </h1>
           <p className="text-size-4 font-normal opacity-70">
             Look at the open positions below
           </p>
@@ -64,7 +66,7 @@ export default function JobsPage() {
       <div className="flex w-full flex-col items-start gap-[20px] p-[70px]">
         {jobs.map((job) => (
           <div key={job.id} className="w-full">
-            <div className="flex flex-col items-start gap-[32px] self-stretch rounded-[24px] p-[28px]">
+            <div className="flex flex-col items-start gap-[32px] self-stretch rounded-[24px] p-[38px]">
               <div className="flex flex-col items-start gap-[4px] self-stretch">
                 <div className="flex items-center justify-between self-stretch">
                   <h1 className="text-size-3 font-semibold">{job.title}</h1>
@@ -72,7 +74,7 @@ export default function JobsPage() {
                     Apply
                   </Button>
                 </div>
-                <p className="w-[880px] text-size-6 font-normal opacity-80">
+                <p className="w-[580px] text-size-6 font-normal opacity-80 xl:w-[780px] 2xl:w-[880px]">
                   {job.description}
                 </p>
               </div>
