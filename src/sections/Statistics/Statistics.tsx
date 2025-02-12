@@ -28,8 +28,8 @@ export default function Statistics() {
           </div>
 
           {/* Child #2 (first set of two circles) – Added flex-none */}
-          <div className="inline-flex flex-col items-center gap-[15px] lg:gap-[85px]">
-            <div className="flex h-[240px] w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:w-[240px] lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px]">
+          <div className="flex flex-col items-center gap-[15px] lg:gap-[85px]">
+            <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] xl:h-[200px] xl:w-[200px] 2xl:h-[240px] 2xl:w-[240px]">
               <Image
                 src={"/statistics/query_stats.png"}
                 alt={"Statistics 1"}
@@ -44,7 +44,7 @@ export default function Statistics() {
                 Years of Growth
               </div>
             </div>
-            <div className="flex h-[240px] w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:w-[240px] lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px]">
+            <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] xl:h-[200px] xl:w-[200px] 2xl:h-[240px] 2xl:w-[240px]">
               <Image
                 src={"/statistics/home_work.png"}
                 alt={"Statistics 1"}
@@ -62,8 +62,8 @@ export default function Statistics() {
           </div>
 
           {/* Child #3 (second set of two circles) – Added flex-none */}
-          <div className="inline-flex flex-col items-center gap-[15px] lg:gap-[85px]">
-            <div className="flex h-[240px] w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:w-[240px] lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px]">
+          <div className="mr-[140px] inline-flex flex-col items-center gap-[15px] lg:gap-[85px]">
+            <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] xl:h-[200px] xl:w-[200px] 2xl:h-[240px] 2xl:w-[240px]">
               <Image
                 src={"/statistics/emoji_objects.png"}
                 alt={"Statistics 1"}
@@ -78,7 +78,7 @@ export default function Statistics() {
                 Products Cultivated
               </div>
             </div>
-            <div className="flex h-[240px] w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:w-[240px] lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px]">
+            <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] xl:h-[200px] xl:w-[200px] 2xl:h-[240px] 2xl:w-[240px]">
               <Image
                 src={"/statistics/emoji_objects.png"}
                 alt={"Statistics 1"}
