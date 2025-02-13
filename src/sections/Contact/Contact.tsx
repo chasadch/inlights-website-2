@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import supabase from "@/lib/supabase";
 import toast from "react-hot-toast";
 import { useRef } from "react";
+import ContactBackground from "./ContactBackground";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -41,7 +42,12 @@ export default function Contact() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-between bg-black px-[16px] py-[140px] sm:flex-row sm:items-start lg:px-[70px]">
+    <section className="relative flex flex-col items-center justify-between bg-black px-[16px] py-[140px] sm:flex-row sm:items-start lg:px-[70px]">
+      {/* Background SVG wrapped in an absolutely positioned container */}
+      <div className="absolute inset-0 left-0 top-0 z-50">
+        <ContactBackground />
+      </div>
+
       {/* Contact Info */}
       <div className="flex w-full flex-col items-start gap-[32px] sm:w-[401px] lg:w-[301px] xl:w-[401px]">
         <div className="flex flex-col items-start gap-[20px] self-stretch">

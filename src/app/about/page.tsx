@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
 import Image from "next/image";
 
 export default function About() {
@@ -37,10 +38,7 @@ export default function About() {
           <div className="absolute left-0 top-0 z-0 h-[541px] w-full">
             <div
               className="h-full"
-              // style={{
-              //   background:
-              //     "url(/about/about_2.png) lightgray 50%  / cover no-repeat",
-              // }}
+              style={{ backgroundImage: "url(/statistics/bg.png)" }}
             ></div>
           </div>
 
@@ -193,7 +191,11 @@ export default function About() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center px-[70px] py-[160px]">
+      <div className="relative flex items-center justify-center px-[70px] py-[160px]">
+        <div className="absolute inset-0 left-0 top-0 z-50">
+          <CallToActionBackground />
+        </div>
+
         <div
           className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{

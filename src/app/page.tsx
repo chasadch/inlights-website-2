@@ -10,7 +10,7 @@ import Testimonials from "@/sections/Testimonials/Testimonials";
 
 export default function HomePage() {
   return (
-    <div>
+    <>
       <Hero />
       <Statistics />
       <Products />
@@ -18,6 +18,6 @@ export default function HomePage() {
       <SuccessStories />
       <Testimonials />
       <Contact />
-    </div>
+    </>
   );
 }

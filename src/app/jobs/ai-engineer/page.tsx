@@ -2,6 +2,7 @@
 
 import Button from "@/components/Button";
 import supabase from "@/lib/supabase";
+import ContactBackground from "@/sections/Contact/ContactBackground";
 import Image from "next/image";
 import React, { useRef } from "react";
 import toast from "react-hot-toast";
@@ -43,7 +44,10 @@ export default function AiEnginnerPage() {
   };
 
   return (
-    <section className="flex flex-shrink-0 flex-col gap-[149px] bg-[#03030E] px-[70px] py-[149px]">
+    <section className="relative flex flex-shrink-0 flex-col gap-[149px] bg-[#03030E] px-[70px] py-[149px]">
+      <div className="pointer-events-none absolute inset-0 left-0 top-0 z-50">
+        <ContactBackground />
+      </div>
       <div className="flex flex-col items-start gap-[33px]">
         <div className="flex items-start justify-between self-stretch">
           <h1 className="flex-grow text-size-2 font-medium">AI Engineer</h1>

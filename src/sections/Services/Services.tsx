@@ -35,8 +35,8 @@ export default function Services() {
   ];
 
   const handleServiceClick = (title: string) => {
-    if (title === "Web Development") router.push("/services/web-development");
-    if (title === "Product Design") router.push("/services/uiux-design");
+    if (title === "Web Development") router.push("/services/web_development");
+    if (title === "Product Design") router.push("/services/uiux_design");
   };
 
   return (

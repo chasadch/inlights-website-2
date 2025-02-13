@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -61,7 +62,10 @@ export default function UIUXDesignPage() {
       </div>
 
       {/* Tech section */}
-      <div className="flex w-full flex-col items-start gap-[10px] self-stretch py-[70px]">
+      <div
+        className="flex h-[541px] w-full flex-col items-start justify-center gap-[10px] self-stretch py-[70px]"
+        style={{ backgroundImage: "url(/statistics/bg.png)" }}
+      >
         <div className="mx-auto inline-flex flex-col items-start gap-[48px]">
           <h1 className="text-[44px] font-normal">
             Process that moves things forward
@@ -245,9 +249,12 @@ export default function UIUXDesignPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center px-[70px] py-[160px]">
+      <div className="relative flex items-center justify-center px-[70px] py-[160px]">
+        <div className="absolute inset-0 left-0 top-0 z-50">
+          <CallToActionBackground />
+        </div>
         <div
-          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] xl:w-[1200px]"
+          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

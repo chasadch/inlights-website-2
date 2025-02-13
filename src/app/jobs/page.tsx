@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import supabase from "@/lib/supabase";
 import toast from "react-hot-toast";
+import ContactBackground from "@/sections/Contact/ContactBackground";
 
 interface Job {
   id: string;
@@ -36,6 +37,7 @@ export default function JobsPage() {
   }, []);
 
   const handleJobClick = (jobName: string) => {
+    console.log(jobName);
     if (jobName === "AI Engineer") router.push("/jobs/ai-engineer");
   };
 
@@ -63,7 +65,11 @@ export default function JobsPage() {
       </div>
 
       {/* Jobs section */}
-      <div className="flex w-full flex-col items-start gap-[20px] p-[70px]">
+      <div className="relative flex w-full flex-col items-start gap-[20px] px-[70px] pb-[250px]">
+        <div className="pointer-events-none absolute inset-0 left-0 top-0 z-50">
+          <ContactBackground />
+        </div>
+
         {jobs.map((job) => (
           <div key={job.id} className="w-full">
             <div className="flex flex-col items-start gap-[32px] self-stretch rounded-[24px] p-[38px]">

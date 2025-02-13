@@ -13,7 +13,7 @@ export default function TrafficManagement() {
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="relative flex h-[961px] flex-col items-center justify-center px-[70px] pt-[162px]"
+        className="relative flex h-[1000px] flex-col items-center justify-center px-[70px] pt-[161.09px]"
         style={{
           backgroundImage:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/info/manage_city_traffic.png)",
@@ -77,16 +77,16 @@ export default function TrafficManagement() {
             </div>
           </div>
 
-          <div className="relative flex-shrink-0 lg:w-[439px] xl:h-[389px] xl:w-[555px] 2xl:w-[655px]">
+          <div className="relative flex-shrink-0 lg:w-[439px] xl:h-[439px] xl:w-[555px] 2xl:h-[489px] 2xl:w-[655px]">
             <Image
               src="/geohealth/topic_customization.png"
               alt="Geohealth"
               width={655}
               height={489}
-              className="flex-shrink-0 rounded-[11.84px] p-[12px]"
+              className="flex-shrink-0 rounded-[11.84px] p-[12px] lg:w-[439px] xl:h-[439px] xl:w-[555px] 2xl:h-[489px] 2xl:w-[655px]"
             />
 
-            <span className="absolute -translate-y-1/2 font-semibold lg:left-[110px] lg:top-[50%] lg:text-[17px] xl:left-[140px] xl:top-[54%] xl:text-[22px] 2xl:left-[150px] 2xl:top-[64%] 2xl:text-[28px]">
+            <span className="absolute -translate-y-1/2 font-semibold lg:left-[110px] lg:top-[50%] lg:text-[17px] xl:left-[135px] xl:top-[50%] xl:text-[22px] 2xl:left-[150px] 2xl:top-[50%] 2xl:text-[28px]">
               Image Placeholder
             </span>
           </div>

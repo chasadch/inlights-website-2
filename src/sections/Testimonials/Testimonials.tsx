@@ -3,6 +3,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useRef } from "react";
+import TestimonialsBackground from "./TestimonialsBackground";
 
 export default function Testimonials() {
   const testimonials = [
@@ -80,7 +81,12 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-black px-[70px] py-[160px]">
+    <section className="relative bg-black px-[70px] py-[160px]">
+      {/* Background SVG wrapped in an absolutely positioned container */}
+      <div className="absolute inset-0 left-0 top-0 z-50">
+        <TestimonialsBackground />
+      </div>
+
       <div className="flex flex-col items-center gap-[64px]">
         <div className="flex flex-col items-center gap-[8px]">
           <h1 className="w-[864px] text-center text-size-2 font-normal">
