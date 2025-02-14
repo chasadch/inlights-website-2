@@ -73,19 +73,28 @@ export default function PortfolioPage() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[20px] shadow-shadowCustom sm:grid-cols-2 xl:h-[239px] 2xl:h-[229px]"
+            className="grid grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[20px] shadow-shadowCustom sm:grid-cols-2"
           >
             {/* Image Container */}
             <div
-              className="flex h-[200px] flex-col items-start gap-[10px] rounded-[18px]"
+              className="relative flex h-[200px] flex-col items-start gap-[10px] rounded-[18px]"
               style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
             >
+              {/* Gradient overlay with blur */}
+              <div
+                className="absolute inset-0 z-50"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(18, 19, 22, 0.46) 0%, rgba(4, 11, 49, 0.46) 100%)",
+                  filter: "blur(3px)",
+                }}
+              ></div>
               <Image
                 src={project.image}
                 alt={project.title}
                 width={285}
                 height={200}
-                className="h-full w-full rounded-[20px] object-cover"
+                className="relative z-10 h-full w-full rounded-[20px] object-cover"
               />
             </div>
 
@@ -171,7 +180,7 @@ export default function PortfolioPage() {
           <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center sm:gap-[24px]">
             {/* Text */}
             <p
-              className="text-2xl font-bold text-[#FBFBFB] sm:text-[45px]"
+              className="font-bold text-[#FBFBFB] sm:text-[45px]"
               style={{ fontFamily: "Roboto Serif" }}
             >
               Enough talk, let&apos;s get to work

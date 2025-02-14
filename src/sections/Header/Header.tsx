@@ -24,7 +24,10 @@ export default function Header() {
         className="z-50 hidden flex-wrap items-center gap-[9px] md:flex"
         style={{ maxWidth: "100%", flexWrap: "wrap" }}
       >
-        <li className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px]">
+        <li
+          className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px]"
+          onClick={() => router.push("/")}
+        >
           <span className="text-size-4 font-semibold">Home</span>
         </li>
 
@@ -74,28 +77,13 @@ export default function Header() {
               items: [
                 {
                   imageSrc: "/header/web_development.png",
-                  title: "Web Development",
-                  onClick: () => router.push("/products/web_development"),
+                  title: "Traffic Management",
+                  onClick: () => router.push("/products/traffic_management"),
                 },
                 {
                   imageSrc: "/header/product_design.png",
-                  title: "Product Design",
-                  onClick: () => router.push("/products/product_design"),
-                },
-              ],
-            },
-            {
-              header: "Artificial Intelligence",
-              items: [
-                {
-                  imageSrc: "/header/computer_vision.png",
-                  title: "Computer Vision",
-                  onClick: () => router.push("/products/computer_vision"),
-                },
-                {
-                  imageSrc: "/header/ai_automation.png",
-                  title: "AI Automation",
-                  onClick: () => router.push("/products/ai_automation"),
+                  title: "Premises Security",
+                  onClick: () => router.push("/products/premises_security"),
                 },
               ],
             },
@@ -107,18 +95,33 @@ export default function Header() {
           title="Company"
           sections={[
             {
+              header: "About",
+              items: [
+                {
+                  imageSrc: "/header/web_development.png",
+                  title: "About",
+                  onClick: () => router.push("/about"),
+                },
+                // {
+                //   imageSrc: "/header/product_design.png",
+                //   title: "Product Design",
+                //   onClick: () => router.push("/company/product_design"),
+                // },
+              ],
+            },
+            {
               header: "Our Portfolio",
               items: [
                 {
                   imageSrc: "/header/web_development.png",
-                  title: "Web Development",
+                  title: "Portfolio",
                   onClick: () => router.push("/portfolio"),
                 },
-                {
-                  imageSrc: "/header/product_design.png",
-                  title: "Product Design",
-                  onClick: () => router.push("/company/product_design"),
-                },
+                // {
+                //   imageSrc: "/header/product_design.png",
+                //   title: "Product Design",
+                //   onClick: () => router.push("/company/product_design"),
+                // },
               ],
             },
             {
@@ -126,14 +129,14 @@ export default function Header() {
               items: [
                 {
                   imageSrc: "/header/computer_vision.png",
-                  title: "Computer Vision",
+                  title: "Team",
                   onClick: () => router.push("/team"),
                 },
-                {
-                  imageSrc: "/header/ai_automation.png",
-                  title: "AI Automation",
-                  onClick: () => router.push("/company/ai_automation"),
-                },
+                // {
+                //   imageSrc: "/header/ai_automation.png",
+                //   title: "AI Automation",
+                //   onClick: () => router.push("/company/ai_automation"),
+                // },
               ],
             },
           ]}

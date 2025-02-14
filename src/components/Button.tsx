@@ -32,13 +32,13 @@ export default function Button({
       </button>
     );
   } else {
-    // Outline variant: the gradient appears only on the border.
-    // We force the outer container to have a fixed height (52px) using box-border
-    // so that its padding is included in the overall height.
+    // Outline variant: show gradient border normally but hide it on hover.
     return (
       <div
-        className={`relative box-border inline-block h-[52px] rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] p-[3px] ${className}`}
+        className={`group relative box-border inline-block h-[52px] rounded-[10px] p-[3px] ${className}`}
       >
+        {/* Gradient border overlay */}
+        <div className="pointer-events-none absolute inset-0 rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] transition-opacity duration-300 group-hover:opacity-0" />
         <button
           onClick={onClick}
           className={`${baseClasses} relative h-full w-full rounded-[7px] bg-black px-[20px] py-[14px] text-white hover:bg-[#5144DCF7]`}
