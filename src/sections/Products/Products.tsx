@@ -20,7 +20,27 @@ export default function Products() {
           </h1>
         </div>
 
-        <div className="grid h-[610px] grid-cols-1 gap-[34px] md:grid-cols-2 lg:gap-[24px]">
+        {/* Products grid (375 pixels) */}
+        <div className="grid grid-cols-1 gap-[34px] py-2 md:grid-cols-2 lg:hidden lg:gap-[24px]">
+          <ProductCard
+            title="Traffic Management"
+            subtitle="Manage City Traffic with AI"
+            description="InLights revolutionizes your planning with advanced forecasting tools. Anticipate needs, schedule proactively, and optimize resources to keep operations running smoothly."
+            imageSrc="/products/management_city_traffic_with_ai.png"
+            onClick={handleCardClick}
+          />
+
+          <ProductCard
+            title="Premises Security"
+            subtitle="Manage who Enters your Premises"
+            description="InLights revolutionizes gate security with a cutting-edge solution that fuses AI-driven vehicle identification, CNIC scanning, and real-time tracking for unmatched access control and theft prevention."
+            imageSrc="/products/manage_who_enters_your_premises.png"
+            onClick={handleCardClick}
+          />
+        </div>
+
+        {/* Products grid (1024 pixels) */}
+        <div className="hidden h-[610px] grid-cols-1 gap-[34px] md:grid-cols-2 lg:grid lg:gap-[24px]">
           <ProductCard
             title="Traffic Management"
             subtitle="Manage City Traffic with AI"

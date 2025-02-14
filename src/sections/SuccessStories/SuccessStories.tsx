@@ -109,7 +109,7 @@ export default function SuccessStories() {
     <div className="bg-black px-[16px] py-[140px] text-white lg:px-[70px]">
       <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[32px]">
         {/* Header Section */}
-        <div className="flex items-center justify-between gap-[48px] self-stretch">
+        <div className="flex items-center justify-center gap-[48px] self-stretch lg:justify-between">
           <h1 className="text-size-3 font-normal lg:text-size-2">
             Our Success Stories
           </h1>
@@ -144,7 +144,21 @@ export default function SuccessStories() {
         </div>
 
         {/* Success Stories Grid Section (375 pixels) */}
-        <div></div>
+        <div
+          ref={containerRef}
+          className="grid w-full grid-cols-1 items-center gap-[24px] self-stretch lg:hidden"
+        >
+          {stories.map((story, index) => (
+            <div key={index}>
+              <StoriesCard
+                image={story.image}
+                category={story.category}
+                title={story.title}
+                description={story.description}
+              />
+            </div>
+          ))}
+        </div>
 
         {/* Success Stories Grid Section (1024 pixels) */}
         <div

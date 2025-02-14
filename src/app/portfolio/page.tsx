@@ -62,10 +62,12 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <section className="flex flex-col gap-[44px] bg-black px-[16px] py-[80px] text-white sm:px-[40px] lg:px-[70px] lg:py-[140px]">
+    <section className="flex flex-col gap-[20px] bg-black px-[16px] py-[80px] text-white sm:px-[40px] lg:gap-[44px] lg:px-[70px] lg:py-[140px]">
       {/* Services Header */}
-      <div className="flex flex-col items-start gap-[64px]">
-        <h1 className="text-3xl font-normal lg:text-size-2">Our Portfolio</h1>
+      <div className="flex flex-col items-start lg:gap-[64px]">
+        <h1 className="text-size-3 font-bold lg:text-size-2 lg:font-normal">
+          Our Portfolio
+        </h1>
       </div>
 
       {/* Projects Grid Container: 2 cards per row */}
@@ -77,7 +79,7 @@ export default function PortfolioPage() {
           >
             {/* Image Container */}
             <div
-              className="relative flex h-[200px] flex-col items-start gap-[10px] rounded-[18px]"
+              className="relative flex h-[200px] flex-col items-start gap-[10.632px] self-stretch rounded-[19.137px]"
               style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
             >
               {/* Gradient overlay with blur */}
@@ -101,8 +103,8 @@ export default function PortfolioPage() {
             {/* Content Container */}
             <div className="flex flex-col items-start justify-between">
               <div className="flex flex-col items-start gap-[14px] self-stretch">
-                <div className="flex items-center gap-[6px] self-stretch">
-                  <h1 className="text-xl font-semibold sm:text-size-3">
+                <div className="mr-[6px] flex items-center justify-between self-stretch">
+                  <h1 className="text-size-5 font-semibold sm:text-size-3">
                     {project.title}
                   </h1>
                   <div className="flex h-[24px] w-[24px] items-center justify-center">
@@ -131,7 +133,7 @@ export default function PortfolioPage() {
                     </svg>
                   </div>
                 </div>
-                <p className="self-stretch font-normal opacity-70 xl:text-[12px] 2xl:text-size-6">
+                <p className="mb-6 self-stretch text-size-7 font-normal opacity-70 2xl:text-size-6">
                   {project.description}
                 </p>
               </div>

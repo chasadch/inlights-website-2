@@ -68,7 +68,7 @@ export default function Services() {
       </div>
 
       {/* Talent Section (375 px)*/}
-      <div className="flex w-full items-center justify-center px-[16px] py-[182px] sm:px-[40px] md:py-[100px] lg:hidden lg:px-[70px]">
+      <div className="flex w-full items-center justify-center px-[16px] pt-[182px] sm:px-[40px] md:py-[100px] lg:hidden lg:px-[70px]">
         <div
           className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
