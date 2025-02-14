@@ -32,16 +32,11 @@ export default function About() {
       </div>
 
       {/* Brief History Section */}
-      <div className="flex flex-col items-start gap-[10px] self-stretch py-[70px]">
-        <div className="relative h-[541px] w-full">
-          {/* Background container placed absolutely behind the content */}
-          <div className="absolute left-0 top-0 z-0 h-[541px] w-full">
-            <div
-              className="h-full"
-              style={{ backgroundImage: "url(/statistics/bg.png)" }}
-            ></div>
-          </div>
-
+      <div className="flex flex-col items-start gap-[10px] self-stretch">
+        <div
+          className="relative w-full py-[70px]"
+          style={{ backgroundImage: "url(/statistics/bg.png)" }}
+        >
           {/* Content container above the background */}
           <div className="relative z-10 flex h-full flex-col items-center gap-[48px]">
             <h1 className="mt-[24px] text-center text-[40px] font-medium">
@@ -192,12 +187,12 @@ export default function About() {
 
       {/* Talent Section */}
       <div className="relative flex items-center justify-center px-[70px] py-[160px]">
-        <div className="absolute inset-0 left-0 top-0 z-50">
+        <div className="absolute inset-0 left-0 top-0 z-10">
           <CallToActionBackground />
         </div>
 
         <div
-          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

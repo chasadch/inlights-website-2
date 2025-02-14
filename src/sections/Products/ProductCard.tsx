@@ -1,6 +1,4 @@
-import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 interface ProductCardProps {
   title: string;
@@ -20,7 +18,7 @@ export default function ProductCard({
   return (
     <div
       onClick={() => onClick(title)}
-      className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-[rgba(45,160,184,0.15)] bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 xl:h-[591px] xl:p-[34px]"
+      className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 xl:h-[591px] xl:p-[34px]"
     >
       <div className="flex cursor-pointer flex-col items-start justify-center gap-[20px] self-stretch xl:gap-[24px]">
         <div className="flex flex-col items-start gap-[34px] self-stretch">
@@ -34,10 +32,17 @@ export default function ProductCard({
           <p className="self-stretch text-size-7 font-normal opacity-70 xl:text-size-5">
             {description}
           </p>
-          <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-            <span className="text-size-7 font-normal">Discover InLights</span>
+          <div
+            className={`flex items-center gap-[9px] self-stretch py-[8px] ${title === "Premises Security" && "-mt-4"}`}
+          >
+            <span className={"text-size-7 font-normal"}>Discover Insights</span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
-              <MoveUpRight width={15} height={15} />
+              <Image
+                src={"/products/up_arrow.png"}
+                alt="arrow"
+                width={15}
+                height={15}
+              />
             </div>
           </div>
         </div>

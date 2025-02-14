@@ -45,13 +45,13 @@ export default function JobsPage() {
     <section className="bg-[#03030E]">
       {/* Hero Section */}
       <div
-        className="relative h-[528px] bg-cover bg-center"
+        className="relative h-[525px] bg-cover bg-center"
         style={{
           background:
-            "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/jobs/this_is_engineering.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
+            "linear-gradient(0deg, rgba(9,17,33,0.32) 0%, rgba(9,17,33,0.32) 100%), url('/jobs/this_is_engineering.png') no-repeat center/cover",
         }}
       >
-        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[18px]">
+        <div className="absolute left-1/2 top-[50%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[18px]">
           <button className="flex items-center justify-center gap-[0.625rem] rounded-[40px] bg-white px-[12px] py-[2px] text-size-7 font-normal text-[#06121B]">
             We are Hiring!
           </button>

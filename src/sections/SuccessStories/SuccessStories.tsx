@@ -106,14 +106,16 @@ export default function SuccessStories() {
   };
 
   return (
-    <div className="bg-black px-[70px] py-[140px] text-white">
-      <div className="flex flex-col items-start gap-[64px] self-stretch">
+    <div className="bg-black px-[16px] py-[140px] text-white lg:px-[70px]">
+      <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[32px]">
         {/* Header Section */}
         <div className="flex items-center justify-between gap-[48px] self-stretch">
-          <h1 className="text-size-2 font-normal">Our Success Stories</h1>
+          <h1 className="text-size-3 font-normal lg:text-size-2">
+            Our Success Stories
+          </h1>
 
           {/* Navigation Buttons */}
-          <div className="flex gap-[10px]">
+          <div className="hidden gap-[10px] lg:flex">
             <button
               onClick={() => handleScroll("left")}
               disabled={scrollPos <= 0}
@@ -141,10 +143,13 @@ export default function SuccessStories() {
           </div>
         </div>
 
-        {/* Success Stories Grid Section */}
+        {/* Success Stories Grid Section (375 pixels) */}
+        <div></div>
+
+        {/* Success Stories Grid Section (1024 pixels) */}
         <div
           ref={containerRef}
-          className="flex items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[5px]"
+          className="hidden items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[16px] lg:flex"
           style={{ scrollbarWidth: "none" }} // For Firefox
         >
           {stories.map((story, index) => (

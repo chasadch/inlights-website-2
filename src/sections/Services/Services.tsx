@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
+import ServiceBackground from "./ServiceBackground";
 import ServiceCard from "./ServiceCard";
 
 export default function Services() {
@@ -12,7 +13,7 @@ export default function Services() {
       image: "/services/ph_code-bold.png",
       title: "Web Development",
       description:
-        "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate your brand.",
+        "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate yo",
     },
     {
       image: "/services/product_design.png",
@@ -40,9 +41,14 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full bg-black text-white">
+    <section className="relative w-full overflow-hidden bg-black pt-[130px] text-white">
+      {/* Background SVG wrapped in an absolutely positioned container */}
+      <div className="absolute inset-0 left-0 top-0 z-10">
+        <ServiceBackground />
+      </div>
+
       {/* Services Header */}
-      <div className="mx-auto flex w-full flex-col items-center gap-[24px] px-[16px] py-[100px] sm:px-[40px] md:py-[140px] lg:gap-[64px] lg:px-[70px]">
+      <div className="relative z-50 mx-auto flex w-full flex-col items-center gap-[24px] px-[16px] py-[30px] sm:px-[40px] md:py-[140px] lg:gap-[64px] lg:px-[70px]">
         <h1 className="text-center text-[24px] font-normal lg:text-size-2">
           Our Services
         </h1>
@@ -61,8 +67,33 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Talent Section */}
-      <div className="flex w-full items-center justify-center px-[16px] py-[80px] sm:px-[40px] md:py-[100px] lg:px-[70px]">
+      {/* Talent Section (375 px)*/}
+      <div className="flex w-full items-center justify-center px-[16px] py-[182px] sm:px-[40px] md:py-[100px] lg:hidden lg:px-[70px]">
+        <div
+          className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
+          style={{
+            backgroundImage: "url('/callToAction/call_to_action_mobile.png')",
+          }}
+        >
+          {/* Overlay Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] sm:flex-row sm:justify-between lg:px-[60px]">
+            {/* Text */}
+            <p
+              className="text-center text-size-6 font-bold text-[#FBFBFB] lg:text-[36px] xl:text-size-2"
+              style={{ fontFamily: "Roboto Serif" }}
+            >
+              Enough talk, let&apos;s get to work
+            </p>
+            {/* Button */}
+            <Button onClick={() => router.push("/jobs")} variant="gradient">
+              Let&apos;s Get in Touch
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Talent Section (1024 px)*/}
+      <div className="hidden w-full items-center justify-center px-[16px] py-[182px] sm:px-[40px] md:py-[100px] lg:flex lg:px-[70px]">
         <div
           className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{

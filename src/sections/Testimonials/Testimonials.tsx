@@ -81,9 +81,9 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative bg-black px-[70px] py-[160px]">
-      {/* Background SVG wrapped in an absolutely positioned container */}
-      <div className="absolute inset-0 left-0 top-0 z-50">
+    <section className="relative overflow-hidden bg-black px-[70px] py-[160px]">
+      {/* Background SVG (placed behind content) */}
+      <div className="absolute inset-0 left-0 top-0 z-10">
         <TestimonialsBackground />
       </div>
 
@@ -95,7 +95,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonial Card */}
-        <div className="flex flex-col items-center justify-center gap-[40px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[48px] shadow-shadowCustom lg:w-[900px] xl:w-[1200px] 2xl:w-[1300px]">
+        <div className="relative z-50 flex flex-col items-center justify-center gap-[40px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[48px] shadow-shadowCustom lg:w-[900px] xl:w-[1200px] 2xl:w-[1300px]">
           <div className="flex items-center self-stretch">
             {/* Left Arrow */}
             <button
