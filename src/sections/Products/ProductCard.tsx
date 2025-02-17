@@ -33,7 +33,7 @@ export default function ProductCard({
             {description}
           </p>
           <div
-            className={`flex items-center gap-[9px] self-stretch ${title === "Premises Security" && "-mt-2 lg:-mt-4"}`}
+            className={`flex items-center gap-[9px] self-stretch ${title === "Premises Security" && "-mt-2"}`}
           >
             <span className={"text-size-7 font-normal"}>Discover Insights</span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">

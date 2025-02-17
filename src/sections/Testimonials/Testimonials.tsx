@@ -42,21 +42,31 @@ export default function Testimonials() {
   // State for animation control
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  // Two separate refs for mobile and desktop sliders
+  const mobileSliderRef = useRef<HTMLDivElement>(null);
+  const desktopSliderRef = useRef<HTMLDivElement>(null);
 
   // When reaching the cloned slide, reset the slider to the real first slide.
   const handleTransitionEnd = () => {
-    if (currentIndex === testimonials.length && sliderRef.current) {
-      // Remove transition so the reset happens instantly
-      sliderRef.current.style.transition = "none";
+    if (currentIndex === testimonials.length) {
+      if (mobileSliderRef.current) {
+        mobileSliderRef.current.style.transition = "none";
+        mobileSliderRef.current.style.transform = `translateX(0%)`;
+      }
+      if (desktopSliderRef.current) {
+        desktopSliderRef.current.style.transition = "none";
+        desktopSliderRef.current.style.transform = `translateX(0%)`;
+      }
       setCurrentIndex(0);
-      sliderRef.current.style.transform = `translateX(0%)`;
-
-      // Force reflow so that the no-transition change is applied immediately
-      void sliderRef.current.offsetWidth;
-
-      // Re-enable transition for future animations
-      sliderRef.current.style.transition = "transform 0.5s ease-in-out";
+      if (mobileSliderRef.current) {
+        void mobileSliderRef.current.offsetWidth;
+        mobileSliderRef.current.style.transition = "transform 0.5s ease-in-out";
+      }
+      if (desktopSliderRef.current) {
+        void desktopSliderRef.current.offsetWidth;
+        desktopSliderRef.current.style.transition =
+          "transform 0.5s ease-in-out";
+      }
     }
   };
 
@@ -87,118 +97,117 @@ export default function Testimonials() {
         <TestimonialsBackground />
       </div>
 
-      <div className="flex flex-col items-center self-stretch px-[16px] py-[32px] lg:gap-[64px]">
+      <div className="flex flex-col items-center self-stretch bg-bg px-[16px] py-[32px] lg:gap-[64px] lg:bg-transparent">
         <div className="hidden flex-col items-center gap-[8px] lg:flex">
           <h1 className="w-[864px] text-center text-size-2 font-normal">
             Don&apos;t take our word, see what customers say about us
           </h1>
         </div>
 
-        {/* Testimonial Card (375 pixels) */}
-        <div className="relative z-50 flex flex-col items-center justify-center gap-[24px] bg-bg lg:hidden">
-          <div className="flex items-center self-stretch">
-            {/* Testimonial Slider */}
-            <div className="relative overflow-hidden">
-              <div
-                ref={sliderRef}
-                onTransitionEnd={handleTransitionEnd}
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`,
-                }}
-              >
-                {testimonials.map((testimonial, index) => (
-                  <div
-                    key={index}
-                    className="flex min-w-full flex-col items-center justify-center gap-[24px] self-stretch"
-                  >
-                    <p className="self-stretch text-center text-size-7 font-light opacity-80">
+        {/* Mobile Slider (375 pixels) */}
+        <div className="relative px-[16px] py-[32px] lg:hidden">
+          <div className="relative flex flex-col gap-[24px] overflow-hidden">
+            <div
+              ref={mobileSliderRef}
+              onTransitionEnd={handleTransitionEnd}
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="flex min-w-full flex-col items-center justify-center gap-[24px]"
+                >
+                  <div className="flex flex-col items-center justify-center gap-[24px]">
+                    <h1 className="text-center text-size-7 opacity-80">
                       {testimonial.text}
-                    </p>
-                    <div className="flex flex-col items-center justify-center gap-[16px]">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        width={42}
-                        height={42}
-                        className="rounded-[42px]"
-                      />
-                      <div className="flex flex-col items-center gap-[4px]">
-                        <div className="text-size-5 font-medium">
-                          {testimonial.name}
-                        </div>
-                        <div className="text-size-7 font-normal">
-                          {testimonial.role}
-                        </div>
-                      </div>
-                    </div>
+                    </h1>
                   </div>
-                ))}
-
-                {/* Cloned First Testimonial for Seamless Loop */}
-                <div className="flex min-w-full flex-col items-center justify-center gap-[32px]">
-                  <p className="self-stretch text-center text-[24px] font-normal opacity-80">
-                    {testimonials[0].text}
-                  </p>
                   <div className="flex flex-col items-center justify-center gap-[16px]">
                     <Image
-                      src={testimonials[0].image}
-                      alt={testimonials[0].name}
-                      width={42}
-                      height={42}
-                      className="rounded-[42px]"
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={32}
+                      height={32}
+                      className="rounded-[32px]"
                     />
-                    <div className="flex flex-col items-center gap-[4px]">
-                      <div className="text-size-5 font-medium">
-                        {testimonials[0].name}
-                      </div>
-                      <div className="text-size-7 font-normal">
-                        {testimonials[0].role}
-                      </div>
+                    <div className="flex flex-col items-center justify-center gap-[4px]">
+                      <h1 className="text-size-6 font-normal">
+                        {testimonial.name}
+                      </h1>
+                      <span className="text-size-7 font-normal">
+                        {testimonial.role}
+                      </span>
                     </div>
+                  </div>
+                </div>
+              ))}
+              {/* Cloned First Testimonial for Seamless Loop */}
+              <div className="flex min-w-full flex-col items-center justify-center gap-[24px]">
+                <div className="flex flex-col items-center justify-center gap-[24px]">
+                  <h1 className="text-center text-size-7 opacity-80">
+                    {testimonials[0].text}
+                  </h1>
+                </div>
+                <div className="flex flex-col items-center justify-center gap-[16px]">
+                  <Image
+                    src={testimonials[0].image}
+                    alt={testimonials[0].name}
+                    width={32}
+                    height={32}
+                    className="rounded-[32px]"
+                  />
+                  <div className="flex flex-col items-center justify-center gap-[4px]">
+                    <h1 className="text-size-6 font-normal">
+                      {testimonials[0].name}
+                    </h1>
+                    <span className="text-size-7 font-normal">
+                      {testimonials[0].role}
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="flex gap-[16px]">
-            {/* Left Arrow */}
-            <button
-              onClick={nextTestimonial}
-              className="flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity hover:opacity-80"
-            >
-              <ArrowLeft width={24} height={24} stroke="currentColor" />
-            </button>
+            {/* Mobile Navigation Arrows */}
+            <div className="flex items-start justify-center gap-[16px]">
+              <button
+                onClick={previousTestimonial}
+                className={`flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity ${
+                  currentIndex === 0
+                    ? "pointer-events-none cursor-not-allowed opacity-50"
+                    : "hover:opacity-80"
+                }`}
+              >
+                <ArrowLeft width={24} height={24} stroke="currentColor" />
+              </button>
+              <button
+                onClick={nextTestimonial}
+                className="flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity hover:opacity-80"
+              >
+                <ArrowRight width={24} height={24} stroke="currentColor" />
+              </button>
+            </div>
 
-            {/* Right Arrow */}
-            <button
-              onClick={nextTestimonial}
-              className="flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity hover:opacity-80"
-            >
-              <ArrowRight width={24} height={24} stroke="currentColor" />
-            </button>
-          </div>
-
-          {/* Pagination Dots */}
-          <div className="flex -rotate-[90deg] flex-col items-start gap-[6px]">
-            {/* Extra wrapper to re-rotate and lay out horizontally */}
-            <div className="flex rotate-[90deg] flex-row items-center gap-[6px]">
-              {testimonials.map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-[6px] rounded-[97px] transition-all duration-300 ${
-                    i === currentIndex % testimonials.length
-                      ? "w-[18px] bg-white"
-                      : "w-[6px] bg-[#929CAB]"
-                  }`}
-                ></div>
-              ))}
+            {/* Mobile Pagination Dots */}
+            <div className="flex justify-center">
+              <div className="flex flex-row items-center gap-[6px]">
+                {testimonials.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-[6px] rounded-[97px] transition-all duration-300 ${
+                      i === currentIndex % testimonials.length
+                        ? "w-[18px] bg-white"
+                        : "w-[6px] bg-[#929CAB]"
+                    }`}
+                  ></div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Testimonial Card (1024 pixels) */}
+        {/* Desktop Slider (1024 pixels and above) */}
         <div className="relative z-50 hidden flex-col items-center justify-center gap-[40px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[48px] shadow-shadowCustom lg:flex lg:w-[900px] xl:w-[1200px] 2xl:w-[1300px]">
           <div className="flex items-center self-stretch">
             {/* Left Arrow */}
@@ -216,7 +225,7 @@ export default function Testimonials() {
             {/* Testimonial Slider */}
             <div className="relative overflow-hidden">
               <div
-                ref={sliderRef}
+                ref={desktopSliderRef}
                 onTransitionEnd={handleTransitionEnd}
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
@@ -288,7 +297,6 @@ export default function Testimonials() {
 
           {/* Pagination Dots */}
           <div className="flex -rotate-[90deg] flex-col items-start gap-[6px]">
-            {/* Extra wrapper to re-rotate and lay out horizontally */}
             <div className="flex rotate-[90deg] flex-row items-center gap-[6px]">
               {testimonials.map((_, i) => (
                 <div

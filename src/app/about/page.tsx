@@ -7,15 +7,17 @@ export default function About() {
     <section className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="relative flex h-[685px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center"
+        className="relative flex h-[586px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center lg:h-[685px]"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="absolute left-1/2 top-1/2 flex w-[903px] -translate-x-1/2 -translate-y-1/2 transform flex-col items-center gap-[18px]">
-          <h1 className="text-size-2 font-medium">About the Company</h1>
-          <p className="text-center text-size-4 font-normal opacity-70">
+        <div className="absolute left-1/2 top-1/2 flex w-[319px] -translate-x-1/2 -translate-y-1/2 transform flex-col items-center gap-[17.612px] lg:w-[903px]">
+          <h1 className="text-size-3 font-medium lg:text-size-2">
+            About the Company
+          </h1>
+          <p className="text-center text-size-6 font-normal opacity-70 lg:text-size-4">
             Founded in 2021, Inlights is a forward-thinking digital solutions
             company that specializes in web development, product design, and AI
             automation services. We are committed to transforming ideas into
@@ -32,7 +34,7 @@ export default function About() {
       </div>
 
       {/* Brief History Section */}
-      <div className="flex flex-col items-start gap-[10px] self-stretch">
+      <div className="hidden flex-col items-start gap-[10px] self-stretch lg:flex">
         <div
           className="relative w-full py-[70px]"
           style={{ backgroundImage: "url(/statistics/bg.png)" }}
@@ -185,8 +187,31 @@ export default function About() {
         </div>
       </div>
 
-      {/* Talent Section */}
-      <div className="relative flex items-center justify-center px-[70px] py-[160px]">
+      {/* Talent Section 375 pixels with higher z-index */}
+      <div className="flex items-center justify-center px-[16px] py-[80px] lg:hidden lg:px-[70px] lg:py-[160px]">
+        <div
+          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          style={{
+            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
+          }}
+        >
+          {/* Overlay Content */}
+          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
+            {/* Text */}
+            <p
+              className="font-bold text-[#FBFBFB] lg:text-[45px]"
+              style={{ fontFamily: "Roboto Serif" }}
+            >
+              Enough talk, let&apos;s get to work
+            </p>
+            {/* Button */}
+            <Button variant="gradient">Let&apos;s Get In Touch</Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Talent Section 1024 pixels with higher z-index */}
+      <div className="relative hidden items-center justify-center px-[70px] py-[160px] lg:flex">
         <div className="absolute inset-0 left-0 top-0 z-10">
           <CallToActionBackground />
         </div>

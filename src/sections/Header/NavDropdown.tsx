@@ -25,13 +25,16 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
 
   return (
     <li
-      className="relative flex flex-col items-center"
+      className="group relative flex flex-col items-center"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
       {/* Trigger */}
       <div className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px] xl:gap-[4px]">
-        <span className="text-size-4 font-semibold">{title}</span>
+        <span className="relative text-size-4 font-semibold">
+          {title}
+          <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+        </span>
         <ChevronDown width={16} height={16} />
       </div>
 

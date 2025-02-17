@@ -11,24 +11,24 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
   return (
     <div className="relative flex flex-col items-start gap-[16px]">
       {/* Image */}
-      <div className="relative h-[300px] w-full overflow-hidden rounded-[16px] sm:h-[350px] md:h-[417px]">
+      <div className="relative h-[196.517px] w-full overflow-hidden rounded-[16px] lg:h-[417px]">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
 
       {/* Name and Role */}
-      <div className="flex flex-col items-start gap-[10px]">
-        <h1 className="text-center text-xl font-semibold sm:text-size-3">
+      <div className="flex flex-col items-start lg:gap-[10px]">
+        <h1 className="text-center text-size-6 font-semibold lg:text-size-3">
           {name}
         </h1>
-        <p className="text-center text-base font-normal opacity-80 sm:text-size-5">
+        <p className="text-center text-size-7 font-normal opacity-80 lg:text-size-5">
           {role}
         </p>
       </div>
 
       {/* Social Icons */}
-      <div className="absolute right-[13px] top-[15px] flex items-start gap-[8px]">
-        <div className="flex cursor-pointer items-start gap-[7px]">
-          <div className="relative h-[35px] w-[35px] rounded-full bg-[#FBFBFB]">
+      <div className="absolute bottom-[70px] right-[7px] flex items-start gap-[8px] lg:right-[13px] lg:top-[15px]">
+        <div className="flex cursor-pointer items-start gap-[5.6px] lg:gap-[7px]">
+          <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] lg:h-[35px] lg:w-[35px]">
             <Image
               src="/team/facebook.png"
               alt="Linkedin"
@@ -38,8 +38,8 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
             />
           </div>
         </div>
-        <div className="flex cursor-pointer items-start gap-[7px]">
-          <div className="relative h-[35px] w-[35px] rounded-full bg-[#FBFBFB]">
+        <div className="flex cursor-pointer items-start gap-[5.6px] lg:gap-[7px]">
+          <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] lg:h-[35px] lg:w-[35px]">
             <Image
               src="/team/instagram.png"
               alt="Linkedin"
@@ -49,8 +49,8 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
             />
           </div>
         </div>
-        <div className="flex cursor-pointer items-start gap-[7px]">
-          <div className="relative h-[35px] w-[35px] rounded-full bg-[#FBFBFB]">
+        <div className="flex cursor-pointer items-start gap-[5.6px] lg:gap-[7px]">
+          <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] lg:h-[35px] lg:w-[35px]">
             <Image
               src="/team/linkedin.png"
               alt="Linkedin"

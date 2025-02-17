@@ -68,18 +68,18 @@ export default function Services() {
       </div>
 
       {/* Talent Section (375 px)*/}
-      <div className="flex w-full items-center justify-center px-[16px] pt-[182px] sm:px-[40px] md:py-[100px] lg:hidden lg:px-[70px]">
+      <div className="flex w-full items-center justify-center px-[16px] pt-[182px] md:py-[100px] lg:hidden lg:px-[70px]">
         <div
-          className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
+          className="relative h-[182px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
             backgroundImage: "url('/callToAction/call_to_action_mobile.png')",
           }}
         >
           {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] sm:flex-row sm:justify-between lg:px-[60px]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] lg:flex-row lg:justify-between lg:px-[60px]">
             {/* Text */}
             <p
-              className="text-center text-size-6 font-bold text-[#FBFBFB] lg:text-[36px] xl:text-size-2"
+              className="text-center text-size-6 font-bold text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2"
               style={{ fontFamily: "Roboto Serif" }}
             >
               Enough talk, let&apos;s get to work

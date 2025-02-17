@@ -104,7 +104,7 @@ export default function GeoHealth() {
             </ul>
           </div>
 
-          <div className="relative flex flex-shrink-0 items-center justify-center lg:hidden lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
+          <div className="relative flex w-[375px] flex-shrink-0 items-center justify-center lg:hidden lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
             <Image
               src="/geohealth/geohealth_image2.png"
               alt="Geohealth"

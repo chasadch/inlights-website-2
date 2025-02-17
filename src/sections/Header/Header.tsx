@@ -25,10 +25,13 @@ export default function Header() {
         style={{ maxWidth: "100%", flexWrap: "wrap" }}
       >
         <li
-          className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px]"
+          className="group relative flex cursor-pointer items-center justify-center rounded-[8px] p-[12px]"
           onClick={() => router.push("/")}
         >
-          <span className="text-size-4 font-semibold">Home</span>
+          <span className="relative text-size-4 font-semibold">
+            Home
+            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+          </span>
         </li>
 
         {/* Services Dropdown */}
@@ -102,26 +105,11 @@ export default function Header() {
                   title: "About",
                   onClick: () => router.push("/about"),
                 },
-                // {
-                //   imageSrc: "/header/product_design.png",
-                //   title: "Product Design",
-                //   onClick: () => router.push("/company/product_design"),
-                // },
-              ],
-            },
-            {
-              header: "Our Portfolio",
-              items: [
                 {
-                  imageSrc: "/header/web_development.png",
+                  imageSrc: "/header/product_design.png",
                   title: "Portfolio",
                   onClick: () => router.push("/portfolio"),
                 },
-                // {
-                //   imageSrc: "/header/product_design.png",
-                //   title: "Product Design",
-                //   onClick: () => router.push("/company/product_design"),
-                // },
               ],
             },
             {
@@ -132,11 +120,11 @@ export default function Header() {
                   title: "Team",
                   onClick: () => router.push("/team"),
                 },
-                // {
-                //   imageSrc: "/header/ai_automation.png",
-                //   title: "AI Automation",
-                //   onClick: () => router.push("/company/ai_automation"),
-                // },
+                {
+                  imageSrc: "/header/computer_vision.png",
+                  title: "Team",
+                  onClick: () => router.push("/team"),
+                },
               ],
             },
           ]}

@@ -75,7 +75,7 @@ export default function PortfolioPage() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[20px] shadow-shadowCustom sm:grid-cols-2"
+            className="grid grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[12px] shadow-shadowCustom sm:grid-cols-2"
           >
             {/* Image Container */}
             <div
@@ -103,7 +103,7 @@ export default function PortfolioPage() {
             {/* Content Container */}
             <div className="flex flex-col items-start justify-between">
               <div className="flex flex-col items-start gap-[14px] self-stretch">
-                <div className="mr-[6px] flex items-center justify-between self-stretch">
+                <div className="flex items-center justify-between self-stretch">
                   <h1 className="text-size-5 font-semibold sm:text-size-3">
                     {project.title}
                   </h1>

@@ -52,14 +52,14 @@ export default function TeamPage() {
   ];
 
   return (
-    <section className="flex flex-col gap-[44px] bg-black px-[16px] py-[80px] text-white sm:px-[40px] lg:px-[120px] lg:py-[136px]">
+    <section className="flex flex-col gap-[44px] bg-black px-[16px] py-[80px] text-white lg:px-[120px] lg:py-[136px]">
       {/* Our Team Header */}
       <div className="flex flex-col items-start gap-[64px]">
-        <h1 className="text-size-2 font-normal">Our Team</h1>
+        <h1 className="text-size-3 font-normal lg:text-size-2">Our Team</h1>
       </div>
 
       {/* Team Cards */}
-      <div className="grid grid-cols-1 gap-[74px] md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-[13px] lg:grid-cols-2 lg:gap-[74px] xl:grid-cols-3">
         {teamMembers.map((member, index) => (
           <TeamCard
             key={index}
@@ -71,18 +71,18 @@ export default function TeamPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center pt-[80px] lg:pt-[240px]">
+      <div className="flex items-center justify-center px-[16px] py-[80px] lg:hidden lg:px-[70px] lg:py-[160px]">
         <div
-          className="relative h-[160px] w-full max-w-[1301px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat sm:h-[209px]"
+          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}
         >
           {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center sm:gap-[24px]">
+          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
             {/* Text */}
             <p
-              className="text-2xl font-bold text-[#FBFBFB] sm:text-[45px]"
+              className="font-bold text-[#FBFBFB] lg:text-[45px]"
               style={{ fontFamily: "Roboto Serif" }}
             >
               Enough talk, let&apos;s get to work

@@ -7,6 +7,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Header from "@/sections/Header/Header";
 import Footer from "@/sections/Footer/Footer";
+import BackToTop from "@/sections/BackToTop/BackToTop";
 
 export const metadata = {
   title: "Smart Cities AI",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
         <Header />
+        <BackToTop />
         <main>{children}</main>
         <Footer />
       </body>

@@ -4,9 +4,51 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import supabase from "@/lib/supabase";
-import toast from "react-hot-toast";
 import ContactBackground from "@/sections/Contact/ContactBackground";
+
+// Local array of job objects (no Supabase)
+const jobsData = [
+  {
+    id: "1",
+    created_at: "2025-02-07 07:39:03.632396+00",
+    title: "AI Engineer",
+    description:
+      "Lorem Ipsum thora Ista La Vista irtim gasiliase Ipsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliase",
+    location: "Remote",
+    schedule: "Full Time",
+    slug: "ai-engineer",
+  },
+  {
+    id: "2",
+    created_at: "2025-02-07 07:40:06.123973+00",
+    title: "AI Engineer",
+    description:
+      "Lorem Ipsum thora Ista La Vista irtim gasiliase Ipsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliase",
+    location: "Remote",
+    schedule: "Full Time",
+    slug: "ai-engineer",
+  },
+  {
+    id: "3",
+    created_at: "2025-02-13 08:14:25.24128+00",
+    title: "AI Engineer",
+    description:
+      "Lorem Ipsum thora Ista La Vista irtim gasiliase Ipsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliase",
+    location: "Remote",
+    schedule: "Full Time",
+    slug: "ai-engineer",
+  },
+  {
+    id: "4",
+    created_at: "2025-02-13 08:15:01.535663+00",
+    title: "AI Engineer",
+    description:
+      "Lorem Ipsum thora Ista La Vista irtim gasiliase Ipsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliaseIpsum thora Ista La Vista irtim gasiliase",
+    location: "Remote",
+    schedule: "Full Time",
+    slug: "ai-engineer",
+  },
+];
 
 interface Job {
   id: string;
@@ -23,17 +65,8 @@ export default function JobsPage() {
   const [jobs, setJobs] = useState<Job[]>([]);
 
   useEffect(() => {
-    const fetchJobs = async () => {
-      const { data, error } = await supabase.from("jobs").select("*");
-      if (error) {
-        toast.error(`Error fetching jobs: ${error.message}`);
-      } else {
-        setJobs(data as Job[]);
-        // toast.success("Jobs fetched successfully!");
-      }
-    };
-
-    fetchJobs();
+    // Simply set jobs from local array (no Supabase)
+    setJobs(jobsData);
   }, []);
 
   const handleJobClick = (jobName: string) => {
