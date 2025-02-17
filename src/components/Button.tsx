@@ -18,13 +18,13 @@ export default function Button({
   ...rest
 }: ButtonProps) {
   const baseClasses =
-    "flex items-center justify-center gap-[10.36px] lg:gap-[12px] text-size-6 font-medium transition duration-300";
+    "flex items-center  justify-center gap-[10.36px] lg:gap-[12px] text-size-6 font-medium transition duration-300";
 
   if (variant === "gradient") {
     return (
       <button
         onClick={onClick}
-        className={`${baseClasses} group relative h-[52px] rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] px-[20px] py-[14px] text-white shadow-shadowCustom before:absolute before:inset-0 before:rounded-[10px] before:border-[3px] before:border-transparent before:transition-all before:duration-300 before:content-[''] hover:bg-none hover:before:border-[#552DDA] ${className}`}
+        className={`${baseClasses} group relative h-[52px] rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] px-[20px] py-[14px] text-white before:absolute before:inset-0 before:rounded-[10px] before:border-[3px] before:border-transparent before:transition-all before:duration-300 before:content-[''] hover:bg-none hover:before:border-[#552DDA] ${className}`}
         {...rest}
       >
         <span>{children}</span>

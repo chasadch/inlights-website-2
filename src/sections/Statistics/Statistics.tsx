@@ -10,7 +10,7 @@ export default function Statistics() {
         {/* Added w-full so the parent’s justify-between works correctly */}
         <div className="flex h-[444px] w-full flex-col items-center gap-[20px] lg:h-[541px] lg:flex-row lg:justify-between">
           {/* Child #1 (large block)  */}
-          <div className="flex flex-shrink-0 flex-col items-end justify-center gap-[2.604px] py-[12.5px] pl-[12.5px] pr-[70px] lg:w-[432px] lg:gap-[10px] lg:p-[0px] xl:w-[532px] 2xl:w-[572px]">
+          <div className="flex flex-shrink-0 flex-col items-end justify-center gap-[2.604px] py-[12.5px] pl-[12.5px] pr-[40px] lg:w-[432px] lg:gap-[10px] lg:p-[0px] xl:w-[532px] 2xl:w-[572px]">
             <div className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] bg-[linear-gradient(to_right,#4935FF,#020F12)] p-[48px] shadow-shadowCustom lg:h-[490px] lg:w-full lg:gap-[10px] lg:rounded-br-[150px] lg:rounded-tr-[150px]">
               {/* Content inside the box */}
               <div className="flex w-[128.385px] flex-col items-center gap-[2.604px] lg:w-[493px] lg:gap-[10px]">
