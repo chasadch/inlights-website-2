@@ -48,7 +48,7 @@ export default function ProductCard({
         </div>
       </div>
 
-      <div className="absolute -bottom-[66px] -left-[16px] h-[172px] w-[297px] xl:-bottom-[107px] xl:left-[16px] xl:h-[307px] xl:w-[567px]">
+      <div className="absolute -bottom-[66px] -left-[16px] h-[172px] w-[332px] xl:-bottom-[107px] xl:left-[16px] xl:h-[307px] xl:w-[567px]">
         <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px]">
           <Image
             src={imageSrc}

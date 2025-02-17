@@ -65,7 +65,7 @@ export default function PortfolioPage() {
     <section className="flex flex-col gap-[20px] bg-black px-[16px] py-[80px] text-white sm:px-[40px] lg:gap-[44px] lg:px-[70px] lg:py-[140px]">
       {/* Services Header */}
       <div className="flex flex-col items-start lg:gap-[64px]">
-        <h1 className="text-size-3 font-bold lg:text-size-2 lg:font-normal">
+        <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-normal">
           Our Portfolio
         </h1>
       </div>
@@ -171,7 +171,7 @@ export default function PortfolioPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center px-[16px] py-[80px] sm:px-[40px] lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center pb-[30px] pt-[80px] sm:px-[40px] lg:px-[70px] lg:py-[160px]">
         <div
           className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat sm:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{

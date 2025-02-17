@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <>
       {/* Footer (375 pixels) */}
-      <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-[#0D0D1D] px-[32px] pb-[30px] pt-[80px] lg:hidden">
+      <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-bg lg:hidden">
         {/* First container */}
-        <div className="flex flex-col items-start gap-[60px] self-stretch">
+        <div className="flex flex-col items-start gap-[60px] self-stretch px-[43px] pb-[30px] pt-[80px]">
           <div className="flex flex-col items-start gap-[16px]">
             <Image
               src={"/footer/inlights.png"}
@@ -16,17 +16,26 @@ export default function Footer() {
               height={18.197}
             />
             <div className="flex flex-col items-start gap-[8px]">
-              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
+              {/* <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
                 INLIGHTS
+              </div> */}
+              <div
+                className="self-stretch text-size-6 font-normal text-[#B5B5B5]"
+                style={{ fontFamily: "Lato" }}
+              >
+                HQ - The Garage Riyadh, Saudi Arabia
               </div>
-              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
-                HQ - The Garage, KACST, Riyadh, Saudi Arabia
+              <div
+                className="self-stretch text-size-6 font-normal text-[#B5B5B5]"
+                style={{ fontFamily: "Lato" }}
+              >
+                NSTP, NUST, H-12 Islamabad, ICT 24090 Pakistan
               </div>
-              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
-                NSTP, NUST, H-12, Islamabad, Pakistan
-              </div>
-              <div className="self-stretch text-size-6 font-normal text-[#B5B5B5]">
-                NASTP, Nur Khan Airbase, Rawalpindi, Pakistan
+              <div
+                className="self-stretch text-size-6 font-normal text-[#B5B5B5]"
+                style={{ fontFamily: "Lato" }}
+              >
+                National Incubation Center for Aerospace Technologies - NICAT
               </div>
             </div>
           </div>
@@ -71,7 +80,7 @@ export default function Footer() {
 
           <div className="flex flex-col items-start gap-[16px]">
             <div className="flex flex-col items-start gap-[8px]">
-              <h1 className="text-size-5 font-medium">Let&apos;s Talk</h1>
+              <h1 className="text-size-5 font-medium">Lets Talk</h1>
               <p className="w-[242px] text-size-6 font-normal text-[#B5B5B5]">
                 Enter Email and our representatives will reach out to you.
               </p>
@@ -175,15 +184,15 @@ export default function Footer() {
         </div>
 
         {/* Second container */}
-        <div className="flex flex-col items-start gap-[23px] self-stretch">
+        <div className="flex flex-col items-start gap-[23px] self-stretch px-[16px]">
           <div className="h-[1px] self-stretch bg-[#8C8C8C] opacity-50"></div>
           <div className="flex items-start justify-between self-stretch">
             <span className="text-size-7 font-normal">
-              admin@inlights.com.pk
+              support@inlights.com
             </span>
             <div className="flex items-start gap-[4px]">
               <span className="text-size-7 font-normal">
-                &copy; InLights. All rights reserved
+                © 2024 Inlights. All rights reserved
               </span>
             </div>
           </div>
