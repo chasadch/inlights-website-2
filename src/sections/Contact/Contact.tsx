@@ -54,7 +54,7 @@ export default function Contact() {
           <h1 className="text-size-3 font-normal lg:text-size-2">
             Let&apos;s talk
           </h1>
-          <p className="w-[376px] text-size-7 font-normal opacity-70 lg:text-size-5">
+          <p className="text-size-7 font-normal opacity-70 lg:text-size-5">
             Like our story? Contact now and create greatness together with us.
           </p>
         </div>

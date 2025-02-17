@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <>
       {/* Footer (375 pixels) */}
-      <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-[#0D0D1D] px-[16px] pb-[30px] pt-[80px] lg:hidden">
+      <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-[#0D0D1D] px-[32px] pb-[30px] pt-[80px] lg:hidden">
         {/* First container */}
         <div className="flex flex-col items-start gap-[60px] self-stretch">
           <div className="flex flex-col items-start gap-[16px]">

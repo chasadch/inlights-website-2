@@ -105,7 +105,7 @@ export default function Testimonials() {
         </div>
 
         {/* Mobile Slider (375 pixels) */}
-        <div className="relative px-[16px] py-[32px] lg:hidden">
+        <div className="relative flex w-[375px] px-[16px] lg:hidden">
           <div className="relative flex flex-col gap-[24px] overflow-hidden">
             <div
               ref={mobileSliderRef}

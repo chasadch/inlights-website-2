@@ -14,7 +14,7 @@ export default function ServiceCard({
   image,
   title,
   description,
-  linkText = "Discover InLights",
+  linkText = "Discover Insights",
   onClick,
 }: ServiceCardProps) {
   return (
