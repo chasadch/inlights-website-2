@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <Toaster
           toastOptions={{
-            duration: 5000,
+            duration: 3000,
           }}
         />
         <Header />
