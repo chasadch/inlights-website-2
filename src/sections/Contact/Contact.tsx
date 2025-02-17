@@ -199,7 +199,7 @@ export default function Contact() {
 
           {/* GitHub */}
           <a
-            href="https://github.com/inlightsai"
+            href="https://github.com/inlights2"
             target="_blank"
             rel="noopener noreferrer"
           >
