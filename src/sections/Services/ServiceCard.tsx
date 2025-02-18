@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { MoveUpRight } from "lucide-react";
-import React from "react";
 
 interface ServiceCardProps {
   image: string;
