@@ -1,4 +1,5 @@
 import { MoveUpRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 interface StoriesCardProps {
@@ -34,13 +35,18 @@ export default function StoriesCard({
         <h1 className="self-stretch text-size-4 font-bold lg:text-size-3">
           {title}
         </h1>
-        <p className="h-[65px] overflow-hidden text-size-7 font-normal text-white opacity-70 lg:text-size-6">
+        <p className="h-[65px] overflow-hidden text-size-7 font-normal leading-[20px] text-white opacity-70 lg:text-size-6">
           {description}
         </p>
         <div className="flex items-center gap-[9px] self-stretch py-[8px]">
           <span className="text-size-7 font-normal">Read More</span>
           <div className="flex h-[15px] w-[15px] items-center justify-center">
-            <MoveUpRight width={15} height={15} />
+            <Image
+              src="/successStories/up_arrow.png"
+              width={15}
+              height={15}
+              alt="arrow right"
+            />
           </div>
         </div>
       </div>

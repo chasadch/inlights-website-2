@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-between overflow-hidden bg-black px-[16px] py-[140px] lg:flex-row lg:items-start lg:px-[70px]">
+    <section className="flex flex-col items-center justify-between overflow-hidden bg-black px-[16px] py-[139px] lg:flex-row lg:items-start lg:px-[70px]">
       {/* Background SVG wrapped in an absolutely positioned container */}
       {/* <div className="absolute inset-0 left-0 top-0 z-10">
         <ContactBackground />
@@ -51,7 +51,7 @@ export default function Contact() {
       {/* Contact Info */}
       <div className="relative z-50 flex w-full flex-col items-start gap-[32px] md:items-center lg:w-[351px] lg:items-start xl:w-[401px]">
         <div className="flex flex-col gap-[20px] self-stretch md:items-center lg:items-start">
-          <h1 className="text-size-3 font-normal lg:text-size-2">
+          <h1 className="text-size-3 font-semibold lg:text-size-2">
             Let&apos;s talk
           </h1>
           <p className="text-size-7 font-normal opacity-70 lg:text-size-5">
@@ -92,7 +92,7 @@ export default function Contact() {
                   className="absolute left-[12px] top-[15px]"
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-start gap-[4px]">
                 <h1 className="text-size-6 font-bold lg:text-size-3">
                   {contact.label}
                 </h1>
@@ -112,7 +112,7 @@ export default function Contact() {
         <div className="h-[1px] w-full max-w-[401px] bg-white opacity-20"></div>
 
         {/* Social Icons */}
-        <div className="flex items-start gap-[40px] pb-[66px] opacity-70">
+        <div className="flex items-start gap-[40px] opacity-70">
           <a
             href="https://www.facebook.com/inlights.smart"
             target="_blank"
@@ -242,10 +242,10 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex h-[747px] w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom md:w-4/5 lg:mt-0 lg:h-[522px] lg:w-[495px] lg:p-[36px] xl:w-[695px]">
+      <div className="flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom md:w-4/5 lg:mt-0 lg:h-[522px] lg:w-[495px] lg:p-[36px] xl:w-[695px]">
         <form ref={formRef} className="flex w-full flex-col gap-[40px]">
-          <div className="flex flex-col gap-[40px] lg:flex-row">
-            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
+          <div className="flex flex-col gap-[63px] lg:flex-row">
+            <div className="flex w-full flex-col gap-[26px] lg:w-1/2">
               <label htmlFor="first-name" className="text-size-6 font-normal">
                 First Name
               </label>
@@ -257,7 +257,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
+            <div className="flex w-full flex-col gap-[26px] lg:w-1/2">
               <label htmlFor="last-name" className="text-size-6 font-normal">
                 Last Name
               </label>
@@ -270,8 +270,8 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[40px] lg:flex-row">
-            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
+          <div className="flex flex-col gap-[63px] lg:flex-row">
+            <div className="flex w-full flex-col gap-[26px] lg:w-1/2">
               <label htmlFor="email" className="text-size-6 font-normal">
                 Email
               </label>
@@ -283,7 +283,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
+            <div className="flex w-full flex-col gap-[26px] lg:w-1/2">
               <label htmlFor="phone" className="text-size-6 font-normal">
                 Phone
               </label>

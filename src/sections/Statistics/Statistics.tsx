@@ -10,22 +10,22 @@ export default function Statistics() {
         {/* Added w-full so the parent’s justify-between works correctly */}
         <div className="flex h-[444px] w-full flex-col items-center gap-[20px] lg:h-[541px] lg:flex-row lg:justify-between">
           {/* Child #1 (large block)  */}
-          <div className="flex flex-shrink-0 flex-col items-end justify-center gap-[2.604px] py-[12.5px] pl-[12.5px] pr-[40px] lg:w-[432px] lg:gap-[10px] lg:p-[0px] xl:w-[532px] 2xl:w-[572px]">
-            <div className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] bg-[linear-gradient(to_right,#4935FF,#020F12)] p-[48px] shadow-shadowCustom lg:h-[490px] lg:w-full lg:gap-[10px] lg:rounded-br-[150px] lg:rounded-tr-[150px]">
-              {/* Content inside the box */}
-              <div className="flex w-[128.385px] flex-col items-center gap-[2.604px] lg:w-[493px] lg:gap-[10px]">
-                <h1 className="flex w-[24px] flex-col justify-center bg-gradient-to-b from-[#9B81F0] to-[#738DC2] bg-clip-text text-center text-[12.522px] font-bold text-transparent lg:w-[69px] lg:text-[36px]">
-                  CO₂
-                </h1>
-                <div className="text-[31.25px] font-semibold lg:text-[90px] xl:text-[100px] 2xl:text-[120px]">
-                  32.5MT
-                </div>
-                <div className="text-center text-[12px] font-normal opacity-70 lg:text-[26px]">
-                  Emissions Reduced
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <Image
+            src="/statistics/child1_sm.png"
+            alt="Statistics"
+            width={1255}
+            height={512}
+            className="block flex-shrink-0 lg:hidden"
+          />
+
+          <Image
+            src="/statistics/child1_lg.png"
+            alt="Statistics"
+            width={538}
+            height={512}
+            className="hidden flex-shrink-0 lg:block"
+          />
 
           {/* Content 375 pixels */}
           <div className="flex items-center gap-[15px] px-[16px] sm:gap-[25px] md:gap-[35px] lg:hidden">
@@ -94,7 +94,7 @@ export default function Statistics() {
             </div>
           </div>
 
-          {/* Child #2 (first set of two circles) – Added flex-none 1024 pixels */}
+          {/* Content 1024 pixels */}
           <div className="hidden flex-col items-center gap-[15px] lg:flex lg:gap-[85px]">
             <div className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]">
               <Image

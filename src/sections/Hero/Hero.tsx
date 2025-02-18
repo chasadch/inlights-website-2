@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-[585px] self-stretch overflow-hidden pb-[336px] pt-[130px] text-center text-white lg:h-[810px] lg:pt-[161px]"
+      className="relative h-[585px] self-stretch overflow-hidden pb-[336px] pt-[116px] text-center text-white lg:h-[810px] lg:pt-[161px]"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -35,9 +35,9 @@ export default function Hero() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-20 inline-flex flex-col items-center gap-[48px] lg:gap-[50px]">
+      <div className="relative z-20 flex flex-col items-center gap-[48px] lg:gap-[50px]">
         {/* Main Heading */}
-        <div className="flex flex-col items-center gap-[16px] self-stretch lg:gap-[18px]">
+        <div className="flex flex-col items-center gap-[8px] self-stretch lg:gap-[18px]">
           {/* First heading */}
           <h1 className="text-[28px] font-medium lg:text-size-1">
             Redefining Smart Cities using
@@ -48,13 +48,13 @@ export default function Hero() {
 
         {/* Let's talk button */}
         <Button onClick={() => router.push("/contact")} variant="gradient">
-          Let&apos;s Talk
+          Lets Talk
         </Button>
       </div>
 
       {/* Bottom */}
-      <div className="absolute bottom-[87px] left-1/2 z-20 inline-flex w-[523.724px] -translate-x-1/2 flex-col items-start justify-center gap-[64px]">
-        <div className="flex w-[523.724px] flex-col items-center gap-[16px]">
+      <div className="absolute bottom-[87.32px] left-1/2 z-20 inline-flex w-full -translate-x-1/2 flex-col items-center justify-center">
+        <div className="flex flex-col items-center gap-[16px]">
           {/* Paragraph */}
           <p className="text-size-7 font-normal opacity-90 lg:text-size-5">
             IN PARTNERSHIP WITH

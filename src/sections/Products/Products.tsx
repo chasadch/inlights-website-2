@@ -12,16 +12,16 @@ export default function Products() {
   };
 
   return (
-    <section className="flex flex-col items-start self-stretch bg-black px-[16px] pt-[65px] lg:gap-[10px] lg:px-[70px] lg:pt-[130px]">
+    <section className="flex flex-col items-start self-stretch bg-black px-[16px] pt-[100px] lg:gap-[10px] lg:px-[70px] lg:pt-[130px]">
       <div className="flex flex-col items-center gap-[20px] self-stretch lg:gap-[64px]">
         <div className="flex flex-col items-start gap-[4px] lg:gap-[8px]">
-          <h1 className="text-center text-size-3 font-medium lg:text-size-2">
+          <h1 className="text-center text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             Our Products
           </h1>
         </div>
 
         {/* Products grid (375 pixels) */}
-        <div className="grid grid-cols-1 gap-[34px] py-2 md:grid-cols-2 lg:hidden lg:gap-[24px]">
+        <div className="grid grid-cols-1 gap-[34px] md:grid-cols-2 lg:hidden lg:gap-[24px]">
           <ProductCard
             title="Traffic Management"
             subtitle="Manage City Traffic with AI"

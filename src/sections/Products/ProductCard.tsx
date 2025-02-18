@@ -29,11 +29,11 @@ export default function ProductCard({
           <p className="w-full text-[20px] font-medium xl:w-[467px] xl:text-[34px]">
             {subtitle}
           </p>
-          <p className="self-stretch text-size-7 font-normal opacity-70 xl:text-size-5">
+          <p className="self-stretch text-size-7 font-normal leading-[20px] opacity-70 xl:text-size-5">
             {description}
           </p>
           <div
-            className={`mt-3 flex items-center gap-[9px] self-stretch ${title === "Premises Security" && "-mt-[6px]"}`}
+            className={`mt-[4px] flex items-center gap-[9px] self-stretch ${title === "Premises Security" && "-mt-[4px] lg:-mt-[12px]"}`}
           >
             <span className={"text-size-7 font-normal"}>Discover Insights</span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
@@ -48,7 +48,7 @@ export default function ProductCard({
         </div>
       </div>
 
-      <div className="absolute -bottom-[66px] -left-[16px] h-[172px] w-[332px] xl:-bottom-[107px] xl:left-[16px] xl:h-[307px] xl:w-[567px]">
+      <div className="absolute -bottom-[66px] -left-[10px] h-[172px] w-[332px] xl:-bottom-[107px] xl:left-[16px] xl:h-[307px] xl:w-[567px]">
         <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px]">
           <Image
             src={imageSrc}

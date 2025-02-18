@@ -35,7 +35,7 @@ export default function ServiceCard({
       <div className="flex flex-col items-start gap-[14px] self-stretch">
         <h1 className="text-size-3 font-semibold">{title}</h1>
         <p
-          className="self-stretch overflow-hidden text-size-7 font-normal opacity-70 lg:text-size-6"
+          className="self-stretch overflow-hidden text-size-7 font-normal leading-[20px] opacity-70 lg:text-size-6"
           style={{
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
@@ -46,10 +46,17 @@ export default function ServiceCard({
         </p>
 
         {/* Link */}
-        <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-          <span className="text-size-7 font-normal">{linkText}</span>
+        <div className="flex items-start gap-[9px] self-stretch py-[8px]">
+          <span className="text-size-7 font-normal leading-[20px]">
+            {linkText}
+          </span>
           <div className="flex h-[15px] w-[15px] items-center justify-center">
-            <MoveUpRight width={15} height={15} />
+            <Image
+              src="/services/up_arrow.png"
+              alt="Arrow Right"
+              width={15}
+              height={15}
+            />
           </div>
         </div>
       </div>

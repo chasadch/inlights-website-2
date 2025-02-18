@@ -91,13 +91,13 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-black lg:px-[70px] lg:py-[160px]">
+    <section className="relative overflow-hidden lg:px-[70px] lg:py-[160px]">
       {/* Background SVG (placed behind content) */}
       <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
         <TestimonialsBackground />
       </div>
 
-      <div className="flex flex-col items-center self-stretch bg-bg px-[16px] py-[32px] lg:gap-[64px] lg:bg-transparent">
+      <div className="mb-[50px] flex flex-col items-center self-stretch bg-bg px-[16px] py-[32px] lg:gap-[64px] lg:bg-transparent">
         <div className="hidden flex-col items-center gap-[8px] lg:flex">
           <h1 className="w-[864px] text-center text-size-2 font-normal">
             Don&apos;t take our word, see what customers say about us
@@ -119,7 +119,7 @@ export default function Testimonials() {
                   className="flex min-w-full flex-col items-center justify-center gap-[24px]"
                 >
                   <div className="flex flex-col items-center justify-center gap-[24px]">
-                    <h1 className="text-center text-size-7 opacity-80">
+                    <h1 className="text-center text-size-7 leading-[20px] opacity-80">
                       {testimonial.text}
                     </h1>
                   </div>
@@ -132,10 +132,10 @@ export default function Testimonials() {
                       className="rounded-[32px]"
                     />
                     <div className="flex flex-col items-center justify-center gap-[4px]">
-                      <h1 className="text-size-6 font-normal">
+                      <h1 className="text-size-6 font-normal leading-[20px]">
                         {testimonial.name}
                       </h1>
-                      <span className="text-size-7 font-normal">
+                      <span className="text-size-7 font-normal leading-[20px]">
                         {testimonial.role}
                       </span>
                     </div>

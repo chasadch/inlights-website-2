@@ -13,7 +13,7 @@ export default function Services() {
       image: "/services/ph_code-bold.png",
       title: "Web Development",
       description:
-        "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate yo",
+        "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate your standards.",
     },
     {
       image: "/services/product_design.png",
@@ -41,7 +41,7 @@ export default function Services() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-black pt-[130px] text-white">
+    <section className="relative mt-[120px] w-full overflow-hidden text-white">
       {/* Background SVG wrapped in an absolutely positioned container */}
       <div className="absolute inset-0 left-0 top-0 z-10">
         <ServiceBackground />
@@ -79,7 +79,7 @@ export default function Services() {
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] lg:flex-row lg:justify-between lg:px-[60px]">
             {/* Text */}
             <p
-              className="text-center text-size-6 font-bold text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2"
+              className="text-center text-size-6 font-bold leading-normal text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2"
               style={{ fontFamily: "Roboto Serif" }}
             >
               Enough talk, let&apos;s get to work
