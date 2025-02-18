@@ -59,7 +59,10 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Tech section */}
-      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch bg-black py-[70px] lg:bg-[url('/statistics/bg.png')]">
+      <div
+        className="flex h-[611px] w-full flex-col items-start justify-center gap-[10px] self-stretch py-[70px]"
+        style={{ backgroundImage: "url(/statistics/bg.png)" }}
+      >
         <div className="mx-auto flex w-[249px] flex-col items-center gap-[26px] lg:w-full lg:gap-[40px]">
           <h1 className="hidden text-[44px] font-normal lg:block">
             Our Tech Stack
@@ -67,58 +70,7 @@ export default function WebDevelopmentPage() {
           <h1 className="block text-[24px] font-medium lg:hidden">
             Stacks Used
           </h1>
-          <div className="grid grid-cols-2 items-start gap-[16px] lg:grid-cols-4 lg:gap-[44px] 2xl:gap-[64px]">
-            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/nodejs.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
-              <span className="text-size-7 font-normal text-black lg:text-size-3">
-                NodeJS
-              </span>
-            </div>
-
-            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/express.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
-              <span className="text-size-7 font-normal text-black lg:text-size-3">
-                Express
-              </span>
-            </div>
-            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/react.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
-              <span className="text-size-7 font-normal text-black lg:text-size-3">
-                React
-              </span>
-            </div>
-
-            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/mongodb.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
-              <span className="text-size-7 font-normal text-black lg:text-size-3">
-                MongoDB
-              </span>
-            </div>
-
+          <div className="flex items-start gap-[16px] lg:gap-[44px] 2xl:gap-[64px]">
             <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/nodejs.png"
@@ -145,7 +97,7 @@ export default function WebDevelopmentPage() {
               </span>
             </div>
 
-            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+            <div className="hidden h-[112px] w-[195px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:flex lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/react.png"
                 alt=""
@@ -158,15 +110,177 @@ export default function WebDevelopmentPage() {
               </span>
             </div>
 
-            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+            <div className="hidden h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white lg:flex xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
               <Image
                 src="/services/mongodb.png"
+                alt=""
+                width={56}
+                height={56}
+                className="flex-shrink-0"
+              />
+              <span className="text-size-3 font-normal text-black">
+                MongoDB
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-[16px] lg:gap-[44px] 2xl:gap-[64px]">
+            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/nodejs.png"
                 alt=""
                 width={56}
                 height={56}
                 className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
               />
               <span className="text-size-7 font-normal text-black lg:text-size-3">
+                NodeJS
+              </span>
+            </div>
+
+            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/express.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                Express
+              </span>
+            </div>
+
+            <div className="hidden h-[112px] w-[195px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:flex lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/react.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                React
+              </span>
+            </div>
+
+            <div className="hidden h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white lg:flex xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/mongodb.png"
+                alt=""
+                width={56}
+                height={56}
+                className="flex-shrink-0"
+              />
+              <span className="text-size-3 font-normal text-black">
+                MongoDB
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-[16px] lg:hidden lg:gap-[44px] 2xl:gap-[64px]">
+            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/nodejs.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                NodeJS
+              </span>
+            </div>
+
+            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:hidden lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/express.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                Express
+              </span>
+            </div>
+
+            <div className="flex h-[112px] w-[195px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:hidden lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/react.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                React
+              </span>
+            </div>
+
+            <div className="flex h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white lg:hidden xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/mongodb.png"
+                alt=""
+                width={56}
+                height={56}
+                className="flex-shrink-0"
+              />
+              <span className="text-size-3 font-normal text-black">
+                MongoDB
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-[16px] lg:hidden lg:gap-[44px] 2xl:gap-[64px]">
+            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/nodejs.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                NodeJS
+              </span>
+            </div>
+
+            <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:hidden lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/express.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                Express
+              </span>
+            </div>
+
+            <div className="hidden h-[112px] w-[195px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:flex lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/react.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
+              />
+              <span className="text-size-7 font-normal text-black lg:text-size-3">
+                React
+              </span>
+            </div>
+
+            <div className="hidden h-[146px] w-[195px] flex-col items-center justify-center gap-[16px] rounded-[20px] bg-white lg:flex xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
+              <Image
+                src="/services/mongodb.png"
+                alt=""
+                width={56}
+                height={56}
+                className="flex-shrink-0"
+              />
+              <span className="text-size-3 font-normal text-black">
                 MongoDB
               </span>
             </div>
@@ -174,37 +288,13 @@ export default function WebDevelopmentPage() {
         </div>
       </div>
 
-      {/* Talent Section 375 pixels with higher z-index */}
-      <div className="flex items-center justify-center px-[16px] pb-[100px] pt-[40px] lg:hidden lg:px-[70px] lg:py-[160px]">
-        <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] lg:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Talent Section 1024 pixels with higher z-index */}
-      <div className="relative hidden items-center justify-center px-[70px] py-[160px] lg:flex">
-        <div className="absolute inset-0 left-0 top-0 z-10">
+      {/* Talent Section */}
+      <div className="relative flex items-center justify-center px-[70px] py-[160px]">
+        <div className="absolute inset-0 left-0 top-0 z-50">
           <CallToActionBackground />
         </div>
-
         <div
-          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}
