@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-between overflow-hidden bg-black px-[16px] py-[139px] lg:flex-row lg:items-start lg:px-[70px]">
+    <section className="flex flex-col items-center justify-between gap-[66px] overflow-hidden bg-black px-[16px] py-[139px] lg:flex-row lg:items-start lg:px-[70px]">
       {/* Background SVG wrapped in an absolutely positioned container */}
       {/* <div className="absolute inset-0 left-0 top-0 z-10">
         <ContactBackground />
