@@ -95,7 +95,7 @@ export default function TrafficManagement() {
         className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
         // style={{ backgroundColor: "lightgray" }}
       >
-        <div className="flex flex-shrink-0 flex-col items-center justify-between py-[100px] lg:flex-row lg:p-[70px]">
+        <div className="flex flex-shrink-0 flex-col items-center justify-between py-[120px] lg:flex-row lg:p-[70px]">
           <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
@@ -108,7 +108,7 @@ export default function TrafficManagement() {
                 Significance
               </h1>
             </div>
-            <p className="flex self-stretch text-size-6 opacity-80 lg:hidden">
+            <p className="flex self-stretch text-size-6 font-medium leading-[24px] opacity-80 lg:hidden">
               Developed a robust system allowing users to define and customize
               their content topics post-registration
             </p>
@@ -143,9 +143,9 @@ export default function TrafficManagement() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center px-[16px] pt-[120px] lg:hidden lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center px-[16px] pt-[160px] lg:hidden lg:px-[70px] lg:py-[160px]">
         <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

@@ -8,13 +8,13 @@ export default function WebDevelopmentPage() {
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="flex h-[687px] w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
+        className="flex h-[717px] w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="flex w-[319px] flex-col items-center gap-[17.612px] pt-[120px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+        <div className="flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             Web Development
           </h1>
@@ -59,7 +59,7 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Tech section */}
-      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch bg-black py-[70px] lg:bg-[url('/statistics/bg.png')]">
+      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch bg-black py-[120px] lg:bg-[url('/statistics/bg.png')]">
         <div className="mx-auto flex w-[249px] flex-col items-center gap-[26px] lg:w-full lg:gap-[40px]">
           <h1 className="hidden text-[44px] font-normal lg:block">
             Our Tech Stack

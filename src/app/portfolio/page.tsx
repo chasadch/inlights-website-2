@@ -75,7 +75,7 @@ export default function PortfolioPage() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[12px] shadow-shadowCustom sm:grid-cols-2"
+            className="grid h-[453.94px] grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg p-[12px] shadow-shadowCustom sm:grid-cols-2 lg:h-auto"
           >
             {/* Image Container */}
             <div
@@ -96,7 +96,7 @@ export default function PortfolioPage() {
                 alt={project.title}
                 width={285}
                 height={200}
-                className="relative z-10 h-full w-full rounded-[20px] object-cover"
+                className="relative z-10 h-full w-full rounded-[32px] object-cover"
               />
             </div>
 
@@ -171,9 +171,9 @@ export default function PortfolioPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center pb-[30px] pt-[80px] sm:px-[40px] lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center pb-[20px] pt-[50px] sm:px-[40px] lg:px-[70px] lg:py-[160px]">
         <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat sm:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

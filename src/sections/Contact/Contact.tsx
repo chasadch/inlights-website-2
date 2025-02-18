@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-between gap-[66px] overflow-hidden bg-black px-[16px] py-[139px] lg:flex-row lg:items-start lg:px-[70px]">
+    <section className="flex flex-col items-center justify-between gap-[66px] overflow-hidden bg-black px-[16px] py-[100px] lg:flex-row lg:items-start lg:px-[70px]">
       {/* Background SVG wrapped in an absolutely positioned container */}
       {/* <div className="absolute inset-0 left-0 top-0 z-10">
         <ContactBackground />
@@ -54,7 +54,7 @@ export default function Contact() {
           <h1 className="text-size-3 font-semibold lg:text-size-2">
             Let&apos;s talk
           </h1>
-          <p className="text-size-7 font-normal opacity-70 lg:text-size-5">
+          <p className="text-size-7 font-normal leading-[20px] opacity-70 lg:text-size-5">
             Like our story? Contact now and create greatness together with us.
           </p>
         </div>
@@ -242,7 +242,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom md:w-4/5 lg:mt-0 lg:h-[522px] lg:w-[495px] lg:p-[36px] xl:w-[695px]">
+      <div className="mb-[40px] flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom md:w-4/5 lg:mt-0 lg:h-[522px] lg:w-[495px] lg:p-[36px] xl:w-[695px]">
         <form ref={formRef} className="flex w-full flex-col gap-[40px]">
           <div className="flex flex-col gap-[63px] lg:flex-row">
             <div className="flex w-full flex-col gap-[26px] lg:w-1/2">

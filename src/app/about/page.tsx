@@ -14,7 +14,7 @@ export default function About() {
         }}
       >
         <div className="absolute left-1/2 top-1/2 flex w-[319px] -translate-x-1/2 -translate-y-1/2 transform flex-col items-center gap-[17.612px] lg:w-[903px]">
-          <h1 className="text-size-3 font-medium lg:text-size-2">
+          <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             About the Company
           </h1>
           <p className="text-center text-size-6 font-normal opacity-70 lg:text-size-4">
@@ -188,7 +188,7 @@ export default function About() {
       </div>
 
       {/* Talent Section 375 pixels with higher z-index */}
-      <div className="flex items-center justify-center px-[16px] py-[80px] lg:hidden lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center px-[16px] py-[100px] lg:hidden lg:px-[70px] lg:py-[160px]">
         <div
           className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{

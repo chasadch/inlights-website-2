@@ -44,7 +44,7 @@ export default function PremiseSecurity() {
 
         <div className="relative mx-auto mt-auto h-[179.816px] w-[363.754px] flex-shrink-0 lg:hidden">
           <Image
-            src="/info/manage_city_traffic_2.png"
+            src="/products/manage_who_enters_your_premises.png"
             alt="hero"
             width={364} // matching the container's width (rounded)
             height={180} // matching the container's height (rounded)
@@ -108,7 +108,7 @@ export default function PremiseSecurity() {
                 Significance
               </h1>
             </div>
-            <p className="flex self-stretch text-size-6 opacity-80 lg:hidden">
+            <p className="flex self-stretch text-size-6 font-medium leading-[24px] opacity-80 lg:hidden">
               Developed a robust system allowing users to define and customize
               their content topics post-registration
             </p>
@@ -121,7 +121,7 @@ export default function PremiseSecurity() {
             </ul>
           </div>
 
-          <div className="relative flex flex-shrink-0 items-center justify-center lg:hidden lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
+          <div className="relative flex w-[375px] flex-shrink-0 items-center justify-center lg:hidden lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
             <Image
               src="/geohealth/geohealth_image2.png"
               alt="Geohealth"
@@ -142,9 +142,9 @@ export default function PremiseSecurity() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center px-[16px] pt-[120px] lg:hidden lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center px-[16px] pt-[160px] lg:hidden lg:px-[70px] lg:py-[160px]">
         <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}
