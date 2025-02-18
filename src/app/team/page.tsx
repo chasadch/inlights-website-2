@@ -49,10 +49,25 @@ export default function TeamPage() {
       name: "Liam Cooper",
       role: "Marketing Head",
     },
+    {
+      image: "/team/team_3.png",
+      name: "Liam Cooper",
+      role: "Marketing Head",
+    },
+    {
+      image: "/team/team_3.png",
+      name: "Liam Cooper",
+      role: "Marketing Head",
+    },
+    {
+      image: "/team/team_3.png",
+      name: "Liam Cooper",
+      role: "Marketing Head",
+    },
   ];
 
   return (
-    <section className="flex flex-col gap-[44px] bg-black px-[16px] py-[80px] text-white lg:px-[120px] lg:py-[136px]">
+    <section className="flex flex-col gap-[21px] bg-black px-[16px] py-[80px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
       {/* Our Team Header */}
       <div className="flex flex-col items-start gap-[64px]">
         <h1 className="text-size-3 font-normal lg:text-size-2">Our Team</h1>
@@ -71,7 +86,7 @@ export default function TeamPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center px-[16px] py-[80px] lg:hidden lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center px-[16px] pt-[100px] lg:px-[70px] lg:pt-[100px]">
         <div
           className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{

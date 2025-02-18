@@ -12,7 +12,7 @@ export default function PremiseSecurity() {
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="relative flex h-[585px] flex-col pt-[116px] lg:h-[961px] lg:pt-[161.09px]"
+        className="relative flex h-[500px] flex-col pt-[116px] lg:h-[961px] lg:pt-[161.09px]"
         style={{
           backgroundImage:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/info/manage_city_traffic.png)",
@@ -95,7 +95,7 @@ export default function PremiseSecurity() {
         className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
         // style={{ backgroundColor: "lightgray" }}
       >
-        <div className="flex flex-shrink-0 flex-col items-center justify-between py-[70px] lg:flex-row lg:p-[70px]">
+        <div className="flex flex-shrink-0 flex-col items-center justify-between py-[100px] lg:flex-row lg:p-[70px]">
           <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
@@ -142,7 +142,7 @@ export default function PremiseSecurity() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center px-[16px] py-[80px] lg:hidden lg:px-[70px] lg:py-[160px]">
+      <div className="flex items-center justify-center px-[16px] pt-[120px] lg:hidden lg:px-[70px] lg:py-[160px]">
         <div
           className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
