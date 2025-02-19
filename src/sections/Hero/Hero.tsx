@@ -28,13 +28,11 @@ export default function Hero() {
       {/* Top Overlay */}
       <div
         className="absolute inset-0 z-10 bg-opacity-80"
-        style={{
-          background: "rgba(9, 17, 33, 0.8)",
-        }}
+        style={{ background: "rgba(9, 17, 33, 0.8)" }}
       ></div>
 
-      {/* Content */}
-      <div className="relative z-20 flex flex-col items-center gap-[49.73px] pb-[155.41px] pt-[116px] text-center lg:gap-[50px] lg:pl-[120.19px] lg:pr-[120.81px] lg:pt-[161.09px]">
+      {/* Centered Content Container */}
+      <div className="relative z-20 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[49.73px] pb-[155.41px] pt-[116px] text-center lg:gap-[50px] lg:pl-[120.19px] lg:pr-[120.81px] lg:pt-[161.09px]">
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[8px] self-stretch lg:gap-[18px]">
           {/* First heading */}
@@ -59,38 +57,40 @@ export default function Hero() {
       </div>
 
       {/* Bottom */}
-      <div className="absolute z-20 w-full flex-col items-center justify-center lg:bottom-[67px] xl:bottom-[87px] xl:pl-[458px] xl:pr-[458.28px]">
-        <div className="flex flex-col items-center gap-[16px]">
-          {/* Paragraph */}
-          <p className="text-size-7 font-normal opacity-90 lg:text-size-6 xl:text-size-5">
-            IN PARTNERSHIP WITH
-          </p>
-          {/* Image container */}
-          <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
-            {/* Image 1 */}
-            <Image
-              src={"/hero/ntdp.png"}
-              alt="Ntdp image"
-              width={52.847}
-              height={54}
-              className="h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[52.847px]"
-            />
-            {/* Image 2 */}
-            <Image
-              src={"/hero/sdaia.png"}
-              alt="Sdaia image"
-              width={107.724}
-              height={24.094}
-              className="h-[18.07px] w-[80.807px] lg:h-[24.094px] lg:w-[107.724px]"
-            />
-            {/* Image 3 */}
-            <Image
-              src={"/hero/nstp_new_2.png"}
-              alt="Nstp image"
-              width={54}
-              height={54}
-              className="h-[40.5px] w-[40.5px] lg:h-[54px] lg:w-[54px]"
-            />
+      <div className="absolute z-20 w-full flex-col items-center justify-center lg:bottom-[67px] xl:bottom-[87px]">
+        <div className="mx-auto w-full max-w-[1440px]">
+          <div className="flex flex-col items-center gap-[16px]">
+            {/* Paragraph */}
+            <p className="text-size-7 font-normal opacity-90 lg:text-size-6 xl:text-size-5">
+              IN PARTNERSHIP WITH
+            </p>
+            {/* Image container */}
+            <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
+              {/* Image 1 */}
+              <Image
+                src={"/hero/ntdp.png"}
+                alt="Ntdp image"
+                width={52.847}
+                height={54}
+                className="h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[52.847px]"
+              />
+              {/* Image 2 */}
+              <Image
+                src={"/hero/sdaia.png"}
+                alt="Sdaia image"
+                width={107.724}
+                height={24.094}
+                className="h-[18.07px] w-[80.807px] lg:h-[24.094px] lg:w-[107.724px]"
+              />
+              {/* Image 3 */}
+              <Image
+                src={"/hero/nstp_new_2.png"}
+                alt="Nstp image"
+                width={54}
+                height={54}
+                className="h-[40.5px] w-[40.5px] lg:h-[54px] lg:w-[54px]"
+              />
+            </div>
           </div>
         </div>
       </div>
