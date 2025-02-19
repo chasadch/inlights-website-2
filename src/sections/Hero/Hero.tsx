@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-[585px] self-stretch overflow-hidden pb-[336px] pt-[116px] text-center text-white lg:h-[810px] lg:pt-[161px]"
+      className="relative min-h-screen self-stretch overflow-hidden"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -35,7 +35,7 @@ export default function Hero() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center gap-[48px] lg:gap-[50px]">
+      <div className="relative z-20 flex flex-col items-center gap-[49.73px] pt-[116px] text-center lg:gap-[50px] lg:pl-[120.19px] lg:pr-[120.81px] lg:pt-[161.09px]">
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[8px] self-stretch lg:gap-[18px]">
           {/* First heading */}
@@ -53,7 +53,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom */}
-      <div className="absolute bottom-[87.32px] left-1/2 z-20 inline-flex w-full -translate-x-1/2 flex-col items-center justify-center">
+      <div className="absolute z-20 flex w-full flex-col items-center justify-center lg:bottom-[87px] lg:pl-[458px] lg:pr-[458.28px]">
         <div className="flex flex-col items-center gap-[16px]">
           {/* Paragraph */}
           <p className="text-size-7 font-normal opacity-90 lg:text-size-5">

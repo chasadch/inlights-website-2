@@ -41,14 +41,14 @@ export default function Services() {
   };
 
   return (
-    <section className="relative mt-[120px] w-full overflow-hidden text-white">
+    <section className="relative w-full overflow-hidden text-white">
       {/* Background SVG wrapped in an absolutely positioned container */}
       <div className="absolute inset-0 left-0 top-0 z-10">
         <ServiceBackground />
       </div>
 
       {/* Services Header */}
-      <div className="relative z-50 mx-auto flex w-full flex-col items-center gap-[24px] px-[16px] py-[30px] sm:px-[40px] md:py-[140px] lg:gap-[64px] lg:px-[70px]">
+      <div className="relative z-50 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[24px] px-[16px] py-[30px] sm:px-[40px] md:py-[140px] lg:gap-[64px] lg:px-[70px]">
         <h1 className="text-center text-[24px] font-normal lg:text-size-2">
           Our Services
         </h1>
@@ -93,7 +93,7 @@ export default function Services() {
       </div>
 
       {/* Talent Section (1024 px)*/}
-      <div className="hidden w-full items-center justify-center px-[16px] py-[182px] sm:px-[40px] md:py-[100px] lg:flex lg:px-[70px]">
+      <div className="hidden w-full items-center justify-center px-[16px] py-[132px] sm:px-[40px] md:py-[100px] lg:flex lg:px-[70px]">
         <div
           className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{

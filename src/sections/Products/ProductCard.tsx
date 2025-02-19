@@ -33,7 +33,7 @@ export default function ProductCard({
             {description}
           </p>
           <div
-            className={`mt-[4px] flex items-center gap-[9px] self-stretch ${title === "Premises Security" && "-mt-[4px] lg:-mt-[12px]"}`}
+            className={`mt-[4px] flex items-start gap-[9px] self-stretch ${title === "Premises Security" && "-mt-[4px] lg:-mt-[14px]"}`}
           >
             <span className={"text-size-7 font-normal"}>Discover Insights</span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
@@ -48,13 +48,13 @@ export default function ProductCard({
         </div>
       </div>
 
-      <div className="absolute -bottom-[66px] -left-[10px] h-[172px] w-[332px] xl:-bottom-[107px] xl:left-[16px] xl:h-[307px] xl:w-[567px]">
-        <div className="border-opacity-44 h-[308px] w-[461px] flex-shrink-0 rounded-[12px]">
+      <div className="absolute bottom-0 left-0 h-[172px] w-[332px] xl:h-[206px] xl:w-[580px]">
+        <div className="border-opacity-44 h-[206px] w-[680px] flex-shrink-0 rounded-[12px]">
           <Image
             src={imageSrc}
             alt={title}
-            width={566}
-            height={307}
+            width={580}
+            height={206}
             className="absolute left-[16px]"
           />
         </div>

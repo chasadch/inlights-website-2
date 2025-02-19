@@ -44,16 +44,41 @@ export default function AiEnginnerPage() {
   };
 
   return (
-    <section className="relative flex flex-shrink-0 flex-col gap-[149px] overflow-hidden bg-[#03030E] px-[70px] py-[149px]">
-      <div className="pointer-events-none absolute inset-0 left-0 top-0 z-10">
+    <section className="relative flex flex-shrink-0 flex-col overflow-hidden bg-[#03030E] px-[16px] py-[149px] lg:px-[70px]">
+      <div className="pointer-events-none absolute inset-0 left-0 top-0 z-10 hidden lg:flex">
         <ContactBackground />
       </div>
-      <div className="relative z-20 flex flex-col items-start gap-[33px]">
+      <div className="relative z-20 flex flex-col items-start gap-[24px] lg:gap-[33px]">
         <div className="flex items-start justify-between self-stretch">
-          <h1 className="flex-grow text-size-2 font-medium">AI Engineer</h1>
+          <h1 className="text-size-3 font-medium lg:text-size-2">
+            AI Engineer
+          </h1>
           <Button variant="gradient" icon={false}>
             Apply
           </Button>
+        </div>
+
+        <div className="flex w-[152px] flex-shrink-0 flex-col items-start gap-[20px] lg:hidden">
+          <div className="flex flex-col items-start gap-[16px] self-stretch">
+            <div className="flex flex-col items-start gap-[6px] self-stretch">
+              <span className="text-size-6 font-normal">Department</span>
+              <span className="text-size-6 font-normal text-white/50">
+                Engineering
+              </span>
+            </div>
+            <div className="flex flex-col items-start gap-[6px] self-stretch">
+              <span className="text-size-6 font-normal">Experience</span>
+              <span className="text-size-6 font-normal text-white/50">
+                2-4 Years
+              </span>
+            </div>
+            <div className="flex flex-col items-start gap-[6px] self-stretch">
+              <span className="text-size-6 font-normal">City</span>
+              <span className="text-size-6 font-normal text-white/50">
+                Lahore
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="flex items-start justify-between self-stretch">
@@ -124,7 +149,7 @@ export default function AiEnginnerPage() {
 
           <div className="flex w-[307px] items-start gap-[40px]">
             <div className="h-[590px] w-[1px] bg-white/50"></div>
-            <div className="flex w-[152px] flex-shrink-0 flex-col items-start gap-[20px]">
+            <div className="hidden w-[152px] flex-shrink-0 flex-col items-start gap-[20px] lg:flex">
               <h1 className="self-stretch text-size-3 font-semibold text-white">
                 Job Info
               </h1>

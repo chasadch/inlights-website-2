@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Statistics() {
   return (
     <section
-      className="overflow-x-hidden bg-black bg-cover bg-center bg-no-repeat py-[10.229px] lg:py-[70px]"
+      className="h-[681px] overflow-x-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/statistics/bg.png)" }}
     >
-      <div className="flex items-start gap-[10px] self-stretch">
+      <div className="flex items-start gap-[10px] self-stretch py-[10.229px] lg:py-[70px]">
         {/* Added w-full so the parent’s justify-between works correctly */}
         <div className="flex h-[444px] w-full flex-col items-center gap-[20px] lg:h-[541px] lg:flex-row lg:justify-between">
           {/* Child #1 (large block)  */}

@@ -9,7 +9,7 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <header className="absolute left-0 top-0 z-50 box-border flex w-full flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white lg:px-[120px] lg:py-[16px]">
+    <header className="absolute left-0 right-0 top-0 z-50 mx-auto box-border flex w-full max-w-[1440px] flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white lg:px-[120px] lg:py-[16px]">
       {/* Logo */}
       <Image
         src={"/header/logo_2.png"}

@@ -1,15 +1,13 @@
 import Button from "@/components/Button";
 import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 export default function UIUXDesignPage() {
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="flex h-[717px] w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
+        className="flex h-[687px] w-full flex-col items-center gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:h-[839.499px] lg:flex-row lg:justify-between"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
@@ -32,7 +30,7 @@ export default function UIUXDesignPage() {
         </div>
 
         <div
-          className="relative h-[197.426px] w-[246.173px] flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+          className="relative mt-[50px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
           style={{
             backgroundImage: "url(/services/web_development/rectangle.png)",
             backgroundSize: "100% 100%",
@@ -44,36 +42,52 @@ export default function UIUXDesignPage() {
             alt=""
             width={380}
             height={449}
-            className="absolute right-[12rem] top-[2.5rem] z-20 h-[186.127px] w-[85.821px] flex-shrink-0 lg:h-[349px] lg:w-[280px] xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[15rem] 2xl:h-[449px] 2xl:w-[380px]"
+            className="absolute right-[7.25rem] top-[1.75rem] z-20 h-[234px] w-[203px] flex-shrink-0 lg:right-[12rem] lg:top-[2.5rem] lg:h-[349px] lg:w-[280px] xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[15rem] 2xl:h-[449px] 2xl:w-[380px]"
           />
           <Image
             src={"/services/uiux-design/alexix2.png"}
             alt=""
             width={383}
             height={503}
-            className="absolute right-[3rem] top-0 z-10 h-[186.127px] w-[85.821px] flex-shrink-0 lg:h-[403px] lg:w-[283px] xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
+            className="absolute right-[1.5rem] top-0 z-10 h-[261px] w-[203px] flex-shrink-0 lg:h-[403px] lg:w-[283px] xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
           />
           <Image
             src={"/services/uiux-design/alexix3.png"}
             alt=""
             width={379}
             height={522}
-            className="absolute -right-[5.5rem] -top-[1rem] h-[186.127px] w-[85.821px] flex-shrink-0 lg:h-[422px] lg:w-[279px] xl:h-[472px] xl:w-[329px] 2xl:h-[522px] 2xl:w-[379px]"
+            className="absolute -right-[3.5rem] -top-[1.5rem] h-[283px] w-[193px] flex-shrink-0 lg:h-[422px] lg:w-[279px] xl:h-[472px] xl:w-[329px] 2xl:h-[522px] 2xl:w-[379px]"
           />
         </div>
       </div>
 
       {/* Tech section */}
       <div
-        className="flex h-[541px] w-full flex-col items-start justify-center gap-[10px] self-stretch py-[70px]"
+        className="flex w-full flex-col items-start justify-center gap-[10px] self-stretch py-[90px] lg:h-[541px]"
         style={{ backgroundImage: "url(/statistics/bg.png)" }}
       >
-        <div className="mx-auto inline-flex flex-col items-start gap-[48px]">
-          <h1 className="text-[44px] font-normal">
+        <div className="mx-auto flex flex-col items-center gap-[40px] lg:gap-[48px]">
+          <h1 className="w-[70%] text-center text-[24px] font-medium leading-[32px] lg:w-full lg:text-[44px]">
             Process that moves things forward
           </h1>
 
-          <div className="flex items-center gap-6">
+          <Image
+            src={"/services/uiux-design/process.png"}
+            alt="Process"
+            width={272}
+            height={916}
+            className="block flex-shrink-0 lg:hidden"
+          />
+
+          <Image
+            src={"/services/uiux-design/process_lg.png"}
+            alt="Process"
+            width={1440}
+            height={512}
+            className="hidden flex-shrink-0 lg:block"
+          />
+
+          {/* <div className="mt-[2rem] flex flex-col items-center gap-[40px] lg:flex-row lg:gap-6">
             <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
               <div className="relative flex-shrink-0">
                 <Image
@@ -246,17 +260,41 @@ export default function UIUXDesignPage() {
                 </div>
               </div>
             </div>
+          </div> */}
+        </div>
+      </div>
+
+      {/* Talent Section 375 pixels with higher z-index */}
+      <div className="flex items-center justify-center px-[16px] pb-[100px] pt-[40px] lg:hidden lg:px-[70px] lg:py-[160px]">
+        <div
+          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          style={{
+            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
+          }}
+        >
+          {/* Overlay Content */}
+          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
+            {/* Text */}
+            <p
+              className="font-bold text-[#FBFBFB] lg:text-[45px]"
+              style={{ fontFamily: "Roboto Serif" }}
+            >
+              Enough talk, let&apos;s get to work
+            </p>
+            {/* Button */}
+            <Button variant="gradient">Let&apos;s Get In Touch</Button>
           </div>
         </div>
       </div>
 
-      {/* Talent Section */}
-      <div className="relative flex items-center justify-center px-[70px] py-[160px]">
-        <div className="absolute inset-0 left-0 top-0 z-50">
+      {/* Talent Section 1024 pixels with higher z-index */}
+      <div className="relative hidden items-center justify-center px-[70px] py-[160px] lg:flex">
+        <div className="absolute inset-0 left-0 top-0 z-10">
           <CallToActionBackground />
         </div>
+
         <div
-          className="relative h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1200px]"
+          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}
