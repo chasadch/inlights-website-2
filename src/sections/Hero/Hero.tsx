@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom */}
-      <div className="absolute z-20 w-full flex-col items-center justify-center lg:bottom-[87px] lg:pl-[458px] lg:pr-[458.28px]">
+      <div className="absolute z-20 w-full flex-col items-center justify-center lg:bottom-[67px] xl:bottom-[87px] xl:pl-[458px] xl:pr-[458.28px]">
         <div className="flex flex-col items-center gap-[16px]">
           {/* Paragraph */}
           <p className="text-size-7 font-normal opacity-90 lg:text-size-6 xl:text-size-5">

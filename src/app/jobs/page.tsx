@@ -91,7 +91,7 @@ export default function JobsPage() {
           <h1 className="text-[26px] font-semibold leading-[28px] lg:text-[47px] lg:font-medium xl:text-size-2">
             Be a part of our Mission
           </h1>
-          <p className="-mt-[10px] text-size-7 font-normal opacity-70 lg:text-size-4">
+          <p className="text-size-7 font-normal opacity-70 lg:text-size-4 xl:-mt-[10px]">
             Look at the open positions below
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function JobsPage() {
                     Apply
                   </Button>
                 </div>
-                <p className="text-size-7 font-normal leading-[20px] opacity-80 lg:text-size-6 xl:w-[780px] 2xl:w-[880px]">
+                <p className="text-size-7 font-normal leading-[20px] opacity-80 lg:w-[580px] lg:text-size-6 xl:w-[780px] 2xl:w-[880px]">
                   {job.description}
                 </p>
               </div>
