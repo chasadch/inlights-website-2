@@ -16,14 +16,14 @@ export default function SuccessStories() {
     {
       image: "/successStories/coverPhoto_2.png",
       category: "Retrofarm",
-      title: "Retro & Vinatage E-commerce Store",
+      title: "Retro & Vintage E-commerce Store",
       description:
-        "RetroFam offers  a seamless shopping experience with advanced search, customization, and secure payment integration.",
+        "RetroFam offers a seamless shopping experience with advanced search, customization, and secure payment integration.",
     },
     {
       image: "/successStories/coverPhoto_3.png",
       category: "Smart TrafficLights",
-      title: "Smart Traffic Lights System ",
+      title: "Smart Traffic Lights System",
       description:
         "Healthcare providers are witnessing notable enhancements in service quality with our platform.",
     },
@@ -72,10 +72,9 @@ export default function SuccessStories() {
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const itemsPerPage = 3; // Number of items visible (and scrolled per click)
-
   const [scrollPos, setScrollPos] = useState(0);
   const [maxScroll, setMaxScroll] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(3); // Show 3 cards initially
 
   useEffect(() => {
     const container = containerRef.current;
@@ -96,7 +95,7 @@ export default function SuccessStories() {
         const cardWidth = cardWrapper.offsetWidth;
         const gap = 24; // gap-[24px]
         const scrollDistancePerCard = cardWidth + gap;
-        const scrollDistance = scrollDistancePerCard * itemsPerPage;
+        const scrollDistance = scrollDistancePerCard; // Scroll 1 card at a time
         containerRef.current.scrollBy({
           left: direction === "right" ? scrollDistance : -scrollDistance,
           behavior: "smooth",
@@ -143,7 +142,7 @@ export default function SuccessStories() {
           </div>
         </div>
 
-        {/* Success Stories Grid Section (375 pixels) */}
+        {/* Mobile Slider Section */}
         <div
           ref={containerRef}
           className="grid w-full grid-cols-1 items-center gap-[24px] self-stretch lg:hidden"
@@ -160,7 +159,7 @@ export default function SuccessStories() {
           ))}
         </div>
 
-        {/* Success Stories Grid Section (1024 pixels) */}
+        {/* Desktop Slider Section */}
         <div
           ref={containerRef}
           className="hidden items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[16px] lg:flex"
@@ -170,7 +169,7 @@ export default function SuccessStories() {
             <div
               key={index}
               className="flex-shrink-0"
-              style={{ width: "calc((100% - 48px) / 3)" }}
+              style={{ width: `calc((100% - 48px) / ${visibleCards})` }} // Adjust width based on visible cards
             >
               <StoriesCard
                 image={story.image}
@@ -182,7 +181,6 @@ export default function SuccessStories() {
           ))}
         </div>
       </div>
-      {/* Hide scrollbar for WebKit browsers */}
       <style jsx>{`
         div::-webkit-scrollbar {
           display: none;

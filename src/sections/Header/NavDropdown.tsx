@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import DropDownCard from "./DropDownCard";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface DropdownItem {
   imageSrc: string;
@@ -37,12 +38,17 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
       onMouseLeave={() => setOpen(false)}
     >
       {/* Trigger */}
-      <div className="flex cursor-pointer items-center justify-center rounded-[8px] p-[12px] xl:gap-[4px]">
+      <div className="flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
         <span className="relative text-size-4 font-semibold">
           {title}
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
         </span>
-        <ChevronDown width={16} height={16} />
+        <Image
+          src="/header/down_arrow.png"
+          alt="arrow"
+          width={16}
+          height={16}
+        />
       </div>
 
       {/* Dropdown */}

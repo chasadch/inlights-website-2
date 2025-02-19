@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom */}
-      <div className="absolute z-20 w-full flex-col items-center justify-center lg:bottom-[67px] xl:bottom-[87px]">
+      <div className="absolute bottom-[87px] left-1/2 z-20 inline-flex w-[523.724px] -translate-x-1/2 flex-col items-start justify-center gap-[64px]">
         <div className="mx-auto w-full max-w-[1440px]">
           <div className="flex flex-col items-center gap-[16px]">
             {/* Paragraph */}
