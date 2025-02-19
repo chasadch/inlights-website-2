@@ -3,29 +3,13 @@ import Image from "next/image";
 export default function Statistics() {
   return (
     <section
-      className="h-[681px] overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      className="h-full overflow-x-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/statistics/bg.png)" }}
     >
       <div className="flex items-start gap-[10px] self-stretch py-[10.229px] lg:py-[70px]">
         {/* Added w-full so the parent’s justify-between works correctly */}
-        <div className="flex h-[444px] w-full flex-col items-center gap-[20px] lg:h-[541px] lg:flex-row lg:justify-between">
+        <div className="flex w-full flex-col items-center gap-[20px] lg:h-[541px] lg:flex-row lg:justify-between">
           {/* Child #1 (large block)  */}
-
-          {/* <Image
-            src="/statistics/child1_sm.png"
-            alt="Statistics"
-            width={1255}
-            height={512}
-            className="block flex-shrink-0 lg:hidden"
-          />
-
-          <Image
-            src="/statistics/child1_lg.png"
-            alt="Statistics"
-            width={538}
-            height={512}
-            className="hidden flex-shrink-0 lg:block"
-          /> */}
 
           <div className="flex flex-shrink-0 flex-col items-end justify-center gap-[2.604px] py-[12.5px] pl-[12.5px] pr-[40px] lg:w-[432px] lg:gap-[10px] lg:p-[0px] xl:w-[532px] 2xl:w-[572px]">
             <div className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] bg-[linear-gradient(to_right,#4935FF,#020F12)] p-[48px] shadow-shadowCustom lg:h-[490px] lg:w-full lg:gap-[10px] lg:rounded-br-[150px] lg:rounded-tr-[150px]">

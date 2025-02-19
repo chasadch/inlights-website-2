@@ -8,7 +8,7 @@ export default function WebDevelopmentPage() {
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="flex h-[687px] w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
+        className="flex h-screen w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",

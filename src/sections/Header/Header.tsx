@@ -17,6 +17,7 @@ export default function Header() {
         width={156}
         height={18}
         className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer xl:h-[18px] xl:w-[156px]"
+        onClick={() => router.push("/")}
       />
 
       {/* Navigation */}
