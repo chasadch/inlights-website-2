@@ -4,7 +4,7 @@ import Contact from "@/sections/Contact/Contact";
 
 export default function ContactPage() {
   return (
-    <div className="mt-[100px]">
+    <div>
       <Contact />;
     </div>
   );

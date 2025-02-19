@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import DropDownCard from "./DropDownCard";
+import { usePathname } from "next/navigation";
 
 interface DropdownItem {
   imageSrc: string;
@@ -22,6 +23,12 @@ interface NavDropdownProps {
 
 export default function NavDropdown({ title, sections }: NavDropdownProps) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  // When route changes, close the dropdown
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <li

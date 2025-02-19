@@ -14,7 +14,7 @@ export default function WebDevelopmentPage() {
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+        <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             Web Development
           </h1>
@@ -34,7 +34,7 @@ export default function WebDevelopmentPage() {
         </div>
 
         <div
-          className="relative h-[197.426px] w-[246.173px] flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+          className="relative mx-auto h-[197.426px] w-[246.173px] flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
           style={{
             backgroundImage: "url(/services/web_development/rectangle.png)",
             backgroundSize: "100% 100%",

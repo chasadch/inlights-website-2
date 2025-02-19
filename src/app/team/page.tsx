@@ -67,12 +67,10 @@ export default function TeamPage() {
   ];
 
   return (
-    <section className="flex flex-col gap-[21px] bg-black px-[16px] pt-[92px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
+    <section className="mx-auto flex max-w-[1440px] flex-col gap-[21px] bg-black px-[16px] pt-[92px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
       {/* Our Team Header */}
       <div className="flex flex-col items-start lg:gap-[64px]">
-        <h1 className="text-size-3 font-medium lg:text-size-2 lg:font-normal">
-          Our team
-        </h1>
+        <h1 className="text-size-3 font-medium lg:text-size-2">Our team</h1>
       </div>
 
       {/* Team Cards */}
@@ -88,7 +86,7 @@ export default function TeamPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center py-[100px] lg:px-[70px] lg:pt-[100px]">
+      <div className="flex items-center justify-center py-[90px] lg:px-[0px] lg:pt-[100px]">
         <div
           className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
           style={{

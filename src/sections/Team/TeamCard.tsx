@@ -12,7 +12,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
     <div className="relative flex flex-col items-start gap-[16px]">
       {/* Image */}
       <div className="relative h-[196.517px] w-full overflow-hidden rounded-[16px] lg:h-[417px]">
-        <Image src={image} alt={name} fill className="object-cover" />
+        <Image src={image} alt={name} fill className="object-contain" />
       </div>
 
       {/* Name and Role */}

@@ -3,14 +3,13 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
-import Gradient from "./Gradient";
 
 export default function Hero() {
   const router = useRouter();
 
   return (
     <section
-      className="relative min-h-screen self-stretch overflow-hidden"
+      className="relative h-[810px] self-stretch overflow-hidden"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -18,7 +17,7 @@ export default function Hero() {
     >
       {/* Background Video */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-fill"
         src="/hero/hero.mp4"
         autoPlay
         loop
@@ -35,15 +34,22 @@ export default function Hero() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center gap-[49.73px] pt-[116px] text-center lg:gap-[50px] lg:pl-[120.19px] lg:pr-[120.81px] lg:pt-[161.09px]">
+      <div className="relative z-20 flex flex-col items-center gap-[49.73px] pb-[155.41px] pt-[116px] text-center lg:gap-[50px] lg:pl-[120.19px] lg:pr-[120.81px] lg:pt-[161.09px]">
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[8px] self-stretch lg:gap-[18px]">
           {/* First heading */}
-          <h1 className="text-[28px] font-medium lg:text-size-1">
+          <h1 className="text-[28px] font-medium lg:text-[64px] xl:text-[74px] 2xl:text-size-1">
             Redefining Smart Cities using
           </h1>
           {/* Second heading */}
-          <Gradient />
+          <div className="relative w-[881.667px] lg:h-[64px] xl:h-[74px] 2xl:h-[83.16px]">
+            <Image
+              src={"/hero/artificial_intelligence.png"}
+              alt="Hero Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Let's talk button */}
@@ -53,14 +59,14 @@ export default function Hero() {
       </div>
 
       {/* Bottom */}
-      <div className="absolute z-20 flex w-full flex-col items-center justify-center lg:bottom-[87px] lg:pl-[458px] lg:pr-[458.28px]">
+      <div className="absolute z-20 w-full flex-col items-center justify-center lg:bottom-[87px] lg:pl-[458px] lg:pr-[458.28px]">
         <div className="flex flex-col items-center gap-[16px]">
           {/* Paragraph */}
-          <p className="text-size-7 font-normal opacity-90 lg:text-size-5">
+          <p className="text-size-7 font-normal opacity-90 lg:text-size-6 xl:text-size-5">
             IN PARTNERSHIP WITH
           </p>
           {/* Image container */}
-          <div className="flex items-center gap-[40px] lg:gap-[62px]">
+          <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
             {/* Image 1 */}
             <Image
               src={"/hero/ntdp.png"}

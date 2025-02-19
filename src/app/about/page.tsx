@@ -36,7 +36,7 @@ export default function About() {
       {/* Brief History Section */}
       <div className="hidden flex-col items-start gap-[10px] self-stretch lg:flex">
         <div
-          className="relative w-full py-[70px]"
+          className="relative h-[681px] w-full bg-cover bg-no-repeat py-[70px]"
           style={{ backgroundImage: "url(/statistics/bg.png)" }}
         >
           {/* Content container above the background */}

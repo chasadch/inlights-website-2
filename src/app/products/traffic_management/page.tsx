@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import ContactBackground from "@/sections/Contact/ContactBackground";
+import Contact from "@/sections/Contact/Contact";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -95,7 +95,7 @@ export default function TrafficManagement() {
         className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
         // style={{ backgroundColor: "lightgray" }}
       >
-        <div className="flex flex-shrink-0 flex-col items-center justify-between py-[120px] lg:flex-row lg:p-[70px]">
+        <div className="mx-auto flex max-w-[1440px] flex-shrink-0 flex-col items-center justify-between py-[120px] lg:flex-row lg:p-[70px]">
           <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
@@ -166,151 +166,7 @@ export default function TrafficManagement() {
       </div>
 
       {/* Contact section */}
-      <section className="relative flex flex-col items-center justify-between overflow-hidden bg-black px-[16px] py-[140px] sm:flex-row sm:items-start lg:px-[70px]">
-        {/* Background SVG wrapped in an absolutely positioned container */}
-        <div className="absolute inset-0 left-0 top-0 z-10">
-          <ContactBackground />
-        </div>
-
-        {/* Contact Info */}
-        <div className="relative z-50 flex w-full flex-col items-start gap-[32px] sm:w-[401px] lg:w-[301px] xl:w-[401px]">
-          <div className="flex flex-col items-start gap-[20px] self-stretch">
-            <h1 className="text-size-3 font-normal lg:text-size-2">
-              Let&apos;s talk
-            </h1>
-            <p className="w-full max-w-[376px] text-size-7 font-normal opacity-70 lg:text-size-5">
-              Like our story? Contact now and create greatness together with us.
-            </p>
-          </div>
-          <div className="h-[1px] w-full max-w-[401px] bg-white opacity-20"></div>
-
-          {/* Contact Details */}
-          <div className="flex flex-col items-start gap-[20px]">
-            {[
-              {
-                icon: "/contact/email.png",
-                label: "Our email",
-                value: "admin@inlights.com.pk",
-                href: "mailto:admin@inlights.com.pk",
-              },
-              {
-                icon: "/contact/call.png",
-                label: "Call us",
-                value: "+92 3235353143",
-                href: "tel:+923235353143",
-              },
-              {
-                icon: "/contact/map.png",
-                label: "Find us",
-                value: "Open Google Maps",
-                href: "https://maps.app.goo.gl/Kvzisj4UWjLZyRFC8",
-              },
-            ].map((contact, index) => (
-              <div key={index} className="flex items-center gap-[26px]">
-                <div className="relative h-[50px] w-[50px] rounded-full bg-gradient-to-t from-[#552DDA] to-[#1D3E80]">
-                  <Image
-                    src={contact.icon}
-                    width={25}
-                    height={20}
-                    alt={contact.label}
-                    className="absolute left-[12px] top-[15px]"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <h1 className="text-size-6 font-bold lg:text-size-3">
-                    {contact.label}
-                  </h1>
-                  <a
-                    href={contact.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-size-6 font-normal opacity-70 lg:text-size-5"
-                  >
-                    {contact.value}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="h-[1px] w-full max-w-[401px] bg-white opacity-20"></div>
-        </div>
-
-        {/* Contact Form */}
-        <div className="flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-[#050919] px-[16px] py-[20px] shadow-shadowCustom sm:mt-0 lg:w-[495px] lg:p-[36px] xl:w-[695px]">
-          <form className="flex w-full flex-col gap-[40px]">
-            <div className="flex flex-col gap-[40px] sm:flex-row">
-              <div className="flex w-full flex-col gap-[24px] sm:w-1/2">
-                <label htmlFor="first-name" className="text-size-6 font-normal">
-                  First Name
-                </label>
-                <input
-                  id="first-name"
-                  name="firstname"
-                  type="text"
-                  className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
-                />
-              </div>
-
-              <div className="flex w-full flex-col gap-[24px] sm:w-1/2">
-                <label htmlFor="last-name" className="text-size-6 font-normal">
-                  Last Name
-                </label>
-                <input
-                  id="last-name"
-                  name="lastname"
-                  type="text"
-                  className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-[40px] sm:flex-row">
-              <div className="flex w-full flex-col gap-[24px] sm:w-1/2">
-                <label htmlFor="email" className="text-size-6 font-normal">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
-                />
-              </div>
-
-              <div className="flex w-full flex-col gap-[24px] sm:w-1/2">
-                <label htmlFor="phone" className="text-size-6 font-normal">
-                  Phone
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="message" className="text-size-6 font-normal">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="resize-none border-b border-[#DFDFDF] bg-transparent text-white outline-none"
-                rows={3}
-              />
-            </div>
-
-            <div>
-              <Button onClick={() => {}} variant="gradient">
-                Let&apos;s Talk
-              </Button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <Contact />
     </div>
   );
 }

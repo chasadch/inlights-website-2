@@ -13,7 +13,7 @@ export default function UIUXDesignPage() {
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+        <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             UI/UX Design
           </h1>
@@ -30,7 +30,7 @@ export default function UIUXDesignPage() {
         </div>
 
         <div
-          className="relative mt-[50px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+          className="relative mx-auto mt-[50px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
           style={{
             backgroundImage: "url(/services/web_development/rectangle.png)",
             backgroundSize: "100% 100%",
@@ -42,14 +42,14 @@ export default function UIUXDesignPage() {
             alt=""
             width={380}
             height={449}
-            className="absolute right-[7.25rem] top-[1.75rem] z-20 h-[234px] w-[203px] flex-shrink-0 lg:right-[12rem] lg:top-[2.5rem] lg:h-[349px] lg:w-[280px] xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[15rem] 2xl:h-[449px] 2xl:w-[380px]"
+            className="absolute right-[7.25rem] top-[1.75rem] z-20 h-[234px] w-[203px] flex-shrink-0 lg:right-[12rem] lg:top-[2.5rem] lg:h-[349px] lg:w-[280px] xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[14rem] 2xl:h-[449px] 2xl:w-[380px]"
           />
           <Image
             src={"/services/uiux-design/alexix2.png"}
             alt=""
             width={383}
             height={503}
-            className="absolute right-[1.5rem] top-0 z-10 h-[261px] w-[203px] flex-shrink-0 lg:h-[403px] lg:w-[283px] xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
+            className="absolute right-[2.5rem] top-0 z-10 h-[261px] w-[203px] flex-shrink-0 lg:h-[403px] lg:w-[283px] xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
           />
           <Image
             src={"/services/uiux-design/alexix3.png"}
@@ -63,11 +63,11 @@ export default function UIUXDesignPage() {
 
       {/* Tech section */}
       <div
-        className="flex w-full flex-col items-start justify-center gap-[10px] self-stretch py-[90px] lg:h-[541px]"
+        className="flex w-full flex-col items-start justify-center gap-[10px] self-stretch py-[90px] lg:h-[681px]"
         style={{ backgroundImage: "url(/statistics/bg.png)" }}
       >
         <div className="mx-auto flex flex-col items-center gap-[40px] lg:gap-[48px]">
-          <h1 className="w-[70%] text-center text-[24px] font-medium leading-[32px] lg:w-full lg:text-[44px]">
+          <h1 className="w-[70%] text-center text-[24px] font-medium leading-[32px] lg:w-full lg:text-start lg:text-[44px]">
             Process that moves things forward
           </h1>
 
@@ -294,7 +294,7 @@ export default function UIUXDesignPage() {
         </div>
 
         <div
-          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
+          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1400px]"
           style={{
             backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
           }}

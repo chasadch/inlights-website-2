@@ -104,7 +104,7 @@ export default function JobsPage() {
         </div>
 
         {jobs.map((job) => (
-          <div key={job.id} className="w-full">
+          <div key={job.id} className="mx-auto w-full max-w-[1440px]">
             <div className="flex flex-col items-start gap-[32px] self-stretch rounded-[24px] p-[13px] lg:p-[38px]">
               <div className="flex flex-col items-start gap-[8px] self-stretch lg:gap-[4px]">
                 <div className="flex items-center justify-between self-stretch">

@@ -48,7 +48,7 @@ export default function AiEnginnerPage() {
       <div className="pointer-events-none absolute inset-0 left-0 top-0 z-10 hidden lg:flex">
         <ContactBackground />
       </div>
-      <div className="relative z-20 flex flex-col items-start gap-[24px] lg:gap-[33px]">
+      <div className="relative z-20 mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[24px] lg:gap-[33px]">
         <div className="flex items-start justify-between self-stretch">
           <h1 className="text-size-3 font-medium lg:text-size-2">
             AI Engineer
@@ -179,7 +179,7 @@ export default function AiEnginnerPage() {
       </div>
 
       {/* Contact Form */}
-      <div className="flex items-center justify-center rounded-[20px] bg-bg p-[36px] shadow-shadowCustom">
+      <div className="mx-auto mt-[149px] flex w-full max-w-[1440px] items-center justify-center rounded-[20px] bg-bg p-[36px] shadow-shadowCustom">
         <form ref={formRef} className="flex w-full flex-col gap-[52px]">
           <h1 className="text-[22px] font-medium">
             Enter your details to Apply
