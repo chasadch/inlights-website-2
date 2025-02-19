@@ -36,11 +36,11 @@ export default function Hero() {
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[8px] self-stretch lg:gap-[18px]">
           {/* First heading */}
-          <h1 className="text-[28px] font-medium lg:text-[54px] xl:text-[74px] 2xl:text-size-1">
+          <h1 className="text-[28px] font-medium lg:text-[44px] xl:text-[54px] 2xl:text-size-1">
             Redefining Smart Cities using
           </h1>
           {/* Second heading */}
-          <div className="relative w-[881.667px] lg:h-[54px] xl:h-[74px] 2xl:h-[83.16px]">
+          <div className="relative w-[881.667px] lg:h-[44px] xl:h-[54px] 2xl:h-[83.16px]">
             <Image
               src={"/hero/artificial_intelligence.png"}
               alt="Hero Logo"
