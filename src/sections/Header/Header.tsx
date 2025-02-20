@@ -1,12 +1,111 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
 import NavDropdown from "./NavDropdown";
 
+// Define types for dropdown data
+type DropdownItem = {
+  imageSrc: string;
+  title: string;
+  path: string;
+};
+
+type DropdownSection = {
+  header: string;
+  items: DropdownItem[];
+};
+
+// Data for your dropdown sections
+const servicesDropdownData: DropdownSection[] = [
+  {
+    header: "Custom Product Development",
+    items: [
+      {
+        imageSrc: "/header/web_development.png",
+        title: "Web Development",
+        path: "/services/web_development",
+      },
+      {
+        imageSrc: "/header/product_design.png",
+        title: "UI/UX Design",
+        path: "/services/uiux_design",
+      },
+    ],
+  },
+  {
+    header: "Artificial Intelligence",
+    items: [
+      {
+        imageSrc: "/header/computer_vision.png",
+        title: "Computer Vision",
+        path: "/services/computer-vision",
+      },
+      {
+        imageSrc: "/header/ai_automation.png",
+        title: "AI Automation",
+        path: "/services/ai-automation",
+      },
+    ],
+  },
+];
+
+const productsDropdownData: DropdownSection[] = [
+  {
+    header: "Custom Product Development",
+    items: [
+      {
+        imageSrc: "/header/web_development.png",
+        title: "Traffic Management",
+        path: "/products/traffic_management",
+      },
+      {
+        imageSrc: "/header/product_design.png",
+        title: "Premises Security",
+        path: "/products/premises_security",
+      },
+    ],
+  },
+];
+
+const companyDropdownData: DropdownSection[] = [
+  {
+    header: "About",
+    items: [
+      {
+        imageSrc: "/header/web_development.png",
+        title: "About",
+        path: "/about",
+      },
+      {
+        imageSrc: "/header/product_design.png",
+        title: "Portfolio",
+        path: "/portfolio",
+      },
+    ],
+  },
+  {
+    header: "Our Team",
+    items: [
+      {
+        imageSrc: "/header/computer_vision.png",
+        title: "Team",
+        path: "/team",
+      },
+      {
+        imageSrc: "/header/computer_vision.png",
+        title: "Team",
+        path: "/team",
+      },
+    ],
+  },
+];
+
 export default function Header() {
   const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="absolute left-0 right-0 top-0 z-50 mx-auto box-border flex w-full max-w-[1440px] flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white lg:px-[120px] lg:py-[16px]">
@@ -20,7 +119,7 @@ export default function Header() {
         onClick={() => router.push("/")}
       />
 
-      {/* Navigation */}
+      {/* Navigation (Desktop) */}
       <ul
         className="z-50 hidden flex-wrap items-center gap-[9px] md:flex"
         style={{ maxWidth: "100%", flexWrap: "wrap" }}
@@ -36,104 +135,20 @@ export default function Header() {
         </li>
 
         {/* Services Dropdown */}
-        <NavDropdown
-          title="Services"
-          sections={[
-            {
-              header: "Custom Product Development",
-              items: [
-                {
-                  imageSrc: "/header/web_development.png",
-                  title: "Web Development",
-                  onClick: () => router.push("/services/web_development"),
-                },
-                {
-                  imageSrc: "/header/product_design.png",
-                  title: "UI/UX Design",
-                  onClick: () => router.push("/services/uiux_design"),
-                },
-              ],
-            },
-            {
-              header: "Artificial Intelligence",
-              items: [
-                {
-                  imageSrc: "/header/computer_vision.png",
-                  title: "Computer Vision",
-                  onClick: () => router.push("/services/computer-vision"),
-                },
-                {
-                  imageSrc: "/header/ai_automation.png",
-                  title: "AI Automation",
-                  onClick: () => router.push("/services/ai-automation"),
-                },
-              ],
-            },
-          ]}
-        />
+        <NavDropdown title="Services" sections={servicesDropdownData} />
 
         {/* Products Dropdown */}
-        <NavDropdown
-          title="Products"
-          sections={[
-            {
-              header: "Custom Product Development",
-              items: [
-                {
-                  imageSrc: "/header/web_development.png",
-                  title: "Traffic Management",
-                  onClick: () => router.push("/products/traffic_management"),
-                },
-                {
-                  imageSrc: "/header/product_design.png",
-                  title: "Premises Security",
-                  onClick: () => router.push("/products/premises_security"),
-                },
-              ],
-            },
-          ]}
-        />
+        <NavDropdown title="Products" sections={productsDropdownData} />
 
         {/* Company Dropdown */}
-        <NavDropdown
-          title="Company"
-          sections={[
-            {
-              header: "About",
-              items: [
-                {
-                  imageSrc: "/header/web_development.png",
-                  title: "About",
-                  onClick: () => router.push("/about"),
-                },
-                {
-                  imageSrc: "/header/product_design.png",
-                  title: "Portfolio",
-                  onClick: () => router.push("/portfolio"),
-                },
-              ],
-            },
-            {
-              header: "Our Team",
-              items: [
-                {
-                  imageSrc: "/header/computer_vision.png",
-                  title: "Team",
-                  onClick: () => router.push("/team"),
-                },
-                {
-                  imageSrc: "/header/computer_vision.png",
-                  title: "Team",
-                  onClick: () => router.push("/team"),
-                },
-              ],
-            },
-          ]}
-        />
+        <NavDropdown title="Company" sections={companyDropdownData} />
       </ul>
 
       {/* Mobile Menu Icon */}
-      <div className="flex items-start gap-[105px] rounded-[56px] p-[6px] md:hidden">
+      <div
+        className="flex cursor-pointer items-start gap-[105px] rounded-[56px] p-[6px] md:hidden"
+        onClick={() => setMobileMenuOpen(true)}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -159,6 +174,133 @@ export default function Header() {
       >
         Join Us
       </Button>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <MobileMenu onClose={() => setMobileMenuOpen(false)} router={router} />
+      )}
     </header>
+  );
+}
+
+// Define props for MobileMenu
+interface MobileMenuProps {
+  onClose: () => void;
+  router: ReturnType<typeof useRouter>;
+}
+
+function MobileMenu({ onClose, router }: MobileMenuProps) {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const handleDropdownToggle = (title: string) => {
+    setOpenDropdown(openDropdown === title ? null : title);
+  };
+
+  return (
+    <div className="fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto bg-black px-[16px] py-[24px]">
+      {/* Close Button */}
+      <div className="mb-[24px] flex items-center justify-end">
+        <button
+          className="text-size-4 font-semibold text-white"
+          onClick={onClose}
+        >
+          X
+        </button>
+      </div>
+
+      {/* Menu Items */}
+      <ul className="flex flex-col gap-[16px] text-size-4 font-semibold text-white">
+        {/* Home */}
+        <li
+          className="cursor-pointer rounded-[8px] p-[12px]"
+          onClick={() => {
+            router.push("/");
+            onClose();
+          }}
+        >
+          Home
+        </li>
+
+        {/* Services */}
+        <li className="cursor-pointer rounded-[8px] p-[12px]">
+          <div onClick={() => handleDropdownToggle("Services")}>Services</div>
+          {openDropdown === "Services" && (
+            <SubDropdown
+              router={router}
+              onClose={onClose}
+              data={servicesDropdownData}
+            />
+          )}
+        </li>
+
+        {/* Products */}
+        <li className="cursor-pointer rounded-[8px] p-[12px]">
+          <div onClick={() => handleDropdownToggle("Products")}>Products</div>
+          {openDropdown === "Products" && (
+            <SubDropdown
+              router={router}
+              onClose={onClose}
+              data={productsDropdownData}
+            />
+          )}
+        </li>
+
+        {/* Company */}
+        <li className="cursor-pointer rounded-[8px] p-[12px]">
+          <div onClick={() => handleDropdownToggle("Company")}>Company</div>
+          {openDropdown === "Company" && (
+            <SubDropdown
+              router={router}
+              onClose={onClose}
+              data={companyDropdownData}
+            />
+          )}
+        </li>
+
+        {/* Join Us */}
+        <li
+          className="cursor-pointer rounded-[8px] p-[12px]"
+          onClick={() => {
+            router.push("/jobs");
+            onClose();
+          }}
+        >
+          Join Us
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+// Define props for SubDropdown
+interface SubDropdownProps {
+  data: DropdownSection[];
+  router: ReturnType<typeof useRouter>;
+  onClose: () => void;
+}
+
+function SubDropdown({ data, router, onClose }: SubDropdownProps) {
+  return (
+    <div className="ml-[12px] mt-[12px] flex flex-col gap-[12px] text-size-3 font-normal">
+      {data.map((section, idx) => (
+        <div key={idx} className="flex flex-col gap-[8px]">
+          <div className="text-size-4 font-semibold">{section.header}</div>
+          <div className="flex flex-col gap-[6px]">
+            {section.items.map((item, i) => (
+              <div
+                key={i}
+                className="cursor-pointer pl-[12px] text-size-4 text-[#D1D1D1]"
+                onClick={() => {
+                  router.push(item.path);
+                  onClose();
+                }}
+              >
+                {item.title}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

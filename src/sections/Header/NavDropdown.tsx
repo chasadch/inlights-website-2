@@ -1,14 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
 import DropDownCard from "./DropDownCard";
+import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface DropdownItem {
   imageSrc: string;
   title: string;
-  onClick: () => void;
+  path: string;
 }
 
 interface DropdownSection {
@@ -24,6 +25,7 @@ interface NavDropdownProps {
 export default function NavDropdown({ title, sections }: NavDropdownProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   // When route changes, close the dropdown
   useEffect(() => {
@@ -68,7 +70,11 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
                       key={i}
                       imageSrc={item.imageSrc}
                       title={item.title}
-                      onClick={item.onClick}
+                      onClick={
+                        item.imageSrc === "/header/computer_vision.png"
+                          ? () => router.push("/team")
+                          : () => router.push(item.path)
+                      }
                     />
                   ))}
                 </div>
