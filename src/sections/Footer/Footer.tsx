@@ -200,7 +200,7 @@ export default function Footer() {
       </section>
 
       {/* Footer (1024 pixels) */}
-      <div className="border-t border-white/20 bg-bg">
+      <div className="relative z-50 border-t border-white/20 bg-bg">
         <section className="mx-auto hidden max-w-[1440px] flex-col items-center gap-[32px] px-[16px] pb-[30px] pt-[80px] lg:flex lg:px-[70px]">
           {/* First container */}
           <div className="flex items-start gap-[60px] self-stretch">
