@@ -16,7 +16,7 @@ export default function Header() {
         alt="Logo"
         width={156}
         height={18}
-        className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer xl:h-[18px] xl:w-[156px]"
+        className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18.197px] lg:w-[145.885px] xl:w-[155.885px]"
         onClick={() => router.push("/")}
       />
 

@@ -1,9 +1,14 @@
+"use client";
+
 import Button from "@/components/Button";
 import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function WebDevelopmentPage() {
+  const router = useRouter();
+
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
@@ -59,7 +64,7 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Tech section */}
-      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch bg-black py-[120px] lg:bg-[url('/statistics/bg.png')]">
+      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch bg-black py-[120px] lg:bg-[url('/statistics/bg.png')] lg:bg-cover lg:bg-no-repeat">
         <div className="mx-auto flex w-[249px] flex-col items-center gap-[26px] lg:w-full lg:gap-[40px]">
           <h1 className="hidden text-[44px] font-normal lg:block">
             Our Tech Stack
@@ -219,7 +224,9 @@ export default function WebDevelopmentPage() {
               Enough talk, let&apos;s get to work
             </p>
             {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
+            <Button variant="gradient" onClick={() => router.push("/contact")}>
+              Let&apos;s Get In Touch
+            </Button>
           </div>
         </div>
       </div>

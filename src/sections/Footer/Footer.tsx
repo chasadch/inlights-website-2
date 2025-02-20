@@ -203,7 +203,7 @@ export default function Footer() {
       <div className="border-t border-white/20 bg-bg">
         <section className="mx-auto hidden max-w-[1440px] flex-col items-center gap-[32px] px-[16px] pb-[30px] pt-[80px] lg:flex lg:px-[70px]">
           {/* First container */}
-          <div className="+ order-2 flex items-start gap-[60px] self-stretch md:order-1">
+          <div className="flex items-start gap-[60px] self-stretch">
             <div className="flex flex-col items-start gap-[16px] self-stretch">
               <div className="flex flex-col items-start gap-[16px]">
                 <Image
@@ -239,9 +239,9 @@ export default function Footer() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="flex h-[40px] w-[250px] items-center gap-[8px] rounded-[8px] border border-white/50 bg-white/5 px-[16px] py-[8px] text-[#B5B5B5]"
+                    className="flex h-[40px] w-[250px] items-center gap-[8px] rounded-[8px] border border-white/50 bg-white/5 px-[16px] py-[8px] text-[#B5B5B5] outline-none"
                   />
-                  <button className="flex h-[40px] w-[40px] items-center justify-center gap-[8px] rounded-[12px] bg-white">
+                  <button className="flex h-[40px] w-[40px] items-center justify-center gap-[8px] rounded-[12px] bg-white transition-all duration-200 hover:bg-gray-300">
                     <div className="flex h-[20px] w-[20px] items-center justify-center">
                       <MoveUpRight width={20} height={20} color="#000" />
                     </div>
@@ -373,7 +373,7 @@ export default function Footer() {
           </div>
 
           {/* Second container */}
-          <div className="+ order-1 flex flex-col items-start gap-[23px] self-stretch md:order-2">
+          <div className="flex flex-col items-start gap-[23px] self-stretch">
             <div className="h-[1px] self-stretch bg-[#8C8C8C] opacity-50"></div>
             <div className="flex items-start justify-between self-stretch">
               <span className="text-size-6 font-normal">
