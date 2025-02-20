@@ -10,59 +10,63 @@ export default function UIUXDesignPage() {
   const router = useRouter();
   return (
     <div className="relative self-stretch bg-black">
-      {/* Hero Section */}
       <div
-        className="flex h-[687px] w-full flex-col items-center gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:h-[839.499px] lg:flex-row lg:justify-between"
         style={{
           background:
-            "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
+            "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
-          <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
-            UI/UX Design
-          </h1>
-          <p className="text-center text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
-            Our product design services cover the entire cycle from
-            conceptualization to the development of successful products,
-            including strategic development, technical engineering, and
-            aesthetic performance. We can assist you at every step of the
-            product development process through our comprehensive UI/UX design
-            services and integrated approach. Our ability to design innovative
-            mobile and web user experiences ensures that your product will
-            appeal to its intended audience.
-          </p>
-        </div>
+        {/* Hero Section */}
+        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch lg:h-[839.499px] lg:flex-row lg:justify-between">
+          <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+            <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
+              UI/UX Design
+            </h1>
+            <p className="text-center text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
+              Our product design services cover the entire cycle from
+              conceptualization to the development of successful products,
+              including strategic development, technical engineering, and
+              aesthetic performance. We can assist you at every step of the
+              product development process through our comprehensive UI/UX design
+              services and integrated approach. Our ability to design innovative
+              mobile and web user experiences ensures that your product will
+              appeal to its intended audience.
+            </p>
+          </div>
 
-        <div
-          className="relative mx-auto mt-[50px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
-          style={{
-            backgroundImage: "url(/services/web_development/rectangle.png)",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <Image
-            src={"/services/uiux-design/alexix.png"}
-            alt=""
-            width={380}
-            height={449}
-            className="absolute right-[7.25rem] top-[1.75rem] z-20 h-[234px] w-[203px] flex-shrink-0 lg:right-[12rem] lg:top-[2.5rem] lg:h-[349px] lg:w-[280px] xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[14rem] 2xl:h-[449px] 2xl:w-[380px]"
-          />
-          <Image
-            src={"/services/uiux-design/alexix2.png"}
-            alt=""
-            width={383}
-            height={503}
-            className="absolute right-[2.5rem] top-0 z-10 h-[261px] w-[203px] flex-shrink-0 lg:h-[403px] lg:w-[283px] xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
-          />
-          <Image
-            src={"/services/uiux-design/alexix3.png"}
-            alt=""
-            width={379}
-            height={522}
-            className="absolute -right-[3.5rem] -top-[1.5rem] h-[283px] w-[193px] flex-shrink-0 lg:h-[422px] lg:w-[279px] xl:h-[472px] xl:w-[329px] 2xl:h-[522px] 2xl:w-[379px]"
-          />
+          <div
+            className="relative mx-auto mt-[50px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+            style={{
+              backgroundImage: "url(/services/web_development/rectangle.png)",
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <Image
+              src={"/services/uiux-design/alexix.png"}
+              alt=""
+              width={380}
+              height={449}
+              className="absolute right-[7.25rem] top-[1.75rem] z-20 h-[234px] w-[203px] flex-shrink-0 lg:right-[12rem] lg:top-[2.5rem] lg:h-[349px] lg:w-[280px] xl:right-[13rem] xl:h-[399px] xl:w-[330px] 2xl:right-[14rem] 2xl:h-[449px] 2xl:w-[380px]"
+            />
+            <Image
+              src={"/services/uiux-design/alexix2.png"}
+              alt=""
+              width={383}
+              height={503}
+              className="absolute right-[2.5rem] top-0 z-10 h-[261px] w-[203px] flex-shrink-0 lg:h-[403px] lg:w-[283px] xl:h-[453px] xl:w-[333px] 2xl:h-[503px] 2xl:w-[383px]"
+            />
+            <Image
+              src={"/services/uiux-design/alexix3.png"}
+              alt=""
+              width={379}
+              height={522}
+              className="absolute -right-[3.5rem] -top-[1.5rem] h-[283px] w-[193px] flex-shrink-0 lg:h-[422px] lg:w-[279px] xl:h-[472px] xl:w-[329px] 2xl:h-[522px] 2xl:w-[379px]"
+            />
+          </div>
         </div>
       </div>
 
@@ -86,7 +90,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.5rem] 2xl:top-[5.15rem]"
+                  className="absolute -right-[0.75rem] top-[5.35rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.65rem] 2xl:top-[5.45rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -131,7 +135,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.5rem] 2xl:top-[5.15rem]"
+                  className="absolute -right-[0.75rem] top-[5.35rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.65rem] 2xl:top-[5.45rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -177,7 +181,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.5rem] 2xl:top-[5.15rem]"
+                  className="absolute -right-[0.75rem] top-[5.35rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.65rem] 2xl:top-[5.45rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image
@@ -223,7 +227,7 @@ export default function UIUXDesignPage() {
                 <ChevronRight
                   width={26}
                   height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.5rem] 2xl:top-[5.15rem]"
+                  className="absolute -right-[0.75rem] top-[5.35rem] flex-shrink-0 lg:-right-[0.65rem] lg:top-[5.45rem] 2xl:-right-[0.65rem] 2xl:top-[5.45rem]"
                 />
                 <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
                   <Image

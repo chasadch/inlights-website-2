@@ -11,55 +11,59 @@ export default function WebDevelopmentPage() {
 
   return (
     <div className="relative self-stretch bg-black">
-      {/* Hero Section */}
       <div
-        className="flex h-screen w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
         style={{
-          background:
-            "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
+          backgroundImage:
+            "linear-gradient(0deg, rgba(9,17,33,0.32) 0%, rgba(9,17,33,0.32) 100%), url(/about/about_hero.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
-          <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
-            Web Development
-          </h1>
-          <p className="text-center text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
-            Attracting and retaining customers in today&apos;s digital age
-            requires a strong online presence. A website that is visually
-            appealing, easy to navigate, and optimized for search engines is
-            essential to building your brand and reaching your target audience.
-            Our web development services can help you achieve all of these goals
-            and more. Our web development services include everything from
-            initial planning and design to development, testing, and deployment.
-            We use the latest web technologies to create websites that are
-            responsive, fast-loading, and optimized for search engines. We also
-            offer ongoing maintenance and support to ensure that your website
-            remains up-to-date and secure.
-          </p>
-        </div>
+        {/* Hero Section */}
+        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch lg:h-[839.499px] lg:flex-row lg:justify-between">
+          <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+            <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
+              Web Development
+            </h1>
+            <p className="text-center text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
+              Attracting and retaining customers in today&apos;s digital age
+              requires a strong online presence. A website that is visually
+              appealing, easy to navigate, and optimized for search engines is
+              essential to building your brand and reaching your target
+              audience. Our web development services can help you achieve all of
+              these goals and more. Our web development services include
+              everything from initial planning and design to development,
+              testing, and deployment. We use the latest web technologies to
+              create websites that are responsive, fast-loading, and optimized
+              for search engines. We also offer ongoing maintenance and support
+              to ensure that your website remains up-to-date and secure.
+            </p>
+          </div>
 
-        <div
-          className="relative mx-auto h-[197.426px] w-[246.173px] flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
-          style={{
-            backgroundImage: "url(/services/web_development/rectangle.png)",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <Image
-            src={"/services/laptop.png"}
-            alt=""
-            width={323.704}
-            height={323.704}
-            className="absolute left-[10px] top-[18px] z-10 h-[168.178px] w-[168.178px] flex-shrink-0 lg:left-[15px] lg:top-[30px] lg:h-[273.704px] lg:w-[263.704px] xl:h-[323.704px] xl:w-[293.704px] 2xl:left-[20px] 2xl:top-[35px] 2xl:w-[323.704px]"
-          />
-          <Image
-            src={"/services/tablet.png"}
-            alt=""
-            width={256.461}
-            height={256.461}
-            className="absolute -right-[10px] -top-[10px] h-[133.242px] w-[133.242px] flex-shrink-0 lg:-right-[15px] lg:-top-[15px] lg:h-[206.461px] lg:w-[196.461px] xl:w-[226.461px] 2xl:-right-[20px] 2xl:-top-[20px] 2xl:h-[256.461px] 2xl:w-[256.461px]"
-          />
+          <div
+            className="relative mx-auto h-[197.426px] w-[246.173px] flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+            style={{
+              backgroundImage: "url(/services/web_development/rectangle.png)",
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <Image
+              src={"/services/laptop.png"}
+              alt=""
+              width={323.704}
+              height={323.704}
+              className="absolute left-[10px] top-[18px] z-10 h-[168.178px] w-[168.178px] flex-shrink-0 lg:left-[15px] lg:top-[30px] lg:h-[273.704px] lg:w-[263.704px] xl:h-[323.704px] xl:w-[293.704px] 2xl:left-[20px] 2xl:top-[35px] 2xl:w-[323.704px]"
+            />
+            <Image
+              src={"/services/tablet.png"}
+              alt=""
+              width={256.461}
+              height={256.461}
+              className="absolute -right-[10px] -top-[10px] h-[133.242px] w-[133.242px] flex-shrink-0 lg:-right-[15px] lg:-top-[15px] lg:h-[206.461px] lg:w-[196.461px] xl:w-[226.461px] 2xl:-right-[20px] 2xl:-top-[20px] 2xl:h-[256.461px] 2xl:w-[256.461px]"
+            />
+          </div>
         </div>
       </div>
 
