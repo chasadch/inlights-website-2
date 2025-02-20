@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
-import DropDownCard from "./DropDownCard";
-import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import DropDownCard from "./DropDownCard";
 
 interface DropdownItem {
   imageSrc: string;
