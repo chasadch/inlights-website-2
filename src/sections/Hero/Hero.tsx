@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-screen self-stretch overflow-hidden"
+      className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
