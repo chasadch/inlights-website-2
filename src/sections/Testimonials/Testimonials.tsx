@@ -97,7 +97,7 @@ export default function Testimonials() {
         <TestimonialsBackground />
       </div>
 
-      <div className="mb-[50px] flex flex-col items-center self-stretch bg-bg px-[16px] py-[32px] lg:gap-[64px] lg:bg-transparent">
+      <div className="flex flex-col items-center self-stretch bg-bg px-[16px] py-[32px] lg:gap-[64px] lg:bg-transparent">
         <div className="hidden flex-col items-center gap-[8px] lg:flex">
           <h1 className="w-[864px] text-center text-size-2 font-normal">
             Don&apos;t take our word, see what customers say about us

@@ -26,13 +26,15 @@ export default function ProductCard({
             <h1 className="text-size-7 font-normal text-[#414C5C]">{title}</h1>
           </div>
           {/* Subheading */}
-          <p className="w-full text-[20px] font-medium xl:text-[34px] xl:leading-none">
+          <p className="w-full text-[20px] font-medium xl:w-[467px] xl:text-[34px]">
             {subtitle}
           </p>
           <p className="self-stretch text-size-7 font-normal leading-[20px] opacity-70 xl:text-size-5">
             {description}
           </p>
-          <div className={"flex items-start gap-[9px] self-stretch"}>
+          <div
+            className={`mt-[4px] flex items-start gap-[9px] self-stretch ${title === "Premises Security" && "-mt-[4px] lg:-mt-[14px]"}`}
+          >
             <span className={"text-size-7 font-normal"}>Discover Insights</span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
               <Image
@@ -46,14 +48,14 @@ export default function ProductCard({
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 h-[120px] w-[326px] lg:h-[206px] lg:w-[580px]">
-        <div className="border-opacity-44 relative h-[206px] w-[580px] flex-shrink-0 rounded-[12px]">
+      <div className="absolute bottom-0 left-0 h-[122px] w-[332px] xl:h-[206px] xl:w-[580px]">
+        <div className="border-opacity-44 relative h-[206px] w-[680px] flex-shrink-0 rounded-[12px]">
           <Image
             src={imageSrc}
             alt={title}
             width={580}
             height={206}
-            className="absolute left-[8px] h-[120px] w-[326px] lg:bottom-0 lg:left-[16px] lg:h-[206px] lg:w-[580px]"
+            className="absolute left-[16px] lg:bottom-0"
           />
         </div>
       </div>

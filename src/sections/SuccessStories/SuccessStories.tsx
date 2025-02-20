@@ -106,11 +106,11 @@ export default function SuccessStories() {
   };
 
   return (
-    <div className="mx-auto max-w-[1440px] bg-black px-[16px] text-white lg:px-[70px] lg:py-[140px]">
+    <div className="mx-auto max-w-[1440px] bg-black px-[16px] pb-[126px] text-white lg:px-[70px] lg:py-[140px]">
       <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[32px]">
         {/* Header Section */}
         <div className="flex items-center justify-center gap-[48px] self-stretch lg:justify-between">
-          <h1 className="text-size-3 font-normal lg:text-size-2 lg:font-normal">
+          <h1 className="text-size-3 font-medium lg:text-size-2 lg:font-normal">
             Our Success Stories
           </h1>
 
@@ -146,7 +146,7 @@ export default function SuccessStories() {
         {/* Mobile Slider Section */}
         <div
           ref={containerRef}
-          className="grid w-full grid-cols-1 items-center gap-[24px] self-stretch lg:hidden"
+          className="grid w-full grid-cols-1 items-center gap-[24px] self-stretch sm:grid-cols-2 lg:hidden"
         >
           {stories.map((story, index) => (
             <div key={index}>

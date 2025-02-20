@@ -7,7 +7,7 @@ export default function Footer() {
       {/* Footer (375 pixels) */}
       <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-bg lg:hidden">
         {/* First container */}
-        <div className="flex flex-col items-start gap-[60px] self-stretch px-[43px] pb-[30px] pt-[75px]">
+        <div className="mx-auto flex flex-col items-start gap-[60px] self-stretch px-[43px] pb-[30px] pt-[80px]">
           <div className="flex flex-col items-start gap-[16px]">
             <Image
               src={"/footer/inlights.png"}

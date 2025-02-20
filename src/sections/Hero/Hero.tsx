@@ -40,7 +40,7 @@ export default function Hero() {
             Redefining Smart Cities using
           </h1>
           {/* Second heading */}
-          <div className="relative w-[881.667px] lg:h-[34px] xl:h-[44px] 2xl:h-[83.16px]">
+          <div className="relative h-[26.862px] w-[881.667px] lg:h-[34px] xl:h-[44px] 2xl:h-[83.16px]">
             <Image
               src={"/hero/artificial_intelligence.png"}
               alt="Hero Logo"
@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom */}
-      <div className="absolute bottom-[87px] left-1/2 z-20 inline-flex w-[523.724px] -translate-x-1/2 flex-col items-start justify-center gap-[64px]">
+      <div className="absolute bottom-[100.5px] left-1/2 z-20 inline-flex w-[523.724px] -translate-x-1/2 flex-col items-start justify-center gap-[64px] lg:bottom-[87px]">
         <div className="mx-auto w-full max-w-[1440px]">
           <div className="flex flex-col items-center gap-[16px]">
             {/* Paragraph */}

@@ -43,15 +43,15 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-[66px] overflow-hidden bg-black px-[16px] py-[100px] lg:flex-row lg:items-start lg:px-[70px] lg:py-[140px]">
+    <section className="relative mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-[66px] overflow-hidden bg-black px-[16px] pb-[120px] pt-[240px] lg:flex-row lg:items-start lg:px-[70px] lg:py-[140px]">
       {/* Background SVG wrapped in an absolutely positioned container */}
       <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
         <ContactBackground />
       </div>
 
       {/* Contact Info */}
-      <div className="relative z-50 flex w-full flex-col items-start gap-[32px] md:items-center lg:w-[351px] lg:items-start xl:w-[401px]">
-        <div className="flex flex-col gap-[20px] self-stretch md:items-center lg:items-start">
+      <div className="relative z-50 flex flex-col items-start gap-[32px] lg:w-[351px] lg:items-start xl:w-[401px]">
+        <div className="flex flex-col gap-[20px] self-stretch lg:items-start">
           <h1 className="text-size-3 font-semibold lg:text-size-2">
             Let&apos;s talk
           </h1>
@@ -243,7 +243,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="relative z-50 flex w-full flex-col items-center justify-center gap-[30px] rounded-[20px] bg-bg px-[16px] py-[20px] shadow-shadowCustom md:w-4/5 lg:mt-0 lg:h-[522px] lg:w-[495px] lg:p-[37px] xl:w-[695px]">
+      <div className="relative z-50 flex w-full max-w-[375px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-bg px-[16px] py-[20px] shadow-shadowCustom lg:mt-0 lg:h-[522px] lg:max-w-[495px] lg:p-[37px] xl:w-[695px]">
         <form ref={formRef} className="flex w-full flex-col gap-[40px]">
           <div className="flex flex-col gap-[63px] lg:flex-row">
             <div className="flex w-full flex-col gap-[32px] lg:w-1/2">

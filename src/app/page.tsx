@@ -1,5 +1,6 @@
 "use client";
 
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import Contact from "@/sections/Contact/Contact";
 import Hero from "@/sections/Hero/Hero";
 import Products from "@/sections/Products/Products";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Statistics />
       <Products />
       <Services />
+      <CallToAction />
       <SuccessStories />
       <Testimonials />
       <Contact />
