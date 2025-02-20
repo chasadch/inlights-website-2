@@ -1,10 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Button from "../../components/Button";
 import ServiceBackground from "./ServiceBackground";
 import ServiceCard from "./ServiceCard";
-import CallToAction from "../CallToAction/CallToAction";
 
 export default function Services() {
   const router = useRouter();
