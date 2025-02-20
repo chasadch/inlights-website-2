@@ -74,7 +74,7 @@ export default function SuccessStories() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scrollPos, setScrollPos] = useState(0);
   const [maxScroll, setMaxScroll] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(3); // Show 3 cards initially
+  const [visibleCards, _] = useState(3); // Show 3 cards initially
 
   useEffect(() => {
     const container = containerRef.current;
