@@ -1,5 +1,6 @@
-import Button from "@/components/Button";
-import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
+"use client";
+
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import Image from "next/image";
 
 export default function About() {
@@ -7,17 +8,17 @@ export default function About() {
     <section className="relative self-stretch bg-black">
       {/* Hero Section */}
       <div
-        className="relative flex h-[586px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center lg:h-[685px]"
+        className="relative flex h-[687px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="absolute left-1/2 top-1/2 flex w-[319px] -translate-x-1/2 -translate-y-1/2 transform flex-col items-center gap-[17.612px] lg:w-[903px]">
+        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:w-[903px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             About the Company
           </h1>
-          <p className="text-center text-size-6 font-normal opacity-70 lg:text-size-4">
+          <p className="self-stretch text-center text-size-6 font-normal opacity-70 lg:text-size-4">
             Founded in 2021, Inlights is a forward-thinking digital solutions
             company that specializes in web development, product design, and AI
             automation services. We are committed to transforming ideas into
@@ -187,55 +188,13 @@ export default function About() {
         </div>
       </div>
 
-      {/* Talent Section 375 pixels with higher z-index */}
-      <div className="flex items-center justify-center px-[16px] py-[100px] lg:hidden lg:px-[70px] lg:py-[160px]">
-        <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] lg:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Talent Section 1024 pixels with higher z-index */}
-      <div className="relative hidden items-center justify-center px-[70px] py-[160px] lg:flex">
-        <div className="absolute inset-0 left-0 top-0 z-10">
-          <CallToActionBackground />
-        </div>
-
-        <div
-          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[24px] text-center">
-            {/* Text */}
-            <p
-              className="text-[45px] font-bold text-[#FBFBFB]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
+      {/* Talent Section */}
+      <CallToAction
+        mobilePaddingTop="109px"
+        mobilePaddingBottom="120px"
+        desktopPaddingTop="160px"
+        desktopPaddingBottom="160px"
+      />
     </section>
   );
 }

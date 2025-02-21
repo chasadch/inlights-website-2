@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import Contact from "@/sections/Contact/Contact";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -142,31 +143,23 @@ export default function TrafficManagement() {
         </div>
       </div>
 
-      {/* Talent Section */}
-      <div className="flex items-center justify-center px-[16px] pt-[160px] lg:hidden lg:px-[70px] lg:py-[160px]">
-        <div
-          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] lg:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
+      <div className="block lg:hidden">
+        {/* Talent Section */}
+        <CallToAction
+          mobilePaddingTop="140px"
+          mobilePaddingBottom="140px"
+          desktopPaddingTop="100px"
+          desktopPaddingBottom="100px"
+        />
       </div>
 
       {/* Contact section */}
-      <Contact />
+      <Contact
+        mobilePaddingTop="0px"
+        mobilePaddingBottom="241.27px"
+        desktopPaddingTop="140px"
+        desktopPaddingBottom="140px"
+      />
     </div>
   );
 }

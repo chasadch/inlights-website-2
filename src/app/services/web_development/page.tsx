@@ -1,10 +1,8 @@
 "use client";
 
-import Button from "@/components/Button";
-import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
 
 export default function WebDevelopmentPage() {
   const router = useRouter();
@@ -21,8 +19,8 @@ export default function WebDevelopmentPage() {
         }}
       >
         {/* Hero Section */}
-        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch lg:h-[839.499px] lg:flex-row lg:justify-between">
-          <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:justify-between lg:pt-0">
+          <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] lg:w-[452px] lg:items-start xl:w-[552px] 2xl:w-[652px]">
             <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
               Web Development
             </h1>
@@ -184,56 +182,12 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Talent Section 375 pixels with higher z-index */}
-      <div className="flex items-center justify-center px-[16px] pb-[100px] pt-[40px] lg:hidden lg:px-[70px] lg:py-[160px]">
-        <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] lg:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Talent Section 1024 pixels with higher z-index */}
-      <div className="relative hidden items-center justify-center px-[70px] py-[160px] lg:flex">
-        <div className="absolute inset-0 left-0 top-0 z-10">
-          <CallToActionBackground />
-        </div>
-
-        <div
-          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[24px] text-center">
-            {/* Text */}
-            <p
-              className="text-[45px] font-bold text-[#FBFBFB]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient" onClick={() => router.push("/contact")}>
-              Let&apos;s Get In Touch
-            </Button>
-          </div>
-        </div>
-      </div>
+      <CallToAction
+        mobilePaddingTop="74px"
+        mobilePaddingBottom="75px"
+        desktopPaddingTop="160px"
+        desktopPaddingBottom="160px"
+      />
     </div>
   );
 }

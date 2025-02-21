@@ -81,9 +81,17 @@ export default function JobsPage() {
         className="relative h-[307px] bg-cover bg-center lg:h-[525px]"
         style={{
           background:
-            "linear-gradient(0deg, rgba(9,17,33,0.32) 0%, rgba(9,17,33,0.32) 100%), url('/jobs/this_is_engineering.png') no-repeat center/cover",
+            "linear-gradient(0deg, rgba(9,17,33,0.32) 0%, rgba(9,17,33,0.32) 100%)",
         }}
       >
+        <div
+          className="absolute inset-0 bg-cover bg-center lg:hidden"
+          style={{ backgroundImage: "url('/jobs/this_is_engineering_sm.png')" }}
+        ></div>
+        <div
+          className="absolute inset-0 hidden bg-cover bg-center lg:block"
+          style={{ backgroundImage: "url('/jobs/this_is_engineering_lg.png')" }}
+        ></div>
         <div className="absolute left-1/2 top-[50%] flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[17.612px]">
           <button className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px] text-size-7 font-normal text-[#06121B]">
             We are Hiring!
@@ -98,13 +106,13 @@ export default function JobsPage() {
       </div>
 
       {/* Jobs section */}
-      <div className="relative flex w-full flex-col items-start gap-[20px] px-[16px] pb-[120px] pt-[40px] lg:px-[70px] lg:pb-[250px] lg:pt-0">
+      <div className="relative flex w-full flex-col items-start gap-[20px] px-[16px] pb-[125px] pt-[45px] lg:px-[70px] lg:pb-[250px] lg:pt-0">
         <div className="pointer-events-none absolute inset-0 left-0 top-0 z-50 hidden lg:flex">
           <ContactBackground />
         </div>
 
         {jobs.map((job) => (
-          <div key={job.id} className="mx-auto w-full max-w-[1440px]">
+          <div key={job.id} className="mx-auto w-full max-w-[1300px]">
             <div className="flex flex-col items-start gap-[32px] self-stretch rounded-[24px] p-[13px] lg:p-[38px]">
               <div className="flex flex-col items-start gap-[8px] self-stretch lg:gap-[4px]">
                 <div className="flex items-center justify-between self-stretch">
@@ -143,7 +151,7 @@ export default function JobsPage() {
                 </div>
               </div>
             </div>
-            <div className="-mx-[16px] mt-[28px] h-[1px] w-[calc(100%+32px)] bg-white/50 lg:mx-0"></div>
+            <div className="-mx-[16px] mt-[28px] h-[1px] w-[calc(100%+32px)] bg-white/50 lg:mx-0 lg:w-full"></div>
           </div>
         ))}
       </div>

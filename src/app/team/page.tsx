@@ -1,5 +1,6 @@
-import React from "react";
-import Button from "../../components/Button";
+"use client";
+
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import TeamCard from "@/sections/Team/TeamCard";
 
 export default function TeamPage() {
@@ -86,27 +87,12 @@ export default function TeamPage() {
       </div>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center py-[90px] lg:px-[0px] lg:pt-[100px]">
-        <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] lg:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
+      <CallToAction
+        mobilePaddingTop="156.45px"
+        mobilePaddingBottom="126px"
+        desktopPaddingTop="168.78px"
+        desktopPaddingBottom="172px"
+      />
     </section>
   );
 }

@@ -16,10 +16,21 @@ export default function HomePage() {
       <Statistics />
       <Products />
       <Services />
-      <CallToAction />
+      <CallToAction
+        mobilePaddingTop="182px"
+        mobilePaddingBottom="167px"
+        desktopPaddingTop="100px"
+        desktopPaddingBottom="100px"
+      />
+
       <SuccessStories />
       <Testimonials />
-      <Contact />
+      <Contact
+        mobilePaddingTop="220px"
+        mobilePaddingBottom="133.27px"
+        desktopPaddingTop="140px"
+        desktopPaddingBottom="140px"
+      />
     </>
   );
 }

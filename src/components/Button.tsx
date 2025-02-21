@@ -24,7 +24,7 @@ export default function Button({
     return (
       <button
         onClick={onClick}
-        className={`${baseClasses} group relative h-[48px] rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] px-[20px] py-[14px] text-white shadow-[0px_0px_35.7px_0px_rgba(81,68,220,0.97)] before:absolute before:inset-0 before:rounded-[10px] before:border-[3px] before:border-transparent before:transition-all before:duration-300 before:content-[''] hover:bg-none hover:before:border-[#552DDA] lg:h-[52px] ${className}`}
+        className={`${baseClasses} group relative h-[42px] rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] px-[20px] py-[14px] text-white shadow-[0px_0px_35.7px_0px_rgba(81,68,220,0.97)] before:absolute before:inset-0 before:rounded-[10px] before:border-[3px] before:border-transparent before:transition-all before:duration-300 before:content-[''] hover:bg-none hover:before:border-[#552DDA] lg:h-[52px] ${className}`}
         {...rest}
       >
         <span>{children}</span>

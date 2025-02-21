@@ -2,13 +2,31 @@ import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-export default function CallToAction() {
+type CallToActionProps = {
+  mobilePaddingTop: string;
+  mobilePaddingBottom: string;
+  desktopPaddingTop: string;
+  desktopPaddingBottom: string;
+};
+
+export default function CallToAction({
+  mobilePaddingTop,
+  mobilePaddingBottom,
+  desktopPaddingTop,
+  desktopPaddingBottom,
+}: CallToActionProps) {
   const router = useRouter();
 
   return (
     <>
       {/* Talent Section (375 px) */}
-      <div className="flex w-full items-center justify-center px-[16px] pb-[152px] pt-[182px] md:py-[100px] lg:hidden lg:px-[70px]">
+      <div
+        className={`flex w-full items-center justify-center px-[16px] md:py-[100px] lg:hidden lg:px-[70px]`}
+        style={{
+          paddingBottom: mobilePaddingBottom,
+          paddingTop: mobilePaddingTop,
+        }}
+      >
         <div
           className="relative h-[182px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
@@ -32,7 +50,13 @@ export default function CallToAction() {
         </div>
       </div>
       {/* Talent Section (1024 px)*/}
-      <div className="hidden w-full items-center justify-center px-[16px] py-[132px] sm:px-[40px] md:py-[100px] lg:flex lg:px-[70px]">
+      <div
+        className="hidden w-full items-center justify-center px-[70px] lg:flex"
+        style={{
+          paddingBottom: desktopPaddingBottom,
+          paddingTop: desktopPaddingTop,
+        }}
+      >
         <div
           className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{

@@ -1,7 +1,6 @@
 "use client";
 
-import Button from "@/components/Button";
-import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -20,8 +19,8 @@ export default function UIUXDesignPage() {
         }}
       >
         {/* Hero Section */}
-        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch lg:h-[839.499px] lg:flex-row lg:justify-between">
-          <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] pt-[115px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
+        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:justify-between lg:pt-0">
+          <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] lg:w-[452px] lg:items-start lg:pt-[0px] xl:w-[552px] 2xl:w-[652px]">
             <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
               UI/UX Design
             </h1>
@@ -38,7 +37,7 @@ export default function UIUXDesignPage() {
           </div>
 
           <div
-            className="relative mx-auto mt-[50px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+            className="relative mx-auto mt-[72.39px] h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
             style={{
               backgroundImage: "url(/services/web_development/rectangle.png)",
               backgroundSize: "100% 100%",
@@ -71,7 +70,7 @@ export default function UIUXDesignPage() {
       </div>
 
       {/* Tech section */}
-      <div className="flex w-full flex-col items-start justify-center gap-[10px] self-stretch py-[90px] lg:h-[681px] lg:bg-[url('/statistics/bg.png')] lg:bg-cover lg:bg-no-repeat">
+      <div className="flex w-full flex-col items-start justify-center gap-[10px] self-stretch bg-[url('/statistics/bg.png')] py-[90px] lg:h-[681px] lg:bg-cover lg:bg-no-repeat">
         <div className="mx-auto flex flex-col items-center gap-[40px] lg:items-start lg:gap-[48px]">
           <h1 className="text-center text-[24px] font-medium leading-[32px] lg:w-full lg:text-start lg:text-[44px] lg:leading-[55px]">
             Process that moves things forward
@@ -265,232 +264,13 @@ export default function UIUXDesignPage() {
         </div>
       </div>
 
-      {/* <div className="mt-[2rem] flex flex-col items-center gap-[40px] lg:flex-row lg:gap-6">
-            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
-              <div className="relative flex-shrink-0">
-                <Image
-                  src={"/services/uiux-design/process_line.png"}
-                  alt=""
-                  width={230}
-                  height={200}
-                  className="flex-shrink-0"
-                />
-                <ChevronRight
-                  width={26}
-                  height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
-                />
-                <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
-                  <Image
-                    src={"/services/uiux-design/bulb.png"}
-                    alt="Bulb"
-                    width={64}
-                    height={64}
-                    className=""
-                  />
-                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
-                    Ideate
-                  </span>
-                </div>
-
-                <div className="absolute -top-[1rem] left-[2rem] h-[184px] w-[171px] flex-shrink-0">
-                  <div className="inline-flex h-[184px] flex-shrink-0 flex-col items-center justify-end pb-[35px] pt-[94px]">
-                    <div className="flex flex-col items-start gap-[9px]">
-                      <p
-                        className="h-[82px] w-[150px] text-size-7 font-normal leading-none opacity-70"
-                        style={{ fontFamily: "Lato" }}
-                      >
-                        The ideation process is a crucial phase in the design
-                        process where creative thinking and brainstorming
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
-              <div className="relative flex-shrink-0">
-                <Image
-                  src={"/services/uiux-design/process_line.png"}
-                  alt=""
-                  width={230}
-                  height={200}
-                  className="flex-shrink-0"
-                />
-                <ChevronRight
-                  width={26}
-                  height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
-                />
-                <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
-                  <Image
-                    src={"/services/uiux-design/bulb.png"}
-                    alt="Bulb"
-                    width={64}
-                    height={64}
-                    className=""
-                  />
-                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
-                    Reserach
-                  </span>
-                </div>
-
-                <div className="absolute -top-[1rem] left-[2rem] h-[184px] w-[171px] flex-shrink-0">
-                  <div className="inline-flex h-[184px] flex-shrink-0 flex-col items-center justify-end pb-[35px] pt-[94px]">
-                    <div className="flex flex-col items-start gap-[9px]">
-                      <p
-                        className="h-[82px] w-[150px] text-size-7 font-normal leading-none opacity-70"
-                        style={{ fontFamily: "Lato" }}
-                      >
-                        Research is a critical component of the design process,
-                        helping designers understand the problem
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
-              <div className="relative flex-shrink-0">
-                <Image
-                  src={"/services/uiux-design/process_line.png"}
-                  alt=""
-                  width={230}
-                  height={200}
-                  className="flex-shrink-0"
-                />
-                <ChevronRight
-                  width={26}
-                  height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
-                />
-                <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
-                  <Image
-                    src={"/services/uiux-design/bulb.png"}
-                    alt="Bulb"
-                    width={64}
-                    height={64}
-                    className=""
-                  />
-                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
-                    Create
-                  </span>
-                </div>
-
-                <div className="absolute -top-[1rem] left-[2rem] h-[184px] w-[171px] flex-shrink-0">
-                  <div className="inline-flex h-[184px] flex-shrink-0 flex-col items-center justify-end pb-[35px] pt-[94px]">
-                    <div className="flex flex-col items-start gap-[9px]">
-                      <p
-                        className="h-[82px] w-[150px] text-size-7 font-normal leading-none opacity-70"
-                        style={{ fontFamily: "Lato" }}
-                      >
-                        Designing a process involves several key steps to ensure
-                        clarity, efficiency, successful implementation
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="h-[202px] w-[222px] flex-shrink-0 xl:w-[272px]">
-              <div className="relative flex-shrink-0">
-                <Image
-                  src={"/services/uiux-design/process_line.png"}
-                  alt=""
-                  width={230}
-                  height={170}
-                  className="flex-shrink-0"
-                />
-                <ChevronRight
-                  width={26}
-                  height={26}
-                  className="absolute -right-[0.75rem] top-[4.357rem] flex-shrink-0 xl:right-[1.9rem] xl:top-[4.57rem]"
-                />
-                <div className="absolute -top-[1.7rem] left-[3.5rem] flex items-center justify-center gap-2">
-                  <Image
-                    src={"/services/uiux-design/bulb.png"}
-                    alt="Bulb"
-                    width={64}
-                    height={64}
-                    className=""
-                  />
-                  <span className="text-center text-[19px] font-medium xl:text-[24px]">
-                    User Testing
-                  </span>
-                </div>
-
-                <div className="absolute -top-[1rem] left-[2rem] h-[184px] w-[171px] flex-shrink-0">
-                  <div className="inline-flex h-[184px] flex-shrink-0 flex-col items-center justify-end pb-[35px] pt-[94px]">
-                    <div className="flex flex-col items-start gap-[9px]">
-                      <p
-                        className="h-[82px] w-[150px] text-size-7 font-normal leading-none opacity-70"
-                        style={{ fontFamily: "Lato" }}
-                      >
-                        Testing is a crucial phase in the design process to
-                        ensure that the product or system meets the specified
-                        requirements
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
       {/* Talent Section 375 pixels with higher z-index */}
-      <div className="flex items-center justify-center px-[16px] pb-[100px] pt-[40px] lg:hidden lg:px-[70px] lg:py-[160px]">
-        <div
-          className="relative h-[160px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[209px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center lg:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] lg:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Talent Section 1024 pixels with higher z-index */}
-      <div className="relative hidden items-center justify-center px-[70px] py-[160px] lg:flex">
-        <div className="absolute inset-0 left-0 top-0 z-10">
-          <CallToActionBackground />
-        </div>
-
-        <div
-          className="relative z-20 h-[209px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1400px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[24px] text-center">
-            {/* Text */}
-            <p
-              className="text-[45px] font-bold text-[#FBFBFB]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient" onClick={() => router.push("/contact")}>
-              Let&apos;s Get In Touch
-            </Button>
-          </div>
-        </div>
-      </div>
+      <CallToAction
+        mobilePaddingTop="74px"
+        mobilePaddingBottom="75px"
+        desktopPaddingTop="160px"
+        desktopPaddingBottom="160px"
+      />
     </div>
   );
 }

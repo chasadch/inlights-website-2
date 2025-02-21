@@ -44,7 +44,7 @@ export default function AiEnginnerPage() {
   };
 
   return (
-    <section className="relative flex flex-shrink-0 flex-col overflow-hidden bg-[#03030E] px-[16px] py-[149px] lg:px-[70px]">
+    <section className="relative flex flex-shrink-0 flex-col overflow-hidden bg-[#03030E] px-[16px] pb-[79px] pt-[99px] lg:px-[70px] lg:pb-[138px] lg:pt-[148px]">
       <div className="pointer-events-none absolute inset-0 left-0 top-0 z-10 hidden lg:flex">
         <ContactBackground />
       </div>
@@ -148,7 +148,7 @@ export default function AiEnginnerPage() {
           </div>
 
           <div className="flex w-[307px] items-start gap-[40px]">
-            <div className="h-[590px] w-[1px] bg-white/50"></div>
+            <div className="hidden h-[590px] w-[1px] bg-white/50 lg:block"></div>
             <div className="hidden w-[152px] flex-shrink-0 flex-col items-start gap-[20px] lg:flex">
               <h1 className="self-stretch text-size-3 font-semibold text-white">
                 Job Info
@@ -184,8 +184,8 @@ export default function AiEnginnerPage() {
           <h1 className="text-[22px] font-medium">
             Enter your details to Apply
           </h1>
-          <div className="flex items-start gap-[63px] self-stretch">
-            <div className="flex w-1/2 flex-col gap-[24px]">
+          <div className="flex flex-col items-start gap-[63px] self-stretch lg:flex-row">
+            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
               <label htmlFor="first-name" className="text-size-6 font-normal">
                 First Name
               </label>
@@ -197,7 +197,7 @@ export default function AiEnginnerPage() {
               />
             </div>
 
-            <div className="flex w-1/2 flex-col gap-[24px]">
+            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
               <label htmlFor="last-name" className="text-size-6 font-normal">
                 Last Name
               </label>
@@ -210,8 +210,8 @@ export default function AiEnginnerPage() {
             </div>
           </div>
 
-          <div className="flex items-start gap-[63px] self-stretch">
-            <div className="flex w-1/2 flex-col gap-[24px]">
+          <div className="flex flex-col items-start gap-[63px] self-stretch lg:flex-row">
+            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
               <label htmlFor="email" className="text-size-6 font-normal">
                 Email
               </label>
@@ -223,7 +223,7 @@ export default function AiEnginnerPage() {
               />
             </div>
 
-            <div className="flex w-1/2 flex-col gap-[24px]">
+            <div className="flex w-full flex-col gap-[24px] lg:w-1/2">
               <label htmlFor="phone" className="text-size-6 font-normal">
                 Phone
               </label>
@@ -285,7 +285,7 @@ export default function AiEnginnerPage() {
                 <div className="flex items-center gap-2">
                   {/* “Click To Upload” (gradient text with colored underline) */}
                   <span
-                    className="font-manrope /* Underline color */ cursor-pointer bg-gradient-to-b from-[#9F85F6] to-[#8FB2F7] bg-clip-text text-[16px] font-medium leading-[16px] text-transparent underline decoration-[#9F85F6] decoration-solid [text-decoration-skip-ink:none] [text-decoration-thickness:auto] [text-underline-offset:auto] [text-underline-position:from-font]"
+                    className="font-manrope cursor-pointer bg-gradient-to-b from-[#9F85F6] to-[#8FB2F7] bg-clip-text text-[12px] font-medium leading-[16px] text-transparent underline decoration-[#9F85F6] decoration-solid [text-decoration-skip-ink:none] [text-decoration-thickness:auto] [text-underline-offset:auto] [text-underline-position:from-font] lg:text-[16px]"
                     style={{
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
@@ -295,7 +295,7 @@ export default function AiEnginnerPage() {
                   </span>
 
                   {/* “or drag and Drop” (white/80, no underline) */}
-                  <span className="font-manrope text-[16px] font-medium leading-[16px] text-white/80">
+                  <span className="font-manrope text-[12px] font-medium leading-[16px] text-white/80 lg:text-[16px]">
                     or drag and Drop
                   </span>
                 </div>

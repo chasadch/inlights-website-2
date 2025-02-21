@@ -1,5 +1,7 @@
+"use client";
+
+import CallToAction from "@/sections/CallToAction/CallToAction";
 import Image from "next/image";
-import Button from "../../components/Button";
 
 export default function PortfolioPage() {
   const projects = [
@@ -63,7 +65,7 @@ export default function PortfolioPage() {
 
   return (
     <div>
-      <section className="mx-auto flex max-w-[1440px] flex-col gap-[20px] bg-black px-[16px] text-white sm:px-[40px] lg:gap-[44px] lg:px-[70px] lg:pt-[140px]">
+      <section className="mx-auto flex max-w-[1440px] flex-col gap-[20px] bg-black px-[16px] pt-[84px] text-white sm:px-[40px] lg:gap-[44px] lg:px-[70px] lg:pt-[140px]">
         {/* Services Header */}
         <div className="flex flex-col items-start lg:gap-[64px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2">
@@ -76,16 +78,16 @@ export default function PortfolioPage() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="grid h-[453.94px] grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg px-[12px] py-[20px] shadow-shadowCustom sm:grid-cols-2 lg:h-[353px] xl:h-[279px] 2xl:h-[229px]"
+              className="grid h-[453.94px] grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg px-[12px] py-[20px] shadow-shadowCustom sm:h-full sm:grid-cols-2 xl:h-[279px] 2xl:h-[229px]"
             >
               {/* Image Container */}
               <div
-                className="relative flex flex-col items-start gap-[10.632px] self-stretch rounded-[19.137px] lg:h-[309px] xl:h-[239px] 2xl:h-[189px]"
+                className="relative flex h-[170.937px] flex-col items-start gap-[10.632px] self-stretch rounded-[19.137px] sm:h-full xl:h-[239px] 2xl:h-[189px]"
                 style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
               >
                 {/* Gradient overlay with blur */}
                 <div
-                  className="absolute inset-0 z-50"
+                  className="absolute inset-0 z-50 h-[201px] w-[98%]"
                   style={{
                     background:
                       "linear-gradient(180deg, rgba(18, 19, 22, 0.46) 0%, rgba(4, 11, 49, 0.46) 100%)",
@@ -97,7 +99,7 @@ export default function PortfolioPage() {
                   alt={project.title}
                   width={285}
                   height={189}
-                  className="relative z-10 h-full w-full rounded-[18px]"
+                  className="relative z-10 h-[201px] w-[98%] rounded-[18px] sm:h-full lg:w-[285px]"
                 />
               </div>
 
@@ -105,7 +107,7 @@ export default function PortfolioPage() {
               <div className="flex flex-col items-start justify-between">
                 <div className="flex flex-col items-start gap-[14px] self-stretch">
                   <div className="flex items-center justify-between self-stretch">
-                    <h1 className="w-[261px] font-semibold sm:text-size-3 lg:text-size-6 xl:text-size-5">
+                    <h1 className="w-[261px] text-size-5 font-semibold lg:text-size-6 xl:text-size-5">
                       {project.title}
                     </h1>
                     <div className="flex h-[24px] w-[24px] items-center justify-center">
@@ -134,7 +136,7 @@ export default function PortfolioPage() {
                       </svg>
                     </div>
                   </div>
-                  <p className="self-stretch text-size-7 font-normal opacity-70 2xl:text-size-6">
+                  <p className="self-stretch text-size-7 font-normal leading-[20px] opacity-70 sm:mb-4 2xl:text-size-6">
                     {project.description}
                   </p>
                 </div>
@@ -173,27 +175,12 @@ export default function PortfolioPage() {
       </section>
 
       {/* Talent Section */}
-      <div className="flex items-center justify-center pb-[20px] pt-[50px] sm:px-[40px] lg:px-[120px] lg:pb-[102px] lg:pt-[209px]">
-        <div
-          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:w-[1000px] xl:w-[1100px] 2xl:w-[1200px]"
-          style={{
-            backgroundImage: "url('/portfolio/portfolio_call_to_action.png')",
-          }}
-        >
-          {/* Overlay Content */}
-          <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center gap-[16px] text-center sm:gap-[24px]">
-            {/* Text */}
-            <p
-              className="font-bold text-[#FBFBFB] sm:text-[45px]"
-              style={{ fontFamily: "Roboto Serif" }}
-            >
-              Enough talk, let&apos;s get to work
-            </p>
-            {/* Button */}
-            <Button variant="gradient">Let&apos;s Get In Touch</Button>
-          </div>
-        </div>
-      </div>
+      <CallToAction
+        mobilePaddingTop="77.38px"
+        mobilePaddingBottom="108px"
+        desktopPaddingTop="209px"
+        desktopPaddingBottom="102px"
+      />
     </div>
   );
 }
