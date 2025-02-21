@@ -2,11 +2,8 @@
 
 import CallToAction from "@/sections/CallToAction/CallToAction";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function WebDevelopmentPage() {
-  const router = useRouter();
-
   return (
     <div className="relative self-stretch bg-black">
       <div

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
 import NavDropdown from "./NavDropdown";
+import { X } from "lucide-react";
 
 // Define types for dropdown data
 type DropdownItem = {
@@ -183,7 +184,7 @@ export default function Header() {
   );
 }
 
-// Define props for MobileMenu
+// Mobile Menu component
 interface MobileMenuProps {
   onClose: () => void;
   router: ReturnType<typeof useRouter>;
@@ -191,20 +192,38 @@ interface MobileMenuProps {
 
 function MobileMenu({ onClose, router }: MobileMenuProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isClosing, setIsClosing] = useState(false);
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdown(openDropdown === title ? null : title);
   };
 
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+      setIsClosing(false);
+    }, 300); // Transition duration
+  };
+
   return (
-    <div className="fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto bg-black px-[16px] py-[24px]">
+    <div
+      className={`fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto bg-black px-[16px] py-[24px] transition-transform duration-300 ${
+        isClosing ? "translate-x-full" : "translate-x-0"
+      }`}
+      style={{
+        backgroundImage: "url(/statistics/bg.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Close Button */}
-      <div className="mb-[24px] flex items-center justify-end">
+      <div className="-mt-[4px] mb-[24px] mr-[6px] flex items-center justify-end">
         <button
           className="text-size-4 font-semibold text-white"
-          onClick={onClose}
+          onClick={handleClose}
         >
-          X
+          <X size={24} />
         </button>
       </div>
 
@@ -215,7 +234,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
           className="cursor-pointer rounded-[8px] p-[12px]"
           onClick={() => {
             router.push("/");
-            onClose();
+            handleClose();
           }}
         >
           Home
@@ -227,7 +246,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
           {openDropdown === "Services" && (
             <SubDropdown
               router={router}
-              onClose={onClose}
+              onClose={handleClose}
               data={servicesDropdownData}
             />
           )}
@@ -239,7 +258,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
           {openDropdown === "Products" && (
             <SubDropdown
               router={router}
-              onClose={onClose}
+              onClose={handleClose}
               data={productsDropdownData}
             />
           )}
@@ -251,7 +270,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
           {openDropdown === "Company" && (
             <SubDropdown
               router={router}
-              onClose={onClose}
+              onClose={handleClose}
               data={companyDropdownData}
             />
           )}
@@ -262,7 +281,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
           className="cursor-pointer rounded-[8px] p-[12px]"
           onClick={() => {
             router.push("/jobs");
-            onClose();
+            handleClose();
           }}
         >
           Join Us
@@ -272,7 +291,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
   );
 }
 
-// Define props for SubDropdown
+// SubDropdown component for nested items
 interface SubDropdownProps {
   data: DropdownSection[];
   router: ReturnType<typeof useRouter>;
