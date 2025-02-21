@@ -317,7 +317,7 @@ export default function AiEnginnerPage() {
 
           <div>
             <Button onClick={handleLetsTalkClick} variant="gradient">
-              Let&apos;s Talk
+              Apply
             </Button>
           </div>
         </form>

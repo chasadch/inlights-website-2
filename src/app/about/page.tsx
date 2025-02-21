@@ -14,7 +14,7 @@ export default function About() {
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:w-[903px]">
+        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:top-1/2 lg:w-[903px] lg:-translate-y-1/2">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             About the Company
           </h1>
