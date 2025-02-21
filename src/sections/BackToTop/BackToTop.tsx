@@ -29,7 +29,7 @@ export default function BackToTop() {
   }, []);
 
   return (
-    <div className="animate-floaty-bounce fixed bottom-4 right-4 z-50">
+    <div className="animate-floaty-bounce fixed bottom-4 right-4 z-[90]">
       {isVisible && (
         <button
           onClick={scrollToTop}
