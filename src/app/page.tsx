@@ -18,6 +18,37 @@ export default function HomePage() {
       <Statistics />
       <Products />
       <Services />
+      {/* Talent Section (375 px) */}
+      <div
+        className={`flex w-full items-center justify-center px-[16px] md:py-[100px] lg:hidden lg:px-[70px]`}
+        style={{
+          paddingBottom: "130px",
+          paddingTop: "182px",
+        }}
+      >
+        <div
+          className="relative h-[182px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
+          style={{
+            backgroundImage: "url('/callToAction/call_to_action_mobile.png')",
+          }}
+        >
+          {/* Overlay Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] lg:flex-row lg:justify-between lg:px-[60px]">
+            {/* Text */}
+            <p
+              className="text-center text-size-6 font-bold leading-normal text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2"
+              style={{ fontFamily: "Roboto Serif" }}
+            >
+              Enough talk, let&apos;s get to work
+            </p>
+            {/* Button */}
+            <Button onClick={() => router.push("/jobs")} variant="gradient">
+              Let&apos;s Get in Touch
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Talent Section (1024 px)*/}
       <div
         className="hidden w-full items-center justify-center px-[70px] lg:flex"
@@ -45,12 +76,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      {/* <CallToAction
-        mobilePaddingTop="182px"
-        mobilePaddingBottom="167px"
-        desktopPaddingTop="100px"
-        desktopPaddingBottom="100px"
-      /> */}
 
       <SuccessStories />
       <Testimonials />
