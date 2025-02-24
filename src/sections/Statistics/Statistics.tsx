@@ -38,7 +38,7 @@ export default function Statistics() {
               className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] border-[1px] border-solid border-[rgba(45,160,184,0.15)] bg-[#020F12] p-[48px] shadow-[0px_0px_50px_0px_rgba(26,54,163,0.90)] lg:h-[450px] lg:w-full lg:gap-[10px] lg:rounded-br-[150px] lg:rounded-tr-[150px] 2xl:h-[490px]"
               style={{
                 backgroundImage:
-                  "linear-gradient(to right,#2c46c5 0%, #020F12 100%)",
+                  "linear-gradient(to right,#283da5 0%, #020F12 100%)",
                 backgroundClip: "padding-box",
               }}
             >
