@@ -1,6 +1,6 @@
 // import Footer from "@/sections/Footer/Footer";
 // import Header from "@/sections/Header/Header";
-import { Manrope } from "next/font/google";
+import { Lato, Manrope, Roboto_Serif } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
@@ -19,11 +19,23 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
+const roboto = Roboto_Serif({
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-roboto",
+  subsets: ["latin"],
+});
+
+const lato = Lato({
+  weight: ["300", "400", "700"],
+  variable: "--font-lato",
+  subsets: ["latin"],
+});
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`overflow-x-hidden bg-black text-white antialiased ${manrope.className}`}
+        className={`overflow-x-hidden bg-black text-white antialiased ${manrope.className} ${roboto.variable} ${lato.variable}`}
       >
         <Toaster
           toastOptions={{

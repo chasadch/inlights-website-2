@@ -1,6 +1,6 @@
 "use client";
 
-import CallToAction from "@/sections/CallToAction/CallToAction";
+import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import Image from "next/image";
 
 export default function PortfolioPage() {
@@ -180,7 +180,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Talent Section */}
-      <CallToAction
+      <CallToAction2
         mobilePaddingTop="77.38px"
         mobilePaddingBottom="108px"
         desktopPaddingTop="209px"

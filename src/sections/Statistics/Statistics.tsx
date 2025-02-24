@@ -12,7 +12,7 @@ export default function Statistics() {
           {/* Mobile View (less than lg) - Single Large Block with Gradient and Shadow */}
           <div className="mr-[30px] flex w-full flex-shrink-0 flex-col items-center justify-center gap-[2.604px] px-[12.5px] py-[12.5px] lg:hidden">
             <div
-              className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] p-[48px] shadow-[0px_0px_20px_5px_rgba(26,54,163,0.90)]"
+              className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] p-[48px] shadow-[0px_0px_50px_0px_rgba(26,54,163,0.90)]"
               style={{
                 backgroundImage:
                   "linear-gradient(to right, #4935FF 0%, #020F12 55%)",
@@ -35,10 +35,11 @@ export default function Statistics() {
           {/* Large Block (lg and above) - Same as your original */}
           <div className="hidden flex-shrink-0 flex-col items-end justify-center gap-[2.604px] py-[12.5px] pl-[12.5px] pr-[40px] lg:flex lg:w-[432px] lg:gap-[10px] lg:p-[0px] xl:w-[532px] 2xl:w-[572px]">
             <div
-              className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] p-[48px] shadow-shadowCustom lg:h-[450px] lg:w-full lg:gap-[10px] lg:rounded-br-[150px] lg:rounded-tr-[150px] 2xl:h-[490px]"
+              className="flex h-[127px] w-[100vw] flex-shrink-0 flex-col items-center justify-center gap-[2.604px] rounded-br-[39.063px] rounded-tr-[39.063px] border-[1px] border-solid border-[rgba(45,160,184,0.15)] bg-[#020F12] p-[48px] shadow-[0px_0px_50px_0px_rgba(26,54,163,0.90)] lg:h-[450px] lg:w-full lg:gap-[10px] lg:rounded-br-[150px] lg:rounded-tr-[150px] 2xl:h-[490px]"
               style={{
                 backgroundImage:
-                  "linear-gradient(to right, #4935FF 0%, #020F12 85%)",
+                  "linear-gradient(to right,#2c46c5 0%, #020F12 100%)",
+                backgroundClip: "padding-box",
               }}
             >
               <div className="flex w-[128.385px] flex-col items-center gap-[2.604px] lg:w-[493px] lg:gap-[10px]">

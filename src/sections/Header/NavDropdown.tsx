@@ -57,10 +57,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
           {sections.map((section, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col items-start gap-[18px]">
-                <span
-                  className="self-stretch text-size-5 font-semibold"
-                  style={{ fontFamily: "Lato" }}
-                >
+                <span className="font-lato self-stretch text-size-5 font-semibold">
                   {section.header}
                 </span>
                 <div className="flex items-start gap-[20px] self-stretch">
@@ -69,11 +66,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
                       key={i}
                       imageSrc={item.imageSrc}
                       title={item.title}
-                      onClick={
-                        item.imageSrc === "/header/computer_vision.png"
-                          ? () => router.push("/team")
-                          : () => router.push(item.path)
-                      }
+                      onClick={() => router.push(item.path)}
                     />
                   ))}
                 </div>

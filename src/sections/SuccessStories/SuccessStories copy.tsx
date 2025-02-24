@@ -75,7 +75,7 @@ export default function SuccessStories() {
   const [scrollPos, setScrollPos] = useState(0);
   const [maxScroll, setMaxScroll] = useState(0);
   // Instead of useState
-  const visibleCards = 3; // Show 3 cards initially
+  // const visibleCards = 3; // Show 3 cards initially
 
   useEffect(() => {
     const container = containerRef.current;
@@ -106,7 +106,7 @@ export default function SuccessStories() {
   };
 
   return (
-    <div className="mx-auto max-w-[1440px] px-[16px] pb-[126px] text-white lg:px-[70px] lg:py-[140px]">
+    <div className="mx-auto max-w-[1440px] bg-black px-[16px] pb-[126px] text-white lg:p-[70px] lg:py-[140px]">
       <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[32px]">
         {/* Header Section */}
         <div className="flex items-center justify-center gap-[48px] self-stretch lg:justify-between">
@@ -163,7 +163,7 @@ export default function SuccessStories() {
         {/* Desktop Slider Section */}
         <div
           ref={containerRef}
-          className="hidden gap-[24px] self-stretch overflow-x-scroll scroll-smooth p-[18px] lg:flex"
+          className="flex gap-[24px]"
           style={{
             scrollbarWidth: "none", // Hides scrollbar in Firefox
             msOverflowStyle: "none", // Hides scrollbar in IE/Edge
@@ -173,7 +173,7 @@ export default function SuccessStories() {
             <div
               key={index}
               className="flex-shrink-0"
-              style={{ width: `calc((100% - 48px) / ${visibleCards})` }} // Adjust width based on visible cards
+              style={{ width: `calc((28.9%))` }} // Adjust width based on visible cards
             >
               <StoriesCard
                 image={story.image}

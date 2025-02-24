@@ -1,6 +1,6 @@
 "use client";
 
-import CallToAction from "@/sections/CallToAction/CallToAction";
+import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import TeamCard from "@/sections/Team/TeamCard";
 
 export default function TeamPage() {
@@ -68,7 +68,7 @@ export default function TeamPage() {
   ];
 
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col gap-[21px] bg-black px-[16px] pt-[92px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
+    <section className="mx-auto flex max-w-[1440px] flex-col gap-[21px] px-[16px] pt-[92px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
       {/* Our Team Header */}
       <div className="flex flex-col items-start lg:gap-[64px]">
         <h1 className="text-size-3 font-medium lg:text-size-2">Our team</h1>
@@ -87,7 +87,7 @@ export default function TeamPage() {
       </div>
 
       {/* Talent Section */}
-      <CallToAction
+      <CallToAction2
         mobilePaddingTop="156.45px"
         mobilePaddingBottom="126px"
         desktopPaddingTop="168.78px"

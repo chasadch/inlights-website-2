@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="relative self-stretch bg-black">
+    <section className="relative self-stretch bg-[#050919]">
       {/* Hero Section */}
       <div
         className="relative flex h-[687px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center"

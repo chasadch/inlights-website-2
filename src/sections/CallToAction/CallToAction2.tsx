@@ -2,19 +2,19 @@ import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-type CallToActionProps = {
+type CallToAction2Props = {
   mobilePaddingTop: string;
   mobilePaddingBottom: string;
   desktopPaddingTop: string;
   desktopPaddingBottom: string;
 };
 
-export default function CallToAction({
+export default function CallToAction2({
   mobilePaddingTop,
   mobilePaddingBottom,
   desktopPaddingTop,
   desktopPaddingBottom,
-}: CallToActionProps) {
+}: CallToAction2Props) {
   const router = useRouter();
 
   return (
@@ -36,7 +36,10 @@ export default function CallToAction({
           {/* Overlay Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] lg:flex-row lg:justify-between lg:px-[60px]">
             {/* Text */}
-            <p className="font-roboto text-center text-size-6 font-bold leading-normal text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2">
+            <p
+              className="text-center text-size-6 font-bold leading-normal text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2"
+              style={{ fontFamily: "Roboto Serif" }}
+            >
               Enough talk, let&apos;s get to work
             </p>
             {/* Button */}
@@ -48,27 +51,27 @@ export default function CallToAction({
       </div>
       {/* Talent Section (1024 px)*/}
       <div
-        className="hidden w-full items-center justify-center px-[70px] lg:flex"
+        className="mx-auto hidden w-full max-w-[1440px] items-center justify-center px-[70px] lg:flex"
         style={{
           paddingBottom: desktopPaddingBottom,
           paddingTop: desktopPaddingTop,
         }}
       >
         <div
-          className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
+          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
           style={{
-            backgroundImage: "url('/services/this_is_engineering.png')",
+            backgroundImage: "url('/callToAction/call_to_action_laptop.png')",
           }}
         >
           {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] sm:flex-row sm:justify-between lg:px-[60px]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] lg:px-[60px]">
             {/* Text */}
-            <p className="text-size-7 font-normal text-white lg:text-[36px] xl:text-size-2">
-              We Are Looking for Exceptional Talent
+            <p className="font-roboto text-size-7 font-bold text-white lg:text-[36px] xl:text-size-2">
+              Enough talk, let’s get to work
             </p>
             {/* Button */}
             <Button onClick={() => router.push("/jobs")} variant="gradient">
-              Join Us
+              Let&apos;s Get in Touch
             </Button>
           </div>
         </div>

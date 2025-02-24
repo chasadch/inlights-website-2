@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function UIUXDesignPage() {
   return (
-    <div className="relative self-stretch bg-black">
+    <div className="relative self-stretch bg-[#050919]">
       <div
         style={{
           background:

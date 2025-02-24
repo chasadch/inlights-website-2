@@ -55,10 +55,10 @@ export default function Contact({
   };
 
   return (
-    <div className="relative w-full text-white">
+    <div className="relative w-full overflow-hidden text-white">
       {/* Contact 375 pixels */}
       <section
-        className="relative mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-[66px] overflow-hidden bg-black px-[16px] lg:hidden lg:flex-row lg:items-start lg:px-[70px]"
+        className="relative flex flex-col items-center justify-between gap-[66px] bg-black px-[16px] lg:hidden"
         style={{
           paddingTop: mobilePaddingTop,
           paddingBottom: mobilePaddingBottom,
@@ -340,7 +340,7 @@ export default function Contact({
 
       {/* Desktop Section (Visible on lg and above) */}
       <section
-        className="relative hidden min-h-screen flex-col items-center justify-center lg:flex"
+        className="relative hidden flex-col items-center justify-center lg:flex"
         style={{
           paddingTop: desktopPaddingTop,
           paddingBottom: desktopPaddingBottom,
@@ -352,7 +352,7 @@ export default function Contact({
         </div>
 
         {/* Centered Content */}
-        <div className="relative z-50 mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-[66px] lg:flex-row lg:items-start lg:px-[70px]">
+        <div className="relative z-50 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-[66px] lg:flex-row lg:items-start lg:px-[70px]">
           {/* Contact Info */}
           <div className="flex flex-col items-start gap-[32px] lg:w-[351px] xl:w-[401px]">
             <div className="flex flex-col gap-[20px]">
