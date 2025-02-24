@@ -83,10 +83,15 @@ export default function PortfolioPage() {
               {/* Image Container */}
               <div
                 className="relative flex h-[170.937px] flex-col items-start gap-[10.632px] self-stretch rounded-[19.137px] sm:h-full xl:h-[239px] 2xl:h-[189px]"
-                style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
+                style={{
+                  boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+                  background: `linear-gradient(180deg, rgba(18, 19, 22, 0.46) 0%, rgba(4, 11, 49, 0.46) 100%), 
+                  url(${project.image})`,
+                  backgroundSize: "cover",
+                }}
               >
                 {/* Gradient overlay with blur */}
-                <div
+                {/* <div
                   className="absolute inset-0 z-50 h-[201px] w-[98%]"
                   style={{
                     background:
@@ -100,7 +105,7 @@ export default function PortfolioPage() {
                   width={285}
                   height={189}
                   className="relative z-10 h-[201px] w-[98%] rounded-[18px] sm:h-full lg:w-[285px]"
-                />
+                /> */}
               </div>
 
               {/* Content Container */}

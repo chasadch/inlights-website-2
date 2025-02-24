@@ -163,8 +163,11 @@ export default function SuccessStories() {
         {/* Desktop Slider Section */}
         <div
           ref={containerRef}
-          className="hidden items-center gap-[24px] self-stretch overflow-x-auto scroll-smooth p-[16px] lg:flex"
-          style={{ scrollbarWidth: "none" }} // For Firefox
+          className="hidden items-center gap-[24px] self-stretch overflow-x-scroll scroll-smooth p-[18px] lg:flex"
+          style={{
+            scrollbarWidth: "none", // Hides scrollbar in Firefox
+            msOverflowStyle: "none", // Hides scrollbar in IE/Edge
+          }}
         >
           {stories.map((story, index) => (
             <div
