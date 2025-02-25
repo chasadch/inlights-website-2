@@ -1,6 +1,6 @@
 "use client";
 
-import CallToAction from "@/sections/CallToAction/CallToAction";
+import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import Image from "next/image";
 
 export default function About() {
@@ -8,13 +8,13 @@ export default function About() {
     <section className="relative self-stretch bg-[#050919]">
       {/* Hero Section */}
       <div
-        className="relative flex h-[687px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center"
+        className="relative flex h-[586px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center lg:h-[685px]"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
       >
-        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:top-1/2 lg:w-[903px] lg:-translate-y-1/2">
+        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:w-[903px] lg:pb-[193.29px] lg:pt-[228px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             About the Company
           </h1>
@@ -189,11 +189,12 @@ export default function About() {
       </div>
 
       {/* Talent Section */}
-      <CallToAction
+      <CallToAction2
         mobilePaddingTop="109px"
         mobilePaddingBottom="120px"
         desktopPaddingTop="160px"
         desktopPaddingBottom="160px"
+        isBackground={true}
       />
     </section>
   );

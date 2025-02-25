@@ -66,7 +66,7 @@ export default function CallToAction2({
         </div>
 
         <div
-          className="relative h-[209px] w-full max-w-[1440px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative z-50 h-[209px] w-full max-w-[1440px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('/callToAction/call_to_action_laptop.png')",
           }}

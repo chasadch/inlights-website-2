@@ -1,7 +1,7 @@
 "use client";
 
 import CallToAction2 from "@/sections/CallToAction/CallToAction2";
-import TeamCard from "@/sections/Team/TeamCard";
+import TeamCard from "../../sections/Team/TeamCard";
 
 export default function TeamPage() {
   const teamMembers = [
@@ -68,23 +68,25 @@ export default function TeamPage() {
   ];
 
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col gap-[21px] px-[16px] pt-[92px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
-      {/* Our Team Header */}
-      <div className="flex flex-col items-start lg:gap-[64px]">
-        <h1 className="text-size-3 font-medium lg:text-size-2">Our team</h1>
-      </div>
+    <div>
+      <section className="mx-auto flex max-w-[1440px] flex-col gap-[21px] px-[16px] pt-[92px] text-white lg:gap-[44px] lg:px-[120px] lg:py-[136px]">
+        {/* Our Team Header */}
+        <div className="flex flex-col items-start lg:gap-[64px]">
+          <h1 className="text-size-3 font-medium lg:text-size-2">Our team</h1>
+        </div>
 
-      {/* Team Cards */}
-      <div className="grid grid-cols-2 gap-[13px] lg:grid-cols-2 lg:gap-[74px] xl:grid-cols-3">
-        {teamMembers.map((member, index) => (
-          <TeamCard
-            key={index}
-            image={member.image}
-            name={member.name}
-            role={member.role}
-          />
-        ))}
-      </div>
+        {/* Team Cards */}
+        <div className="grid grid-cols-2 gap-[13px] sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 lg:gap-[74px] xl:grid-cols-3">
+          {teamMembers.map((member, index) => (
+            <TeamCard
+              key={index}
+              image={member.image}
+              name={member.name}
+              role={member.role}
+            />
+          ))}
+        </div>
+      </section>
 
       {/* Talent Section */}
       <CallToAction2
@@ -92,7 +94,8 @@ export default function TeamPage() {
         mobilePaddingBottom="126px"
         desktopPaddingTop="168.78px"
         desktopPaddingBottom="172px"
+        isBackground={false}
       />
-    </section>
+    </div>
   );
 }
