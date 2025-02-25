@@ -59,7 +59,7 @@ export default function CallToAction({
         <div
           className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
-            backgroundImage: "url('/services/this_is_engineering.png')",
+            backgroundImage: "url('/services/this_is_engineering_lg.png')",
           }}
         >
           {/* Overlay Content */}
