@@ -41,8 +41,8 @@ const servicesDropdownData: DropdownSection[] = [
     items: [
       {
         imageSrc: "/header/computer_vision.png",
-        title: "Computer Vision",
-        path: "/services/computer-vision",
+        title: "GeoHealth",
+        path: "/geohealth",
       },
       {
         imageSrc: "/header/ai_automation.png",

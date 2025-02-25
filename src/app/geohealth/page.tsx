@@ -8,6 +8,38 @@ import Image from "next/image";
 import React from "react";
 
 export default function GeoHealth() {
+  // Define your stacks data
+  const stacks = [
+    {
+      title: "Frontend Architecture",
+      items: [
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+      ],
+    },
+    {
+      title: "Data Flow",
+      items: [
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+      ],
+    },
+    {
+      title: "UI Components",
+      items: [
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+      ],
+    },
+    {
+      title: "Development Workflow",
+      items: [
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+      ],
+    },
+  ];
+
   return (
     <div className="relative self-stretch bg-black">
       {/* Hero Section */}
@@ -16,10 +48,8 @@ export default function GeoHealth() {
         <div
           className={`absolute inset-0 bg-[url('/geohealth/geohealth_hero_sm.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/geohealth/geohealth_hero_lg.png')]`}
         />
-
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(9,17,33,0.32),rgba(9,17,33,0.32))]" />
-
         {/* Hero Content */}
         <div className="relative z-10 flex h-full w-full flex-col px-[16px] pt-[116px] lg:flex-row lg:px-[70px] lg:pb-[160px] lg:pt-[176px]">
           {/* Left Column */}
@@ -52,7 +82,6 @@ export default function GeoHealth() {
             </div>
             <Button variant="gradient">Let&apos;s Talk</Button>
           </div>
-
           {/* Image */}
           <div className="mx-auto w-[292.211px] flex-shrink-0 pt-[131.48px] lg:pt-0 xl:h-[380.48px] xl:w-[411px] 2xl:h-[480.48px] 2xl:w-[511px]">
             <div className="relative h-[199.559px] w-[292.211px] flex-shrink-0 rounded-[12.67px] bg-[#33A0F1] lg:h-[249px] lg:w-[411px] lg:rounded-[22px] 2xl:h-[349px] 2xl:w-[511px]">
@@ -89,10 +118,7 @@ export default function GeoHealth() {
       </div>
 
       {/* Topic Customization Engine */}
-      <div
-        className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
-        // style={{ backgroundColor: "lightgray" }}
-      >
+      <div className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat">
         <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[106px] pt-[118px] lg:flex-row lg:items-start lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]">
           <div className="flex w-[343px] flex-col items-start gap-[24px] pt-[72px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
@@ -140,142 +166,46 @@ export default function GeoHealth() {
       </div>
 
       {/* Stacks section */}
-      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[26px] pb-[117px] pt-[100px] lg:gap-[40px] lg:px-[70px]">
+      <div className="relative">
         {/* Background SVG */}
         <div className="absolute inset-0 left-0 top-0 z-10">
           <CallToActionBackground />
         </div>
 
-        <h1 className="w-full text-center text-[24px] font-medium leading-[32px] lg:text-size-2 lg:font-normal">
-          Stacks Used
-        </h1>
-        <div className="flex w-full flex-col items-center justify-between gap-[48px] rounded-[28px] lg:flex-row">
-          <div className="flex flex-shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:gap-[32px] xl:w-[249px]">
-            <h1 className="text-size-4 font-semibold xl:text-size-3">
-              Frontend Architecture
-            </h1>
-            <div className="flex flex-col items-start gap-[12px]">
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
+        <div className="relative z-40 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[26px] pb-[117px] pt-[100px] lg:gap-[40px] lg:px-[70px]">
+          <h1 className="w-full text-center text-[24px] font-medium leading-[32px] lg:text-size-2 lg:font-normal">
+            Stacks Used
+          </h1>
+          <div className="flex w-full flex-col items-center justify-between gap-[48px] rounded-[28px] lg:flex-row">
+            {stacks.map((stack, index) => (
+              <div
+                key={index}
+                className="flex shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:shrink lg:gap-[32px] xl:w-[249px]"
+              >
+                <h1 className="text-size-4 font-semibold lg:text-size-5 xl:text-size-3">
+                  {stack.title}
+                </h1>
+                <div className="flex flex-col items-start gap-[12px]">
+                  {stack.items.map((tech, techIndex) => (
+                    <div
+                      key={techIndex}
+                      className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white"
+                    >
+                      <Image
+                        src={tech.src}
+                        alt={tech.alt}
+                        width={44}
+                        height={44}
+                        className="flex-shrink-0"
+                      />
+                      <span className="text-size-7 font-normal text-black">
+                        {tech.techName}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:gap-[32px] xl:w-[249px]">
-            <h1 className="text-size-4 font-semibold xl:text-size-3">
-              Data Flow
-            </h1>
-            <div className="flex flex-col items-start gap-[12px]">
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:gap-[32px] xl:w-[249px]">
-            <h1 className="text-size-4 font-semibold xl:text-size-3">
-              UI Components
-            </h1>
-            <div className="flex flex-col items-start gap-[12px]">
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:gap-[32px] xl:w-[249px]">
-            <h1 className="text-size-4 font-semibold xl:text-size-3">
-              Development Workflow
-            </h1>
-            <div className="flex flex-col items-start gap-[12px]">
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-              <div className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white">
-                <Image
-                  src="/services/nodejs.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="flex-shrink-0"
-                />
-                <span className="text-size-7 font-normal text-black">
-                  NodeJS
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
