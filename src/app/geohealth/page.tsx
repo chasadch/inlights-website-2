@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
+import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
 import Contact from "@/sections/Contact/Contact";
 import Testimonials from "@/sections/Testimonials/Testimonials";
 import Image from "next/image";
@@ -20,9 +21,9 @@ export default function GeoHealth() {
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(9,17,33,0.32),rgba(9,17,33,0.32))]" />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex h-full w-full flex-col items-center px-[16px] pt-[116px] lg:flex-row lg:px-[70px] lg:pb-[160px]">
+        <div className="relative z-10 flex h-full w-full flex-col px-[16px] pt-[116px] lg:flex-row lg:px-[70px] lg:pb-[160px] lg:pt-[176px]">
           {/* Left Column */}
-          <div className="flex flex-col items-start gap-[49.727px]">
+          <div className="flex flex-col items-start gap-[49.73px]">
             <div className="flex flex-col items-start gap-[17.612px] xl:w-[746px]">
               {/* Pill Badge */}
               <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
@@ -53,7 +54,7 @@ export default function GeoHealth() {
           </div>
 
           {/* Image */}
-          <div className="mx-auto w-[292.211px] flex-shrink-0 pt-[131.48px] lg:pt-[91.48px] xl:h-[380.48px] xl:w-[411px] 2xl:h-[480.48px] 2xl:w-[511px]">
+          <div className="mx-auto w-[292.211px] flex-shrink-0 pt-[131.48px] lg:pt-0 xl:h-[380.48px] xl:w-[411px] 2xl:h-[480.48px] 2xl:w-[511px]">
             <div className="relative h-[199.559px] w-[292.211px] flex-shrink-0 rounded-[12.67px] bg-[#33A0F1] lg:h-[249px] lg:w-[411px] lg:rounded-[22px] 2xl:h-[349px] 2xl:w-[511px]">
               <Image
                 src={"/geohealth/geohealth_image1.png"}
@@ -92,8 +93,8 @@ export default function GeoHealth() {
         className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
         // style={{ backgroundColor: "lightgray" }}
       >
-        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:flex-row lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]">
-          <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
+        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[106px] pt-[118px] lg:flex-row lg:items-start lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]">
+          <div className="flex w-[343px] flex-col items-start gap-[24px] pt-[72px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
                 1
@@ -139,7 +140,12 @@ export default function GeoHealth() {
       </div>
 
       {/* Stacks section */}
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[26px] pb-[117px] pt-[100px] lg:gap-[40px] lg:px-[70px]">
+      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[26px] pb-[117px] pt-[100px] lg:gap-[40px] lg:px-[70px]">
+        {/* Background SVG */}
+        <div className="absolute inset-0 left-0 top-0 z-10">
+          <CallToActionBackground />
+        </div>
+
         <h1 className="w-full text-center text-[24px] font-medium leading-[32px] lg:text-size-2 lg:font-normal">
           Stacks Used
         </h1>
@@ -275,7 +281,7 @@ export default function GeoHealth() {
       </div>
 
       {/* Testimonial section */}
-      <Testimonials />
+      <Testimonials newBackground={true} />
 
       {/* Contact section */}
       <Contact

@@ -78,7 +78,7 @@ export default function PortfolioPage() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="grid h-[453.94px] grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg px-[12px] py-[20px] shadow-shadowCustom sm:h-full sm:grid-cols-2 xl:h-[279px] 2xl:h-[229px]"
+              className="grid h-[453.94px] grid-cols-1 gap-[24px] rounded-[32px] border-borderCustom bg-bg px-[20px] py-[20px] shadow-shadowCustom sm:h-full sm:grid-cols-2 xl:h-[279px] 2xl:h-[229px]"
             >
               {/* Image Container */}
               <div

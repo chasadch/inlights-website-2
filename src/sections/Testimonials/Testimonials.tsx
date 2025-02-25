@@ -4,8 +4,15 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import TestimonialsBackground from "./TestimonialsBackground";
+import TestimonialsBackgroundNew from "./TestimonialsBackgroundNew";
 
-export default function Testimonials() {
+interface TestimonialProps {
+  newBackground?: boolean;
+}
+
+export default function Testimonials({
+  newBackground = false,
+}: TestimonialProps) {
   const testimonials = [
     {
       text: "InLights Solutions has transformed our campus management. With real-time tracking and automated scheduling, our facilities are always in top condition, allowing us to focus on educating our students.",
@@ -94,7 +101,11 @@ export default function Testimonials() {
     <section className="relative overflow-hidden lg:px-[70px] lg:py-[160px]">
       {/* Background SVG (placed behind content) */}
       <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
-        <TestimonialsBackground />
+        {!newBackground ? (
+          <TestimonialsBackground />
+        ) : (
+          <TestimonialsBackgroundNew />
+        )}
       </div>
 
       <div className="flex flex-col items-center self-stretch bg-bg px-[16px] py-[32px] lg:gap-[64px] lg:bg-transparent">
