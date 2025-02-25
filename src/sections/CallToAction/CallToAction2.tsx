@@ -1,12 +1,14 @@
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import React from "react";
+import CallToActionBackground from "./CallToActionBackground";
 
 type CallToAction2Props = {
   mobilePaddingTop: string;
   mobilePaddingBottom: string;
   desktopPaddingTop: string;
   desktopPaddingBottom: string;
+  isBackground: boolean;
 };
 
 export default function CallToAction2({
@@ -14,6 +16,7 @@ export default function CallToAction2({
   mobilePaddingBottom,
   desktopPaddingTop,
   desktopPaddingBottom,
+  isBackground,
 }: CallToAction2Props) {
   const router = useRouter();
 
@@ -51,14 +54,19 @@ export default function CallToAction2({
       </div>
       {/* Talent Section (1024 px)*/}
       <div
-        className="mx-auto hidden w-full max-w-[1440px] items-center justify-center px-[70px] lg:flex"
+        className="relative hidden w-full items-center justify-center px-[120px] lg:flex"
         style={{
           paddingBottom: desktopPaddingBottom,
           paddingTop: desktopPaddingTop,
         }}
       >
+        {/* Background SVG */}
+        <div className="absolute inset-0 left-0 top-0 z-10">
+          {isBackground && <CallToActionBackground />}
+        </div>
+
         <div
-          className="relative h-[209px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
+          className="relative h-[209px] w-full max-w-[1440px] overflow-hidden rounded-[32px] bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('/callToAction/call_to_action_laptop.png')",
           }}

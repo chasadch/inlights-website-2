@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`overflow-x-hidden bg-black text-white antialiased ${manrope.className} ${roboto.variable} ${lato.variable}`}
+        className={`overflow-x-hidden bg-[#03030E] text-white antialiased ${manrope.className} ${roboto.variable} ${lato.variable}`}
       >
         <Toaster
           toastOptions={{

@@ -65,7 +65,7 @@ export default function PortfolioPage() {
 
   return (
     <div>
-      <section className="mx-auto flex max-w-[1440px] flex-col gap-[20px] bg-black px-[16px] pt-[84px] text-white sm:px-[40px] lg:gap-[44px] lg:px-[70px] lg:pt-[140px]">
+      <section className="mx-auto flex max-w-[1440px] flex-col gap-[20px] px-[16px] pt-[84px] text-white sm:px-[40px] lg:gap-[44px] lg:px-[70px] lg:pt-[140px]">
         {/* Services Header */}
         <div className="flex flex-col items-start lg:gap-[64px]">
           <h1 className="text-size-3 font-semibold lg:text-size-2">
@@ -185,6 +185,7 @@ export default function PortfolioPage() {
         mobilePaddingBottom="108px"
         desktopPaddingTop="209px"
         desktopPaddingBottom="102px"
+        isBackground={false}
       />
     </div>
   );

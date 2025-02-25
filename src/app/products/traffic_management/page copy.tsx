@@ -93,8 +93,8 @@ export default function TrafficManagement() {
         className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
         // style={{ backgroundColor: "lightgray" }}
       >
-        <div className="mx-auto flex max-w-[1440px] flex-shrink-0 flex-col items-center justify-between py-[120px] lg:flex-row lg:p-[70px]">
-          <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[499px] 2xl:w-[599px]">
+        <div className="mx-auto flex max-w-[1440px] flex-shrink-0 flex-col items-center justify-between py-[120px] lg:flex-row lg:px-[70px] lg:pb-[96px] lg:pt-[48px]">
+          <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
                 1
@@ -110,7 +110,7 @@ export default function TrafficManagement() {
               Developed a robust system allowing users to define and customize
               their content topics post-registration
             </p>
-            <p className="hidden w-[343px] space-y-3 self-stretch text-size-4 opacity-80 lg:block lg:w-[499px] 2xl:w-[599px]">
+            <p className="hidden w-[599px] space-y-3 self-stretch text-size-4 opacity-80 lg:block">
               Easy to use easy to use Easy to use easy to use Easy to use easy
               to use Easy to use easy to use vEasy to use easy to use
             </p>
@@ -133,7 +133,7 @@ export default function TrafficManagement() {
               height={489}
               className="flex-shrink-0 rounded-[11.84px] p-[12px]"
             />
-            <span className="font-lato absolute font-semibold leading-normal text-white lg:left-[26%] lg:text-[18px] xl:top-[46%] xl:text-[23px] 2xl:left-[26%] 2xl:top-[44%] 2xl:text-[28px]">
+            <span className="font-lato absolute w-full font-semibold leading-normal text-white">
               Image Placeholder
             </span>
           </div>

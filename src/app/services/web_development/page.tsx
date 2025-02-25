@@ -1,22 +1,14 @@
 "use client";
 
-import CallToAction from "@/sections/CallToAction/CallToAction";
+import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import Image from "next/image";
 
 export default function WebDevelopmentPage() {
   return (
     <div className="relative self-stretch bg-[#050919]">
-      <div
-        style={{
-          backgroundImage:
-            "linear-gradient(0deg, rgba(9,17,33,0.32) 0%, rgba(9,17,33,0.32) 100%), url(/about/about_hero.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <div className="h-[687px] bg-[linear-gradient(0deg,rgba(9,17,33,0.12)_0%,rgba(9,17,33,0.12)_100%),url('/services/this_is_engineering_sm.png')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/about/about_hero.png')] lg:h-[685px]">
         {/* Hero Section */}
-        <div className="mx-auto flex h-[687px] w-full max-w-[1440px] flex-col items-center gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:justify-between lg:pt-0">
+        <div className="mx-auto flex h-[685px] w-full max-w-[1440px] flex-col gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:justify-between lg:pr-[71.17px] lg:pt-[198px]">
           <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] lg:w-[452px] lg:items-start xl:w-[552px] 2xl:w-[652px]">
             <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
               Web Development
@@ -37,7 +29,7 @@ export default function WebDevelopmentPage() {
           </div>
 
           <div
-            className="relative mx-auto h-[197.426px] w-[246.173px] flex-shrink-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
+            className="relative mx-auto mt-auto h-[197.426px] w-[246.173px] flex-shrink-0 lg:mt-0 lg:h-[330px] lg:w-[373.827px] xl:w-[423.827px] 2xl:h-[380px] 2xl:w-[473.827px]"
             style={{
               backgroundImage: "url(/services/web_development/rectangle.png)",
               backgroundSize: "100% 100%",
@@ -179,11 +171,12 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Talent Section 375 pixels with higher z-index */}
-      <CallToAction
+      <CallToAction2
         mobilePaddingTop="74px"
         mobilePaddingBottom="75px"
         desktopPaddingTop="160px"
         desktopPaddingBottom="160px"
+        isBackground={true}
       />
     </div>
   );
