@@ -57,7 +57,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
           {sections.map((section, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col items-start gap-[18px]">
-                <span className="font-lato self-stretch text-size-5 font-semibold">
+                <span className="self-stretch font-lato text-size-5 font-semibold">
                   {section.header}
                 </span>
                 <div className="flex items-start gap-[20px] self-stretch">

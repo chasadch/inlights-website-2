@@ -1,5 +1,3 @@
-"use client";
-
 import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";

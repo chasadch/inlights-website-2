@@ -1,12 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
 
 export default function Hero() {
-  const router = useRouter();
-
   return (
     <section
       className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
@@ -51,7 +46,7 @@ export default function Hero() {
         </div>
 
         {/* Let's talk button */}
-        <Button onClick={() => router.push("/contact")} variant="gradient">
+        <Button href="/contact" variant="gradient">
           Lets Talk
         </Button>
       </div>
