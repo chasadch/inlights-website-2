@@ -52,7 +52,7 @@ export default function Team() {
   ];
 
   return (
-    <section className="flex flex-col gap-[44px] bg-black px-[120px] py-[136px] text-white">
+    <section className="flex flex-col gap-[44px] px-[120px] py-[136px] text-white">
       {/* Our Team Header */}
       <div className="flex flex-col items-start gap-[64px]">
         <h1 className="text-size-2 font-normal">Our Team</h1>

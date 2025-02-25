@@ -58,7 +58,7 @@ export default function Contact({
     <div className="relative w-full overflow-hidden text-white">
       {/* Contact 375 pixels */}
       <section
-        className="relative flex flex-col items-center justify-between gap-[66px] bg-black px-[16px] lg:hidden"
+        className="relative flex flex-col items-center justify-between gap-[66px] px-[16px] lg:hidden"
         style={{
           paddingTop: mobilePaddingTop,
           paddingBottom: mobilePaddingBottom,

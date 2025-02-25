@@ -10,7 +10,7 @@ export default function PremiseSecurity() {
   const router = useRouter();
 
   return (
-    <div className="relative self-stretch bg-black">
+    <div className="relative self-stretch ">
       {/* Hero Section */}
       <div
         className="relative flex h-[500px] flex-col pt-[116px] lg:h-[961px] lg:pt-[161.09px]"

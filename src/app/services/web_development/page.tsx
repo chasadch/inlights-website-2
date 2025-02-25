@@ -55,7 +55,7 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Tech section */}
-      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch bg-black py-[120px] lg:bg-[url('/statistics/bg.png')] lg:bg-cover lg:bg-no-repeat">
+      <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch py-[120px] lg:bg-[url('/statistics/bg.png')] lg:bg-cover lg:bg-no-repeat">
         <div className="mx-auto flex w-[249px] flex-col items-center gap-[26px] lg:w-full lg:gap-[40px]">
           <h1 className="hidden text-[44px] font-normal lg:block">
             Our Tech Stack

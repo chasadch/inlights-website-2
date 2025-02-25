@@ -41,9 +41,9 @@ export default function GeoHealth() {
   ];
 
   return (
-    <div className="relative self-stretch bg-black">
+    <div className="relative self-stretch">
       {/* Hero Section */}
-      <div className="relative h-[810px] w-full overflow-hidden bg-black">
+      <div className="relative h-[810px] w-full overflow-hidden">
         {/* Responsive background images */}
         <div
           className={`absolute inset-0 bg-[url('/geohealth/geohealth_hero_sm.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/geohealth/geohealth_hero_lg.png')]`}

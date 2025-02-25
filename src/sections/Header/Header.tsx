@@ -208,7 +208,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
   return (
     <div
-      className={`fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto bg-black px-[16px] py-[24px] transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto px-[16px] py-[24px] transition-transform duration-300 ${
         isClosing ? "translate-x-full" : "translate-x-0"
       }`}
       style={{

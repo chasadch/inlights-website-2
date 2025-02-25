@@ -5,7 +5,7 @@ import React from "react";
 
 export default function WebDevelopmentPage() {
   return (
-    <div className="relative self-stretch bg-black">
+    <div className="relative self-stretch">
       {/* Hero Section */}
       <div
         className="flex h-[687px] w-full flex-col items-center justify-between gap-[16px] self-stretch bg-cover bg-center px-[70px] lg:flex-row"
