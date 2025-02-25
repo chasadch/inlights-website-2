@@ -1,11 +1,14 @@
-"use client";
-
 import Button from "@/components/Button";
 import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
 import Contact from "@/sections/Contact/Contact";
 import Testimonials from "@/sections/Testimonials/Testimonials";
 import Image from "next/image";
 import React from "react";
+
+export const metadata = {
+  title: "Inlights | Geohealth",
+  description: "Redefining Smart Cities using AI",
+};
 
 export default function GeoHealth() {
   // Define your stacks data

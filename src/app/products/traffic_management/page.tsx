@@ -1,14 +1,14 @@
-"use client";
-
 import Button from "@/components/Button";
 import CallToAction from "@/sections/CallToAction/CallToAction";
 import Contact from "@/sections/Contact/Contact";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+
+export const metadata = {
+  title: "Inlights | Products | Traffic Management",
+  description: "Redefining Smart Cities using AI",
+};
 
 export default function TrafficManagement() {
-  const router = useRouter();
-
   return (
     <div className="relative self-stretch overflow-hidden">
       {/* Hero Section */}
@@ -38,7 +38,7 @@ export default function TrafficManagement() {
             </div>
           </div>
 
-          <Button onClick={() => router.push("/contact")} variant="gradient">
+          <Button href="/contact" variant="gradient">
             Let&apos;s Talk
           </Button>
         </div>
@@ -71,7 +71,7 @@ export default function TrafficManagement() {
               alt="Premise Security"
             />
           </div>
-          <Button onClick={() => router.push("/contact")} variant="gradient">
+          <Button href="/contact" variant="gradient">
             Let&apos;s Talk
           </Button>
         </div>

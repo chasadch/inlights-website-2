@@ -30,7 +30,7 @@ export default function CallToAction({
         }}
       >
         <div
-          className="relative h-[182px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
+          className="relative z-50 h-[182px] w-full overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
             backgroundImage: "url('/callToAction/call_to_action_mobile.png')",
           }}
@@ -57,7 +57,7 @@ export default function CallToAction({
         }}
       >
         <div
-          className="relative h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
+          className="relative z-50 h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
             backgroundImage: "url('/services/this_is_engineering_lg.png')",
           }}

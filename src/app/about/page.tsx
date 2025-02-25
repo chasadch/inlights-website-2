@@ -1,7 +1,10 @@
-"use client";
-
 import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Inlights | About",
+  description: "Redefining Smart Cities using AI",
+};
 
 export default function About() {
   return (

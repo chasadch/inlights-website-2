@@ -4,6 +4,11 @@ import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Inlights | Services | UI/UX Design",
+  description: "Redefining Smart Cities using AI",
+};
+
 export default function UIUXDesignPage() {
   return (
     <div className="relative self-stretch bg-[#050919]">

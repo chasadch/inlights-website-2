@@ -1,12 +1,15 @@
-"use client";
-
 import CallToAction2 from "@/sections/CallToAction/CallToAction2";
 import TeamCard from "../../sections/Team/TeamCard";
+
+export const metadata = {
+  title: "Inlights | Team",
+  description: "Redefining Smart Cities using AI",
+};
 
 export default function TeamPage() {
   const teamMembers = [
     {
-      image: "/team/team_1.png",
+      image: "/team/team_1.jpg",
       name: "Esther Howards",
       role: "Founder & CEO",
     },

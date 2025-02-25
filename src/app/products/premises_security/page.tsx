@@ -1,16 +1,16 @@
-"use client";
-
 import Button from "@/components/Button";
 import CallToAction from "@/sections/CallToAction/CallToAction";
 import Contact from "@/sections/Contact/Contact";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+
+export const metadata = {
+  title: "Inlights | Products | Premise Security",
+  description: "Redefining Smart Cities using AI",
+};
 
 export default function PremiseSecurity() {
-  const router = useRouter();
-
   return (
-    <div className="relative self-stretch ">
+    <div className="relative self-stretch">
       {/* Hero Section */}
       <div
         className="relative flex h-[500px] flex-col pt-[116px] lg:h-[961px] lg:pt-[161.09px]"
@@ -38,7 +38,7 @@ export default function PremiseSecurity() {
             </div>
           </div>
 
-          <Button onClick={() => router.push("/contact")} variant="gradient">
+          <Button href="/contact" variant="gradient">
             Let&apos;s Talk
           </Button>
         </div>
@@ -71,7 +71,7 @@ export default function PremiseSecurity() {
               alt="Premise Security"
             />
           </div>
-          <Button onClick={() => router.push("/contact")} variant="gradient">
+          <Button href="/contact" variant="gradient">
             Let&apos;s Talk
           </Button>
         </div>
@@ -133,7 +133,7 @@ export default function PremiseSecurity() {
               height={489}
               className="flex-shrink-0 rounded-[11.84px] p-[12px]"
             />
-            <span className="font-lato absolute font-semibold leading-normal text-white lg:left-[26%] lg:text-[18px] xl:top-[46%] xl:text-[23px] 2xl:left-[26%] 2xl:top-[44%] 2xl:text-[28px]">
+            <span className="absolute font-lato font-semibold leading-normal text-white lg:left-[26%] lg:text-[18px] xl:top-[46%] xl:text-[23px] 2xl:left-[26%] 2xl:top-[44%] 2xl:text-[28px]">
               Image Placeholder
             </span>
           </div>
