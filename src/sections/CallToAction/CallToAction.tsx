@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -36,7 +38,7 @@ export default function CallToAction({
           {/* Overlay Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-[24px] lg:flex-row lg:justify-between lg:px-[60px]">
             {/* Text */}
-            <p className="font-roboto text-center text-size-6 font-bold leading-normal text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2">
+            <p className="text-center font-roboto text-size-6 font-bold leading-normal text-[#FBFBFB] md:text-size-3 lg:text-[36px] xl:text-size-2">
               Enough talk, let&apos;s get to work
             </p>
             {/* Button */}

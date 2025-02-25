@@ -10,7 +10,7 @@ import Footer from "@/sections/Footer/Footer";
 import BackToTop from "@/sections/BackToTop/BackToTop";
 
 export const metadata = {
-  title: "Smart Cities AI",
+  title: "Inlights",
   description: "Redefining Smart Cities using AI",
 };
 
