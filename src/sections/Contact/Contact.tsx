@@ -6,6 +6,7 @@ import supabase from "@/lib/supabase";
 import toast from "react-hot-toast";
 import { useRef } from "react";
 import ContactBackground from "./ContactBackground";
+import Underline from "@/components/Underline";
 // import ContactBackground from "./ContactBackground";
 
 type ContactProps = {
@@ -411,7 +412,7 @@ export default function Contact({
                       className="group relative text-size-6 font-normal opacity-70 lg:text-size-5"
                     >
                       {contact.value}
-                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                      <Underline />
                     </a>
                   </div>
                 </div>

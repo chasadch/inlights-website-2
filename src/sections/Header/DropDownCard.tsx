@@ -1,3 +1,4 @@
+import Underline from "@/components/Underline";
 import Image from "next/image";
 import React from "react";
 
@@ -26,7 +27,7 @@ export default function DropDownCard({
       />
       <span className="relative font-normal lg:text-size-7 xl:text-size-6 2xl:text-size-6">
         {title}
-        <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+        <Underline />
       </span>
     </div>
   );

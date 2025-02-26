@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import DropDownCard from "./DropDownCard";
+import Underline from "@/components/Underline";
 
 interface DropdownItem {
   imageSrc: string;
@@ -41,7 +42,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
       <div className="flex cursor-pointer items-center justify-center gap-[4px] rounded-[8px] p-[12px]">
         <span className="relative text-size-4 font-semibold">
           {title}
-          <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+          <Underline />
         </span>
         <Image
           src="/header/down_arrow.png"

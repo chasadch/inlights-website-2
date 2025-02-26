@@ -1,3 +1,4 @@
+import Underline from "@/components/Underline";
 import Image from "next/image";
 
 interface StoriesCardProps {
@@ -39,7 +40,7 @@ export default function StoriesCard({
         <div className="flex items-center gap-[9px] self-stretch py-[8px]">
           <span className="relative cursor-pointer text-size-7 font-normal">
             Read More
-            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+            <Underline />
           </span>
           <div className="flex h-[15px] w-[15px] items-center justify-center">
             <Image
