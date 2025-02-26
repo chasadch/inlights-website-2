@@ -54,12 +54,12 @@ export default function TeamPage() {
       role: "Marketing Head",
     },
     {
-      image: "/team/team_3.jpg",
+      image: "/team/team_1.jpg",
       name: "Liam Cooper",
       role: "Marketing Head",
     },
     {
-      image: "/team/team_3.jpg",
+      image: "/team/team_2.jpg",
       name: "Liam Cooper",
       role: "Marketing Head",
     },

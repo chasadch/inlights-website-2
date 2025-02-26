@@ -53,9 +53,9 @@ export default function AiEnginnerPage() {
           <h1 className="text-size-3 font-medium lg:text-size-2">
             AI Engineer
           </h1>
-          <Button variant="gradient" icon={false}>
+          {/* <Button variant="gradient" icon={false}>
             Apply
-          </Button>
+          </Button> */}
         </div>
 
         <div className="flex w-[152px] flex-shrink-0 flex-col items-start gap-[20px] lg:hidden">
