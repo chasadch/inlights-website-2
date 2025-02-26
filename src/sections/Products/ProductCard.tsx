@@ -38,12 +38,14 @@ export default function ProductCard({
               <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
             </span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
-              <Image
-                src={"/products/up_arrow.png"}
-                alt="arrow"
-                width={15}
-                height={15}
-              />
+              <div className="relative h-[15px] w-[15px]">
+                <Image
+                  src={"/products/up_arrow.png"}
+                  alt="arrow"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -51,13 +53,9 @@ export default function ProductCard({
 
       <div className="absolute bottom-0 left-0 h-[120px] w-[326px] lg:h-[206px] lg:w-[580px]">
         <div className="border-opacity-44 relative h-[206px] w-[580px] flex-shrink-0 rounded-[12px]">
-          <Image
-            src={imageSrc}
-            alt={title}
-            width={580}
-            height={206}
-            className="absolute left-[8px] h-[120px] w-[326px] lg:bottom-0 lg:left-[16px] lg:h-[206px] lg:w-[580px]"
-          />
+          <div className="absolute left-[8px] h-[120px] w-[326px] object-cover lg:bottom-0 lg:left-[2%] lg:h-[206px] lg:w-[580px]">
+            <Image src={imageSrc} alt={title} fill className="object-cover" />
+          </div>
         </div>
       </div>
     </div>

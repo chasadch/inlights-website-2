@@ -136,13 +136,14 @@ export default function Testimonials({
                     </h1>
                   </div>
                   <div className="flex flex-col items-center justify-center gap-[16px]">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      width={32}
-                      height={32}
-                      className="rounded-[32px]"
-                    />
+                    <div className="relative h-[42px] w-[42px] rounded-[32px]">
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="flex flex-col items-center justify-center gap-[4px]">
                       <h1 className="text-size-6 font-normal leading-[20px]">
                         {testimonial.name}
@@ -162,13 +163,15 @@ export default function Testimonials({
                   </h1>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-[16px]">
-                  <Image
-                    src={testimonials[0].image}
-                    alt={testimonials[0].name}
-                    width={32}
-                    height={32}
-                    className="rounded-[32px]"
-                  />
+                  <div className="relative h-[32px] w-[32px] rounded-[32px]">
+                    <Image
+                      src={testimonials[0].image}
+                      alt={testimonials[0].name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
                   <div className="flex flex-col items-center justify-center gap-[4px]">
                     <h1 className="text-size-6 font-normal">
                       {testimonials[0].name}
@@ -253,13 +256,15 @@ export default function Testimonials({
                       {testimonial.text}
                     </p>
                     <div className="flex flex-col items-center justify-center gap-[16px]">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        width={42}
-                        height={42}
-                        className="rounded-[42px]"
-                      />
+                      <div className="relative h-[42px] w-[42px] rounded-[32px]">
+                        <Image
+                          src={testimonials[0].image}
+                          alt={testimonials[0].name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+
                       <div className="flex flex-col items-center gap-[4px]">
                         <div className="text-size-5 font-medium">
                           {testimonial.name}
@@ -278,13 +283,14 @@ export default function Testimonials({
                     {testimonials[0].text}
                   </p>
                   <div className="flex flex-col items-center justify-center gap-[16px]">
-                    <Image
-                      src={testimonials[0].image}
-                      alt={testimonials[0].name}
-                      width={42}
-                      height={42}
-                      className="rounded-[42px]"
-                    />
+                    <div className="relative h-[42px] w-[42px] rounded-[32px]">
+                      <Image
+                        src={testimonials[0].image}
+                        alt={testimonials[0].name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="flex flex-col items-center gap-[4px]">
                       <div className="text-size-5 font-medium">
                         {testimonials[0].name}

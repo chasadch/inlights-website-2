@@ -41,20 +41,22 @@ export default function WebDevelopmentPage() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <Image
-              src={"/services/laptop.png"}
-              alt=""
-              width={323.704}
-              height={323.704}
-              className="absolute left-[10px] top-[18px] z-10 h-[168.178px] w-[168.178px] flex-shrink-0 lg:left-[15px] lg:top-[30px] lg:h-[273.704px] lg:w-[263.704px] xl:h-[323.704px] xl:w-[293.704px] 2xl:left-[20px] 2xl:top-[35px] 2xl:w-[323.704px]"
-            />
-            <Image
-              src={"/services/tablet.png"}
-              alt=""
-              width={256.461}
-              height={256.461}
-              className="absolute -right-[10px] -top-[10px] h-[133.242px] w-[133.242px] flex-shrink-0 lg:-right-[15px] lg:-top-[15px] lg:h-[206.461px] lg:w-[196.461px] xl:w-[226.461px] 2xl:-right-[20px] 2xl:-top-[20px] 2xl:h-[256.461px] 2xl:w-[256.461px]"
-            />
+            <div className="absolute left-[10px] top-[18px] z-10 h-[168.178px] w-[168.178px] flex-shrink-0 lg:left-[15px] lg:top-[30px] lg:h-[273.704px] lg:w-[263.704px] xl:h-[323.704px] xl:w-[293.704px] 2xl:left-[20px] 2xl:top-[35px] 2xl:w-[323.704px]">
+              <Image
+                src={"/services/laptop.png"}
+                alt="Laptop"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute -right-[10px] -top-[10px] h-[133.242px] w-[133.242px] flex-shrink-0 lg:-right-[15px] lg:-top-[15px] lg:h-[206.461px] lg:w-[196.461px] xl:w-[226.461px] 2xl:-right-[20px] 2xl:-top-[20px] 2xl:h-[256.461px] 2xl:w-[256.461px]">
+              <Image
+                src={"/services/tablet.png"}
+                alt="Tablet"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

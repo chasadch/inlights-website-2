@@ -109,13 +109,14 @@ export default function Contact({
             ].map((contact, index) => (
               <div key={index} className="flex items-center gap-[26px]">
                 <div className="relative h-[50px] w-[50px] rounded-full bg-gradient-to-t from-[#552DDA] to-[#1D3E80]">
-                  <Image
-                    src={contact.icon}
-                    width={25}
-                    height={20}
-                    alt={contact.label}
-                    className="absolute left-[12px] top-[15px]"
-                  />
+                  <div className="absolute left-1/2 top-1/2 h-[25px] w-[20px] -translate-x-1/2 -translate-y-1/2">
+                    <Image
+                      src={contact.icon}
+                      fill
+                      alt={contact.label}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col items-start gap-[4px]">
                   <h1 className="text-size-6 font-bold lg:text-size-3">
@@ -394,13 +395,14 @@ export default function Contact({
               ].map((contact, index) => (
                 <div key={index} className="flex items-center gap-[26px]">
                   <div className="relative h-[50px] w-[50px] rounded-full bg-gradient-to-t from-[#552DDA] to-[#1D3E80]">
-                    <Image
-                      src={contact.icon}
-                      width={25}
-                      height={20}
-                      alt={contact.label}
-                      className="absolute left-[12px] top-[15px]"
-                    />
+                    <div className="absolute left-1/2 top-1/2 h-[25px] w-[20px] -translate-x-1/2 -translate-y-1/2">
+                      <Image
+                        src={contact.icon}
+                        fill
+                        alt={contact.label}
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                   <div className="flex flex-col items-start gap-[4px]">
                     <h1 className="text-size-6 font-bold lg:text-size-3">

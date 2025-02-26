@@ -69,29 +69,32 @@ export default function Hero() {
             {/* Image container */}
             <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
               {/* Image 1 */}
-              <Image
-                src={"/hero/ntdp.png"}
-                alt="Ntdp image"
-                width={52.847}
-                height={54}
-                className="h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[52.847px]"
-              />
+              <div className="relative h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[52.847px]">
+                <Image
+                  src={"/hero/ntdp.png"}
+                  alt="Ntdp image"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               {/* Image 2 */}
-              <Image
-                src={"/hero/sdaia.png"}
-                alt="Sdaia image"
-                width={107.724}
-                height={24.094}
-                className="h-[18.07px] w-[80.807px] lg:h-[24.094px] lg:w-[107.724px]"
-              />
+              <div className="relative h-[18.07px] w-[80.807px] lg:h-[24.094px] lg:w-[107.724px]">
+                <Image
+                  src={"/hero/sdaia.png"}
+                  alt="Sdaia image"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               {/* Image 3 */}
-              <Image
-                src={"/hero/nstp_new_2.png"}
-                alt="Nstp image"
-                width={54}
-                height={54}
-                className="h-[40.5px] w-[40.5px] lg:h-[54px] lg:w-[54px]"
-              />
+              <div className="relative h-[40.5px] w-[40.5px] lg:h-[54px] lg:w-[54px]">
+                <Image
+                  src={"/hero/nstp_new_2.png"}
+                  alt="Nstp image"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

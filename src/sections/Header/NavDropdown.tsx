@@ -44,12 +44,14 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
           {title}
           <Underline />
         </span>
-        <Image
-          src="/header/down_arrow.png"
-          alt="arrow"
-          width={16}
-          height={16}
-        />
+        <div className="relative h-[12px] w-[12px]">
+          <Image
+            src="/header/down_arrow.png"
+            alt="arrow"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* Dropdown */}

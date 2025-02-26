@@ -20,14 +20,10 @@ export default function ServiceCard({
       onClick={onClick}
       className="border-[rgba(45, 160, 184, 0.15)] group flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 lg:p-[24px]"
     >
-      {/* Service Icon */}
-      <Image
-        src={image}
-        alt={title}
-        width={72}
-        height={72}
-        className="flex-shrink-0"
-      />
+      <div className="relative h-[72px] w-[72px]">
+        {/* Service Icon */}
+        <Image src={image} alt={title} fill className="object-cover" />
+      </div>
 
       {/* Service Info */}
       <div className="flex flex-col items-start gap-[14px] self-stretch">
@@ -49,12 +45,12 @@ export default function ServiceCard({
             {linkText}
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
           </span>
-          <div className="flex h-[15px] w-[15px] items-center justify-center">
+          <div className="relative flex h-[15px] w-[15px] items-center justify-center">
             <Image
               src="/services/up_arrow.png"
               alt="Arrow Right"
-              width={15}
-              height={15}
+              fill
+              className="object-cover"
             />
           </div>
         </div>

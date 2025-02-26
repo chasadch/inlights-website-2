@@ -112,14 +112,15 @@ export default function Header() {
   return (
     <header className="absolute left-0 right-0 top-0 z-50 mx-auto box-border flex w-full max-w-[1440px] flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white lg:px-[120px] lg:py-[16px]">
       {/* Logo */}
-      <Image
-        src={"/header/logo_2.png"}
-        alt="Logo"
-        width={156}
-        height={18}
-        className="h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18.197px] lg:w-[145.885px] xl:w-[155.885px]"
-        onClick={() => router.push("/")}
-      />
+      <div className="relative h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18.197px] lg:w-[145.885px] xl:w-[155.885px]">
+        <Image
+          src={"/header/logo_2.png"}
+          alt="Logo"
+          fill
+          className="object-cover"
+          onClick={() => router.push("/")}
+        />
+      </div>
 
       {/* Navigation (Desktop) */}
       <ul
@@ -151,21 +152,14 @@ export default function Header() {
         className="flex cursor-pointer items-start gap-[105px] rounded-[56px] p-[6px] md:hidden"
         onClick={() => setMobileMenuOpen(true)}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M4 6H20M4 12H20M4 18H20"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+        <div className="relative h-[24px] w-[24px]">
+          <Image
+            src="/header/hamburger.png"
+            alt="Menu"
+            fill
+            className="object-cover"
           />
-        </svg>
+        </div>
       </div>
 
       {/* "Join Us" Button */}

@@ -42,12 +42,13 @@ export default function StoriesCard({
             Read More
             <Underline />
           </span>
-          <div className="flex h-[15px] w-[15px] items-center justify-center">
+
+          <div className="relative flex h-[15px] w-[15px] items-center justify-center">
             <Image
               src="/successStories/up_arrow.png"
-              width={15}
-              height={15}
+              fill
               alt="arrow right"
+              className="object-cover"
             />
           </div>
         </div>

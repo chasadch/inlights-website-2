@@ -9,7 +9,7 @@ export default function Services() {
 
   const services = [
     {
-      image: "/services/ph_code-bold.png",
+      image: "/services/web_development.png",
       title: "Web Development",
       description:
         "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate your standards.",

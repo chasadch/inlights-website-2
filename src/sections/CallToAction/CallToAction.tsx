@@ -59,7 +59,7 @@ export default function CallToAction({
         <div
           className="relative z-50 h-[182px] w-full max-w-screen-xl overflow-hidden rounded-[32px] bg-cover bg-no-repeat lg:h-[255px]"
           style={{
-            backgroundImage: "url('/services/this_is_engineering_lg.png')",
+            backgroundImage: "url('/callToAction/this_is_engineering_lg.png')",
           }}
         >
           {/* Overlay Content */}
@@ -69,7 +69,7 @@ export default function CallToAction({
               We Are Looking for Exceptional Talent
             </p>
             {/* Button */}
-            <Button onClick={() => router.push("/jobs")} variant="gradient">
+            <Button href="/jobs" variant="gradient">
               Join Us
             </Button>
           </div>

@@ -122,24 +122,28 @@ export default function SuccessStories() {
               disabled={scrollPos <= 0}
               className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-[#B4BBC6] transition-all hover:scale-110 hover:bg-[#B4BBC6] hover:bg-opacity-20 disabled:opacity-50"
             >
-              <Image
-                src="/successStories/left.png"
-                alt="Arrow Left"
-                width={24}
-                height={24}
-              />
+              <div className="relative h-[24px] w-[24px]">
+                <Image
+                  src="/successStories/left.png"
+                  alt="Arrow Left"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </button>
             <button
               onClick={() => handleScroll("right")}
               disabled={scrollPos >= maxScroll - 1}
               className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-[#B4BBC6] transition-all hover:scale-110 hover:bg-[#B4BBC6] hover:bg-opacity-20 disabled:opacity-50"
             >
-              <Image
-                src="/successStories/right.png"
-                alt="Arrow Right"
-                width={24}
-                height={24}
-              />
+              <div className="relative h-[24px] w-[24px]">
+                <Image
+                  src="/successStories/right.png"
+                  alt="Arrow Left"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </button>
           </div>
         </div>

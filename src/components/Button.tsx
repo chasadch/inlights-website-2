@@ -44,7 +44,14 @@ export default function Button({
       >
         <span>{children}</span>
         {icon && (
-          <Image src="/hero/up_arrow.png" alt="Arrow" width={15} height={15} />
+          <div className="relative h-[15px] w-[15px]">
+            <Image
+              src="/hero/up_arrow.png"
+              alt="Arrow"
+              fill
+              className="object-cover"
+            />
+          </div>
         )}
       </button>
     );
@@ -62,12 +69,14 @@ export default function Button({
         >
           <span>{children}</span>
           {icon && (
-            <Image
-              src="/hero/up_arrow.png"
-              alt="Arrow"
-              width={15}
-              height={15}
-            />
+            <div className="relative h-[15px] w-[15px]">
+              <Image
+                src="/hero/up_arrow.png"
+                alt="Arrow"
+                fill
+                className="object-cover"
+              />
+            </div>
           )}
         </button>
       </div>
