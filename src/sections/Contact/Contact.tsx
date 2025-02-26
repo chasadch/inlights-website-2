@@ -58,7 +58,8 @@ export default function Contact({
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden text-white">
+    // <div className="relative min-h-screen w-full overflow-hidden text-white">
+    <div className="relative w-full overflow-hidden text-white">
       {/* Contact 375 pixels */}
       <section
         className="relative flex flex-col items-center justify-between gap-[66px] px-[16px] lg:hidden"

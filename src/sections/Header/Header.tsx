@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
 import NavDropdown from "./NavDropdown";
 import { X } from "lucide-react";
+import Underline from "@/components/Underline";
 
 // Define types for dropdown data
 type DropdownItem = {
@@ -131,7 +132,7 @@ export default function Header() {
         >
           <span className="relative text-size-4 font-semibold">
             Home
-            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+            <Underline />
           </span>
         </li>
 

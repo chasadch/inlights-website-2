@@ -48,22 +48,17 @@ export default function GeoHealth() {
       {/* Hero Section */}
       <div className="relative h-[810px] w-full overflow-hidden">
         {/* Responsive background images */}
-        <div
-          className={`absolute inset-0 bg-[url('/geohealth/geohealth_hero_sm.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/geohealth/geohealth_hero_lg.png')]`}
-        />
+        <div className="absolute inset-0 bg-[url('/geohealth/geohealth_hero_sm.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/geohealth/geohealth_hero_lg.png')]" />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(9,17,33,0.32),rgba(9,17,33,0.32))]" />
         {/* Hero Content */}
-        <div className="relative z-10 flex h-full w-full flex-col px-[16px] pt-[116px] lg:flex-row lg:px-[70px] lg:pb-[160px] lg:pt-[176px]">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-col px-[16px] pt-[116px] lg:flex-row lg:px-[70px] lg:pb-[160px] lg:pt-[176px]">
           {/* Left Column */}
           <div className="flex flex-col items-start gap-[49.73px]">
             <div className="flex flex-col items-start gap-[17.612px] xl:w-[746px]">
               {/* Pill Badge */}
               <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
-                <button
-                  className="text-size-7 font-normal text-[#414C5C] lg:text-size-6"
-                  style={{ fontFamily: "Manrope" }}
-                >
+                <button className="text-size-7 font-normal text-[#414C5C] lg:text-size-6">
                   GeoHealth
                 </button>
               </div>

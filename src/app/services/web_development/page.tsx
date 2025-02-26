@@ -10,8 +10,10 @@ export default function WebDevelopmentPage() {
   return (
     <div className="relative self-stretch bg-[#050919]">
       <div className="h-[687px] bg-[linear-gradient(0deg,rgba(9,17,33,0.12)_0%,rgba(9,17,33,0.12)_100%),url('/services/this_is_engineering_sm.png')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/about/about_hero.png')] lg:h-[685px]">
+        {/* <div className="h-[687px] bg-[linear-gradient(0deg,rgba(9,17,33,0.12)_0%,rgba(9,17,33,0.12)_100%),url('/services/this_is_engineering_sm.png')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/about/about_hero.png')] lg:min-h-screen"> */}
         {/* Hero Section */}
         <div className="mx-auto flex h-[685px] w-full max-w-[1440px] flex-col gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:justify-between lg:pr-[71.17px] lg:pt-[198px]">
+          {/* <div className="mx-auto flex h-[685px] w-full max-w-[1440px] flex-col gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:items-center lg:justify-between lg:pr-[71.17px]"> */}
           <div className="mx-auto flex w-[319px] flex-col items-center gap-[17.612px] lg:w-[452px] lg:items-start xl:w-[552px] 2xl:w-[652px]">
             <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
               Web Development
@@ -59,6 +61,7 @@ export default function WebDevelopmentPage() {
 
       {/* Tech section */}
       <div className="flex h-[681px] w-full flex-col items-start justify-center gap-[10px] self-stretch py-[120px] lg:bg-[url('/statistics/bg.png')] lg:bg-cover lg:bg-no-repeat">
+        {/* <div className="flex min-h-screen w-full flex-col items-start justify-center gap-[10px] self-stretch py-[120px] lg:bg-[url('/statistics/bg.png')] lg:bg-cover lg:bg-no-repeat"> */}
         <div className="mx-auto flex w-[249px] flex-col items-center gap-[26px] lg:w-full lg:gap-[40px]">
           <h1 className="hidden text-[44px] font-normal lg:block">
             Our Tech Stack

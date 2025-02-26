@@ -106,7 +106,8 @@ export default function SuccessStories() {
   };
 
   return (
-    <div className="mx-auto min-h-screen max-w-[1440px] px-[16px] pb-[126px] text-white lg:px-[70px] lg:py-[140px]">
+    // <div className="mx-auto min-h-screen max-w-[1440px] px-[16px] pb-[126px] text-white lg:px-[70px] lg:py-[140px]">
+    <div className="mx-auto max-w-[1440px] px-[16px] pb-[126px] text-white lg:px-[70px] lg:py-[140px]">
       <div className="flex flex-col items-start gap-[24px] self-stretch lg:gap-[32px]">
         {/* Header Section */}
         <div className="flex items-center justify-center gap-[48px] self-stretch lg:justify-between">
