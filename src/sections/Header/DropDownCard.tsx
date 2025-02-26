@@ -15,7 +15,7 @@ export default function DropDownCard({
   return (
     <div
       onClick={onClick}
-      className="flex h-[152px] cursor-pointer flex-col items-center justify-center gap-[16px] rounded-[24px] bg-bg p-[20px] shadow-shadowCustom lg:w-[143px] xl:w-[163px] 2xl:w-[183px]"
+      className="group flex h-[152px] cursor-pointer flex-col items-center justify-center gap-[16px] rounded-[24px] bg-[#03030E] p-[20px] shadow-shadowCustom lg:w-[143px] xl:w-[163px] 2xl:w-[183px]"
     >
       <Image
         src={imageSrc}
@@ -24,8 +24,9 @@ export default function DropDownCard({
         height={40}
         className="flex-shrink-0"
       />
-      <span className="font-normal lg:text-size-7 xl:text-size-6 2xl:text-size-6">
+      <span className="relative font-normal lg:text-size-7 xl:text-size-6 2xl:text-size-6">
         {title}
+        <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
       </span>
     </div>
   );

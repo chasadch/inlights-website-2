@@ -18,7 +18,7 @@ export default function ProductCard({
   return (
     <div
       onClick={() => onClick(title)}
-      className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 xl:h-[591px] xl:p-[34px]"
+      className="group relative flex h-[426px] w-full cursor-pointer flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 xl:h-[591px] xl:p-[34px]"
     >
       <div className="flex cursor-pointer flex-col items-start justify-center gap-[20px] self-stretch xl:gap-[24px]">
         <div className="flex flex-col items-start gap-[20px] self-stretch lg:gap-[34px]">
@@ -33,7 +33,10 @@ export default function ProductCard({
             {description}
           </p>
           <div className={"flex items-start gap-[9px] self-stretch"}>
-            <span className={"text-size-7 font-normal"}>Discover Insights</span>
+            <span className="relative text-size-7 font-normal">
+              Discover Insights
+              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+            </span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
               <Image
                 src={"/products/up_arrow.png"}

@@ -57,7 +57,7 @@ export default function Contact({
   };
 
   return (
-    <div className="relative w-full overflow-hidden text-white">
+    <div className="relative min-h-screen w-full overflow-hidden text-white">
       {/* Contact 375 pixels */}
       <section
         className="relative flex flex-col items-center justify-between gap-[66px] px-[16px] lg:hidden"
@@ -408,9 +408,10 @@ export default function Contact({
                       href={contact.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-size-6 font-normal opacity-70 lg:text-size-5"
+                      className="group relative text-size-6 font-normal opacity-70 lg:text-size-5"
                     >
                       {contact.value}
+                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                     </a>
                   </div>
                 </div>

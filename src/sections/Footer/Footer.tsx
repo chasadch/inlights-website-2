@@ -1,7 +1,12 @@
+"use client";
+
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
     <>
       {/* Footer (375 pixels) */}
@@ -338,34 +343,66 @@ export default function Footer() {
               <div className="flex flex-col items-start gap-[20px]">
                 <h1 className="text-size-5 font-medium">Quick Links</h1>
                 <div className="flex flex-col items-start gap-[16px]">
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/about")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     About us
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/products/premises_security")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     InLights Security
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/products/traffic_management")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     InLights Traffic
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/jobs")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     Careers
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
                 </div>
               </div>
               <div className="flex flex-col items-start gap-[20px]">
                 <h1 className="text-size-5 font-medium">Solutions</h1>
                 <div className="flex flex-col items-start gap-[16px]">
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/services/web_development")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     Web Development
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/services/uiux_design")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     Product Design
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/services/ai_automation")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     AI Automation
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
-                  <span className="text-size-6 font-normal text-[#B5B5B5]">
+                  <span
+                    onClick={() => router.push("/services/computer_vision")}
+                    className="group relative cursor-pointer text-size-6 font-normal text-[#B5B5B5]"
+                  >
                     Computer Vision
+                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                   </span>
                 </div>
               </div>

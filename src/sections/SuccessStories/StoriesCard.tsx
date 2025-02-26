@@ -14,7 +14,7 @@ export default function StoriesCard({
   image,
 }: StoriesCardProps) {
   return (
-    <div className="relative flex w-full flex-col items-start gap-[34px] rounded-[32px] border-[1px] border-borderCustom bg-bg shadow-shadowCustom">
+    <div className="group relative flex w-full cursor-pointer flex-col items-start gap-[34px] rounded-[32px] border-[1px] border-borderCustom bg-bg shadow-shadowCustom transition-all duration-300 hover:scale-105">
       {/* Image with overlay */}
       <div
         className="relative flex h-[174px] flex-shrink-0 flex-col items-center justify-center gap-[10px] self-stretch overflow-hidden rounded-[18px] bg-cover bg-center lg:rounded-[20px]"
@@ -37,7 +37,10 @@ export default function StoriesCard({
           {description}
         </p>
         <div className="flex items-center gap-[9px] self-stretch py-[8px]">
-          <span className="text-size-7 font-normal">Read More</span>
+          <span className="relative cursor-pointer text-size-7 font-normal">
+            Read More
+            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+          </span>
           <div className="flex h-[15px] w-[15px] items-center justify-center">
             <Image
               src="/successStories/up_arrow.png"

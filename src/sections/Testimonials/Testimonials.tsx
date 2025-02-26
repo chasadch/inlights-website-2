@@ -98,7 +98,7 @@ export default function Testimonials({
   };
 
   return (
-    <section className="relative overflow-hidden lg:px-[70px] lg:py-[160px]">
+    <section className="relative overflow-hidden lg:min-h-screen lg:px-[70px] lg:py-[160px]">
       {/* Background SVG (placed behind content) */}
       <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
         {!newBackground ? (
@@ -224,7 +224,7 @@ export default function Testimonials({
             {/* Left Arrow */}
             <button
               onClick={previousTestimonial}
-              className={`flex items-center gap-[10px] rounded-[50px] bg-bg p-[10px] transition-opacity ${
+              className={`flex items-center gap-[10px] rounded-[50px] bg-[rgba(255,255,255,0.12)] p-[10px] transition-opacity ${
                 currentIndex === 0
                   ? "pointer-events-none cursor-not-allowed opacity-50"
                   : "hover:opacity-80"

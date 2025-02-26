@@ -20,7 +20,7 @@ export default function CallToAction({
   const router = useRouter();
 
   return (
-    <>
+    <div className="">
       {/* Talent Section (375 px) */}
       <div
         className={`flex w-full items-center justify-center px-[16px] md:py-[100px] lg:hidden lg:px-[70px]`}
@@ -75,6 +75,6 @@ export default function CallToAction({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

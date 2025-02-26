@@ -33,7 +33,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
 
   return (
     <li
-      className="group relative flex flex-col items-center"
+      className="relative flex flex-col items-center"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
@@ -57,7 +57,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
           {sections.map((section, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col items-start gap-[18px]">
-                <span className="self-stretch font-lato text-size-5 font-semibold">
+                <span className="self-stretch font-lato text-size-4 font-semibold leading-[28.8px]">
                   {section.header}
                 </span>
                 <div className="flex items-start gap-[20px] self-stretch">
