@@ -39,6 +39,7 @@ export default function Products() {
             description="InLights revolutionizes gate security with a cutting-edge solution that fuses AI-driven vehicle identification, CNIC scanning, and real-time tracking for unmatched access control and theft prevention."
             imageSrc="/products/manage_who_enters_your_premises.png"
             onClick={handleCardClick}
+            imagePosition="second"
           />
         </div>
 
@@ -58,6 +59,7 @@ export default function Products() {
             description="InLights revolutionizes gate security with a cutting-edge solution that fuses AI-driven vehicle identification, CNIC scanning, and real-time tracking for unmatched access control and theft prevention."
             imageSrc="/products/manage_who_enters_your_premises.png"
             onClick={handleCardClick}
+            imagePosition="second"
           />
         </div>
       </div>

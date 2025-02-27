@@ -12,7 +12,7 @@ export default function Team() {
     {
       image: "/team/team_2.png",
       name: "Cameron Williamson",
-      role: "Marketing Head",
+      role: "Founder & CEO",
     },
     {
       image: "/team/team_3.png",

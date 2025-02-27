@@ -69,9 +69,9 @@ export default function Hero() {
             {/* Image container */}
             <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
               {/* Image 1 */}
-              <div className="relative h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[52.847px]">
+              <div className="relative h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[102.847px]">
                 <Image
-                  src={"/hero/ntdp.png"}
+                  src={"/hero/ntdp.jpeg"}
                   alt="Ntdp image"
                   fill
                   className="object-cover"

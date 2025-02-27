@@ -81,13 +81,14 @@ export default function TrafficManagement() {
         </div>
 
         {/* Image 1024 pixels and above */}
-        <div className="hidden h-[495px] w-[1003px] flex-shrink-0 lg:block">
+        <div className="relative mx-auto hidden h-[495px] w-[1003px] flex-shrink-0 lg:block">
           <Image
-            src={"/info/manage_city_traffic_2.png"}
+            src="/info/manage_city_traffic_2.png"
             alt="hero"
-            width={1003}
-            height={495}
-            className="absolute bottom-0 left-1/2 z-0 -translate-x-1/2"
+            quality={100}
+            priority
+            fill
+            className="mt-2.5 object-contain"
           />
         </div>
       </div>
@@ -130,13 +131,16 @@ export default function TrafficManagement() {
             />
           </div>
           <div className="relative hidden flex-shrink-0 items-center justify-center lg:flex lg:h-[401px] lg:w-[382px] 2xl:h-[489px] 2xl:w-[655px]">
-            <Image
-              src="/geohealth/geohealth_image2.png"
-              alt="Geohealth"
-              width={655}
-              height={489}
-              className="flex-shrink-0 rounded-[11.84px] p-[12px]"
-            />
+            <div className="relative h-[489px] w-[655px]">
+              <Image
+                src="/geohealth/geohealth_image2.png"
+                alt="Geohealth"
+                fill
+                quality={100}
+                priority
+                className="flex-shrink-0 rounded-[11.84px] object-cover p-[12px]"
+              />
+            </div>
             <span className="absolute font-lato font-semibold leading-normal text-white lg:left-[26%] lg:text-[18px] xl:top-[46%] xl:text-[23px] 2xl:left-[26%] 2xl:top-[44%] 2xl:text-[28px]">
               Image Placeholder
             </span>

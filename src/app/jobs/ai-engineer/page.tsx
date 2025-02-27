@@ -24,6 +24,11 @@ export default function AiEnginnerPage() {
     const phone = formData.get("phone") as string;
     const message = formData.get("message") as string;
 
+    if (!firstName || !lastName || !email || !phone || !message) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
     try {
       const { error } = await supabase
         .from("contacts")
@@ -193,6 +198,7 @@ export default function AiEnginnerPage() {
                 id="first-name"
                 name="firstname"
                 type="text"
+                required
                 className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               />
             </div>
@@ -219,6 +225,7 @@ export default function AiEnginnerPage() {
                 id="email"
                 name="email"
                 type="email"
+                required
                 className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               />
             </div>
@@ -231,6 +238,7 @@ export default function AiEnginnerPage() {
                 id="phone"
                 name="phone"
                 type="number"
+                required
                 className="border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               />
             </div>
@@ -243,6 +251,7 @@ export default function AiEnginnerPage() {
             <textarea
               id="address"
               name="address"
+              required
               className="resize-none border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               rows={3}
             />
@@ -258,6 +267,7 @@ export default function AiEnginnerPage() {
             <textarea
               id="linkedin-profile"
               name="linkedinProfile"
+              required
               className="resize-none border-b border-[#DFDFDF] bg-transparent text-white outline-none"
               rows={3}
             />
@@ -273,13 +283,14 @@ export default function AiEnginnerPage() {
               htmlFor="resume"
               className="flex flex-col items-center gap-[16px] self-stretch rounded-[8px] border-[1px] border-dashed border-[#283F9C] bg-[#080E27] px-[16px] py-[20px]"
             >
-              <Image
-                src="/jobs/upload.png"
-                alt="Upload icon"
-                width={32}
-                height={32}
-                className="h-[32px] w-[32px] cursor-pointer"
-              />
+              <div className="relative h-[32px] w-[32px] cursor-pointer">
+                <Image
+                  src="/jobs/upload.png"
+                  alt="Upload icon"
+                  fill
+                  className="relative"
+                />
+              </div>
 
               <div className="flex flex-col items-center gap-[8px]">
                 <div className="flex items-center gap-2">
@@ -309,6 +320,7 @@ export default function AiEnginnerPage() {
                   id="resume"
                   name="resume"
                   type="file"
+                  required
                   className="hidden"
                 />
               </div>

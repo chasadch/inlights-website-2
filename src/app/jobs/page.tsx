@@ -127,24 +127,28 @@ export default function JobsPage() {
               </div>
               <div className="flex items-center gap-[12px]">
                 <div className="flex items-start gap-[8px] rounded-[25px] border-[1px] border-white/50 px-[12px] py-[4px]">
-                  <Image
-                    src="/jobs/location_on.png"
-                    alt="Location"
-                    width={20}
-                    height={20}
-                  />
+                  <div className="relative h-[20px] w-[20px]">
+                    <Image
+                      src="/jobs/location_on.png"
+                      alt="Location"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <span className="text-size-7 font-normal lg:text-size-6">
                     {job.location}
                   </span>
                 </div>
 
                 <div className="flex items-start gap-[8px] rounded-[25px] border-[1px] border-white/50 px-[12px] py-[4px]">
-                  <Image
-                    src="/jobs/schedule.png"
-                    alt="Schedule"
-                    width={20}
-                    height={20}
-                  />
+                  <div className="relative h-[20px] w-[20px]">
+                    <Image
+                      src="/jobs/schedule.png"
+                      alt="Location"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <span className="text-size-7 font-normal lg:text-size-6">
                     {job.schedule}
                   </span>

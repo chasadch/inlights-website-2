@@ -6,6 +6,7 @@ interface ProductCardProps {
   description: string;
   imageSrc: string;
   onClick: (title: string) => void;
+  imagePosition?: "first" | "second";
 }
 
 export default function ProductCard({
@@ -14,6 +15,7 @@ export default function ProductCard({
   description,
   imageSrc,
   onClick,
+  imagePosition = "first",
 }: ProductCardProps) {
   return (
     <div
@@ -53,7 +55,13 @@ export default function ProductCard({
 
       <div className="absolute bottom-0 left-0 h-[120px] w-[326px] lg:h-[206px] lg:w-[580px]">
         <div className="border-opacity-44 relative h-[206px] w-[580px] flex-shrink-0 rounded-[12px]">
-          <div className="absolute left-[8px] h-[120px] w-[326px] object-cover lg:bottom-0 lg:left-[2%] lg:h-[206px] lg:w-[580px]">
+          <div
+            className={`absolute h-[120px] w-[326px] object-cover lg:bottom-0 lg:h-[206px] lg:w-[580px] ${
+              imagePosition === "second"
+                ? "left-[16px] lg:left-[5%]"
+                : "left-[8px] lg:left-[2%]"
+            }`}
+          >
             <Image src={imageSrc} alt={title} fill className="object-cover" />
           </div>
         </div>
