@@ -95,7 +95,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Email"
-                className="flex h-[40px] w-[250px] items-center gap-[8px] rounded-[8px] border border-white/50 bg-white/5 px-[16px] py-[8px] text-[#B5B5B5]"
+                className="flex h-[40px] w-[250px] items-center gap-[8px] rounded-[8px] border border-white/50 bg-white/5 px-[16px] py-[8px] text-[#B5B5B5] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
               />
               <button className="flex h-[40px] w-[40px] items-center justify-center gap-[8px] rounded-[12px] bg-white">
                 <div className="flex h-[20px] w-[20px] items-center justify-center">
@@ -245,9 +245,9 @@ export default function Footer() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="flex h-[40px] w-[250px] items-center gap-[8px] rounded-[8px] border border-white/50 bg-white/5 px-[16px] py-[8px] text-[#B5B5B5] outline-none"
+                    className="focus:outline-offset-0.5 flex h-[40px] w-[250px] items-center gap-[8px] rounded-[8px] border border-white/50 bg-white/5 px-[16px] py-[8px] text-[#B5B5B5] focus:outline focus:outline-2 focus:outline-white"
                   />
-                  <button className="flex h-[40px] w-[40px] items-center justify-center gap-[8px] rounded-[12px] bg-white transition-all duration-200 hover:bg-gray-300">
+                  <button className="flex h-[40px] w-[40px] items-center justify-center gap-[8px] rounded-[12px] bg-white">
                     <div className="flex h-[20px] w-[20px] items-center justify-center">
                       <MoveUpRight width={20} height={20} color="#000" />
                     </div>
