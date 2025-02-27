@@ -89,7 +89,7 @@ export default function Hero() {
               {/* Image 3 */}
               <div className="relative h-[40.5px] w-[40.5px] lg:h-[54px] lg:w-[54px]">
                 <Image
-                  src={"/hero/nstp_new_2.png"}
+                  src={"/hero/nstp.jpg"}
                   alt="Nstp image"
                   fill
                   className="object-cover"

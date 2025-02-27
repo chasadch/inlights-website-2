@@ -555,7 +555,7 @@ export default function Contact({
           </div>
 
           {/* Contact Form */}
-          <div className="relative z-50 flex w-full max-w-[375px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-bg px-[16px] py-[20px] shadow-shadowCustom lg:mt-0 lg:h-[522px] lg:max-w-[695px] lg:p-[37px] xl:w-[695px]">
+          <div className="relative flex w-full max-w-[375px] flex-col items-center justify-center gap-[30px] rounded-[20px] bg-bg px-[16px] py-[20px] shadow-shadowCustom lg:mt-0 lg:h-[522px] lg:max-w-[695px] lg:p-[37px] xl:w-[695px]">
             <form ref={formRef} className="flex w-full flex-col gap-[40px]">
               <div className="flex flex-col gap-[63px] lg:flex-row">
                 <div className="flex w-full flex-col gap-[32px] lg:w-1/2">
