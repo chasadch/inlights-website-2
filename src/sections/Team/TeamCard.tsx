@@ -29,35 +29,38 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
       <div className="absolute bottom-[70px] right-[7px] flex -translate-y-[15%] items-start gap-[8px] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 lg:right-[13px] lg:top-[15px]">
         <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
-            <Image
-              src="/team/facebook.png"
-              alt="Facebook"
-              width={10}
-              height={15}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
-            />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
+              <Image
+                src="/team/facebook.png"
+                alt="Facebook"
+                width={10}
+                height={15}
+              />
+            </div>
           </div>
         </div>
         <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
-            <Image
-              src="/team/instagram.png"
-              alt="Instagram"
-              width={16}
-              height={16}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
+              <Image
+                src="/team/instagram.png"
+                alt="Facebook"
+                width={15.995}
+                height={15.995}
+              />
+            </div>
           </div>
         </div>
         <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
-            <Image
-              src="/team/linkedin.png"
-              alt="Linkedin"
-              width={14}
-              height={14}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
+              <Image
+                src="/team/linkedin.png"
+                alt="Facebook"
+                width={15.995}
+                height={15.995}
+              />
+            </div>
           </div>
         </div>
       </div>

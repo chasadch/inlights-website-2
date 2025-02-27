@@ -83,31 +83,34 @@ export default function GeoHealth() {
           {/* Image */}
           <div className="mx-auto w-[292.211px] flex-shrink-0 pt-[131.48px] lg:pt-0 xl:h-[380.48px] xl:w-[411px] 2xl:h-[480.48px] 2xl:w-[511px]">
             <div className="relative h-[199.559px] w-[292.211px] flex-shrink-0 rounded-[12.67px] bg-[#33A0F1] lg:h-[249px] lg:w-[411px] lg:rounded-[22px] 2xl:h-[349px] 2xl:w-[511px]">
-              <Image
-                src={"/geohealth/geohealth_image1.png"}
-                alt="Geohealth"
-                width={428}
-                height={253}
-                className="absolute bottom-0 left-1/2 h-[144.918px] w-[244.697px] flex-shrink-0 -translate-x-1/2 lg:h-[153px] lg:w-[318px] xl:h-[163px] xl:w-[328px] 2xl:h-[253px] 2xl:w-[428px]"
-                style={{ borderRadius: "11.079px 11.079px 0px 0px" }}
-              />
-              <Image
-                src={"/geohealth/star.png"}
-                alt="Star"
-                width={66}
-                height={66}
-                className="absolute right-[40px] top-[10px] h-[38.011px] w-[38.011px] flex-shrink-0 lg:right-[70px] lg:h-[56px] lg:w-[56px] 2xl:h-[66px] 2xl:w-[66px]"
-                style={{ borderRadius: "11.079px 11.079px 0px 0px" }}
-              />
+              <div className="absolute bottom-0 left-1/2 h-[144.918px] w-[244.697px] flex-shrink-0 -translate-x-1/2 lg:h-[153px] lg:w-[318px] xl:h-[163px] xl:w-[328px] 2xl:h-[253px] 2xl:w-[428px]">
+                <Image
+                  src={"/geohealth/geohealth_image1.png"}
+                  alt="Geohealth"
+                  fill
+                  className="object-cover"
+                  style={{ borderRadius: "11.079px 11.079px 0px 0px" }}
+                />
+              </div>
+              <div className="absolute right-[40px] top-[10px] h-[38.011px] w-[38.011px] flex-shrink-0 lg:right-[70px] lg:h-[56px] lg:w-[56px] 2xl:h-[66px] 2xl:w-[66px]">
+                <Image
+                  src={"/geohealth/star.png"}
+                  alt="Star"
+                  fill
+                  className="object-cover"
+                  style={{ borderRadius: "11.079px 11.079px 0px 0px" }}
+                />
+              </div>
               <div className="absolute -left-[20px] -top-[30px] h-[90px] w-[165px] flex-shrink-0">
                 <div className="relative h-[51.631px] w-[94.322px] flex-shrink-0 rounded-[4.465px] bg-[#F1F371] lg:h-[70px] lg:w-[135px] lg:rounded-[8px] xl:h-[70px] xl:w-[135px] 2xl:h-[90px] 2xl:w-[165px]">
-                  <Image
-                    src={"/geohealth/geohealth.png"}
-                    alt="Geohealth"
-                    width={88}
-                    height={24}
-                    className="absolute left-1/2 top-1/2 h-[13.954px] w-[50.228px] flex-shrink-0 -translate-x-1/2 -translate-y-1/2 xl:h-[24px] xl:w-[78px] 2xl:h-[24px] 2xl:w-[88px]"
-                  />
+                  <div className="absolute left-1/2 top-1/2 h-[13.954px] w-[50.228px] flex-shrink-0 -translate-x-1/2 -translate-y-1/2 xl:h-[24px] xl:w-[78px] 2xl:h-[24px] 2xl:w-[88px]">
+                    <Image
+                      src={"/geohealth/geohealth.png"}
+                      alt="Geohealth"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -117,8 +120,8 @@ export default function GeoHealth() {
 
       {/* Topic Customization Engine */}
       <div className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat">
-        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[106px] pt-[118px] lg:flex-row lg:items-start lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]">
-          <div className="flex w-[343px] flex-col items-start gap-[24px] pt-[72px] lg:w-[709px]">
+        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:flex-row lg:items-start lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]">
+          <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
                 1
@@ -166,7 +169,7 @@ export default function GeoHealth() {
       {/* Stacks section */}
       <div className="relative">
         {/* Background SVG */}
-        <div className="absolute inset-0 left-0 top-0 z-10">
+        <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
           <CallToActionBackground />
         </div>
 
@@ -189,13 +192,14 @@ export default function GeoHealth() {
                       key={techIndex}
                       className="flex h-[112px] w-[112px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white"
                     >
-                      <Image
-                        src={tech.src}
-                        alt={tech.alt}
-                        width={44}
-                        height={44}
-                        className="flex-shrink-0"
-                      />
+                      <div className="relative h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]">
+                        <Image
+                          src="/services/web_development/nodejs.png"
+                          alt=""
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                       <span className="text-size-7 font-normal text-black">
                         {tech.techName}
                       </span>

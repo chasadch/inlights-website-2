@@ -9,17 +9,17 @@ export const metadata = {
 export default function TeamPage() {
   const teamMembers = [
     {
-      image: "/team/team_1.jpg",
+      image: "/team/team_7.jpg",
       name: "Esther Howards",
       role: "Founder & CEO",
     },
     {
-      image: "/team/team_2.jpg",
+      image: "/team/team_4.jpg",
       name: "Cameron Williamson",
       role: "Marketing Head",
     },
     {
-      image: "/team/team_3.jpg",
+      image: "/team/team_4.jpg",
       name: "Liam Cooper",
       role: "Marketing Head",
     },
@@ -29,12 +29,12 @@ export default function TeamPage() {
       role: "Founder & CEO",
     },
     {
-      image: "/team/team_2.jpg",
+      image: "/team/team_5.jpg",
       name: "Cameron Williamson",
       role: "Marketing Head",
     },
     {
-      image: "/team/team_3.jpg",
+      image: "/team/team_6.jpg",
       name: "Liam Cooper",
       role: "Marketing Head",
     },

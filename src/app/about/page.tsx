@@ -61,13 +61,14 @@ export default function About() {
                   <h1 className="mt-24 self-stretch text-center text-size-3 font-bold">
                     2019
                   </h1>
-                  <Image
-                    src={"/about/point.png"}
-                    alt="Point"
-                    width={24}
-                    height={24}
-                    className="absolute left-[63px] top-1/2 -translate-y-1/2"
-                  />
+                  <div className="absolute left-[63px] top-1/2 h-[24px] w-[24px] -translate-y-1/2">
+                    <Image
+                      src={"/about/point.png"}
+                      alt="Point"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="flex flex-col items-center gap-[12px] self-stretch">
                     <Image
                       src={"/about/line1.png"}
@@ -99,13 +100,14 @@ export default function About() {
                   <h1 className="mb-24 self-stretch text-center text-size-3 font-bold">
                     2020
                   </h1>
-                  <Image
-                    src={"/about/point.png"}
-                    alt="Point"
-                    width={24}
-                    height={24}
-                    className="absolute left-[63px] top-1/2 -translate-y-1/2"
-                  />
+                  <div className="absolute left-[63px] top-1/2 h-[24px] w-[24px] -translate-y-1/2">
+                    <Image
+                      src={"/about/point.png"}
+                      alt="Point"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
 
                 {/* -- 2021 -- */}
@@ -113,13 +115,14 @@ export default function About() {
                   <h1 className="mt-24 self-stretch text-center text-size-3 font-bold">
                     2021
                   </h1>
-                  <Image
-                    src={"/about/point.png"}
-                    alt="Point"
-                    width={24}
-                    height={24}
-                    className="absolute left-[63px] top-1/2 -translate-y-1/2"
-                  />
+                  <div className="absolute left-[63px] top-1/2 h-[24px] w-[24px] -translate-y-1/2">
+                    <Image
+                      src={"/about/point.png"}
+                      alt="Point"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="flex flex-col items-center gap-[12px] self-stretch">
                     <Image
                       src={"/about/line1.png"}
@@ -151,13 +154,14 @@ export default function About() {
                   <h1 className="mb-24 self-stretch text-center text-size-3 font-bold">
                     2022
                   </h1>
-                  <Image
-                    src={"/about/point.png"}
-                    alt="Point"
-                    width={24}
-                    height={24}
-                    className="absolute left-[63px] top-1/2 -translate-y-1/2"
-                  />
+                  <div className="absolute left-[63px] top-1/2 h-[24px] w-[24px] -translate-y-1/2">
+                    <Image
+                      src={"/about/point.png"}
+                      alt="Point"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
 
                 {/* -- 2023 -- */}
@@ -165,13 +169,14 @@ export default function About() {
                   <h1 className="mt-24 self-stretch text-center text-size-3 font-bold">
                     2023
                   </h1>
-                  <Image
-                    src={"/about/point.png"}
-                    alt="Point"
-                    width={24}
-                    height={24}
-                    className="absolute left-[63px] top-1/2 -translate-y-1/2"
-                  />
+                  <div className="absolute left-[63px] top-1/2 h-[24px] w-[24px] -translate-y-1/2">
+                    <Image
+                      src={"/about/point.png"}
+                      alt="Point"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="flex flex-col items-center gap-[12px] self-stretch">
                     <Image
                       src={"/about/line1.png"}

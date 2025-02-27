@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Button from "../../components/Button";
@@ -180,14 +180,21 @@ export default function Header() {
 }
 
 // Mobile Menu component
+// Mobile Menu component
 interface MobileMenuProps {
   onClose: () => void;
   router: ReturnType<typeof useRouter>;
 }
 
 function MobileMenu({ onClose, router }: MobileMenuProps) {
+  const [openAnim, setOpenAnim] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isClosing, setIsClosing] = useState(false);
+
+  // When the component mounts, trigger the opening animation
+  useEffect(() => {
+    setOpenAnim(true);
+  }, []);
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdown(openDropdown === title ? null : title);
@@ -198,13 +205,13 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
     setTimeout(() => {
       onClose();
       setIsClosing(false);
-    }, 300); // Transition duration
+    }, 300);
   };
 
   return (
     <div
-      className={`fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto px-[16px] py-[24px] transition-transform duration-300 ${
-        isClosing ? "translate-x-full" : "translate-x-0"
+      className={`fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto bg-black px-[16px] py-[24px] transition-transform duration-300 ${
+        !openAnim || isClosing ? "translate-x-full" : "translate-x-0"
       }`}
       style={{
         backgroundImage: "url(/statistics/bg.png)",

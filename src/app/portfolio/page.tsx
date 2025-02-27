@@ -150,27 +150,30 @@ export default function PortfolioPage() {
                 </div>
                 <div className="flex items-center justify-between self-stretch">
                   <div className="flex items-center justify-end gap-[20px]">
-                    <Image
-                      src="/portfolio/nodejs.png"
-                      alt="Nodejs"
-                      width={32}
-                      height={32}
-                      className="xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]"
-                    />
-                    <Image
-                      src="/portfolio/mongodb.png"
-                      alt="MongoDB"
-                      width={32}
-                      height={32}
-                      className="xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]"
-                    />
-                    <Image
-                      src="/portfolio/react.png"
-                      alt="React"
-                      width={32}
-                      height={32}
-                      className="xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]"
-                    />
+                    <div className="relative xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]">
+                      <Image
+                        src="/portfolio/nodejs.png"
+                        alt="Nodejs"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]">
+                      <Image
+                        src="/portfolio/mongodb.png"
+                        alt="Nodejs"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative xl:h-[27px] xl:w-[27px] 2xl:h-[32px] 2xl:w-[32px]">
+                      <Image
+                        src="/portfolio/react.png"
+                        alt="Nodejs"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <span className="w-[29px] text-base font-normal opacity-90 sm:text-size-6">
                     {project.type}

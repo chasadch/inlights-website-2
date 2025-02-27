@@ -29,12 +29,14 @@ export default function TrafficManagement() {
               <h1 className="text-[28px] font-medium leading-[36.378px]">
                 Manage City Traffic with
               </h1>
-              <Image
-                src="/premisesSecurity/artificial_intelligence.png"
-                width={258.951}
-                height={26.862}
-                alt="Traffic Management"
-              />
+              <div className="relative h-[26.862px] w-[881.667px] lg:h-[34px] xl:h-[44px] 2xl:h-[83.16px]">
+                <Image
+                  src={"/hero/artificial_intelligence.png"}
+                  alt="Hero Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
 
@@ -64,12 +66,14 @@ export default function TrafficManagement() {
             <h1 className="text-size-1 font-medium">
               Manage City Traffic with
             </h1>
-            <Image
-              src="/premisesSecurity/artificial_intelligence.png"
-              width={801.667}
-              height={83.16}
-              alt="Premise Security"
-            />
+            <div className="relative h-[26.862px] w-[881.667px] lg:h-[34px] xl:h-[44px] 2xl:h-[83.16px]">
+              <Image
+                src={"/hero/artificial_intelligence.png"}
+                alt="Hero Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
           <Button href="/contact" variant="gradient">
             Let&apos;s Talk

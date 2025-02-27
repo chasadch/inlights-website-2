@@ -9,7 +9,7 @@ export const metadata = {
 export default function WebDevelopmentPage() {
   return (
     <div className="relative self-stretch bg-[#050919]">
-      <div className="h-[687px] bg-[linear-gradient(0deg,rgba(9,17,33,0.12)_0%,rgba(9,17,33,0.12)_100%),url('/services/this_is_engineering_sm.png')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/about/about_hero.png')] lg:h-[685px]">
+      <div className="h-[687px] bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/services/web_development/about_hero_sm.png')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/services/web_development/about_hero_lg.png')] lg:h-[685px]">
         {/* <div className="h-[687px] bg-[linear-gradient(0deg,rgba(9,17,33,0.12)_0%,rgba(9,17,33,0.12)_100%),url('/services/this_is_engineering_sm.png')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(0deg,rgba(9,17,33,0.32)_0%,rgba(9,17,33,0.32)_100%),url('/about/about_hero.png')] lg:min-h-screen"> */}
         {/* Hero Section */}
         <div className="mx-auto flex h-[685px] w-full max-w-[1440px] flex-col gap-[16px] self-stretch pt-[100px] lg:h-[839.499px] lg:flex-row lg:justify-between lg:pr-[71.17px] lg:pt-[198px]">
@@ -73,51 +73,55 @@ export default function WebDevelopmentPage() {
           </h1>
           <div className="grid grid-cols-2 items-start gap-[16px] lg:grid-cols-4 lg:gap-[44px] 2xl:gap-[64px]">
             <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/nodejs.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
+              <div className="relative h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]">
+                <Image
+                  src="/services/web_development/nodejs.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <span className="text-size-7 font-normal text-black lg:text-size-3">
                 NodeJS
               </span>
             </div>
 
             <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/express.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
+              <div className="relative h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]">
+                <Image
+                  src="/services/web_development/express.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <span className="text-size-7 font-normal text-black lg:text-size-3">
                 Express
               </span>
             </div>
             <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/react.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
+              <div className="relative h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]">
+                <Image
+                  src="/services/web_development/react.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <span className="text-size-7 font-normal text-black lg:text-size-3">
                 React
               </span>
             </div>
 
             <div className="flex h-[112px] w-[116.5px] flex-col items-center justify-center gap-[2px] rounded-[20px] bg-white lg:h-[146px] lg:gap-[16px] xl:h-[146px] xl:w-[215px] 2xl:h-[156px] 2xl:w-[225px]">
-              <Image
-                src="/services/mongodb.png"
-                alt=""
-                width={56}
-                height={56}
-                className="h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]"
-              />
+              <div className="relative h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]">
+                <Image
+                  src="/services/web_development/mongodb.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <span className="text-size-7 font-normal text-black lg:text-size-3">
                 MongoDB
               </span>
