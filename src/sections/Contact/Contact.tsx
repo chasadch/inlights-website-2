@@ -38,6 +38,11 @@ export default function Contact({
     const phone = forlgata.get("phone") as string;
     const message = forlgata.get("message") as string;
 
+    if (!firstName || !lastName || !email || !phone || !message) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
     try {
       const { error } = await supabase
         .from("contacts")
