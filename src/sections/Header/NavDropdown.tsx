@@ -56,7 +56,7 @@ export default function NavDropdown({ title, sections }: NavDropdownProps) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute left-0 top-full z-10 flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[24px] shadow-shadowCustom transition-all duration-200 ease-in-out">
+        <div className="absolute left-0 top-full z-[999] flex flex-col items-start gap-[16px] rounded-[32px] border-[1px] border-borderCustom bg-bg p-[24px] shadow-shadowCustom transition-all duration-200 ease-in-out">
           {sections.map((section, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col items-start gap-[18px]">
