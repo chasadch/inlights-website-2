@@ -19,7 +19,7 @@ export default function TeamPage() {
       role: "Founder & CEO",
     },
     {
-      image: "/team/team_8.jpg",
+      image: "/team/team_7.jpg",
       name: "Ali Hussain",
       role: "Team Lead",
     },
