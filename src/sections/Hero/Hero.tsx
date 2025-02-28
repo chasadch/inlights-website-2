@@ -3,20 +3,20 @@ import Button from "../../components/Button";
 
 export default function Hero() {
   return (
-    // <section
-    //   className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
-    //   style={{
-    //     background:
-    //       "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
-    //   }}
-    // >
     <section
-      className="relative h-[585px] self-stretch overflow-hidden lg:h-[810px]"
+      className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
       }}
     >
+      {/* <section
+      className="relative h-[585px] self-stretch overflow-hidden lg:h-[810px]"
+      style={{
+        background:
+          "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
+      }}
+    > */}
       {/* Background Video */}
       <video
         className="absolute inset-0 h-full w-full object-fill"
@@ -92,7 +92,7 @@ export default function Hero() {
                   src={"/hero/nstp.jpg"}
                   alt="Nstp image"
                   fill
-                  className="object-cover"
+                  className="-mt-3 object-cover"
                 />
               </div>
             </div>
