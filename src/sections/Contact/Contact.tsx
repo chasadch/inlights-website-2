@@ -31,12 +31,12 @@ export default function Contact({
 
     if (!formRef.current) return;
 
-    const forlgata = new FormData(formRef.current);
-    const firstName = forlgata.get("firstname") as string;
-    const lastName = forlgata.get("lastname") as string;
-    const email = forlgata.get("email") as string;
-    const phone = forlgata.get("phone") as string;
-    const message = forlgata.get("message") as string;
+    const formData = new FormData(formRef.current);
+    const firstName = formData.get("firstname") as string;
+    const lastName = formData.get("lastname") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const message = formData.get("message") as string;
 
     if (!firstName || !lastName || !email || !phone || !message) {
       toast.error("Please fill in all required fields.");

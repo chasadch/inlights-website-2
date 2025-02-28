@@ -9,19 +9,19 @@ export const metadata = {
 export default function TeamPage() {
   const teamMembers = [
     {
-      image: "/team/team_7.jpg",
+      image: "/team/team_4.jpg",
       name: "Esther Howards",
       role: "Founder & CEO",
     },
     {
-      image: "/team/team_4.jpg",
+      image: "/team/team_7.jpg",
       name: "Cameron Williamson",
-      role: "Marketing Head",
+      role: "Founder & CEO",
     },
     {
-      image: "/team/team_4.jpg",
-      name: "Liam Cooper",
-      role: "Marketing Head",
+      image: "/team/team_8.jpg",
+      name: "Ali Hussain",
+      role: "Team Lead",
     },
     {
       image: "/team/team_1.jpg",
@@ -31,40 +31,25 @@ export default function TeamPage() {
     {
       image: "/team/team_5.jpg",
       name: "Cameron Williamson",
-      role: "Marketing Head",
+      role: "Founder & CEO",
     },
     {
       image: "/team/team_6.jpg",
-      name: "Liam Cooper",
-      role: "Marketing Head",
+      name: "Ali Hussain",
+      role: "Team Lead",
     },
     {
-      image: "/team/team_1.jpg",
+      image: "/team/team_2.jpg",
       name: "Esther Howards",
       role: "Founder & CEO",
     },
     {
-      image: "/team/team_2.jpg",
+      image: "/team/team_3.jpg",
       name: "Cameron Williamson",
       role: "Marketing Head",
     },
     {
-      image: "/team/team_3.jpg",
-      name: "Liam Cooper",
-      role: "Marketing Head",
-    },
-    {
-      image: "/team/team_1.jpg",
-      name: "Liam Cooper",
-      role: "Marketing Head",
-    },
-    {
-      image: "/team/team_2.jpg",
-      name: "Liam Cooper",
-      role: "Marketing Head",
-    },
-    {
-      image: "/team/team_3.jpg",
+      image: "/team/team_9.jpg",
       name: "Liam Cooper",
       role: "Marketing Head",
     },
