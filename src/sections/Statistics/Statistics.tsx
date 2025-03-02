@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function Statistics() {
   return (
-    // <section
-    //   className="overflow-x-hidden bg-cover bg-center bg-no-repeat lg:min-h-screen"
-    //   style={{ backgroundImage: "url(/statistics/bg.png)" }}
-    // >
     <section
-      className="overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      className="overflow-x-hidden bg-cover bg-center bg-no-repeat lg:min-h-screen"
       style={{ backgroundImage: "url(/statistics/bg.png)" }}
     >
+      {/* <section
+      className="overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/statistics/bg.png)" }}
+    > */}
       {/* Centering Container */}
-      {/* <div className="flex flex-col items-center justify-center lg:min-h-screen"> */}
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center lg:min-h-screen">
+        {/* <div className="flex flex-col items-center justify-center"> */}
         {/* Heading */}
         {/* <h1 className="text-size-3 font-medium text-white lg:text-size-2 lg:font-normal">
           Our Statistics

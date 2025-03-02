@@ -3,12 +3,6 @@ import CallToActionBackground from "@/sections/CallToAction/CallToActionBackgrou
 import Contact from "@/sections/Contact/Contact";
 import Testimonials from "@/sections/Testimonials/Testimonials";
 import Image from "next/image";
-import React from "react";
-
-export const metadata = {
-  title: "Inlights | Geohealth",
-  description: "Redefining Smart Cities using AI",
-};
 
 export default function GeoHealth() {
   // Define your stacks data
@@ -46,7 +40,7 @@ export default function GeoHealth() {
   return (
     <div className="relative self-stretch">
       {/* Hero Section */}
-      <div className="relative h-[810px] w-full overflow-hidden">
+      <div className="relative h-[810px] w-full overflow-hidden lg:h-screen">
         {/* Responsive background images */}
         <div className="absolute inset-0 bg-[url('/geohealth/geohealth_hero_sm.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('/geohealth/geohealth_hero_lg.png')]" />
         {/* Gradient overlay */}
@@ -120,7 +114,8 @@ export default function GeoHealth() {
 
       {/* Topic Customization Engine */}
       <div className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat">
-        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:flex-row lg:items-start lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]">
+        {/* <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]"> */}
+        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pb-0 lg:pl-[70px] lg:pr-[70px] lg:pt-0">
           <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
@@ -167,13 +162,13 @@ export default function GeoHealth() {
       </div>
 
       {/* Stacks section */}
-      <div className="relative">
+      <div className="relative lg:h-screen">
         {/* Background SVG */}
         <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
           <CallToActionBackground />
         </div>
 
-        <div className="relative z-40 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[26px] pb-[117px] pt-[100px] lg:gap-[40px] lg:px-[70px]">
+        <div className="relative z-40 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center gap-[26px] pb-[117px] pt-[100px] lg:top-1/2 lg:-translate-y-1/2 lg:gap-[40px] lg:px-[70px] lg:pb-0 lg:pt-0">
           <h1 className="w-full text-center text-[24px] font-medium leading-[32px] lg:text-size-2 lg:font-normal">
             Stacks Used
           </h1>

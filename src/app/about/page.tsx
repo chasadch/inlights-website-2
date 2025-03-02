@@ -10,14 +10,22 @@ export default function About() {
   return (
     <section className="relative self-stretch bg-[#050919]">
       {/* Hero Section */}
-      <div
+      {/* <div
         className="relative flex h-[586px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center lg:h-[685px]"
         style={{
           background:
             "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
         }}
+      > */}
+      <div
+        className="relative flex h-[586px] w-full flex-col items-center justify-center gap-[16px] self-stretch bg-cover bg-center lg:h-screen"
+        style={{
+          background:
+            "linear-gradient(0deg, rgba(9, 17, 33, 0.32) 0%, rgba(9, 17, 33, 0.32) 100%), url(/about/about_hero.png) lightgray -0.05px 0px / 100.006% 102.599% no-repeat",
+        }}
       >
-        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:w-[903px] lg:pb-[193.29px] lg:pt-[228px]">
+        {/* <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:w-[903px] lg:pb-[193.29px] lg:pt-[228px]"> */}
+        <div className="absolute top-0 flex w-[319px] flex-col items-center gap-[17.612px] pb-[140.39px] pt-[100px] lg:top-1/2 lg:w-[903px] lg:-translate-y-1/2 lg:pb-0 lg:pt-0">
           <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             About the Company
           </h1>
@@ -39,12 +47,16 @@ export default function About() {
 
       {/* Brief History Section */}
       <div className="hidden flex-col items-start gap-[10px] self-stretch lg:flex">
-        <div
+        {/* <div
           className="relative h-[681px] w-full bg-cover bg-no-repeat py-[70px]"
+          style={{ backgroundImage: "url(/statistics/bg.png)" }}
+        > */}
+        <div
+          className="relative h-[681px] w-full bg-cover bg-no-repeat py-[70px] lg:h-screen"
           style={{ backgroundImage: "url(/statistics/bg.png)" }}
         >
           {/* Content container above the background */}
-          <div className="relative z-10 flex h-full flex-col items-center gap-[48px]">
+          <div className="relative z-10 flex h-full flex-col items-center gap-[48px] lg:justify-center">
             <h1 className="mt-[24px] text-center text-[40px] font-medium">
               A Brief History
             </h1>

@@ -98,8 +98,8 @@ export default function Testimonials({
   };
 
   return (
-    // <section className="relative lg:min-h-screen lg:px-[70px] lg:py-[160px]">
-    <section className="relative lg:px-[70px] lg:py-[160px]">
+    <section className="relative lg:min-h-screen lg:px-[70px] lg:py-[160px]">
+      {/* <section className="relative lg:px-[70px] lg:py-[160px]"> */}
       {/* Background SVG (placed behind content) */}
       <div className="absolute inset-0 left-0 top-0 z-10 hidden lg:block">
         {!newBackground ? (

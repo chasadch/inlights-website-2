@@ -94,7 +94,8 @@ export default function PremiseSecurity() {
         className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat"
         // style={{ backgroundColor: "lightgray" }}
       >
-        <div className="mx-auto flex max-w-[1440px] flex-shrink-0 flex-col items-center justify-between py-[120px] lg:h-[821px] lg:flex-row lg:px-[70px] lg:pb-[166px] lg:pt-[127px]">
+        {/* <div className="mx-auto flex max-w-[1440px] flex-shrink-0 flex-col items-center justify-between py-[120px] lg:h-[821px] lg:flex-row lg:px-[70px] lg:pb-[166px] lg:pt-[127px]"> */}
+        <div className="mx-auto flex max-w-[1440px] flex-shrink-0 flex-col items-center justify-between py-[120px] lg:h-screen lg:flex-row lg:px-[70px] lg:pb-0 lg:pt-0">
           <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[499px] 2xl:w-[599px]">
             <div className="flex flex-col items-start gap-[12px] self-stretch">
               <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
