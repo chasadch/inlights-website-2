@@ -7,13 +7,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 
-interface TestimonialProps {
-  newBackground?: boolean;
-}
-
-export default function TestimonialsPage({
-  newBackground = false,
-}: TestimonialProps) {
+export default function TestimonialsPage() {
+  const newBackground = false;
   const router = useRouter();
 
   const testimonials = [
