@@ -1,3 +1,4 @@
+import Underline from "@/components/Underline";
 import Image from "next/image";
 
 interface ProductCardProps {
@@ -18,14 +19,16 @@ export default function ProductCard({
   imagePosition = "first",
 }: ProductCardProps) {
   return (
-    <div
-      onClick={() => onClick(title)}
-      className="group relative flex h-[426px] w-full cursor-pointer flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 xl:h-[591px] xl:p-[34px]"
-    >
-      <div className="flex cursor-pointer flex-col items-start justify-center gap-[20px] self-stretch xl:gap-[24px]">
+    <div className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 xl:h-[591px] xl:p-[34px]">
+      <div className="flex flex-col items-start justify-center gap-[20px] self-stretch xl:gap-[24px]">
         <div className="flex flex-col items-start gap-[20px] self-stretch lg:gap-[34px]">
           <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
-            <h1 className="text-size-7 font-normal text-[#414C5C]">{title}</h1>
+            <h1
+              onClick={() => onClick(title)}
+              className="text-size-7 font-normal text-[#414C5C]"
+            >
+              {title}
+            </h1>
           </div>
           {/* Subheading */}
           <p className="w-full text-[20px] font-medium xl:text-[34px] xl:leading-none">
@@ -34,10 +37,13 @@ export default function ProductCard({
           <p className="self-stretch text-size-7 font-normal leading-[20px] opacity-70 xl:text-size-5">
             {description}
           </p>
-          <div className={"flex items-start gap-[9px] self-stretch"}>
-            <span className="relative text-size-7 font-normal">
+          <div
+            onClick={() => onClick(title)}
+            className="flex w-fit cursor-pointer items-start gap-[9px] self-stretch"
+          >
+            <span className="group relative text-size-7 font-normal">
               Discover Insights
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+              <Underline />
             </span>
             <div className="flex h-[15px] w-[15px] items-center justify-center">
               <div className="relative h-[15px] w-[15px]">

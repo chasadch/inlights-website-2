@@ -1,17 +1,17 @@
 "use client";
 
+import TestimonialsBackground from "@/sections/Testimonials/TestimonialsBackground";
+import TestimonialsBackgroundNew from "@/sections/Testimonials/TestimonialsBackgroundNew";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-import TestimonialsBackground from "./TestimonialsBackground";
-import TestimonialsBackgroundNew from "./TestimonialsBackgroundNew";
 
 interface TestimonialProps {
   newBackground?: boolean;
 }
 
-export default function Testimonials({
+export default function TestimonialsPage({
   newBackground = false,
 }: TestimonialProps) {
   const router = useRouter();

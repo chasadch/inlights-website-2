@@ -1,3 +1,4 @@
+import Underline from "@/components/Underline";
 import Image from "next/image";
 
 interface ServiceCardProps {
@@ -16,10 +17,7 @@ export default function ServiceCard({
   onClick,
 }: ServiceCardProps) {
   return (
-    <div
-      onClick={onClick}
-      className="border-[rgba(45, 160, 184, 0.15)] group flex flex-grow cursor-pointer flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 hover:scale-105 lg:p-[24px]"
-    >
+    <div className="border-[rgba(45, 160, 184, 0.15)] flex flex-grow flex-col items-start gap-[16px] rounded-[32px] border border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 lg:p-[24px]">
       <div className="relative h-[72px] w-[72px]">
         {/* Service Icon */}
         <Image src={image} alt={title} fill className="object-cover" />
@@ -40,10 +38,13 @@ export default function ServiceCard({
         </p>
 
         {/* Link */}
-        <div className="flex items-start gap-[9px] self-stretch py-[8px]">
+        <div
+          onClick={onClick}
+          className="group flex w-fit cursor-pointer items-start gap-[9px] self-stretch py-[8px]"
+        >
           <span className="relative text-size-7 font-normal leading-[20px]">
             {linkText}
-            <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+            <Underline />
           </span>
           <div className="relative flex h-[15px] w-[15px] items-center justify-center">
             <Image

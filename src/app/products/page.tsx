@@ -1,10 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import ProductCard from "./ProductCard";
-// import { scrollToSection } from "@/lib/helpers";
 
-export default function Products() {
+import ProductCard from "@/sections/Products/ProductCard";
+
+export default function ProductsPage() {
   const router = useRouter();
   const handleCardClick = (cardName: string) => {
     if (cardName === "Traffic Management")
@@ -26,10 +26,7 @@ export default function Products() {
       {/* <section className="mx-auto flex max-w-[1440px] flex-col items-start self-stretch px-[16px] py-[90px] lg:gap-[10px] lg:px-[70px] lg:py-[130px]"> */}
       <div className="flex flex-col items-center gap-[20px] self-stretch lg:gap-[64px]">
         <div className="flex flex-col items-start gap-[4px] lg:gap-[8px]">
-          <h1
-            onClick={() => router.push("products")}
-            className="cursor-pointer text-center text-size-3 font-semibold lg:text-size-2 lg:font-medium"
-          >
+          <h1 className="cursor-pointer text-center text-size-3 font-semibold lg:text-size-2 lg:font-medium">
             Our Products
           </h1>
         </div>

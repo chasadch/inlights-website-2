@@ -1,11 +1,11 @@
 "use client";
 
+import StoriesCard from "@/sections/SuccessStories/StoriesCard";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import StoriesCard from "./StoriesCard";
 
-export default function SuccessStories() {
+export default function SuccessStoriesPage() {
   const router = useRouter();
 
   const stories = [

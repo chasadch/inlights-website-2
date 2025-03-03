@@ -1,13 +1,11 @@
-// import Footer from "@/sections/Footer/Footer";
-// import Header from "@/sections/Header/Header";
 import { Lato, Manrope, Roboto_Serif } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
-import { Toaster } from "react-hot-toast";
-import Header from "@/sections/Header/Header";
-import Footer from "@/sections/Footer/Footer";
 import BackToTop from "@/sections/BackToTop/BackToTop";
+import Footer from "@/sections/Footer/Footer";
+import Header from "@/sections/Header/Header";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Inlights",

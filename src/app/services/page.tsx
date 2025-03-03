@@ -1,11 +1,11 @@
 "use client";
 
+import ServiceBackground from "@/sections/Services/ServiceBackground";
+import ServiceCard from "@/sections/Services/ServiceCard";
 import { useRouter } from "next/navigation";
-import ServiceBackground from "./ServiceBackground";
-import ServiceCard from "./ServiceCard";
 // import { scrollToSection } from "@/lib/helpers";
 
-export default function Services() {
+export default function ServicesPage() {
   const router = useRouter();
 
   const services = [
@@ -41,7 +41,10 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative min-h-screen w-full text-white">
+    <section
+      id="services"
+      className="relative z-20 min-h-screen w-full text-white"
+    >
       {/* <section className="relative w-full text-white"> */}
       {/* Background SVG wrapped in an absolutely positioned container */}
       <div className="absolute inset-0 left-0 top-0 z-10 h-full w-full">
@@ -51,10 +54,7 @@ export default function Services() {
       {/* Services Header */}
       <div className="relative z-50 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[24px] px-[16px] py-[30px] sm:px-[40px] md:py-[140px] lg:gap-[64px] lg:px-[70px]">
         <h1
-          onClick={() => {
-            // scrollToSection("services");
-            router.push("services");
-          }}
+          onClick={() => router.push("services")}
           className="cursor-pointer text-center text-[24px] font-medium lg:text-size-2"
         >
           Our Services
