@@ -18,32 +18,87 @@ export default function AiEnginnerPage() {
     if (!formRef.current) return;
 
     const formData = new FormData(formRef.current);
-    const firstName = formData.get("firstname") as string;
-    const lastName = formData.get("lastname") as string;
+    const firstname = formData.get("firstname") as string;
+    const lastname = formData.get("lastname") as string;
     const email = formData.get("email") as string;
     const phone = formData.get("phone") as string;
-    const message = formData.get("message") as string;
+    const address = formData.get("address") as string;
+    const linkedinProfile = formData.get("linkedinProfile") as string;
+    // For file input; additional logic is required to upload the file.
+    const resume = formData.get("resume") as File;
 
-    if (!firstName || !lastName || !email || !phone || !message) {
+    if (
+      !firstname ||
+      !lastname ||
+      !email ||
+      !phone ||
+      !address ||
+      !address ||
+      !linkedinProfile ||
+      !resume
+    ) {
       toast.error("Please fill in all required fields.");
       return;
     }
 
     try {
-      const { error } = await supabase
-        .from("contacts")
-        .insert([{ firstName, lastName, email, phone, message }]);
+      // Upload the resume to Supabase Storage
+      const fileExt = resume.name.split(".").pop();
+      const fileName = `${Math.random()}.${fileExt}`;
+      const filePath = `${fileName}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from("resumes")
+        .upload(filePath, resume);
+
+      // console.log(data);
+
+      if (uploadError) {
+        throw new Error("Error uploading resume: " + uploadError.message);
+      }
+
+      // Get the public URL of the uploaded file
+      const {
+        data: { publicUrl },
+      } = supabase.storage.from("resumes").getPublicUrl(filePath);
+
+      console.log(publicUrl);
+
+      const { error } = await supabase.from("jobs").insert([
+        {
+          firstname,
+          lastname,
+          email,
+          phone,
+          address,
+          linkedinProfile,
+          resumeUrl: publicUrl,
+        },
+      ]);
+
+      // console.log(data2);
 
       if (error) {
-        throw new Error("Error inserting contact: " + error.message);
+        throw new Error("Error inserting job application: " + error.message);
       }
 
       toast.success(
-        "Thank you for reaching out! Your message has been sent successfully, and we'll be in touch soon.",
+        "Thank you for applying! Your details have been submitted successfully.",
+        {
+          duration: 4000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+          iconTheme: {
+            primary: "#4CAF50",
+            secondary: "#fff",
+          },
+        },
       );
     } catch (error) {
       if (error instanceof Error) {
-        toast.error("Error sending message: " + error.message);
+        toast.error("Error submitting application: " + error.message);
       }
     }
   };
