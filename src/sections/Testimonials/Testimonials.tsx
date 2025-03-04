@@ -18,35 +18,35 @@ export default function Testimonials({
 
   const testimonials = [
     {
-      text: "InLights Solutions has transformed our campus management. With real-time tracking and automated scheduling, our facilities are always in top condition, allowing us to focus on educating our students.",
-      name: "Cameron Williamson",
-      role: "CEO",
-      image: "/testimonials/ellipse.png",
+      text: "“This system should be deployed across the country”",
+      name: "Shehbaz Sharif",
+      role: "Prime Minister of Pakistan",
+      image: "/testimonials/shahbaz-sharif.png",
     },
     {
-      text: "Our productivity increased significantly after implementing InLights Solutions. The automation features are a game-changer for our workflow efficiency.",
-      name: "Leslie Alexander",
-      role: "CTO",
-      image: "/testimonials/ellipse.png",
+      text: "Being a practical implementation of the “Triple Helix Model of Innovation”, this is a first of its kind project executed in Pakistan. This project not only gained international recognition but also won Prime Minister’s National Innovation Award 2023.",
+      name: "Fawad Kashan",
+      role: "Manager Corporate Relations - RIC",
+      image: "/testimonials/fawad-kashan.png",
     },
     {
-      text: "The best investment we made this year! InLights Solutions optimized our operations beyond expectations. Highly recommended!",
-      name: "Michael Johnson",
-      role: "Founder",
-      image: "/testimonials/ellipse.png",
+      text: "We are proud of you. Keep it up.",
+      name: "Javed Mahmood Bukhari",
+      role: "Rector, NUST",
+      image: "/testimonials/jawed-mahmood-bukhari.png",
     },
     {
-      text: "Our productivity increased significantly after implementing InLights Solutions. The automation features are a game-changer for our workflow efficiency.",
-      name: "Leslie Alexander",
-      role: "CTO",
-      image: "/testimonials/ellipse.png",
+      text: "Hats off to Team InLights for developing this system.",
+      name: "Captain (R) Muhammad Usman Younis",
+      role: "Chairman CDA",
+      image: "/testimonials/captain-usman.png",
     },
-    {
-      text: "The best investment we made this year! InLights Solutions optimized our operations beyond expectations. Highly recommended!",
-      name: "Michael Johnson",
-      role: "Founder",
-      image: "/testimonials/ellipse.png",
-    },
+    // {
+    //   text: "The best investment we made this year! InLights Solutions optimized our operations beyond expectations. Highly recommended!",
+    //   name: "Michael Johnson",
+    //   role: "Founder",
+    //   image: "/testimonials/ellipse.png",
+    // },
   ];
 
   // State for animation control
@@ -271,8 +271,8 @@ export default function Testimonials({
                     <div className="flex flex-col items-center justify-center gap-[16px]">
                       <div className="relative h-[42px] w-[42px] rounded-[32px]">
                         <Image
-                          src={testimonials[0].image}
-                          alt={testimonials[0].name}
+                          src={testimonial.image}
+                          alt={testimonial.name}
                           fill
                           className="object-cover"
                         />

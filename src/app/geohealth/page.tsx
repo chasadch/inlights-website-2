@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components/Button";
 import CallToActionBackground from "@/sections/CallToAction/CallToActionBackground";
 import Contact from "@/sections/Contact/Contact";
@@ -5,34 +7,54 @@ import Testimonials from "@/sections/Testimonials/Testimonials";
 import Image from "next/image";
 
 export default function GeoHealth() {
+  const topicCustomization = [
+    {
+      title: "Accurate Data",
+      description: "90%+ Accuracy in Pose Detection",
+      image: "/geohealth/accurate-data.svg",
+    },
+    {
+      title: "Versatile Workout Modes",
+      description: "4+ Exercise Variations Covered",
+      image: "/geohealth/versatile-workout-modes.svg",
+    },
+    {
+      title: "Instant Performance Insights",
+      description: "Real-Time Feedback in Under 1 Second",
+      image: "/geohealth/instant-performance-insights.svg",
+    },
+  ];
+
   // Define your stacks data
   const stacks = [
     {
       title: "Frontend Architecture",
       items: [
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
-      ],
-    },
-    {
-      title: "Data Flow",
-      items: [
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
-      ],
-    },
-    {
-      title: "UI Components",
-      items: [
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+        { src: "/geohealth/nextjs.svg", alt: "Nextjs", techName: "Next js" },
+        { src: "/geohealth/html5.svg", alt: "HTML5", techName: "HTML5" },
+        { src: "/geohealth/html5.svg", alt: "HTML5", techName: "HTML5" },
+        { src: "/geohealth/html5.svg", alt: "HTML5", techName: "HTML5" },
       ],
     },
     {
       title: "Development Workflow",
       items: [
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
-        { src: "/services/nodejs.png", alt: "NodeJS", techName: "NodeJS" },
+        { src: "/geohealth/vercel.svg", alt: "Vercel", techName: "Vercel" },
+        {
+          src: "/geohealth/ci-cd-pipeline.svg",
+          alt: "CI/CD Pipeline",
+          techName: "CI/CD Pipeline",
+        },
+        {
+          src: "/geohealth/serverless-arch.svg",
+          alt: "Serverless Arch",
+          techName: "Serverless Arch",
+        },
+        {
+          src: "/geohealth/ssl-tls-encrypt.svg",
+          alt: "SSL/TLS Encrypt",
+          techName: "SSL/TLS Encrypt",
+        },
       ],
     },
   ];
@@ -97,12 +119,12 @@ export default function GeoHealth() {
               </div>
               <div className="absolute -left-[20px] -top-[30px] h-[90px] w-[165px] flex-shrink-0">
                 <div className="relative h-[51.631px] w-[94.322px] flex-shrink-0 rounded-[4.465px] bg-[#F1F371] lg:h-[70px] lg:w-[135px] lg:rounded-[8px] xl:h-[70px] xl:w-[135px] 2xl:h-[90px] 2xl:w-[165px]">
-                  <div className="absolute left-1/2 top-1/2 h-[13.954px] w-[50.228px] flex-shrink-0 -translate-x-1/2 -translate-y-1/2 xl:h-[24px] xl:w-[78px] 2xl:h-[24px] 2xl:w-[88px]">
+                  <div className="absolute left-1/2 top-1/2 h-[13.954px] w-[50.228px] flex-shrink-0 -translate-x-1/2 -translate-y-1/2 lg:h-[24px] lg:w-[78px] xl:h-[24px] xl:w-[78px] 2xl:h-[24px] 2xl:w-[88px]">
                     <Image
                       src={"/geohealth/geohealth.png"}
                       alt="Geohealth"
                       fill
-                      className="object-cover"
+                      className="bg-cover"
                     />
                   </div>
                 </div>
@@ -113,52 +135,66 @@ export default function GeoHealth() {
       </div>
 
       {/* Topic Customization Engine */}
-      <div className="bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat">
-        {/* <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pb-[84px] lg:pl-[70px] lg:pr-[70px] lg:pt-[109px]"> */}
-        <div className="mx-auto flex h-[681px] max-w-[1440px] flex-shrink-0 flex-col items-center justify-between pb-[95px] pt-[95px] lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pb-0 lg:pl-[70px] lg:pr-[70px] lg:pt-0">
-          <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
-            <div className="flex flex-col items-start gap-[12px] self-stretch">
-              <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
-                1
-              </h1>
-              <h1 className="block self-stretch text-[24px] font-medium leading-[32px] lg:hidden lg:text-[52px] lg:leading-[66px]">
-                Topic Customization Engine
-              </h1>
-              <h1 className="hidden self-stretch text-[24px] font-medium leading-[32px] lg:block lg:text-[52px] lg:leading-[66px]">
-                Significance
-              </h1>
-            </div>
-            <p className="flex self-stretch text-size-6 font-medium leading-[24px] opacity-80 lg:hidden">
-              Developed a robust system allowing users to define and customize
-              their content topics post-registration
-            </p>
-            <ul className="hidden space-y-3 self-stretch text-size-4 opacity-80 lg:block">
-              <li>90%+ Accuracy in Pose Detection</li>
-              <li>Exercise Variations Covered 2X Faster</li>
-              <li>Form Correction Compared to Traditional Methods</li>
-              <li>Seamless Integration with Dashboards</li>
-              <li>Real-Time Feedback in Under 1 Second</li>
-            </ul>
-          </div>
+      <div className="min-h-[300vh] bg-[url('/geohealth/bg.png')] bg-cover bg-center bg-no-repeat">
+        {topicCustomization.map(({ title, description, image }, index) => (
+          <div
+            key={index}
+            className="flex h-screen items-center justify-center"
+          >
+            <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between pb-[95px] pt-[95px] lg:flex-row lg:items-center lg:justify-center lg:pb-0 lg:pl-[70px] lg:pr-[70px] lg:pt-0">
+              <div className="flex w-[343px] flex-col items-start gap-[24px] lg:w-[709px]">
+                <div className="flex flex-col items-start gap-[12px] self-stretch">
+                  {/* Title on mobile */}
+                  <h1 className="block text-[24px] font-normal leading-[32px] lg:hidden">
+                    1
+                  </h1>
+                  <h1 className="block self-stretch text-[24px] font-medium leading-[32px] lg:hidden lg:text-[52px] lg:leading-[66px]">
+                    Topic Customization Engine
+                  </h1>
 
-          <div className="relative flex w-[375px] flex-shrink-0 items-center justify-center lg:hidden lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
-            <Image
-              src="/geohealth/geohealth_image2.png"
-              alt="Geohealth"
-              width={655}
-              height={489}
-              className="flex-shrink-0 rounded-[11.84px] p-[16px]"
-            />
+                  {/* Title on desktop */}
+                  <h1
+                    className={`hidden ${index === 2 ? "xl:w-[715px]" : "w-[599px]"} self-stretch text-[24px] font-medium leading-[32px] lg:block lg:text-[42px] lg:leading-[56px] xl:text-[52px] xl:leading-[66px]`}
+                  >
+                    {title}
+                  </h1>
+                </div>
+
+                {/* Description on mobile */}
+                <p className="flex self-stretch text-size-6 font-medium leading-[24px] opacity-80 lg:hidden">
+                  Developed a robust system allowing users to define and
+                  customize their content topics post-registration
+                </p>
+
+                {/* Description on desktop */}
+                <p className="hidden self-stretch text-size-4 opacity-80 lg:block">
+                  {description}
+                </p>
+              </div>
+
+              {/* Mobile Image */}
+              <div className="relative flex w-[375px] flex-shrink-0 items-center justify-center lg:hidden lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
+                <Image
+                  src="/geohealth/geohealth_image2.png"
+                  alt="Geohealth"
+                  width={655}
+                  height={489}
+                  className="flex-shrink-0 rounded-[11.84px] p-[16px]"
+                />
+              </div>
+
+              {/* Desktop Image */}
+              <div className="relative hidden flex-shrink-0 items-center justify-center lg:flex lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
+                <Image
+                  src={image}
+                  alt="Geohealth"
+                  fill
+                  className="flex-shrink-0 rounded-[11.84px]"
+                />
+              </div>
+            </div>
           </div>
-          <div className="relative hidden flex-shrink-0 items-center justify-center lg:flex lg:h-[401px] lg:w-[382px] 2xl:h-[501px] 2xl:w-[632px]">
-            <Image
-              src="/geohealth/significance.png"
-              alt="Geohealth"
-              fill
-              className="flex-shrink-0 rounded-[11.84px]"
-            />
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Stacks section */}
@@ -172,16 +208,16 @@ export default function GeoHealth() {
           <h1 className="w-full text-center text-[24px] font-medium leading-[32px] lg:text-size-2 lg:font-normal">
             Stacks Used
           </h1>
-          <div className="flex w-full flex-col items-center justify-between gap-[48px] rounded-[28px] lg:flex-row">
+          <div className="flex w-full flex-col items-center justify-center gap-[128px] rounded-[28px] lg:flex-row">
             {stacks.map((stack, index) => (
               <div
                 key={index}
-                className="flex shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:shrink lg:gap-[32px] xl:w-[249px]"
+                className="flex shrink-0 flex-col items-center gap-[20px] lg:w-[199px] lg:shrink lg:gap-[32px] xl:w-[407px]"
               >
                 <h1 className="text-size-4 font-semibold lg:text-size-5 xl:text-size-3">
                   {stack.title}
                 </h1>
-                <div className="flex flex-col items-start gap-[12px]">
+                <div className="flex flex-col items-start gap-[30px] lg:grid lg:grid-cols-2 lg:gap-[30px]">
                   {stack.items.map((tech, techIndex) => (
                     <div
                       key={techIndex}
@@ -189,7 +225,7 @@ export default function GeoHealth() {
                     >
                       <div className="relative h-[44px] w-[44px] flex-shrink-0 lg:h-[56px] lg:w-[56px]">
                         <Image
-                          src="/services/web_development/nodejs.png"
+                          src={tech.src}
                           alt=""
                           fill
                           className="object-cover"
