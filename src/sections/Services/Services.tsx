@@ -10,25 +10,25 @@ export default function Services() {
 
   const services = [
     {
-      image: "/services/web_development.png",
+      image: "/services/web_development.svg",
       title: "Web Development",
       description:
         "Crafting dynamic, user-centric websites with cutting-edge design and seamless functionality to elevate your standards.",
     },
     {
-      image: "/services/product_design.png",
+      image: "/services/product_design.svg",
       title: "Product Design",
       description:
         "Transforming raw ideas into innovative, user-focused products with seamless design and unmatched functionality.",
     },
     {
-      image: "/services/computer_vision.png",
+      image: "/services/computer_vision.svg",
       title: "Computer Vision",
       description:
         "Empowering businesses with advanced computer vision solutions that unlock insights and automate processes.",
     },
     {
-      image: "/services/ai_automation.png",
+      image: "/services/ai_automation.svg",
       title: "AI Automation",
       description:
         "Revolutionizing workflows with AI-driven automation, delivering efficiency, accuracy, and smarter decision-making.",
@@ -41,7 +41,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative min-h-screen w-full text-white">
+    <section id="services" className="relative w-full text-white">
       {/* <section className="relative w-full text-white"> */}
       {/* Background SVG wrapped in an absolutely positioned container */}
       <div className="absolute inset-0 left-0 top-0 z-10 h-full w-full">
