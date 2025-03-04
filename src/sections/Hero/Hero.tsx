@@ -92,7 +92,7 @@ export default function Hero() {
                   src={"/hero/nstp.png"}
                   alt="Nstp image"
                   fill
-                  className="-mt-3.5 object-cover"
+                  className="-mt-[10px] object-cover"
                 />
               </div>
             </div>
