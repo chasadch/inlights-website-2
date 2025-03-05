@@ -8,7 +8,7 @@ export function AOSInit() {
   useEffect(() => {
     AOS.init({
       offset: 400,
-      duration: 600, // animation duration in ms
+      duration: 400, // animation duration in ms
       easing: "ease-in-sine", // easing function
       once: true,
     });

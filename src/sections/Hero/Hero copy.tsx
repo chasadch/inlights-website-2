@@ -35,7 +35,7 @@ export default function Hero() {
       ></div>
 
       {/* Centered Content Container */}
-      <div className="relative top-1/2 z-20 mx-auto flex w-full max-w-[1440px] -translate-y-1/2 flex-col items-center gap-[49.73px] pb-[155.41px] text-center lg:gap-[50px]">
+      <div className="relative z-20 mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[49.73px] pb-[155.41px] pt-[116px] text-center lg:gap-[50px] lg:pl-[120.19px] lg:pr-[120.81px] lg:pt-[161.09px]">
         {/* Main Heading */}
         <div className="flex flex-col items-center gap-[8px] self-stretch lg:gap-[18px]">
           {/* First heading */}
