@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function Statistics() {
   return (
     <section
+      data-aos="slide-right"
       className="overflow-x-hidden bg-cover bg-center bg-no-repeat lg:min-h-screen"
       style={{ backgroundImage: "url(/statistics/bg.png)" }}
     >
@@ -72,7 +73,7 @@ export default function Statistics() {
               {/* First box */}
               <div className="flex flex-col items-start gap-[20px]">
                 <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-bg px-[8.333px] py-[20px] shadow-[0px_0px_7.812px_0px_rgba(26,54,163,0.8)]">
-                  <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70">
+                  <div className="relative h-[22px] w-[22px] flex-shrink-0 opacity-70">
                     <Image
                       src={"/statistics/query_stats.png"}
                       alt={"Statistics 1"}
@@ -89,7 +90,7 @@ export default function Statistics() {
                 </div>
 
                 <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-bg px-[8.333px] py-[20px] shadow-[0px_0px_7.812px_0px_rgba(26,54,163,0.8)]">
-                  <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70">
+                  <div className="relative h-[22px] w-[22px] flex-shrink-0 opacity-70">
                     <Image
                       src={"/statistics/home_work.png"}
                       alt={"Statistics 1"}
@@ -109,7 +110,7 @@ export default function Statistics() {
               {/* Second box */}
               <div className="flex flex-col items-start gap-[20px]">
                 <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-bg px-[8.333px] py-[20px] shadow-[0px_0px_7.812px_0px_rgba(26,54,163,0.8)]">
-                  <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70">
+                  <div className="relative h-[22px] w-[22px] flex-shrink-0 opacity-70">
                     <Image
                       src={"/statistics/emoji_objects.png"}
                       alt={"Statistics 1"}
@@ -124,7 +125,7 @@ export default function Statistics() {
                 </div>
 
                 <div className="flex w-[169px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-bg px-[8.333px] py-[20px] shadow-[0px_0px_7.812px_0px_rgba(26,54,163,0.8)]">
-                  <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70">
+                  <div className="relative h-[22px] w-[22px] flex-shrink-0 opacity-70">
                     <Image
                       src={"/statistics/emoji_objects.png"}
                       alt={"Statistics 2"}

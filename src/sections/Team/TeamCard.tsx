@@ -11,7 +11,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
   return (
     <div className="group relative flex flex-col items-start gap-[16px] overflow-hidden">
       {/* Image */}
-      <div className="relative h-[196.517px] w-full overflow-hidden rounded-[16px] lg:h-[417px]">
+      <div className="relative h-[196.517px] w-full overflow-hidden rounded-[16px] border-[2px] border-white/15 lg:h-[417px]">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
 
@@ -26,12 +26,12 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
       </div>
 
       {/* Social Icons */}
-      <div className="absolute bottom-[70px] right-[7px] flex -translate-y-[15%] items-start gap-[8px] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 lg:right-[13px] lg:top-[15px]">
+      <div className="absolute right-[7px] top-[10.2px] flex items-start gap-[8px] lg:lg:right-[13px] lg:lg:top-[15px] lg:-translate-y-[15%] lg:opacity-0 lg:transition-all lg:duration-500 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
         <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15px] w-[10px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
               <Image
-                src="/team/facebook.png"
+                src="/team/facebook.svg"
                 alt="Facebook"
                 fill
                 className="object-contain"
@@ -43,7 +43,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15.995px] w-[15.995px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
               <Image
-                src="/team/instagram.png"
+                src="/team/instagram.svg"
                 alt="Facebook"
                 fill
                 className="object-contain"
@@ -55,7 +55,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15.995px] w-[15.995px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
               <Image
-                src="/team/linkedin.png"
+                src="/team/linkedin.svg"
                 alt="Facebook"
                 fill
                 className="object-contain"

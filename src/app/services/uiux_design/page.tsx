@@ -19,7 +19,7 @@ export default function UIUXDesignPage() {
             <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
               UI/UX Design
             </h1>
-            <p className="text-center text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
+            <p className="text-start text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
               Our product design services cover the entire cycle from
               conceptualization to the development of successful products,
               including strategic development, technical engineering, and

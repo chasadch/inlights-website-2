@@ -1,12 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Underline from "@/components/Underline";
+import {
+  Box,
+  Briefcase,
+  ChevronRight,
+  Home,
+  UserPlus,
+  Users,
+  X,
+} from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Button from "../../components/Button";
 import NavDropdown from "./NavDropdown";
-import { X } from "lucide-react";
-import Underline from "@/components/Underline";
 
 // Define types for dropdown data
 type DropdownItem = {
@@ -187,108 +195,150 @@ interface MobileMenuProps {
 }
 
 function MobileMenu({ onClose, router }: MobileMenuProps) {
-  const [openAnim, setOpenAnim] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [isClosing, setIsClosing] = useState(false);
-
-  // When the component mounts, trigger the opening animation
-  useEffect(() => {
-    setOpenAnim(true);
-  }, []);
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdown(openDropdown === title ? null : title);
   };
 
-  const handleClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      onClose();
-      setIsClosing(false);
-    }, 300);
-  };
-
   return (
-    <div
-      className={`fixed left-0 top-0 z-[60] flex h-screen w-screen flex-col overflow-auto bg-black px-[16px] py-[24px] transition-transform duration-300 ${
-        !openAnim || isClosing ? "translate-x-full" : "translate-x-0"
-      }`}
-      style={{
-        backgroundImage: "url(/statistics/bg.png)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Close Button */}
-      <div className="-mt-[4px] mb-[24px] mr-[6px] flex items-center justify-end">
+    <div className="fixed inset-0 z-[60] flex">
+      {/* Overlay Background */}
+      <div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Sidebar Menu */}
+      <div
+        className="relative ml-auto flex h-full w-[80%] max-w-[300px] flex-col bg-black shadow-2xl"
+        style={{
+          backgroundImage: "url(/statistics/bg.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Close Button */}
         <button
-          className="text-size-4 font-semibold text-white"
-          onClick={handleClose}
+          className="absolute right-4 top-4 rounded-full p-2 text-white hover:bg-gray-700"
+          onClick={onClose}
         >
           <X size={24} />
         </button>
+
+        {/* Menu Header */}
+        <div className="mt-16 flex items-center justify-center">
+          <Image
+            src="/header/logo_2.png"
+            alt="Logo"
+            width={120}
+            height={24}
+            className="object-cover"
+          />
+        </div>
+
+        {/* Menu Items */}
+        <ul className="mt-8 flex flex-col gap-2 px-6">
+          {/* Home */}
+          <li
+            className="flex cursor-pointer items-center gap-3 rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            onClick={() => {
+              router.push("/");
+              onClose();
+            }}
+          >
+            <Home size={16} />
+            <span>Home</span>
+          </li>
+
+          {/* Services */}
+          <li
+            className="cursor-pointer rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            onClick={() => handleDropdownToggle("Services")}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Briefcase size={16} />
+                <span>Services</span>
+              </div>
+              <ChevronRight
+                className={`transition-transform duration-200 ${
+                  openDropdown === "Services" ? "rotate-90" : ""
+                }`}
+              />
+            </div>
+            {openDropdown === "Services" && (
+              <SubDropdown
+                router={router}
+                onClose={onClose}
+                data={servicesDropdownData}
+              />
+            )}
+          </li>
+
+          {/* Products */}
+          <li
+            className="cursor-pointer rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            onClick={() => handleDropdownToggle("Products")}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Box size={16} />
+                <span>Products</span>
+              </div>
+              <ChevronRight
+                className={`transition-transform duration-200 ${
+                  openDropdown === "Products" ? "rotate-90" : ""
+                }`}
+              />
+            </div>
+            {openDropdown === "Products" && (
+              <SubDropdown
+                router={router}
+                onClose={onClose}
+                data={productsDropdownData}
+              />
+            )}
+          </li>
+
+          {/* Company */}
+          <li
+            className="cursor-pointer rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            onClick={() => handleDropdownToggle("Company")}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Users size={16} />
+                <span>Company</span>
+              </div>
+              <ChevronRight
+                className={`transition-transform duration-200 ${
+                  openDropdown === "Company" ? "rotate-90" : ""
+                }`}
+              />
+            </div>
+            {openDropdown === "Company" && (
+              <SubDropdown
+                router={router}
+                onClose={onClose}
+                data={companyDropdownData}
+              />
+            )}
+          </li>
+
+          {/* Join Us */}
+          <li
+            className="flex cursor-pointer items-center gap-3 rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            onClick={() => {
+              router.push("/jobs");
+              onClose();
+            }}
+          >
+            <UserPlus size={16} />
+            <span>Join Us</span>
+          </li>
+        </ul>
       </div>
-
-      {/* Menu Items */}
-      <ul className="flex flex-col gap-[16px] text-size-4 font-semibold text-white">
-        {/* Home */}
-        <li
-          className="cursor-pointer rounded-[8px] p-[12px]"
-          onClick={() => {
-            router.push("/");
-            handleClose();
-          }}
-        >
-          Home
-        </li>
-
-        {/* Services */}
-        <li className="cursor-pointer rounded-[8px] p-[12px]">
-          <div onClick={() => handleDropdownToggle("Services")}>Services</div>
-          {openDropdown === "Services" && (
-            <SubDropdown
-              router={router}
-              onClose={handleClose}
-              data={servicesDropdownData}
-            />
-          )}
-        </li>
-
-        {/* Products */}
-        <li className="cursor-pointer rounded-[8px] p-[12px]">
-          <div onClick={() => handleDropdownToggle("Products")}>Products</div>
-          {openDropdown === "Products" && (
-            <SubDropdown
-              router={router}
-              onClose={handleClose}
-              data={productsDropdownData}
-            />
-          )}
-        </li>
-
-        {/* Company */}
-        <li className="cursor-pointer rounded-[8px] p-[12px]">
-          <div onClick={() => handleDropdownToggle("Company")}>Company</div>
-          {openDropdown === "Company" && (
-            <SubDropdown
-              router={router}
-              onClose={handleClose}
-              data={companyDropdownData}
-            />
-          )}
-        </li>
-
-        {/* Join Us */}
-        <li
-          className="cursor-pointer rounded-[8px] p-[12px]"
-          onClick={() => {
-            router.push("/jobs");
-            handleClose();
-          }}
-        >
-          Join Us
-        </li>
-      </ul>
     </div>
   );
 }
@@ -305,12 +355,12 @@ function SubDropdown({ data, router, onClose }: SubDropdownProps) {
     <div className="ml-[12px] mt-[12px] flex flex-col gap-[12px] text-size-3 font-normal">
       {data.map((section, idx) => (
         <div key={idx} className="flex flex-col gap-[8px]">
-          <div className="text-size-4 font-semibold">{section.header}</div>
+          <div className="text-size-6 font-semibold">{section.header}</div>
           <div className="flex flex-col gap-[6px]">
             {section.items.map((item, i) => (
               <div
                 key={i}
-                className="cursor-pointer pl-[12px] text-size-4 text-[#D1D1D1]"
+                className="cursor-pointer pl-[12px] text-size-7 text-[#D1D1D1]"
                 onClick={() => {
                   router.push(item.path);
                   onClose();

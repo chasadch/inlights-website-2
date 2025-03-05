@@ -186,6 +186,31 @@ export default function Footer() {
                 </svg>
               </div>
             </a>
+
+            {/* Twitter Icon */}
+            <a
+              href="https://twitter.com/inlights_ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative flex w-[35px] items-start justify-between">
+                <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#8794E0]"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                >
+                  <path
+                    d="M23.643 4.937c-.835.37-1.732.62-2.675.732.962-.576 1.7-1.488 2.048-2.573-.9.534-1.897.922-2.958 1.13-.848-.903-2.062-1.47-3.404-1.47-2.574 0-4.658 2.084-4.658 4.655 0 .365.042.72.121 1.063-3.87-.194-7.303-2.05-9.601-4.87-.401.688-.63 1.488-.63 2.343 0 1.616.822 3.043 2.075 3.878-.764-.024-1.483-.234-2.109-.584v.058c0 2.256 1.607 4.138 3.74 4.564-.392.107-.806.164-1.232.164-.302 0-.596-.03-.883-.085.597 1.865 2.33 3.22 4.386 3.255-1.606 1.26-3.63 2.012-5.832 2.012-.38 0-.757-.023-1.129-.067 2.085 1.338 4.56 2.12 7.221 2.12 8.663 0 13.41-7.18 13.41-13.41 0-.205-.005-.41-.014-.614.92-.666 1.716-1.5 2.345-2.448z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -198,7 +223,7 @@ export default function Footer() {
             </span>
             <div className="flex items-start gap-[4px]">
               <span className="text-size-7 font-normal">
-                © 2024 Inlights. All rights reserved
+                © 2025 Inlights. All rights reserved
               </span>
             </div>
           </div>
@@ -419,7 +444,7 @@ export default function Footer() {
               </span>
               <div className="flex items-start gap-[4px]">
                 <span className="text-size-6 font-normal">
-                  &copy; InLights. All rights reserved
+                  &copy; 2025 InLights. All rights reserved
                 </span>
               </div>
             </div>

@@ -4,7 +4,8 @@ import Button from "../../components/Button";
 export default function Hero() {
   return (
     <section
-      className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
+      // className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
+      className="relative h-screen self-stretch overflow-hidden"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -69,19 +70,19 @@ export default function Hero() {
             {/* Image container */}
             <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
               {/* Image 1 */}
-              <div className="relative h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[102.847px]">
+              <div className="relative -mt-[8.5px] h-[54px] w-[77px]">
                 <Image
-                  src={"/hero/ntdp.png"}
-                  alt="Ntdp image"
+                  src={"/hero/nust.svg"}
+                  alt="Sdaia image"
                   fill
                   className="object-cover"
                 />
               </div>
               {/* Image 2 */}
-              <div className="relative h-[18.07px] w-[80.807px] lg:h-[24.094px] lg:w-[107.724px]">
+              <div className="relative h-[40.5px] w-[39.636px] lg:h-[54px] lg:w-[102.847px]">
                 <Image
-                  src={"/hero/sdaia.png"}
-                  alt="Sdaia image"
+                  src={"/hero/ntdp.png"}
+                  alt="Ntdp image"
                   fill
                   className="object-cover"
                 />

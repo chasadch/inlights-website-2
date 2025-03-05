@@ -110,6 +110,7 @@ export default function SuccessStories() {
 
   return (
     <section
+      data-aos="slide-left"
       id="success"
       className="mx-auto min-h-screen max-w-[1440px] px-[16px] pb-[126px] text-white lg:px-[70px] lg:py-[30px]"
     >

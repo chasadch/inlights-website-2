@@ -41,7 +41,11 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative w-full text-white">
+    <section
+      data-aos="slide-right"
+      id="services"
+      className="relative w-full text-white"
+    >
       {/* <section className="relative w-full text-white"> */}
       {/* Background SVG wrapped in an absolutely positioned container */}
       <div className="absolute inset-0 left-0 top-0 z-10 h-full w-full">

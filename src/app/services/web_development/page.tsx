@@ -18,7 +18,7 @@ export default function WebDevelopmentPage() {
             <h1 className="text-size-3 font-semibold lg:text-size-2 lg:font-medium">
               Web Development
             </h1>
-            <p className="text-center text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
+            <p className="text-start text-size-6 font-normal opacity-70 lg:text-start lg:text-size-4">
               Attracting and retaining customers in today&apos;s digital age
               requires a strong online presence. A website that is visually
               appealing, easy to navigate, and optimized for search engines is

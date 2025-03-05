@@ -20,6 +20,7 @@ export default function Products() {
     //   className="mx-auto flex min-h-screen max-w-[1440px] flex-col items-start self-stretch px-[16px] py-[90px] lg:gap-[10px] lg:px-[70px] lg:py-[130px]"
     // >
     <section
+      data-aos="slide-left"
       id="products"
       className="mx-auto flex min-h-screen max-w-[1440px] flex-col items-start self-stretch px-[16px] py-[90px] lg:gap-[10px] lg:px-[70px] lg:py-[30px]"
     >
