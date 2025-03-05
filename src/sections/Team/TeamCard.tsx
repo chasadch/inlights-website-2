@@ -27,7 +27,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
 
       {/* Social Icons */}
       <div className="absolute right-[7px] top-[10.2px] flex items-start gap-[8px] lg:lg:right-[13px] lg:lg:top-[15px] lg:-translate-y-[15%] lg:opacity-0 lg:transition-all lg:duration-500 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
-        <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
+        {/* <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15px] w-[10px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
               <Image
@@ -38,8 +38,8 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
               />
             </div>
           </div>
-        </div>
-        <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
+        </div> */}
+        {/* <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15.995px] w-[15.995px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
               <Image
@@ -50,7 +50,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex cursor-pointer items-start gap-[5.6px] transition-colors duration-300 lg:gap-[7px]">
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15.995px] w-[15.995px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
