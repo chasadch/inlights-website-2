@@ -106,7 +106,6 @@ export default function Testimonials({
     //   className="relative lg:min-h-screen lg:px-[70px] lg:py-[160px]"
     // >
     <section
-      data-aos="flip-left"
       id="testimonials"
       className="relative lg:min-h-screen lg:px-[70px] lg:py-[30px]"
     >

@@ -63,10 +63,7 @@ export default function Contact({
   };
 
   return (
-    <div
-      data-aos="slide-right"
-      className="relative min-h-screen w-full overflow-hidden text-white"
-    >
+    <div className="relative min-h-screen w-full overflow-hidden text-white">
       {/* <div className="relative w-full overflow-hidden text-white"> */}
       {/* Contact 375 pixels */}
       <section

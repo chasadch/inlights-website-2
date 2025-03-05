@@ -6,7 +6,6 @@ import BackToTop from "@/sections/BackToTop/BackToTop";
 import Footer from "@/sections/Footer/Footer";
 import Header from "@/sections/Header/Header";
 import { Toaster } from "react-hot-toast";
-import { AOSInit } from "@/components/AOSInit";
 
 export const metadata = {
   title: "Inlights",
@@ -43,8 +42,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
         <Header />
         <BackToTop />
-        {/* Insert the AOSInit component to initialize animations */}
-        <AOSInit />
         <main>{children}</main>
         <Footer />
       </body>

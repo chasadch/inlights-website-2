@@ -70,7 +70,7 @@ export default function Hero() {
             {/* Image container */}
             <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
               {/* Image 1 */}
-              <div className="relative -mt-[8.5px] h-[39px] w-[57px]">
+              <div className="relative -mt-[8.5px] h-[46px] w-[46px]">
                 <Image
                   src={"/hero/nust.svg"}
                   alt="Sdaia image"

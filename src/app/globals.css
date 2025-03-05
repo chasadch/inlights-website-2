@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import "aos/dist/aos.css"; */
-
 /* Add this to your global CSS or a CSS module */
 .mobile-menu {
   transform: translateX(100%);

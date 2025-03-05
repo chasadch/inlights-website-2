@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function Statistics() {
   return (
     <section
-      data-aos="slide-right"
       className="overflow-x-hidden bg-cover bg-center bg-no-repeat lg:min-h-screen"
       style={{ backgroundImage: "url(/statistics/bg.png)" }}
     >
