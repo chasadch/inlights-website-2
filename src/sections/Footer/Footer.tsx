@@ -13,7 +13,7 @@ export default function Footer() {
       {/* Footer (375 pixels) */}
       <section className="flex flex-col items-center gap-[32px] border-t border-white/20 bg-bg lg:hidden">
         {/* First container */}
-        <div className="flex flex-col items-start gap-[60px] self-stretch px-[43px] pb-[30px] pt-[80px]">
+        <div className="flex flex-col items-start gap-[60px] self-stretch px-[16px] pb-[30px] pt-[80px]">
           <div className="flex flex-col items-start gap-[16px]">
             <Image
               src={"/footer/inlights.png"}
@@ -192,7 +192,7 @@ export default function Footer() {
         {/* Second container */}
         <div className="flex flex-col items-start gap-[23px] self-stretch px-[16px]">
           <div className="h-[1px] self-stretch bg-[#8C8C8C] opacity-50"></div>
-          <div className="flex items-start justify-between self-stretch">
+          <div className="flex h-[53px] items-start justify-between self-stretch">
             <span className="text-size-7 font-normal">
               support@inlights.com
             </span>
