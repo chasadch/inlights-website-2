@@ -1,18 +1,10 @@
 "use client";
 
 import Underline from "@/components/Underline";
-import {
-  Box,
-  Briefcase,
-  ChevronRight,
-  Home,
-  UserPlus,
-  Users,
-  X,
-} from "lucide-react";
+import { ChevronRight, Home, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import NavDropdown from "./NavDropdown";
 
@@ -25,6 +17,7 @@ type DropdownItem = {
 
 type DropdownSection = {
   header: string;
+  subtext?: string; // Optional subtext for dropdown headings
   items: DropdownItem[];
 };
 
@@ -32,6 +25,7 @@ type DropdownSection = {
 const servicesDropdownData: DropdownSection[] = [
   {
     header: "Custom Product Development",
+    subtext: "Build innovative solutions tailored to your needs.",
     items: [
       {
         imageSrc: "/header/web_development.png",
@@ -47,6 +41,7 @@ const servicesDropdownData: DropdownSection[] = [
   },
   {
     header: "Artificial Intelligence",
+    subtext: "Harness the power of AI for your business.",
     items: [
       {
         imageSrc: "/header/computer_vision.png",
@@ -65,6 +60,7 @@ const servicesDropdownData: DropdownSection[] = [
 const productsDropdownData: DropdownSection[] = [
   {
     header: "Custom Product Development",
+    subtext: "Explore our innovative product offerings.",
     items: [
       {
         imageSrc: "/header/web_development.png",
@@ -82,7 +78,8 @@ const productsDropdownData: DropdownSection[] = [
 
 const companyDropdownData: DropdownSection[] = [
   {
-    header: "About",
+    header: "About Us",
+    subtext: "Learn more about our mission and vision.",
     items: [
       {
         imageSrc: "/header/web_development.png",
@@ -98,6 +95,7 @@ const companyDropdownData: DropdownSection[] = [
   },
   {
     header: "Our Team",
+    subtext: "Meet the talented people behind our success.",
     items: [
       {
         imageSrc: "/header/computer_vision.png",
@@ -106,8 +104,8 @@ const companyDropdownData: DropdownSection[] = [
       },
       {
         imageSrc: "/header/computer_vision.png",
-        title: "Team",
-        path: "/team",
+        title: "Careers",
+        path: "/careers",
       },
     ],
   },
@@ -188,7 +186,6 @@ export default function Header() {
 }
 
 // Mobile Menu component
-// Mobile Menu component
 interface MobileMenuProps {
   onClose: () => void;
   router: ReturnType<typeof useRouter>;
@@ -196,22 +193,41 @@ interface MobileMenuProps {
 
 function MobileMenu({ onClose, router }: MobileMenuProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Delay the open state to allow initial render off-screen
+  useEffect(() => {
+    setTimeout(() => {
+      setIsOpen(true);
+    }, 50);
+  }, []);
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdown(openDropdown === title ? null : title);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+    setTimeout(() => {
+      onClose();
+    }, 300); // match the transition duration
+  };
+
   return (
-    <div className="fixed inset-0 z-[60] flex">
+    <div className="fixed inset-0 z-[60] overflow-hidden">
       {/* Overlay Background */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
+        className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0"
+        }`}
+        onClick={handleClose}
       />
 
-      {/* Sidebar Menu */}
+      {/* Sidebar Menu with translation animation */}
       <div
-        className="relative ml-auto flex h-full w-[80%] max-w-[300px] flex-col bg-black shadow-2xl"
+        className={`absolute right-0 top-0 flex h-full w-[80%] max-w-[300px] transform flex-col bg-black shadow-2xl transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
         style={{
           backgroundImage: "url(/statistics/bg.png)",
           backgroundSize: "cover",
@@ -221,7 +237,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
         {/* Close Button */}
         <button
           className="absolute right-4 top-4 rounded-full p-2 text-white hover:bg-gray-700"
-          onClick={onClose}
+          onClick={handleClose}
         >
           <X size={24} />
         </button>
@@ -244,7 +260,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             className="flex cursor-pointer items-center gap-3 rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
             onClick={() => {
               router.push("/");
-              onClose();
+              handleClose();
             }}
           >
             <Home size={16} />
@@ -253,14 +269,11 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
           {/* Services */}
           <li
-            className="cursor-pointer rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            className="cursor-pointer rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
             onClick={() => handleDropdownToggle("Services")}
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Briefcase size={16} />
-                <span>Services</span>
-              </div>
+              <span>Services</span>
               <ChevronRight
                 className={`transition-transform duration-200 ${
                   openDropdown === "Services" ? "rotate-90" : ""
@@ -270,7 +283,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             {openDropdown === "Services" && (
               <SubDropdown
                 router={router}
-                onClose={onClose}
+                onClose={handleClose}
                 data={servicesDropdownData}
               />
             )}
@@ -278,14 +291,11 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
           {/* Products */}
           <li
-            className="cursor-pointer rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            className="cursor-pointer rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
             onClick={() => handleDropdownToggle("Products")}
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Box size={16} />
-                <span>Products</span>
-              </div>
+              <span>Products</span>
               <ChevronRight
                 className={`transition-transform duration-200 ${
                   openDropdown === "Products" ? "rotate-90" : ""
@@ -295,7 +305,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             {openDropdown === "Products" && (
               <SubDropdown
                 router={router}
-                onClose={onClose}
+                onClose={handleClose}
                 data={productsDropdownData}
               />
             )}
@@ -303,14 +313,11 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
           {/* Company */}
           <li
-            className="cursor-pointer rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            className="cursor-pointer rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
             onClick={() => handleDropdownToggle("Company")}
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Users size={16} />
-                <span>Company</span>
-              </div>
+              <span>Company</span>
               <ChevronRight
                 className={`transition-transform duration-200 ${
                   openDropdown === "Company" ? "rotate-90" : ""
@@ -320,7 +327,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             {openDropdown === "Company" && (
               <SubDropdown
                 router={router}
-                onClose={onClose}
+                onClose={handleClose}
                 data={companyDropdownData}
               />
             )}
@@ -328,14 +335,13 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
           {/* Join Us */}
           <li
-            className="flex cursor-pointer items-center gap-3 rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            className="cursor-pointer rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
             onClick={() => {
               router.push("/jobs");
-              onClose();
+              handleClose();
             }}
           >
-            <UserPlus size={16} />
-            <span>Join Us</span>
+            Join Us
           </li>
         </ul>
       </div>
@@ -352,15 +358,24 @@ interface SubDropdownProps {
 
 function SubDropdown({ data, router, onClose }: SubDropdownProps) {
   return (
-    <div className="ml-[12px] mt-[12px] flex flex-col gap-[12px] text-size-3 font-normal">
+    <div className="mt-2 flex flex-col gap-4 pl-4">
       {data.map((section, idx) => (
-        <div key={idx} className="flex flex-col gap-[8px]">
-          <div className="text-size-6 font-semibold">{section.header}</div>
-          <div className="flex flex-col gap-[6px]">
+        <div key={idx} className="flex flex-col gap-2">
+          {/* Dropdown Heading */}
+          <div className="flex flex-col gap-1">
+            <h3 className="text-lg font-semibold text-white">
+              {section.header}
+            </h3>
+            {section.subtext && (
+              <p className="text-sm text-gray-300">{section.subtext}</p>
+            )}
+          </div>
+          {/* Dropdown Items */}
+          <div className="flex flex-col gap-1">
             {section.items.map((item, i) => (
               <div
                 key={i}
-                className="cursor-pointer pl-[12px] text-size-7 text-[#D1D1D1]"
+                className="cursor-pointer rounded-lg p-2 text-sm text-gray-100 transition-colors duration-200 hover:bg-gray-700"
                 onClick={() => {
                   router.push(item.path);
                   onClose();
