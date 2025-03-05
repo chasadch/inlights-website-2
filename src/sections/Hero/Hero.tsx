@@ -4,8 +4,8 @@ import Button from "../../components/Button";
 export default function Hero() {
   return (
     <section
-      // className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
-      className="relative h-screen self-stretch overflow-hidden"
+      className="relative h-[585px] self-stretch overflow-hidden lg:h-screen"
+      // className="relative h-screen self-stretch overflow-hidden"
       style={{
         background:
           "linear-gradient(0deg, rgba(9, 17, 33, 0.80) 0%, rgba(9, 17, 33, 0.80) 100%)",
@@ -70,7 +70,7 @@ export default function Hero() {
             {/* Image container */}
             <div className="flex items-center justify-center gap-[40px] lg:gap-[62px]">
               {/* Image 1 */}
-              <div className="relative -mt-[8.5px] h-[54px] w-[77px]">
+              <div className="relative -mt-[8.5px] h-[39px] w-[57px]">
                 <Image
                   src={"/hero/nust.svg"}
                   alt="Sdaia image"

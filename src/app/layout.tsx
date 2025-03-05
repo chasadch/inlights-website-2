@@ -6,6 +6,7 @@ import BackToTop from "@/sections/BackToTop/BackToTop";
 import Footer from "@/sections/Footer/Footer";
 import Header from "@/sections/Header/Header";
 import { Toaster } from "react-hot-toast";
+import { AOSInit } from "@/components/AOSInit";
 
 export const metadata = {
   title: "Inlights",
@@ -31,7 +32,7 @@ const lato = Lato({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="overflow-x-hidden scroll-smooth">
       <body
         className={`overflow-x-hidden bg-[#03030E] text-white antialiased ${manrope.className} ${roboto.variable} ${lato.variable}`}
       >
@@ -43,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <BackToTop />
         {/* Insert the AOSInit component to initialize animations */}
-        {/* <AOSInit /> */}
+        <AOSInit />
         <main>{children}</main>
         <Footer />
       </body>

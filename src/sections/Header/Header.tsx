@@ -1,7 +1,15 @@
 "use client";
 
 import Underline from "@/components/Underline";
-import { ChevronRight, Home, X } from "lucide-react";
+import {
+  ChevronRight,
+  Home,
+  X,
+  Briefcase,
+  Box,
+  Users,
+  UserPlus,
+} from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,7 +25,7 @@ type DropdownItem = {
 
 type DropdownSection = {
   header: string;
-  subtext?: string; // Optional subtext for dropdown headings
+  subtext?: string;
   items: DropdownItem[];
 };
 
@@ -25,7 +33,6 @@ type DropdownSection = {
 const servicesDropdownData: DropdownSection[] = [
   {
     header: "Custom Product Development",
-    subtext: "Build innovative solutions tailored to your needs.",
     items: [
       {
         imageSrc: "/header/web_development.png",
@@ -41,7 +48,6 @@ const servicesDropdownData: DropdownSection[] = [
   },
   {
     header: "Artificial Intelligence",
-    subtext: "Harness the power of AI for your business.",
     items: [
       {
         imageSrc: "/header/computer_vision.png",
@@ -60,7 +66,6 @@ const servicesDropdownData: DropdownSection[] = [
 const productsDropdownData: DropdownSection[] = [
   {
     header: "Custom Product Development",
-    subtext: "Explore our innovative product offerings.",
     items: [
       {
         imageSrc: "/header/web_development.png",
@@ -79,7 +84,6 @@ const productsDropdownData: DropdownSection[] = [
 const companyDropdownData: DropdownSection[] = [
   {
     header: "About Us",
-    subtext: "Learn more about our mission and vision.",
     items: [
       {
         imageSrc: "/header/web_development.png",
@@ -95,7 +99,6 @@ const companyDropdownData: DropdownSection[] = [
   },
   {
     header: "Our Team",
-    subtext: "Meet the talented people behind our success.",
     items: [
       {
         imageSrc: "/header/computer_vision.png",
@@ -118,13 +121,15 @@ export default function Header() {
   return (
     <header className="absolute left-0 right-0 top-0 z-50 mx-auto box-border flex w-full max-w-[1440px] flex-shrink-0 items-center justify-between px-[16px] py-[12px] text-white lg:px-[120px] lg:py-[16px]">
       {/* Logo */}
-      <div className="relative h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18.197px] lg:w-[145.885px] xl:w-[155.885px]">
+      <div
+        className="relative h-[12px] w-[102.8px] flex-shrink-0 cursor-pointer lg:h-[18.197px] lg:w-[145.885px] xl:w-[155.885px]"
+        onClick={() => router.push("/")}
+      >
         <Image
           src={"/header/logo_2.png"}
           alt="Logo"
           fill
           className="object-cover"
-          onClick={() => router.push("/")}
         />
       </div>
 
@@ -195,7 +200,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Delay the open state to allow initial render off-screen
+  // Delay open state to allow initial off-screen render
   useEffect(() => {
     setTimeout(() => {
       setIsOpen(true);
@@ -210,7 +215,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
     setIsOpen(false);
     setTimeout(() => {
       onClose();
-    }, 300); // match the transition duration
+    }, 300); // Duration should match the transition duration
   };
 
   return (
@@ -225,7 +230,7 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
       {/* Sidebar Menu with translation animation */}
       <div
-        className={`absolute right-0 top-0 flex h-full w-[80%] max-w-[300px] transform flex-col bg-black shadow-2xl transition-transform duration-300 ${
+        className={`absolute right-0 top-0 flex h-full w-[85%] max-w-[300px] transform flex-col bg-black shadow-2xl transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
@@ -254,10 +259,10 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
         </div>
 
         {/* Menu Items */}
-        <ul className="mt-8 flex flex-col gap-2 px-6">
+        <ul className="mt-8 flex flex-col gap-2 px-6 text-size-4 font-semibold text-white">
           {/* Home */}
           <li
-            className="flex cursor-pointer items-center gap-3 rounded-lg p-3 text-white transition-colors duration-200 hover:bg-gray-700"
+            className="flex cursor-pointer items-center gap-3 rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
             onClick={() => {
               router.push("/");
               handleClose();
@@ -273,8 +278,12 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             onClick={() => handleDropdownToggle("Services")}
           >
             <div className="flex items-center justify-between">
-              <span>Services</span>
+              <div className="flex items-center gap-3">
+                <Briefcase size={16} />
+                <span>Services</span>
+              </div>
               <ChevronRight
+                size={16}
                 className={`transition-transform duration-200 ${
                   openDropdown === "Services" ? "rotate-90" : ""
                 }`}
@@ -295,8 +304,12 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             onClick={() => handleDropdownToggle("Products")}
           >
             <div className="flex items-center justify-between">
-              <span>Products</span>
+              <div className="flex items-center gap-3">
+                <Box size={16} />
+                <span>Products</span>
+              </div>
               <ChevronRight
+                size={16}
                 className={`transition-transform duration-200 ${
                   openDropdown === "Products" ? "rotate-90" : ""
                 }`}
@@ -317,8 +330,12 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
             onClick={() => handleDropdownToggle("Company")}
           >
             <div className="flex items-center justify-between">
-              <span>Company</span>
+              <div className="flex items-center gap-3">
+                <Users size={16} />
+                <span>Company</span>
+              </div>
               <ChevronRight
+                size={16}
                 className={`transition-transform duration-200 ${
                   openDropdown === "Company" ? "rotate-90" : ""
                 }`}
@@ -335,13 +352,14 @@ function MobileMenu({ onClose, router }: MobileMenuProps) {
 
           {/* Join Us */}
           <li
-            className="cursor-pointer rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
+            className="flex cursor-pointer items-center gap-3 rounded-lg p-[12px] transition-colors duration-200 hover:bg-gray-700"
             onClick={() => {
               router.push("/jobs");
               handleClose();
             }}
           >
-            Join Us
+            <UserPlus size={16} />
+            <span>Join Us</span>
           </li>
         </ul>
       </div>
@@ -363,19 +381,16 @@ function SubDropdown({ data, router, onClose }: SubDropdownProps) {
         <div key={idx} className="flex flex-col gap-2">
           {/* Dropdown Heading */}
           <div className="flex flex-col gap-1">
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-size-6 font-medium text-white">
               {section.header}
             </h3>
-            {section.subtext && (
-              <p className="text-sm text-gray-300">{section.subtext}</p>
-            )}
           </div>
           {/* Dropdown Items */}
           <div className="flex flex-col gap-1">
             {section.items.map((item, i) => (
               <div
                 key={i}
-                className="cursor-pointer rounded-lg p-2 text-sm text-gray-100 transition-colors duration-200 hover:bg-gray-700"
+                className="cursor-pointer rounded-lg p-2 text-size-7 text-[#D1D1D1] transition-colors duration-200 hover:bg-gray-700"
                 onClick={() => {
                   router.push(item.path);
                   onClose();
