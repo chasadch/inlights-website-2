@@ -52,7 +52,7 @@ export default function Button({
   if (variant === "gradient") {
     return (
       <motion.button
-        whileHover={{ scale: 1.25, rotate: "2.5deg" }}
+        whileHover={{ scale: 1.25 }}
         transition={{ duration: 0.005 }}
         onClick={handleClick}
         onDrag={onDrag}
@@ -81,7 +81,7 @@ export default function Button({
       >
         <div className="pointer-events-none absolute inset-0 rounded-[10px] bg-gradient-to-b from-[#552DDA] to-[#1D3E80] transition-opacity duration-300 group-hover:opacity-0" />
         <motion.button
-          whileHover={{ scale: 1.25, rotate: "-2.5deg" }}
+          whileHover={{ scale: 1.25 }}
           transition={{ duration: 0.005 }}
           onClick={handleClick}
           onDrag={onDrag}
