@@ -105,7 +105,7 @@ export default function PremiseSecurity() {
                 Topic Customization Engine
               </h1>
               <h1 className="hidden self-stretch text-[24px] font-medium leading-[32px] lg:block lg:text-[52px] lg:leading-[66px]">
-                1. Easy to use
+                AI-Driven Security: Smarter, Safer Gates!
               </h1>
             </div>
             <p className="flex self-stretch text-size-6 font-medium leading-[24px] opacity-80 lg:hidden">
@@ -113,8 +113,11 @@ export default function PremiseSecurity() {
               their content topics post-registration
             </p>
             <p className="hidden w-[343px] space-y-3 self-stretch text-size-4 opacity-80 lg:block lg:w-[499px] 2xl:w-[599px]">
-              Easy to use easy to use Easy to use easy to use Easy to use easy
-              to use Easy to use easy to use vEasy to use easy to use
+              Our cutting-edge Automated Number Plate Recognition (ANPR) system
+              enhances security and access control with real-time vehicle and
+              personnel verification. <br /> <br /> Powered by advanced computer
+              vision and AI, our system prevents unauthorized access, tracks
+              entry and exit times, and ensures seamless security at gates.
             </p>
           </div>
 
@@ -130,7 +133,7 @@ export default function PremiseSecurity() {
           <div className="relative hidden flex-shrink-0 items-center justify-center lg:flex lg:h-[401px] lg:w-[382px] 2xl:h-[489px] 2xl:w-[655px]">
             <div className="relative h-[489px] w-[655px]">
               <Image
-                src="/geohealth/geohealth_image2.png"
+                src="/geohealth/geohealth_image_2_lg.svg"
                 alt="Geohealth"
                 fill
                 quality={100}
@@ -139,7 +142,7 @@ export default function PremiseSecurity() {
               />
             </div>
             <span className="absolute font-lato font-semibold leading-normal text-white lg:left-[26%] lg:text-[18px] xl:top-[46%] xl:text-[23px] 2xl:left-[26%] 2xl:top-[44%] 2xl:text-[28px]">
-              Image Placeholder
+              AI-Powered Smart Gate Security
             </span>
           </div>
         </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
@@ -5,9 +7,15 @@ interface TeamCardProps {
   image: string;
   name: string;
   role: string;
+  linkedInUrl: string;
 }
 
-export default function TeamCard({ image, name, role }: TeamCardProps) {
+export default function TeamCard({
+  image,
+  name,
+  role,
+  linkedInUrl,
+}: TeamCardProps) {
   return (
     <div className="group relative flex flex-col items-start gap-[16px] overflow-hidden">
       {/* Image */}
@@ -55,6 +63,7 @@ export default function TeamCard({ image, name, role }: TeamCardProps) {
           <div className="relative h-[28px] w-[28px] rounded-full bg-[#FBFBFB] transition-all duration-300 hover:bg-[#8794E0] lg:h-[35px] lg:w-[35px]">
             <div className="absolute left-1/2 top-1/2 h-[15.995px] w-[15.995px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply">
               <Image
+                onClick={() => window.open(linkedInUrl, "_blank")}
                 src="/team/linkedin.svg"
                 alt="Facebook"
                 fill

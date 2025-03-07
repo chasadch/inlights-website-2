@@ -109,7 +109,7 @@ export default function TrafficManagement() {
                 Topic Customization Engine
               </h1>
               <h1 className="hidden self-stretch text-[24px] font-medium leading-[32px] lg:block lg:text-[52px] lg:leading-[66px]">
-                1. Easy to use
+                Smart Traffic, Smooth Cities
               </h1>
             </div>
             <p className="flex self-stretch text-size-6 font-medium leading-[24px] opacity-80 lg:hidden">
@@ -117,8 +117,11 @@ export default function TrafficManagement() {
               their content topics post-registration
             </p>
             <p className="hidden w-[343px] space-y-3 self-stretch text-size-4 opacity-80 lg:block lg:w-[499px] 2xl:w-[599px]">
-              Easy to use easy to use Easy to use easy to use Easy to use easy
-              to use Easy to use easy to use vEasy to use easy to use
+              InLights is revolutionizing traffic management with cutting-edge
+              artificial intelligence, ensuring smoother, safer, and more
+              efficient roadways. <br /> <br /> Our AI-driven solutions optimize
+              traffic flow, reduce congestion, and enhance urban mobility in
+              real time.
             </p>
           </div>
 
@@ -134,7 +137,7 @@ export default function TrafficManagement() {
           <div className="relative hidden flex-shrink-0 items-center justify-center lg:flex lg:h-[401px] lg:w-[382px] 2xl:h-[489px] 2xl:w-[655px]">
             <div className="relative h-[489px] w-[655px]">
               <Image
-                src="/geohealth/geohealth_image2.png"
+                src="/geohealth/geohealth_image_lg.svg"
                 alt="Geohealth"
                 fill
                 quality={100}
@@ -143,7 +146,7 @@ export default function TrafficManagement() {
               />
             </div>
             <span className="absolute font-lato font-semibold leading-normal text-white lg:left-[26%] lg:text-[18px] xl:top-[46%] xl:text-[23px] 2xl:left-[26%] 2xl:top-[44%] 2xl:text-[28px]">
-              Image Placeholder
+              AI Powered Traffic Control
             </span>
           </div>
         </div>
