@@ -19,7 +19,7 @@ export default function ProductCard({
   imagePosition = "first",
 }: ProductCardProps) {
   return (
-    <div className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 xl:h-[591px] xl:p-[34px]">
+    <motiondiv className="relative flex h-[426px] w-full flex-col items-start gap-[64px] overflow-hidden rounded-[32px] border-[1px] border-borderCustom bg-bg px-[16px] py-[20px] shadow-shadowCustom transition-transform duration-300 xl:h-[591px] xl:p-[34px]">
       <div className="flex flex-col items-start justify-center gap-[20px] self-stretch xl:gap-[24px]">
         <div className="flex flex-col items-start gap-[20px] self-stretch lg:gap-[34px]">
           <div className="flex h-[34px] items-center justify-center gap-[10px] rounded-[48px] bg-white px-[12px] py-[2px]">
@@ -72,6 +72,6 @@ export default function ProductCard({
           </div>
         </div>
       </div>
-    </div>
+    </motiondiv>
   );
 }

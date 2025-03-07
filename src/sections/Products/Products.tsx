@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import ProductCard from "./ProductCard";
+
 // import { scrollToSection } from "@/lib/helpers";
 
 export default function Products() {

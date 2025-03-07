@@ -108,7 +108,10 @@ export default function Footer() {
 
           <div className="flex items-start gap-[12px]">
             <a href="mailto:admin@inlights.com.pk" className="block">
-              <div className="relative flex w-[35px] items-start justify-between">
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="relative flex w-[35px] items-start justify-between"
+              >
                 <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25"></div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +126,7 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-              </div>
+              </motion.div>
             </a>
 
             <a
@@ -132,7 +135,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="relative flex w-[35px] items-start justify-between">
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="relative flex w-[35px] items-start justify-between"
+              >
                 <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25"></div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +161,7 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-              </div>
+              </motion.div>
             </a>
 
             {/* Instagram Icon */}
@@ -165,7 +171,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="relative flex w-[35px] items-start justify-between">
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="relative flex w-[35px] items-start justify-between"
+              >
                 <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25"></div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +194,7 @@ export default function Footer() {
                   />
                   <circle cx="17.5" cy="6.5" r="1" fill="white" />
                 </svg>
-              </div>
+              </motion.div>
             </a>
 
             {/* Twitter Icon */}
@@ -195,8 +204,11 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="group block"
             >
-              <div className="relative flex w-[35px] items-start justify-between">
-                <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#8794E0]"></div>
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="relative flex w-[35px] items-start justify-between"
+              >
+                <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:bg-[#8794E0]"></div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
@@ -210,7 +222,7 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-              </div>
+              </motion.div>
             </a>
           </div>
         </div>
@@ -282,13 +294,12 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start gap-[12px]">
-                <a href="mailto:admin@inlights.com.pk" className="group block">
+                <a href="www.youtube.com" className="group block">
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.15 }}
                     className="relative flex w-[35px] items-start justify-between"
                   >
-                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#8794E0]"></div>
+                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:bg-[#8794E0]"></div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -311,8 +322,11 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <div className="relative flex w-[35px] items-start justify-between">
-                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#8794E0]"></div>
+                  <motion.div
+                    whileHover={{ scale: 1.15 }}
+                    className="relative flex w-[35px] items-start justify-between"
+                  >
+                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:bg-[#8794E0]"></div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="12"
@@ -334,7 +348,7 @@ export default function Footer() {
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </motion.div>
                 </a>
 
                 {/* Instagram Icon */}
@@ -344,8 +358,11 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <div className="relative flex w-[35px] items-start justify-between">
-                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#8794E0]"></div>
+                  <motion.div
+                    whileHover={{ scale: 1.15 }}
+                    className="relative flex w-[35px] items-start justify-between"
+                  >
+                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:bg-[#8794E0]"></div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -364,7 +381,7 @@ export default function Footer() {
                       />
                       <circle cx="17.5" cy="6.5" r="1" fill="white" />
                     </svg>
-                  </div>
+                  </motion.div>
                 </a>
                 {/* Twitter Icon */}
                 <a
@@ -373,8 +390,11 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <div className="relative flex w-[35px] items-start justify-between">
-                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#8794E0]"></div>
+                  <motion.div
+                    whileHover={{ scale: 1.15 }}
+                    className="relative flex w-[35px] items-start justify-between"
+                  >
+                    <div className="h-[35px] w-[35px] rounded-full border-[1.5px] border-white opacity-25 transition-all duration-300 group-hover:bg-[#8794E0]"></div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -388,7 +408,7 @@ export default function Footer() {
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </motion.div>
                 </a>
               </div>
             </div>

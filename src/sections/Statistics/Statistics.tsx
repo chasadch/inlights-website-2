@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Statistics() {
   return (
@@ -142,7 +145,10 @@ export default function Statistics() {
 
             {/* Desktop Stats (lg and above) - Three columns of single boxes */}
             <div className="hidden flex-col items-center gap-[15px] lg:flex lg:gap-[85px]">
-              <div className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]">
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]"
+              >
                 <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70 lg:h-[36px] lg:w-[36px]">
                   <Image
                     src={"/statistics/query_stats.png"}
@@ -157,8 +163,11 @@ export default function Statistics() {
                 <div className="text-center text-size-7 font-normal lg:text-size-6">
                   Years of Growth
                 </div>
-              </div>
-              <div className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]">
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]"
+              >
                 <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70 lg:h-[36px] lg:w-[36px]">
                   <Image
                     src={"/statistics/home_work.png"}
@@ -173,12 +182,15 @@ export default function Statistics() {
                 <div className="text-center text-size-7 font-normal lg:text-size-6">
                   Global Office
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Second set of two circles for desktop (lg and above) */}
             <div className="mr-[70px] hidden flex-col items-center gap-[15px] lg:flex lg:gap-[85px] xl:mr-[140px]">
-              <div className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]">
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]"
+              >
                 <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70 lg:h-[36px] lg:w-[36px]">
                   <Image
                     src={"/statistics/emoji_objects.png"}
@@ -193,8 +205,11 @@ export default function Statistics() {
                 <div className="text-center text-size-7 font-normal lg:text-size-6">
                   Products Cultivated
                 </div>
-              </div>
-              <div className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]">
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.15 }}
+                className="flex h-[200px] w-[200px] flex-col items-center justify-center gap-[12px] rounded-[52.083px] border-[0.26px] border-borderCustom bg-[#050919] px-[8.333px] py-[20px] shadow-shadowCustom lg:gap-[10px] lg:rounded-[200px] lg:border-[1px] lg:p-[32px] 2xl:h-[240px] 2xl:w-[240px]"
+              >
                 <div className="relative h-[14px] w-[14px] flex-shrink-0 opacity-70 lg:h-[36px] lg:w-[36px]">
                   <Image
                     src={"/statistics/emoji_objects.png"}
@@ -209,7 +224,7 @@ export default function Statistics() {
                 <div className="text-center text-size-7 font-normal lg:text-size-6">
                   Products Cultivated
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

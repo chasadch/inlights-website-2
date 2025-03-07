@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useRef } from "react";
 import ContactBackground from "./ContactBackground";
 import Underline from "@/components/Underline";
+import { motion } from "framer-motion";
 // import ContactBackground from "./ContactBackground";
 
 type ContactProps = {
@@ -431,7 +432,8 @@ export default function Contact({
 
             {/* Social Icons */}
             <div className="flex items-start gap-[40px] opacity-70">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.15 }}
                 href="https://www.facebook.com/inlights.smart"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -450,8 +452,9 @@ export default function Contact({
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.15 }}
                 href="https://www.instagram.com/inlights.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -482,8 +485,9 @@ export default function Contact({
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.15 }}
                 href="https://www.linkedin.com/company/inlightsai/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -513,10 +517,11 @@ export default function Contact({
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </motion.a>
 
               {/* GitHub */}
-              <a
+              <motion.a
+                whileHover={{ scale: 1.15 }}
                 href="https://github.com/inlights2"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -534,10 +539,11 @@ export default function Contact({
                 >
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
-              </a>
+              </motion.a>
 
               {/* Twitter */}
-              <a
+              <motion.a
+                whileHover={{ scale: 1.15 }}
                 href="https://twitter.com/yourpage"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -555,7 +561,7 @@ export default function Contact({
                 >
                   <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 16 2a4.48 4.48 0 0 0-4.47 4.48c0 .35.04.7.12 1.03A12.74 12.74 0 0 1 3 3.19a4.48 4.48 0 0 0 1.39 5.98 4.45 4.45 0 0 1-2-.55v.06a4.48 4.48 0 0 0 3.58 4.39 4.52 4.52 0 0 1-2 .08 4.48 4.48 0 0 0 4.18 3.11 8.96 8.96 0 0 1-5.57 1.92A9 9 0 0 1 2 18.54 12.62 12.62 0 0 0 9.29 21c7.55 0 11.67-6.26 11.67-11.67 0-.18 0-.35-.01-.53A8.18 8.18 0 0 0 23 3z" />
                 </svg>
-              </a>
+              </motion.a>
             </div>
           </div>
 
