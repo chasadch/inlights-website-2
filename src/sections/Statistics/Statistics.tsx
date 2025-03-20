@@ -135,9 +135,11 @@ export default function Statistics() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="text-center text-[15px] font-semibold">6</div>
+                  <div className="text-center text-[15px] font-semibold">
+                    100,000+ hours
+                  </div>
                   <div className="text-center text-size-7 font-normal leading-[5.208px]">
-                    Products Cultivated
+                    of traffic optimized
                   </div>
                 </div>
               </div>
@@ -180,7 +182,7 @@ export default function Statistics() {
                   03
                 </div>
                 <div className="text-center text-size-7 font-normal lg:text-size-6">
-                  Global Office
+                  Global Offices
                 </div>
               </motion.div>
             </div>
@@ -218,11 +220,11 @@ export default function Statistics() {
                     className="object-cover"
                   />
                 </div>
-                <div className="text-center text-[30px] font-semibold 2xl:text-size-2">
-                  6
+                <div className="text-center text-[30px] font-semibold 2xl:text-[30px]">
+                  100,000+
                 </div>
                 <div className="text-center text-size-7 font-normal lg:text-size-6">
-                  Products Cultivated
+                  of traffic optimized
                 </div>
               </motion.div>
             </div>
